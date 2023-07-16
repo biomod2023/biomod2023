@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    <h1>Title</h1>
+    <h1 class="text-white">Title</h1>
   </main>
 </template>
