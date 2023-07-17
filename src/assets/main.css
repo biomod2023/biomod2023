@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
 #app {
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-  @apply bg-black;
+  @apply bg-black h-screen text-gray-50;
 }
