@@ -40,4 +40,3 @@ npm run build
 ```sh
 npm run lint
 ```
-# Biomod 2023 Website TEST
