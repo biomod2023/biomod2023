@@ -19,7 +19,7 @@ module.exports = {
         'title': ['5rem', {
           fontWeight: '600'
         }],
-        'subtitle': ['1.3rem']
+        'subtitle': ['1.35rem']
       }
     },
   },
