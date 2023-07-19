@@ -18,7 +18,8 @@ module.exports = {
       fontSize: {
         'title': ['5rem', {
           fontWeight: '600'
-        }]
+        }],
+        'subtitle': ['1.3rem']
       }
     },
   },
