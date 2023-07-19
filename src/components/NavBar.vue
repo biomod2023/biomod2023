@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <div class="flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44">
+  <div class="flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg">
     <div class="flex justify-center gap-16">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="#">Ideas</RouterLink>

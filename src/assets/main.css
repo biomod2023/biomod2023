@@ -10,5 +10,5 @@
 }
 
 #app {
-  @apply bg-black h-screen text-gray-50;
+  @apply bg-[#272727] h-screen text-gray-50;
 }
