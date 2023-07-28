@@ -2,7 +2,7 @@
 
 <template>
   
-    <button class="ibtn my-4 flex flex-col items-center">
+    <button class="group ibtn my-4 flex flex-col items-center">
       <div class="mb-2">
       <slot name="svg"></slot>
     </div>
