@@ -17,7 +17,7 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
       <div class="flex flex-col items-center justify-center h-screen">
         
-        <div class="flex space x-4">
+        <div class="flex space-x-11">
 
           <IdeaCard>
             <template #svg>
@@ -62,7 +62,7 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
         </div>
 
-        <div class="flex mt-8">
+        <div class="flex mt-4 space-x-11">
           
           <IdeaCard>
             <template #svg>
