@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
   >
     <div class="flex justify-center gap-16">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="#">Ideas</RouterLink>
+      <RouterLink to="/ideas">Ideas</RouterLink>
       <RouterLink to="#">Notebook</RouterLink>
     </div>
     <a href="/">

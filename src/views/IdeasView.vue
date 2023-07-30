@@ -130,10 +130,9 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
       </div>
 
-
       <div class="flex flex-col justify-end grow">
-      <Footer />
-    </div>
+        <Footer />
+     </div>
     
      </div>
      
