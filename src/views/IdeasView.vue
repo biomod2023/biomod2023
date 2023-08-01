@@ -6,18 +6,19 @@ import IdeaCard from '@/components/IdeaCard.vue';
 </script>
 
 <template>
-    <div class="flex flex-col h-screen">
+
+    <div class="flex flex-col h-screen overflow-y-auto">
 
       <NavBar />
 
       <main class="pt-2 flex flex-col items-center">
         <h1 class="text-gold font-title text-title">Project Ideas</h1>
-        <p>Our project is always of our team's interest. Follow along to see how we incorperated our intersts into this year's project.</p>
+        <p class="text-center">Our project is always of our team's interest. Follow along to see how we incorperated our intersts into this year's project.</p>
       </main>
 
       <div class="flex flex-col items-center justify-center h-screen">
         
-        <div class="flex space-x-10 mt-4">
+        <div class="flex space-x-10 mt-10">
 
           <IdeaCard class="flex-grow">
             <template #svg>
@@ -33,7 +34,7 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
           <IdeaCard class="flex-grow">
             <template #svg>
-              <svg class="stroke-gold group-hover:stroke-white w-[100px] h-[100px] stroke-2" width="130" height="138" viewBox="0 0 130 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="stroke-gold group-hover:stroke-white w-[100px] h-[100px] stroke-[2.5px]" width="130" height="138" viewBox="0 0 130 138" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M54.9454 38.1086C59.2062 26.8328 61.3365 21.195 65 21.195C68.6634 21.195 70.7938 26.8328 75.0546 38.1086L75.253 38.6336C77.6601 45.0039 78.8637 48.189 81.3166 50.125C83.7695 52.0609 86.9895 52.367 93.4295 52.9793L94.5937 53.09C105.134 54.092 110.403 54.593 111.531 58.1521C112.659 61.7113 108.745 65.491 100.918 73.0505L98.3054 75.5734C94.3431 79.4002 92.3619 81.3135 91.4385 83.8213C91.2663 84.289 91.1231 84.7683 91.0098 85.256C90.4029 87.8703 90.983 90.646 92.1433 96.1974L92.5045 97.9254C94.6369 108.128 95.7031 113.229 93.8415 115.429C93.1459 116.252 92.2418 116.844 91.2374 117.134C88.5497 117.913 84.7337 114.612 77.1019 108.011C72.0906 103.676 69.5849 101.508 66.7081 101.021C65.5765 100.829 64.4234 100.829 63.2919 101.021C60.4151 101.508 57.9094 103.676 52.898 108.011C45.2662 114.612 41.4503 117.913 38.7625 117.134C37.7582 116.844 36.8541 116.252 36.1585 115.429C34.2969 113.229 35.3631 108.128 37.4955 97.9254L37.8566 96.1974C39.0169 90.646 39.5971 87.8703 38.9901 85.256C38.8769 84.7683 38.7337 84.289 38.5615 83.8213C37.638 81.3135 35.6569 79.4002 31.6946 75.5734L29.0822 73.0505C21.2549 65.491 17.3412 61.7113 18.4689 58.1521C19.5965 54.593 24.8664 54.092 35.4062 53.09L36.5705 52.9793C43.0104 52.367 46.2304 52.0609 48.6833 50.125C51.1363 48.189 52.3399 45.0039 54.747 38.6336L54.9454 38.1086Z"/>
               </svg>
              </template>
@@ -45,7 +46,7 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
           <IdeaCard class="flex grow">
             <template #svg>
-              <svg class="w-[100px] h-[100px] stroke-gold group-hover:stroke-white stroke-2" width="119" height="122" viewBox="0 0 119 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-[100px] h-[100px] stroke-gold group-hover:stroke-white stroke-[2.5px]" width="119" height="122" viewBox="0 0 119 122" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M44.625 35.5833L64.4583 35.5833" stroke-linecap="round"/>
                 <path d="M44.625 76.25L59.5 76.25" stroke-linecap="round"/>
                 <path d="M44.625 55.9167L74.375 55.9167" stroke-linecap="round"/>
@@ -93,7 +94,7 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
           <IdeaCard class="flex-grow">
             <template #svg>
-              <svg class="stroke-gold group-hover:stroke-white w-[100px] h-[100px] stroke-1" width="113" height="113" viewBox="0 0 113 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="stroke-gold group-hover:stroke-white w-[100px] h-[100px] stroke-[1.2px]" width="113" height="113" viewBox="0 0 113 113" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5181 54.4973C27.5631 53.651 26.5753 52.773 25.5517 51.8631L14.4572 42.0013C14.2508 41.8178 13.9348 41.8364 13.7513 42.0428C13.5678 42.2492 13.5864 42.5653 13.7928 42.7487L24.8874 52.6105L24.9158 52.6358L24.9158 52.6358C25.8956 53.5067 26.8436 54.3494 27.7624 55.1638C28.0164 54.9395 28.2683 54.7173 28.5181 54.4973ZM31.5449 58.4951C35.8615 62.262 39.5018 65.2796 42.8037 67.5362C47.6884 70.8746 51.8855 72.5856 56.5 72.5856C61.1145 72.5856 65.3116 70.8746 70.1963 67.5362C75.0631 64.2101 80.665 59.2307 88.0844 52.6357L88.1127 52.6105L99.2072 42.7487C99.4136 42.5653 99.4322 42.2492 99.2487 42.0428C99.0653 41.8364 98.7492 41.8178 98.5428 42.0013L87.4483 51.8631C79.9951 58.4882 74.4401 63.4247 69.6321 66.7106C64.8358 69.9886 60.836 71.5856 56.5 71.5856C52.164 71.5856 48.1642 69.9886 43.3679 66.7106C40.1341 64.5005 36.5622 61.5437 32.3022 57.8285C32.0523 58.0481 31.7999 58.2703 31.5449 58.4951Z"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M81.4551 54.5034C77.1385 50.7365 73.4982 47.7189 70.1963 45.4622C65.3116 42.1239 61.1145 40.4128 56.5 40.4128C51.8855 40.4128 47.6884 42.1239 42.8037 45.4622C37.9369 48.7883 32.3351 53.7678 24.9158 60.3627L24.9158 60.3627L24.8874 60.388L13.7928 70.2498C13.5864 70.4332 13.5678 70.7493 13.7513 70.9557C13.9348 71.1621 14.2508 71.1806 14.4572 70.9972L25.5517 61.1354C33.0049 54.5103 38.56 49.5738 43.3679 46.2879C48.1642 43.0099 52.164 41.4128 56.5 41.4128C60.836 41.4128 64.8358 43.0099 69.6321 46.2879C72.8659 48.498 76.4378 51.4548 80.6978 55.1699C80.9477 54.9504 81.2001 54.7282 81.4551 54.5034ZM85.2376 57.8347C84.9836 58.059 84.7318 58.2812 84.4819 58.5012C85.4369 59.3475 86.4247 60.2255 87.4483 61.1354L98.5428 70.9972C98.7492 71.1806 99.0653 71.1621 99.2487 70.9557C99.4322 70.7493 99.4136 70.4332 99.2072 70.2498L88.1127 60.388L88.0843 60.3628C87.1046 59.4919 86.1565 58.6492 85.2376 57.8347Z"/>
               </svg>
