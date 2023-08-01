@@ -24,3 +24,4 @@ a {
 .ibtn {
   @apply bg-[#1e1e1e] hover:bg-[#e2b764] active:bg-[#e2b764] active:opacity-70 text-[#d9d9d9] hover:text-[#1e1e1e] transition-all duration-200 rounded-[16px] font-semibold text-subtitle text-sm py-5 px-6 min-h-[150px] min-w-[150px];
 }
+
