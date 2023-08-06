@@ -27,9 +27,11 @@ const Miguel: Member = {
     position: "Team Captain",
     major: "Micro-Biology",
     year: 3,
-    description: "Also Sexiest man alive",
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
     department: "Captain",
 }
+
+const members: Member[] = [Kshemaka, Miguel, Kshemaka, Miguel, Miguel, Kshemaka, Miguel, Kshemaka, Miguel, Kshemaka]
 
 export type { Member }
 export {Kshemaka, Miguel}

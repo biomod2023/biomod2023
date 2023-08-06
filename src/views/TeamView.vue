@@ -25,6 +25,7 @@
         <!-- Team Carousel -->
         <div class="flex flex-wrap justify-center">
             <ProfileCard :member="Kshemaka"/>
+            <ProfileCard :member="Miguel"/>
         </div>
 
         
