@@ -12,9 +12,9 @@ const isHovering: Ref<boolean> = ref(false)
 
 <template>
     <div class="relative w-[24rem] h-[13rem]">
-        <TransitionGroup enter-active-class="transition-opacity duration-500 ease-in" 
-            leave-active-class="transition-opacity duration 500 ease-in" 
-            enter-from-class="opacity-0" enter-to-class="opacity-100">
+        <TransitionGroup enter-active-class="transition-opacity duration-200 ease-in-out" 
+            leave-active-class="transition-opacity duration-500 ease-in" 
+            enter-from-class="opacity-0" enter-to-class="opacity-100" leave-to-class="opacity-0">
 
             <div :class="cardConfig + ' justify-center bg-gold/40'" @mouseenter="isHovering = true" 
                 v-show="!isHovering" key="main">
