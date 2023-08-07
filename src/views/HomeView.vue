@@ -28,12 +28,24 @@ import LightButton from '../components/LightButton.vue'
         </div>
       </div>
 
-      <div class="mt-20 flex justify-evenly items-center bg-slate p-8">
+      <div class="mt-20 flex justify-evenly items-center bg-[#1E1E1E] p-8">
         <div class="w-96 h-96 bg-white"></div>
         <div class="w-96 h-96 bg-white"></div>
         <div class="w-96 h-96 bg-white"></div>
       </div>
     </div>
+
+    <div class="flex justify-around py-36 px-10">
+      <div class="w-[30rem] h-[30rem] bg-white"></div>
+      <div class="flex flex-col max-w-[50%] gap-10">
+        <h1 class="font-title text-[5rem] text-gold">Abstract</h1>
+        <p class="text-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+
 
     <div class="flex flex-col justify-end grow">
       <Footer />
