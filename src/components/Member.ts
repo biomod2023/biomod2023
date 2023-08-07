@@ -31,7 +31,86 @@ const Miguel: Member = {
     department: "Captain",
 }
 
-const members: Member[] = [Kshemaka, Miguel, Kshemaka, Miguel, Miguel, Kshemaka, Miguel, Kshemaka, Miguel, Kshemaka]
+const MiguelOhara: Member = {
+    image: _Miguel,
+    name: "Miguel Ohara",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake1: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake2: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake3: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake4: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake5: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake6: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+
+const MiguelFake7: Member = {
+    image: _Miguel,
+    name: "Miguel Tsai",
+    position: "Team Captain",
+    major: "Micro-Biology",
+    year: 3,
+    description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
+    department: "Captain",
+}
+const members: Member[] = [Kshemaka, Miguel, MiguelOhara, MiguelFake1, MiguelFake2, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]
 
 export type { Member }
-export {Kshemaka, Miguel}
+export {Kshemaka, Miguel, members}
