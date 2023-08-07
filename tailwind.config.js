@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         slate: '#272727',
+        dark: '#1E1E1E',
         gold: '#E2B764'
       },
       fontSize: {

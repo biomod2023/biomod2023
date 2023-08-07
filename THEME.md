@@ -4,11 +4,15 @@ The default TailwindCSS theming has been extended with the palette of the websit
 
 ## Colors
 
-The slate grey color and gold color can be accessed with the `slate` and `gold` keywords:
+The slate grey color, dark homepage color, and gold color can be accessed with the `slate`, `dark`, and `gold` keywords:
 
 ```html
 <div class="bg-slate">
     <h1 class="text-gold">Title</h1>
+</div>
+
+<div class="bg-dark">
+    <p>Body</p>
 </div>
 ```
 

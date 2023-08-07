@@ -8,7 +8,7 @@ import LightButton from '../components/LightButton.vue'
   <div class="flex flex-col bg-slate">
     <NavBar />
 
-    <div class="pt-2 flex flex-col items-center justify-center min-h-screen bg-[#1E1E1E]">
+    <div class="pt-2 flex flex-col items-center justify-center min-h-screen bg-dark">
       <h1 class="font-title text-title">Embrace the Nano Frontier</h1>
       <h2 class="text-subtitle w-1/2 text-center">Unleash the Nano Frontier, where a new era of technology begins. Pioneering advancements redefine possibilities. Embrace the future with us.</h2>
       <button class="btn mt-20">Explore</button>
@@ -16,7 +16,7 @@ import LightButton from '../components/LightButton.vue'
 
 
     <div class="flex flex-col bg">
-      <span class="w-full h-40 rounded-b-[50%] bg-[#1E1E1E]"></span>
+      <span class="w-full h-40 rounded-b-[50%] bg-dark"></span>
       <div class="p-4 w-1/3 ml-28 mt-10">
         <h1 class="font-title text-title text-gold">The smallest of beginnings</h1>
 
@@ -28,7 +28,7 @@ import LightButton from '../components/LightButton.vue'
         </div>
       </div>
 
-      <div class="mt-20 flex justify-evenly items-center bg-[#1E1E1E] p-8">
+      <div class="mt-20 flex justify-evenly items-center bg-dark p-8">
         <div class="w-96 h-96 bg-white"></div>
         <div class="w-96 h-96 bg-white"></div>
         <div class="w-96 h-96 bg-white"></div>
@@ -45,7 +45,22 @@ import LightButton from '../components/LightButton.vue'
       </div>
     </div>
 
+    <div class="flex flex-col gap-2 items-center bg-dark pt-4 pb-8">
+      <div class="font-title text-title -mb-4">Watch us Fold</div>
+      <svg width="150" height="3" viewBox="0 0 150 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="1.5" x2="150" y2="1.5" stroke="#E2B764" stroke-width="3"/>
+      </svg>
 
+      <div class="bg-white w-3/4 h-[40rem] m-8"></div>
+      
+      <button class="btn !py-4 my-2">
+        <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 36L13.5 2H10.5L10.5 36H13.5Z" fill="#C9A96C"/>
+        </svg>
+      </button>
+
+    </div>
+    
 
     <div class="flex flex-col justify-end grow">
       <Footer />
