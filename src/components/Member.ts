@@ -110,7 +110,16 @@ const MiguelFake7: Member = {
     description: "Also Sexiest man alive. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat arcu vitae quam pulvinar elementum. Proin congue porttitor rutrum. Fusce dignissim malesuada massa, vitae fermentum nunc dictum et. Cras ligula dolor, facilisis eu sagittis quis, commodo ac elit. Cras elit erat, malesuada quis tempus vitae, iaculis id libero. Mauris eget volutpat est",
     department: "Captain",
 }
-const members: Member[] = [Kshemaka, Miguel, MiguelOhara, MiguelFake1, MiguelFake2, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]
+// const members: Member[] = [Kshemaka, Miguel, MiguelOhara, MiguelFake1, MiguelFake2, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]
+const teams: string[] = ["Leads", "CADnano", "Wetlab", "Finance", "Website", "Social Media"]
+const members: Map<string, Member[]> = new Map<string, Member[]>([
+    ["Leads", [Kshemaka, Miguel, MiguelOhara, MiguelFake1, MiguelFake2, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]],
+    ["CADnano", [Miguel, MiguelOhara, MiguelFake1, MiguelFake2,]] ,
+    ["Wetlab", [MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, Miguel]],
+    ["Finance", [MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]], 
+    ["Website", [Miguel, MiguelOhara, Kshemaka, Kshemaka]],
+    ["Social Media", [Miguel]],
+])
 
 export type { Member }
-export {Kshemaka, Miguel, members}
+export { teams, members }
