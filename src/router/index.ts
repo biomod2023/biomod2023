@@ -17,7 +17,7 @@ const router = createRouter({
       name: 'ideas',
       component: IdeasView
     },
-    
+
     {
       path: '/team',
       name: 'team',
