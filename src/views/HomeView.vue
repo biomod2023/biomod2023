@@ -13,7 +13,9 @@ import IdeaCard from '@/components/IdeaCard.vue';
       <h1 class="text-gold font-title text-title">Title</h1>
       <p>Text</p>
       <button class="btn my-4">Click me</button>
-      <LightButton>Explore</LightButton>
+      <LightButton>Explore
+        
+      </LightButton>
       <IdeaCard>
         <template #svg>
           <svg class="fill-gold group-hover:fill-white" width="62" height="101" viewBox="0 0 62 101" fill="none" xmlns="http://www.w3.org/2000/svg">
