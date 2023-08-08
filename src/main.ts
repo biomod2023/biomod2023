@@ -12,6 +12,6 @@ addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowD
 const app = createApp(App)
 
 app.use(router)
-app.component('v-icon', OhVueIcon)
+app.component('VIcon', OhVueIcon)
 
 app.mount('#app')
