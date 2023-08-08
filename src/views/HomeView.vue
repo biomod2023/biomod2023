@@ -7,7 +7,6 @@ import IdeaCard from '@/components/IdeaCard.vue';
 </script>
 
 <template>
-  
   <div class="flex flex-col h-screen">
     <NavBar />
     <main class="pt-2 flex flex-col items-center">
