@@ -5,7 +5,9 @@ permissions:
 
 on:
   merge_group:
-    branches: [main]
+    branches:
+      - main
+      - ci-testing
 
 jobs:
   prettier:
