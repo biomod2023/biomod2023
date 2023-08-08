@@ -53,12 +53,17 @@
                 <TransparentButton v-for="team in teams" :is-disabled="team == currTeam" @click="handleTeamChange(team)">{{ team }}</TransparentButton> 
             </div>
 
+            <div class="flex flex-row gap-x-[1rem] pb-[1rem]">
+                <div :class="'w-[0.5rem] h-[0.5rem] rounded-full border-[#8f8d8b] border-2 ' + (i - 1 == currIdx ? 'bg-[#8f8d8b]' : 'bg-transparent')" 
+                    v-for="i in Math.ceil(members?.get(currTeam)?.length / maxMembers)"></div>
+            </div>
+
             <!-- Team Carousel -->
             <div class="flex justify-center items-center w-[68.5rem] h-[49.6rem]">
-                <v-icon class="cursor-pointer" name="hi-solid-arrow-sm-left" scale="3" @click="handleClick(-1)"/>
+                <v-icon :class="'cursor-pointer relative bottom-[3rem] ' + (currIdx == 0 ? 'invisible' : '')" name="ri-arrow-drop-left-line" scale="3.5" @click="handleClick(-1)" fill="#8f8d8b"/>
                 
                 <!-- Content -->
-                <div class="relative h-full w-full overflow-hidden pl-[3.5rem]">
+                <div class="relative h-full w-full overflow-hidden pl-[2.7rem]">
                     <TransitionGroup :enter-from-class="initialState" :leave-to-class="finalState"
                         :enter-active-class="activeAnimation" 
                         :leave-active-class="activeAnimation" :css="!changingTeam">
@@ -71,7 +76,8 @@
                     </TransitionGroup>
                 </div>
 
-                <v-icon class="cursor-pointer" name="hi-solid-arrow-sm-right" scale="3" @click="handleClick(1)"/>
+                <v-icon class="cursor-pointer relative bottom-[3rem]" name="ri-arrow-drop-right-line" scale="3.5" @click="handleClick(1)" fill="#8f8d8b"
+                    v-show="currIdx != Math.ceil(members?.get(currTeam)?.length / maxMembers) - 1"/>
             </div>
 
         </div>

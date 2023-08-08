@@ -115,7 +115,7 @@ const teams: string[] = ["Leads", "CADnano", "Wetlab", "Finance", "Website", "So
 const members: Map<string, Member[]> = new Map<string, Member[]>([
     ["Leads", [Kshemaka, Miguel, MiguelOhara, MiguelFake1, MiguelFake2, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]],
     ["CADnano", [Miguel, MiguelOhara, MiguelFake1, MiguelFake2,]] ,
-    ["Wetlab", [MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, Miguel]],
+    ["Wetlab", [MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, Miguel, MiguelFake6, MiguelFake7, Miguel]],
     ["Finance", [MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7, MiguelFake3, MiguelFake4, MiguelFake5, MiguelFake6, MiguelFake7]], 
     ["Website", [Miguel, MiguelOhara, Kshemaka, Kshemaka]],
     ["Social Media", [Miguel]],

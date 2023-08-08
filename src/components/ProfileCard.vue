@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import type { Member } from "@/components/Member"
-import type { PropType } from "vue";
 import { ref } from "vue";
 import type { Ref } from "vue";
+import type { PropType } from "vue";
+import emptyPic from "@/assets/empty_profile.png"
+
+import type { Member } from "@/components/Member"
 const props = defineProps({
     member: Object as PropType<Member>,
 })
 const cardConfig: string = "absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1"
 const isHovering: Ref<boolean> = ref(false)
+
+const handleImgErr = (e: Event) => {
+    const target = e.target as HTMLImageElement
+    target.src = emptyPic
+}
 </script>
 
 <template>
@@ -18,7 +25,7 @@ const isHovering: Ref<boolean> = ref(false)
 
             <div :class="cardConfig + ' justify-center bg-gold/40'" @mouseenter="isHovering = true" 
                 v-show="!isHovering" key="main">
-                <img :src="member?.image" class="w-[8.2rem] h-[8.2rem] rounded-[5.7rem]" />
+                <img :src="member?.image" class="w-[8.2rem] h-[8.2rem] rounded-[5.7rem]" @error="handleImgErr"/>
                 <div class="flex flex-col items-center gap-0">
                     <div class="text-base font-bold text-white">{{ member?.name }}</div>
                     <div class="text-base font-normal text-gold">{{ member?.position }}</div>
