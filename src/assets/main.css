@@ -8,7 +8,7 @@
     font-family: 'Montserrat', system-ui, sans-serif;
   }
 }
- 
+
 @layer utilities {
   .invisible-scroller {
     scrollbar-color: grey transparent;
@@ -30,7 +30,7 @@
 }
 
 a {
-  @apply hover:opacity-80 active:opacity-60 transition-opacity duration-200
+  @apply hover:opacity-80 active:opacity-60 transition-opacity duration-200;
 }
 
 .btn {
