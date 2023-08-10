@@ -45,15 +45,15 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
         <h2 class="text-subtitle text-gold">Behold the Amazing Folders!</h2>
       </div>
 
-            <div class="flex flex-row gap-x-[4rem] py-[2rem]">
-          <TransparentButton
-            v-for="(team, i) in teams"
-            :key="i"
-            :is-disabled="team == currTeam"
-            @click="handleTeamChange(team)"
-            >{{ team }}</TransparentButton
-          >
-        </div>
+      <div class="flex flex-row gap-x-[4rem] py-[2rem]">
+        <TransparentButton
+          v-for="(team, i) in teams"
+          :key="i"
+          :is-disabled="team == currTeam"
+          @click="handleTeamChange(team)"
+          >{{ team }}</TransparentButton
+        >
+      </div>
 
       <div class="flex flex-row gap-x-[1rem] pb-[1rem]">
         <div
