@@ -12,7 +12,7 @@ let currIdx: Ref<number> = ref(0)
 const maxMembers = 6
 const handleClick = (inc: number) => {
   let temp = (currIdx.value + inc) * maxMembers
-  if ((inc > 0 && temp < members?.get(currTeam.value)?.length) || (inc < 0 && temp >= 0)) {
+  if ((inc > 0 && temp < (members?.get(currTeam.value)?.length ?? 0)) || (inc < 0 && temp >= 0)) {
     currIdx.value += inc
     initialState.value = inc < 0 ? '-translate-x-full opacity-0' : 'translate-x-full opacity-0'
     finalState.value = inc < 0 ? 'translate-x-full opacity-0' : '-translate-x-full opacity-0'
@@ -57,7 +57,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
       <div class="flex flex-row gap-x-[1rem] pb-[1rem]">
         <div
-          v-for="i in Math.ceil(members?.get(currTeam)?.length / maxMembers)"
+          v-for="i in Math.ceil(members?.get(currTeam)?.length ?? 0 / maxMembers)"
           :key="i"
           :class="
             'w-[0.5rem] h-[0.5rem] rounded-full border-[#8f8d8b] border-2 ' +
@@ -102,7 +102,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
         </div>
 
         <v-icon
-          v-show="currIdx != Math.ceil(members?.get(currTeam)?.length / maxMembers) - 1"
+          v-show="currIdx != Math.ceil(members?.get(currTeam)?.length ?? 0 / maxMembers) - 1"
           class="cursor-pointer relative bottom-[3rem]"
           name="ri-arrow-drop-right-line"
           scale="3.5"
