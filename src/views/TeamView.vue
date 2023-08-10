@@ -47,7 +47,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
       <div class="flex flex-row gap-x-[4rem] py-[2rem]">
         <TransparentButton
-          v-for="(team, i) in teams" 
+          v-for="(team, i) in teams"
           :key="i"
           :is-disabled="team == currTeam"
           @click="handleTeamChange(team)"
