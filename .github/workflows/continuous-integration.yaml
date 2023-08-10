@@ -10,8 +10,7 @@ on:
       - ci-testing
 
 jobs:
-  lint-and-build:
-    needs: prettier
+  lint-build-prettify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,20 +28,6 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
-      
-
-  prettier:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          # Make sure the actual branch is checked out when running on pull requests
-          ref: ${{ github.head_ref }}
-          # This is important to fetch the changes to the previous commit
-          fetch-depth: 0
-
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
