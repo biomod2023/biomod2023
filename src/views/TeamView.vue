@@ -47,7 +47,8 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
       <div class="flex flex-row gap-x-[4rem] py-[2rem]">
         <TransparentButton
-          v-for="team in teams"
+          v-for="(team, i) in teams" 
+          :key="i"
           :is-disabled="team == currTeam"
           @click="handleTeamChange(team)"
           >{{ team }}</TransparentButton
@@ -57,6 +58,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
       <div class="flex flex-row gap-x-[1rem] pb-[1rem]">
         <div
           v-for="i in Math.ceil(members?.get(currTeam)?.length / maxMembers)"
+          :key="i"
           :class="
             'w-[0.5rem] h-[0.5rem] rounded-full border-[#8f8d8b] border-2 ' +
             (i - 1 == currIdx ? 'bg-[#8f8d8b]' : 'bg-transparent')
