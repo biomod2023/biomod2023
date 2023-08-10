@@ -15,8 +15,7 @@ import IdeaCard from '@/components/IdeaCard.vue'
         
       </p>
       <button class="btn my-4">Click me</button>
-      <LightButton
-      >Explore</LightButton>
+      <LightButton>Explore</LightButton>
       <IdeaCard>
         <template #svg>
           <svg
