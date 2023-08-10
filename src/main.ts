@@ -5,7 +5,12 @@ import App from './App.vue'
 import router from './router'
 
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
-import { RiArrowDropLeftLine, RiArrowDropRightLine, HiSolidArrowSmRight, HiSolidArrowSmLeft} from 'oh-vue-icons/icons'
+import {
+  RiArrowDropLeftLine,
+  RiArrowDropRightLine,
+  HiSolidArrowSmRight,
+  HiSolidArrowSmLeft
+} from 'oh-vue-icons/icons'
 
 addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine)
 
