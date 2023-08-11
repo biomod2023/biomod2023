@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router'
     </a>
     <div class="flex justify-center gap-16">
       <RouterLink to="#">ELSI</RouterLink>
-      <RouterLink to="#">Teams</RouterLink>
+      <RouterLink to="/team">Teams</RouterLink>
       <RouterLink to="#">Sponsors</RouterLink>
     </div>
   </div>

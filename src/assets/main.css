@@ -9,12 +9,28 @@
   }
 }
 
+@layer utilities {
+  .invisible-scroller {
+    scrollbar-color: grey transparent;
+  }
+  .invisible-scroller::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  .invisible-scroller::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .invisible-scroller::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: gray;
+  }
+}
+
 #app {
   @apply bg-slate h-screen text-gray-50;
 }
 
 a {
-  @apply hover:opacity-80 active:opacity-60 transition-opacity duration-200
+  @apply hover:opacity-80 active:opacity-60 transition-opacity duration-200;
 }
 
 .btn {
