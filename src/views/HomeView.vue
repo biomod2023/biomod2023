@@ -33,7 +33,7 @@ const scrollToTop = () => {
         </div>
       </div>
 
-      <div class="mt-20 flex flex-col gap-y-12 lg:flex-row justify-around items-center bg-dark p-10 lg:p-8">
+      <div class="mt-20 flex flex-col gap-y-12 lg:flex-row justify-around items-center bg-dark opacity-90 p-10 lg:p-8">
         <div v-for="index in 3" :key="index">
           <div class="flex flex-col w-80 gap-4">
             <div class="w-80 h-80 bg-white"></div>
@@ -77,9 +77,19 @@ const scrollToTop = () => {
 </template>
 
 <style>
-  .bg {
+  /* .bg {
     @apply w-full bg-no-repeat;
-    background-image: url('../assets/homepage_bg_rot.png'), url('../assets/homepage_bg.png');
-    background-position: -5% top, right 40%;
+    background-image: url('../assets/homepage_bg_rot.png');
+    background-position: -5% top left;
+  }
+  make small mobile version of img
+  */
+
+  @media only screen and (min-width: 1024px) {
+    .bg {
+      @apply w-full bg-no-repeat;
+      background-image: url('../assets/homepage_bg_rot.png'), url('../assets/homepage_bg.png');
+      background-position: -5% top, right 40%;
+    }
   }
 </style>
