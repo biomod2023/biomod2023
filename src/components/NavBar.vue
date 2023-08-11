@@ -6,8 +6,9 @@ const sidebar = ref(false)
 </script>
 
 <template>
-  <!-- <div
-    class="flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
+  <!-- Desktop Navbar -->
+  <div
+    class="hidden lg:flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
   >
     <div class="flex justify-center gap-16">
       <RouterLink to="/">Home</RouterLink>
@@ -22,9 +23,10 @@ const sidebar = ref(false)
       <RouterLink to="/team">Teams</RouterLink>
       <RouterLink to="#">Sponsors</RouterLink>
     </div>
-  </div> -->
+  </div>
 
-  <div class="fixed z-10 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg">
+  <!-- Mobile Navbar -->
+  <div class="lg:hidden fixed z-10 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg">
     <RouterLink to="/" class="flex items-center">
       <img class="-mr-1" src="../assets/logo.svg" alt="Biomod Logo" />
       <span class="text-[#FFC000] font-bold text-xl">UBC Biomod</span>

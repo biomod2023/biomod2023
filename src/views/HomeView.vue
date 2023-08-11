@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
+
 import LightButton from '../components/LightButton.vue'
 
 const scrollToTop = () => {
@@ -9,8 +8,8 @@ const scrollToTop = () => {
 </script>
 
 <template>
-  <div class="flex flex-col bg-slate mt-24">
-    <NavBar />
+  <div class="flex flex-col bg-slate">
+    
 
     <div class="px-6 flex flex-col justify-center min-h-[80vh] bg-dark">
       <div class="w-full flex flex-col items-center">
@@ -73,9 +72,7 @@ const scrollToTop = () => {
     </div>
     
 
-    <div class="flex flex-col justify-end grow">
-      <Footer />
-    </div>
+    
   </div>
 </template>
 
