@@ -2,8 +2,6 @@
 import { ref } from 'vue'
 import type { Ref } from 'vue'
 
-import NavBar from '@/components/NavBar.vue'
-import Footer from '@/components/Footer.vue'
 import ProfileCard from '@/components/ProfileCard.vue'
 import TransparentButton from '@/components/TransparentButton.vue'
 import { teams, members } from '@/components/Member'
@@ -36,7 +34,6 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
 <template>
   <div class="flex flex-col h-max bg-slate">
-    <NavBar />
 
     <div class="flex flex-col items-center w-full h-full">
       <!-- Header -->
@@ -110,10 +107,6 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
           @click="handleClick(1)"
         />
       </div>
-    </div>
-
-    <div class="flex flex-col justify-end grow w-full">
-      <Footer />
     </div>
   </div>
 </template>
