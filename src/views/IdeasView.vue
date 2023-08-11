@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import NavBar from '@/components/NavBar.vue';
-import Footer from '@/components/Footer.vue';
-import IdeaCard from '@/components/IdeaCard.vue';
-
+import NavBar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
+import IdeaCard from '@/components/IdeaCard.vue'
 </script>
 
 <template>
@@ -27,10 +26,8 @@ import IdeaCard from '@/components/IdeaCard.vue';
               </svg>
              </template>
 
-            <template #text>
-               Relevance
-           </template>
-          </IdeaCard>
+          <template #text> Relevance </template>
+        </IdeaCard>
 
           <IdeaCard class="flex-grow">
             <template #svg>
@@ -39,10 +36,8 @@ import IdeaCard from '@/components/IdeaCard.vue';
               </svg>
              </template>
 
-            <template #text>
-               Merit
-           </template>
-          </IdeaCard>
+          <template #text> Merit </template>
+        </IdeaCard>
 
           <IdeaCard class="flex grow">
             <template #svg>
@@ -56,12 +51,9 @@ import IdeaCard from '@/components/IdeaCard.vue';
               </svg>
              </template>
 
-            <template #text>
-               Specifications
-           </template>
-          </IdeaCard>
-
-        </div>
+          <template #text> Specifications </template>
+        </IdeaCard>
+      </div>
 
         <div class="flex mt-2 space-x-10">
           
@@ -142,12 +134,10 @@ import IdeaCard from '@/components/IdeaCard.vue';
 
       </div>
 
-      <div class="flex flex-col justify-end grow">
-        <Footer />
-     </div>
-    
-     </div>
-     
+    <div class="flex flex-col justify-end grow">
+      <Footer />
+    </div>
+  </div>
 </template>
 
 
