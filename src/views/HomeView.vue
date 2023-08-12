@@ -48,7 +48,7 @@ const scrollToTop = () => {
     <div class="flex flex-col lg:flex-row items-center justify-around py-16 lg:py-36 px-10">
       <div class="w-72 h-72 lg:w-[30rem] lg:h-[30rem] bg-white"></div>
 
-      <div class="flex flex-col w-full lg:max-w-[50%] gap-4 lg:gap-10 mt-10 lg:mt-0">
+      <div class="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:max-w-[50%] gap-4 lg:gap-10 mt-10 lg:mt-0">
         <h1 class="font-title text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -62,7 +62,7 @@ const scrollToTop = () => {
         <line y1="1.5" x2="150" y2="1.5" stroke="#E2B764" stroke-width="3"/>
       </svg>
 
-      <div class="bg-white w-5/6 lg:w-3/4 h-40 lg:h-[40rem] m-8"></div>
+      <div class="bg-white w-5/6 lg:w-3/4 h-52 lg:h-[40rem] m-8"></div>
       
       <button class="btn !py-4 my-2 group" @click="scrollToTop">
         <svg class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
