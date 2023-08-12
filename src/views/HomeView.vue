@@ -78,19 +78,18 @@ const scrollToTop = () => {
 </template>
 
 <style>
-  /* .bg {
+  .bg {
     @apply w-full bg-no-repeat;
-    background-image: url('../assets/homepage_bg_rot.png');
-    background-position: -5% top left;
+    background-image: url('../assets/homepage_bg_rot_mobile.png'), url('../assets/homepage_bg_top_mobile.png');
+    background-position: -2% 5%, right 6%;
   }
-  make small mobile version of img
-  */
+ 
 
   @media only screen and (min-width: 1024px) {
     .bg {
       @apply w-full bg-no-repeat;
-      background-image: url('../assets/homepage_bg_rot.png'), url('../assets/homepage_bg.png');
-      background-position: -5% top, right 40%;
+      background-image: url('../assets/homepage_bg_rot.png'), url('../assets/homepage_bg_top.png'), url('../assets/homepage_bg.png');
+      background-position: -2% 5%, right 5%, right 25%;
     }
   }
 </style>
