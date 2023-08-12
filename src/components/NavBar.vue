@@ -26,7 +26,7 @@ const sidebar = ref(false)
   </div>
 
   <!-- Mobile Navbar -->
-  <div class="lg:hidden fixed z-10 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg">
+  <div class="lg:hidden fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg">
     <RouterLink to="/" class="flex items-center">
       <img class="-mr-1" src="../assets/logo.svg" alt="Biomod Logo" />
       <span class="text-[#FFC000] font-bold text-xl">UBC Biomod</span>
@@ -40,7 +40,7 @@ const sidebar = ref(false)
 
   <Transition>
     <template v-if="sidebar">
-        <div class="absolute w-full left-0 top-24 flex justify-end bg-black bg-opacity-90" style="height: calc(100% - 6rem);">
+        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
 
           <div class="fly flex flex-col items-center justify-center p-4 h-full w-[70%] bg-slate">
               <div class="flex flex-col h-3/4 w-full ml-10 mb-10 justify-around text-gold text-2xl font-bold">
