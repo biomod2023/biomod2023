@@ -3,6 +3,9 @@
 
 name: Deploy to Firebase Hosting after PR
 
+permissions:
+  contents: write
+
 'on': pull_request
 
 jobs:
