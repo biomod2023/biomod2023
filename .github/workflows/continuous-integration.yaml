@@ -48,4 +48,9 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           prettier_options: --write **/*.{js,ts,vue,md}
+          commit_message: |
+            Prettified code!
+
+            
+            skip-checks: true
           only_changed: True
