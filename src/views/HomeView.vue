@@ -37,8 +37,7 @@ const scrollToTop = () => {
           >
             <line y1="2" x2="127" y2="2" stroke="#E2B764" />
           </svg>
-          <LightButton>
-            Learn More</LightButton>
+          <LightButton> Learn More</LightButton>
         </div>
       </div>
 
