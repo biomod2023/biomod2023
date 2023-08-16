@@ -99,7 +99,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
         </div>
 
         <v-icon
-          v-show="currIdx != Math.ceil(members?.get(currTeam)?.length ?? 0 / maxMembers) - 1"
+          v-show="currIdx != Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers) - 1"
           class="cursor-pointer relative bottom-[3rem]"
           name="ri-arrow-drop-right-line"
           scale="3.5"
