@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const sidebar = ref(false)
+let transitionAnimation = 'transition duration-100 ease-in'
+
 </script>
 
 <template>
@@ -38,47 +40,25 @@ const sidebar = ref(false)
     </button>
   </div>
 
-  <Transition>
+  <Transition enter-from-class="opacity-0" leave-to-class="opacity-0" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation">
     <template v-if="sidebar">
         <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
 
-          <div class="fly flex flex-col items-center justify-center p-4 h-full w-[70%] bg-slate">
-              <div class="flex flex-col h-3/4 w-full ml-10 mb-10 justify-around text-gold text-2xl font-bold">
-                  <RouterLink to="/">Home</RouterLink>
-                  <RouterLink to="/ideas">Ideas</RouterLink>
-                  <RouterLink to="#">Notebook</RouterLink>
-                  <RouterLink to="#">ELSI</RouterLink>
-                  <RouterLink to="/team">Teams</RouterLink>
-                  <RouterLink to="#">Sponsors</RouterLink>
-              </div>
+        <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
+        <div class="fly flex flex-col items-center justify-center p-4 h-full w-[70%] bg-slate">
+          <div class="flex flex-col h-full w-full py-20 ml-10 mb-10 justify-around text-gold text-2xl font-bold">
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/ideas">Ideas</RouterLink>
+            <RouterLink to="#">Notebook</RouterLink>
+            <RouterLink to="#">ELSI</RouterLink>
+            <RouterLink to="/team">Teams</RouterLink>
+            <RouterLink to="#">Sponsors</RouterLink>
           </div>
+        </div>
+        <!-- </Transition> -->
+
         </div>
     </template>
   </Transition>
 
 </template>
-
-<style>
-.v-enter-active,
-.v-leave-active {
-  transition: 100ms;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-
-.v-enter-active .fly,
-.v-leave-active .fly {
-  transition: 100ms;
-}
-
-.v-enter-from .fly {
-  transform: translateX(100%);
-}
-
-.v-leave-to .fly {
-  transform: translateX(100%);
-}
-</style>
