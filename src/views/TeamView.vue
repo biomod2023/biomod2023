@@ -54,7 +54,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
       <div class="flex flex-row gap-x-[1rem] pb-[1rem]">
         <div
-          v-for="i in Math.ceil(members?.get(currTeam)?.length ?? 0 / maxMembers)"
+          v-for="i in Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers)"
           :key="i"
           :class="
             'w-[0.5rem] h-[0.5rem] rounded-full border-[#8f8d8b] border-2 ' +
