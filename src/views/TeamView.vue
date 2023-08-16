@@ -34,7 +34,6 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
 <template>
   <div class="flex flex-col h-max bg-slate">
-
     <div class="flex flex-col items-center w-full h-full">
       <!-- Header -->
       <div class="flex flex-col w-full items-center">
