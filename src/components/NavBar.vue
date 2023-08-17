@@ -42,21 +42,19 @@ let transitionAnimation = 'transition duration-100 ease-in'
 
   <Transition enter-from-class="opacity-0" leave-to-class="opacity-0" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation">
     <template v-if="sidebar">
-        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
-
-        <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
-        <div class="fly flex flex-col items-center justify-center p-4 h-full w-[70%] bg-slate">
-          <div class="flex flex-col h-full w-full py-20 ml-10 mb-10 justify-around text-gold text-2xl font-bold">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/ideas">Ideas</RouterLink>
-            <RouterLink to="#">Notebook</RouterLink>
-            <RouterLink to="#">ELSI</RouterLink>
-            <RouterLink to="/team">Teams</RouterLink>
-            <RouterLink to="#">Sponsors</RouterLink>
+        <div class="lg:hidden fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
+          <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
+          <div class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate">
+            <div class="flex flex-col h-full w-full py-20 ml-10 mb-20 gap-6 overflow-scroll justify-evenly text-gold text-2xl font-bold">
+              <RouterLink to="/">Home</RouterLink>
+              <RouterLink to="/ideas">Ideas</RouterLink>
+              <RouterLink to="#">Notebook</RouterLink>
+              <RouterLink to="#">ELSI</RouterLink>
+              <RouterLink to="/team">Teams</RouterLink>
+              <RouterLink to="#">Sponsors</RouterLink>
+            </div>
           </div>
-        </div>
-        <!-- </Transition> -->
-
+          <!-- </Transition> -->
         </div>
     </template>
   </Transition>
