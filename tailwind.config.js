@@ -10,16 +10,24 @@ module.exports = {
     extend: {
       colors: {
         slate: '#272727',
+        dark: '#1E1E1E',
         gold: '#E2B764'
       },
       fontSize: {
-        title: [
+        'title-sm': [
+          '3rem',
+          {
+            fontWeight: '600'
+          }
+        ],
+        'title': [
           '5rem',
           {
             fontWeight: '600'
           }
         ],
-        subtitle: ['1.35rem']
+        'subtitle-sm': ['1.15rem'],
+        'subtitle': ['1.35rem']
       }
     }
   },

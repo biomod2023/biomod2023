@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import NavBar from '@/components/NavBar.vue'
-import Footer from '@/components/Footer.vue'
 import IdeaCard from '@/components/IdeaCard.vue'
 </script>
 
@@ -237,10 +235,6 @@ import IdeaCard from '@/components/IdeaCard.vue'
         <div class="text-subtitle text-gold text-xl font-semibold">Background</div>
         <div class="text-subtitle text-gold text-xl font-semibold">Solution</div>
       </div>
-    </div>
-
-    <div class="flex flex-col justify-end grow">
-      <Footer />
     </div>
   </div>
 </template>
