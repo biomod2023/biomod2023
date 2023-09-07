@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import IdeasView from '@/views/IdeasView.vue'
 import TeamView from '@/views/TeamView.vue'
+import ELSIView from '@/views/ELSIView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,6 +18,12 @@ const router = createRouter({
       path: '/ideas',
       name: 'ideas',
       component: IdeasView
+    },
+
+    {
+      path: '/elsi',
+      name: 'elsi',
+      component: ELSIView
     },
 
     {

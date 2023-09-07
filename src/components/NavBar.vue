@@ -20,7 +20,7 @@ let transitionAnimation = 'transition duration-100 ease-in'
       <img src="../assets/logo.svg" alt="Biomod Logo" />
     </a>
     <div class="flex justify-center gap-16">
-      <RouterLink to="#">ELSI</RouterLink>
+      <RouterLink to="/elsi">ELSI</RouterLink>
       <RouterLink to="/team">Teams</RouterLink>
       <RouterLink to="#">Sponsors</RouterLink>
     </div>
@@ -70,7 +70,7 @@ let transitionAnimation = 'transition duration-100 ease-in'
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/ideas">Ideas</RouterLink>
             <RouterLink to="#">Notebook</RouterLink>
-            <RouterLink to="#">ELSI</RouterLink>
+            <RouterLink to="/elsi">ELSI</RouterLink>
             <RouterLink to="/team">Teams</RouterLink>
             <RouterLink to="#">Sponsors</RouterLink>
           </div>
