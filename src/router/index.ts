@@ -4,7 +4,6 @@ import IdeasView from '@/views/IdeasView.vue'
 import TeamView from '@/views/TeamView.vue'
 import ELSIView from '@/views/ELSIView.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
