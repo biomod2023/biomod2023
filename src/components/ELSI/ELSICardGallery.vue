@@ -1,13 +1,24 @@
 <script setup lang="ts">
-    import ELSICard from '@/components/ELSICard.vue'
+    import ELSICard from '@/components/ELSI/ELSICard.vue'
+    import { ref } from 'vue'
+
+    const emit = defineEmits(['currentSelection'])
+
+    let currentSelection = ref(0)
+
+    const setSelection = (num: number) => {
+        currentSelection.value = num
+        emit('currentSelection', num)
+    }
 </script>
 
 <template>
     <div class="w-full flex items-center gap-8 overflow-x-scroll">
-        <ELSICard class="ml-auto">
+        <ELSICard class="ml-auto" :currently-selected="currentSelection == 0" @click="setSelection(0)">
             <template #svg>
                 <svg
-                class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                class="group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                :class="{'stroke-gold': currentSelection != 0, 'stroke-white': currentSelection == 0}"
                 width="97"
                 height="97"
                 viewBox="0 0 97 97"
@@ -22,9 +33,11 @@
             <template #text> Hospitals </template>
         </ELSICard>
 
-        <ELSICard>
+        <ELSICard :currently-selected="currentSelection == 1" @click="setSelection(1)">
             <template #svg>
-                <svg class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200" width="135" height="95" viewBox="0 0 135 95" fill="none">
+                <svg class="group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                    :class="{ 'stroke-gold': currentSelection != 1, 'stroke-white': currentSelection == 1 }"
+                    width="135" height="95" viewBox="0 0 135 95" fill="none">
                     <path d="M67.7079 0.839844L133.996 36.4187L67.8825 72.8743L1 36.1275L67.7079 0.839844Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M61.8394 36.6942C61.8394 35.2505 64.503 34.0796 67.7887 34.0796C71.0744 34.0796 73.738 35.2505 73.738 36.6942C73.738 38.1386 71.0744 39.3088 67.7887 39.3088C64.503 39.3088 61.8394 38.1386 61.8394 36.6942Z" stroke-miterlimit="10"/>
                     <path d="M30.7124 82.9211C39.7382 97.0635 95.1742 98.6165 104.992 83.2332" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -37,9 +50,10 @@
             <template #text> Universities </template>
         </ELSICard>
 
-        <ELSICard>
+        <ELSICard :currently-selected="currentSelection == 2" @click="setSelection(2)">
             <template #svg>
-                <svg class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200" 
+                <svg class=" group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200" 
+                :class="{ 'stroke-gold': currentSelection != 2, 'stroke-white': currentSelection == 2 }"
                 width="103" height="97" viewBox="0 0 103 97" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M38.4587 94.9683C33.5033 94.0109 27.6006 91.1611 21.788 86.5799C9.53846 76.9257 1.40332 46.9883 1.40332 46.9883C1.40332 46.9883 21.6711 50.7459 33.9203 60.3996C39.4185 64.7327 43.902 69.8778 46.871 74.8875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M35.6963 93.0861C31.6792 87.8245 41.797 76.9995 58.2947 68.9077C74.7924 60.8159 101.597 60.5566 101.597 60.5566C101.597 60.5566 89.3388 79.8687 72.8411 87.961C56.3434 96.0528 39.7127 98.3476 35.6963 93.0861Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,9 +77,10 @@
             <template #text> Agriculture </template>
         </ELSICard>
 
-        <ELSICard>
+        <ELSICard :currently-selected="currentSelection == 3" @click="setSelection(3)">
             <template #svg>
-                <svg class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                <svg class=" group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                    :class="{ 'stroke-gold': currentSelection != 3, 'stroke-white': currentSelection == 3 }"
                 width="121" height="99" viewBox="0 0 121 99" fill="none">
                     <path d="M72.9094 96.5888L72.9093 61.6842C72.9093 61.6842 72.9778 60.5816 72.2542 59.939C71.5306 59.2964 70.2889 59.3573 70.2889 59.3573H49.981C49.981 59.3573 48.7392 59.2964 48.0156 59.939C47.292 60.5816 47.3606 61.6842 47.3606 61.6842V96.5888" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M15.6028 33.4387V94.6229C15.6028 94.6229 15.5341 96.0725 16.2581 96.9173C16.9821 97.7621 18.2245 97.6821 18.2245 97.6821H102.775C102.775 97.6821 104.017 97.7622 104.741 96.9173C105.465 96.0725 105.397 94.6229 105.397 94.6229L105.397 33.4387" stroke-linejoin="round"/>
@@ -76,9 +91,10 @@
             <template #text> Homes </template>
         </ELSICard>
 
-        <ELSICard>
+        <ELSICard :currently-selected="currentSelection == 4" @click="setSelection(4)">
             <template #svg>
-                <svg class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                <svg class="group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                :class="{ 'stroke-gold': currentSelection != 4, 'stroke-white': currentSelection == 4 }"
                 width="93" height="95" viewBox="0 0 93 95" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M39.5859 24.9617L49.3469 39.9872L39.5859 55.0127H24.9445L15.1836 39.9872L24.9445 24.9617H39.5859Z" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M63.7851 9.93628L73.5461 24.9618L63.7851 39.9873H49.1437L39.3828 24.9618L49.1437 9.93628H63.7851Z" stroke-linecap="round" stroke-linejoin="round"/>
@@ -99,9 +115,10 @@
             <template #text> Research Facilities </template>
         </ELSICard>
 
-        <ELSICard>
+        <ELSICard :currently-selected="currentSelection == 5" @click="setSelection(5)">
             <template #svg>
-                <svg class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                <svg class="group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                :class="{ 'stroke-gold': currentSelection != 5, 'stroke-white': currentSelection == 5 }"
                 width="83" height="110" viewBox="0 0 83 110" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.395 98.4043H80.4705V109.39H16.395V98.4043Z" stroke-miterlimit="10"/>
                     <path d="M1 64.1047H33.9711V73.1332H1V64.1047Z" stroke-miterlimit="10"/>
@@ -117,9 +134,10 @@
             <template #text> Hospital Labs </template>
         </ELSICard>
 
-        <ELSICard class="mr-auto">
+        <ELSICard class="mr-auto" :currently-selected="currentSelection == 6" @click="setSelection(6)">
             <template #svg>
-                <svg class="stroke-gold group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                <svg class="group-hover:stroke-white w-20 h-20 stroke-[0.9px] transition-all duration-200"
+                :class="{ 'stroke-gold': currentSelection != 6, 'stroke-white': currentSelection == 6 }"
                 width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M95.375 27.25L68.8321 53.7929C68.4416 54.1834 67.8084 54.1834 67.4179 53.7929L55.2071 41.5821C54.8166 41.1916 54.1834 41.1916 53.7929 41.5821L31.7917 63.5833" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.625 13.625V92.175C13.625 93.2951 13.625 93.8552 13.843 94.283C14.0347 94.6593 14.3407 94.9653 14.717 95.157C15.1448 95.375 15.7049 95.375 16.825 95.375H95.375" stroke-linecap="round"/>
@@ -127,7 +145,7 @@
 
             </template>
 
-            <template #text> Hospital Labs </template>
+            <template #text> Businesses </template>
         </ELSICard>
 
     </div>
