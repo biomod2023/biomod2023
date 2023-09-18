@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <h1 class="text-title-sm lg:text-title">Doctors</h1>
+    <h1 class="text-[2rem] lg:text-[3rem] font-semibold font-title">Issues for Doctors</h1>
 
     <h2 class="text-subtitle-sm lg:text-subtitle">Concerns</h2>
 

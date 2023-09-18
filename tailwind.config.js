@@ -26,7 +26,7 @@ module.exports = {
             fontWeight: '600'
           }
         ],
-        'subtitle-sm': ['1.15rem'],
+        'subtitle-sm': ['1.2rem'],
         'subtitle': ['1.35rem']
       }
     }
