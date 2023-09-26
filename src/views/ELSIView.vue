@@ -11,41 +11,41 @@ import Businesses from '@/components/ELSI/categories/Businesses.vue'
 
 const categories = [
   {
-    name: "Hospitals",
+    name: 'Hospitals',
     component: Hospitals
   },
   {
-    name: "Universities",
+    name: 'Universities',
     component: Universities
   },
   {
-    name: "Agriculture",
+    name: 'Agriculture',
     component: Agriculture
   },
   {
-    name: "Home",
+    name: 'Home',
     component: Home
   },
   {
-    name: "Research Facilities",
+    name: 'Research Facilities',
     component: ResearchFacilities
   },
   {
-    name: "Hospital Lab",
+    name: 'Hospital Lab',
     component: HospitalLab
   },
   {
-    name: "Businesses",
+    name: 'Businesses',
     component: Businesses
   }
 ]
 
-let currentSelection = ref(0);
+let currentSelection = ref(0)
 let increasing = ref(true)
 
-const fromRightAnim = "translate-x-1/4 opacity-0"
-const fromLeftAnim = "-translate-x-1/4 opacity-0"
-const activeAnim="transition duration-200 ease-in-out"
+const fromRightAnim = 'translate-x-1/4 opacity-0'
+const fromLeftAnim = '-translate-x-1/4 opacity-0'
+const activeAnim = 'transition duration-200 ease-in-out'
 
 const setSelection = (num: number) => {
   if (num >= currentSelection.value) increasing.value = true
@@ -71,10 +71,14 @@ const setSelection = (num: number) => {
           :enter-active-class="activeAnim"
           :leave-active-class="activeAnim"
         >
-          <h1 :key="currentSelection" class="text-title-sm lg:text-title text-gray-300 pl-8 pb-2">{{ categories[currentSelection].name }}</h1>
+          <h1 :key="currentSelection" class="text-title-sm lg:text-title text-gray-300 pl-8 pb-2">
+            {{ categories[currentSelection].name }}
+          </h1>
         </Transition>
-        
-        <div class="flex flex-col justify-center w-full text-black bg-gray-300 rounded-[3em] p-8 m-auto">
+
+        <div
+          class="flex flex-col justify-center w-full text-black bg-gray-300 rounded-[3em] p-8 m-auto"
+        >
           <Transition
             mode="out-in"
             :enter-from-class="increasing ? fromRightAnim : fromLeftAnim"
@@ -86,7 +90,6 @@ const setSelection = (num: number) => {
           </Transition>
         </div>
       </div>
-
     </div>
   </div>
 </template>
