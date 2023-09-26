@@ -21,5 +21,8 @@
             <b>Rebuttal:</b> It is not difficult to ensure that the production and use of enzymosomes remains far from key biofilms of the food industry.
             A protocol for enzymosome “spills” or “leaks” can also be developed to minimize the impact of any enzymosomes on these biofilms. 
         </p>
+
+        <br />
+        <i>Olanbiwoninu, A., & Popoola, B. (2022). Biofilms and their impact on the food industry. Saudi Journal of Biological Sciences, 103523.</i>
     </div>
 </template>
