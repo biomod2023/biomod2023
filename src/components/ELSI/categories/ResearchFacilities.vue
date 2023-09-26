@@ -7,24 +7,13 @@
         <h1 class="text-[2rem] lg:text-[3rem] font-semibold font-title">Issues for Researchers</h1>
         <h2 class="text-subtitle-sm lg:text-subtitle">Concerns</h2>
         <p>
-            This includes the ethical implications of using a new drug that has not been tested for long-term side effects on patients.
-            In order to be able to use the enzymosomes to degrade bacterial biofilms in patients, there will be testing prior to application
-            clinically but there may still be ethical considerations and differences between different medical practitioners willingness to
-            administer a new drug to patients with little known long-term effects.
+            The concern with research facilities will be the impact of the waste products both on the people working with the enzymosomes in research facilities and for the environment as well.
+            The waste products that are produced must be monitored for potential health impacts on researchers as well as harmful effects they could have during disposal both to the facility and to the environment. 
         </p>
-        <h2 class="text-subtitle-sm lg:text-subtitle mt-4">Concerns</h2>
+        <h2 class="text-subtitle-sm lg:text-subtitle mt-4">Potential Non-Researcher Response</h2>
         <p>
-            This includes the ethical implications of using a new drug that has not been tested for long-term side effects on patients.
-            In order to be able to use the enzymosomes to degrade bacterial biofilms in patients, there will be testing prior to application
-            clinically but there may still be ethical considerations and differences between different medical practitioners willingness to
-            administer a new drug to patients with little known long-term effects.
-        </p>
-        <h2 class="text-subtitle-sm lg:text-subtitle mt-4">Concerns</h2>
-        <p>
-            This includes the ethical implications of using a new drug that has not been tested for long-term side effects on patients.
-            In order to be able to use the enzymosomes to degrade bacterial biofilms in patients, there will be testing prior to application
-            clinically but there may still be ethical considerations and differences between different medical practitioners willingness to
-            administer a new drug to patients with little known long-term effects.
+            There may be reluctance for labs in general to take on projects relating to enzymosomes if there are huge concerns for ethical implications of the product as a whole and on the environment.
+            If these concerns are made public then it would have an impact on the users of the product as well as they will be more reluctant to use a product that is ethically ambiguous. 
         </p>
     </div>
 </template>

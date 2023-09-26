@@ -7,24 +7,14 @@
         <h1 class="text-[2rem] lg:text-[3rem] font-semibold font-title">Issues for Marketers</h1>
         <h2 class="text-subtitle-sm lg:text-subtitle">Concerns</h2>
         <p>
-            This includes the ethical implications of using a new drug that has not been tested for long-term side effects on patients.
-            In order to be able to use the enzymosomes to degrade bacterial biofilms in patients, there will be testing prior to application
-            clinically but there may still be ethical considerations and differences between different medical practitioners willingness to
-            administer a new drug to patients with little known long-term effects.
+            Because there is potential for this project to be commercialized and it is based on a combination of pre-existing concepts, there is a concern over whether doing so will violate any intellectual property over the concepts involved.
+            Intellectual property is important because it helps to ensure that those involved in creating these concepts receive the credit for and benefits of their efforts.
+            Thus, it is important that any intellectual property involved is respected when commercializing any application of these concepts.
         </p>
-        <h2 class="text-subtitle-sm lg:text-subtitle mt-4">Concerns</h2>
+        <h2 class="text-subtitle-sm lg:text-subtitle mt-4">Potential Non-Researcher Response</h2>
         <p>
-            This includes the ethical implications of using a new drug that has not been tested for long-term side effects on patients.
-            In order to be able to use the enzymosomes to degrade bacterial biofilms in patients, there will be testing prior to application
-            clinically but there may still be ethical considerations and differences between different medical practitioners willingness to
-            administer a new drug to patients with little known long-term effects.
-        </p>
-        <h2 class="text-subtitle-sm lg:text-subtitle mt-4">Concerns</h2>
-        <p>
-            This includes the ethical implications of using a new drug that has not been tested for long-term side effects on patients.
-            In order to be able to use the enzymosomes to degrade bacterial biofilms in patients, there will be testing prior to application
-            clinically but there may still be ethical considerations and differences between different medical practitioners willingness to
-            administer a new drug to patients with little known long-term effects.
+            If existing intellectual property is not properly respected, the resulting commercial product may face public backlash in addition to legal and ethical issues,
+            as it would be seen as trying to unfairly profit from the work of others.
         </p>
     </div>
 </template>
