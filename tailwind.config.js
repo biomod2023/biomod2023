@@ -9,6 +9,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        notebookBg: '#333333',
+        notebookText: '#8F8F90',
         slate: '#272727',
         dark: '#1E1E1E',
         gold: '#E2B764'
