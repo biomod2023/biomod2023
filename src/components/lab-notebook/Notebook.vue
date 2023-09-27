@@ -12,12 +12,12 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex p-4 gap-4 bg-slate">
-        <div class="w-1/6 py-8">
+    <div class="flex p-4 gap-3 bg-slate">
+        <div class="basis-1/5 py-8 sticky h-1/3 top-0 hidden lg:block">
             <TableOfContents :elements="elements" />
         </div>
-        <div class="flex flex-col gap-10 w-5/6 p-8">
+        <div class="flex flex-col gap-10 lg:basis-4/5 p-8 leading-relaxed">
             <slot name="content"></slot>
-            </div>
+        </div>
     </div>
 </template>
