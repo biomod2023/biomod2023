@@ -2,7 +2,7 @@
 import TableOfContents from '@/components/lab-notebook/TableOfContents.vue'
 import { onMounted, ref } from "vue";
 
-const elements = ref([])
+const elements = ref<string[]>([])
 
 onMounted(() => {
     const headerElems = Array.from(document.querySelectorAll("h2"))
@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex p-4 gap-3 bg-slate">
+    <div class="flex p-4 gap-3 bg-slate scroll-smooth">
         <div class="basis-1/5 py-8 sticky h-1/3 top-0 hidden lg:block">
             <TableOfContents :elements="elements" />
         </div>
