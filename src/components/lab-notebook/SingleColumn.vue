@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col bg-notebookBg p-8 rounded-[3.2em]">
-        <div class="font-title font-medium text-2xl mb-4">
+        <h2 class="font-title font-medium text-2xl mb-4">
             <slot name="title"></slot>
-        </div>
+        </h2>
         <div class="text-notebookText mb-6">
             <slot name="body"></slot>
         </div>

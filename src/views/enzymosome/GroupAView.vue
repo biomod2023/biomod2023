@@ -1,7 +1,7 @@
 <script setup lang="ts">
-    import Notebook from "@/components/lab-notebook/Notebook.vue"
-    import SingleColumn from "@/components/lab-notebook/SingleColumn.vue"
-    import DoubleColumn from "@/components/lab-notebook/DoubleColumn.vue"
+import Notebook from "@/components/lab-notebook/Notebook.vue"
+import SingleColumn from "@/components/lab-notebook/SingleColumn.vue"
+import DoubleColumn from "@/components/lab-notebook/DoubleColumn.vue"
 </script>
 
 <template>
@@ -36,13 +36,13 @@
                     </template>
 
                     <template #left>
-                        <h2 class="text-subtitle text-white mb-4">Enzyme Activity Assay</h2>
+                        <h3 class="text-subtitle text-white mb-4">Enzyme Activity Assay</h3>
                         <p>
                             Enzyme activity assays determine the activity and amount of specific enzymes in a sample using a standardized procedure (Scopes, 2001). This procedure can vary depending on the enzyme being measured (Scopes, 2001).
                         </p>
                     </template>
                     <template #right>
-                        <h2 class="text-subtitle text-white mb-4">Spectrometry</h2>
+                        <h3 class="text-subtitle text-white mb-4">Spectrometry</h3>
                         <p>Spectrometry can be used to determine the amount of enzyme activity through measuring the concentration of colour or fluorescence in the sample. For the Alpha Amylase assay, this is done through colorimetric spectrometry with p-nitrophenol (Sigma-Aldrich, 2014). For the DNase I assay, this is done through fluorescence spectrometry with picogreen (ThermoFischer Scientific, 2022).</p>
                     </template>
                 </DoubleColumn>
