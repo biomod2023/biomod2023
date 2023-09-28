@@ -7,7 +7,7 @@ import Footer from '@/components/Footer.vue'
 <template>
   <div class="flex flex-col h-full">
     <NavBar :key="$route.fullPath" />
-    <RouterView class="mt-24 lg:mt-0 bg-slate"/>
+    <RouterView class="mt-24 lg:mt-0 bg-slate" />
     <div class="flex flex-col justify-end grow">
       <Footer />
     </div>

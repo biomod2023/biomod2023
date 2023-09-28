@@ -9,66 +9,70 @@ const sidebar = ref(false)
 let transitionAnimation = 'transition duration-100 ease-in'
 
 interface Tree {
-  name: string,
-  url?: string,
+  name: string
+  url?: string
   children?: Tree[]
 }
 
 const tree: Tree[] = [
   {
-    name: "Home",
-    url: "/"},
+    name: 'Home',
+    url: '/'
+  },
   {
-    name: "Ideas",
-    url: "/ideas"},
+    name: 'Ideas',
+    url: '/ideas'
+  },
   {
-    name: "Notebook",
+    name: 'Notebook',
     children: [
       {
-        name: "Enzymosome",
+        name: 'Enzymosome',
         children: [
           {
-            name: "Enzyme Activity Assays",
-            url: "/enzymosome/enzyme-activity-assays"
+            name: 'Enzyme Activity Assays',
+            url: '/enzymosome/enzyme-activity-assays'
           },
           {
-            name: "Liposome Formation",
-            url: "#"
+            name: 'Liposome Formation',
+            url: '#'
           },
           {
-            name: "Enzyme Conjugation",
-            url: "#"
+            name: 'Enzyme Conjugation',
+            url: '#'
           }
         ]
       },
       {
-        name: "CADnano",
+        name: 'CADnano',
         children: [
           {
-            name: "Octahedron",
-            url: "#"
+            name: 'Octahedron',
+            url: '#'
           },
           {
-            name: "Trigon",
-            url: "#"
+            name: 'Trigon',
+            url: '#'
           },
           {
-            name: "Pentahedron",
-            url: "#"
+            name: 'Pentahedron',
+            url: '#'
           }
         ]
       }
-  ]},
-  {
-    name: "ELSI",
-    url: "#"},
-  {
-    name: "Team",
-    url: "/team"
+    ]
   },
   {
-    name: "Sponsors",
-    url: "#"
+    name: 'ELSI',
+    url: '#'
+  },
+  {
+    name: 'Team',
+    url: '/team'
+  },
+  {
+    name: 'Sponsors',
+    url: '#'
   }
 ]
 </script>
@@ -80,8 +84,10 @@ const tree: Tree[] = [
       class="hidden lg:flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
     >
       <div class="flex justify-center gap-16">
-        <template v-for="(entry, i) in tree.slice(0, tree.length/2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">{{ entry.name }}</RouterLink>
+        <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
+          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">{{
+            entry.name
+          }}</RouterLink>
           <Dropdown v-show="entry.children" to="#">
             <template #text>{{ entry.name }}</template>
             <template #content>
@@ -92,7 +98,9 @@ const tree: Tree[] = [
                     <template #content>
                       <ul>
                         <li v-for="(subchild, k) in child.children" :key="k" class="m-2">
-                          <RouterLink :to="subchild.url ? subchild.url : '#'">{{ subchild.name }}</RouterLink>
+                          <RouterLink :to="subchild.url ? subchild.url : '#'">{{
+                            subchild.name
+                          }}</RouterLink>
                         </li>
                       </ul>
                     </template>
@@ -108,8 +116,9 @@ const tree: Tree[] = [
       </a>
       <div class="flex justify-center gap-16">
         <RouterLink
-          v-for="(entry, i) in tree.slice(tree.length/2, tree.length)"
-          :key="i" :to="entry.url ? entry.url : '#'"
+          v-for="(entry, i) in tree.slice(tree.length / 2, tree.length)"
+          :key="i"
+          :to="entry.url ? entry.url : '#'"
         >
           {{ entry.name }}
         </RouterLink>
@@ -148,9 +157,7 @@ const tree: Tree[] = [
       :leave-active-class="transitionAnimation"
     >
       <template v-if="sidebar">
-        <div
-          class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90"
-        >
+        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
           <div
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
@@ -159,16 +166,25 @@ const tree: Tree[] = [
               class="flex flex-col h-full w-full py-20 ml-10 mt-10 gap-6 overflow-scroll justify-evenly text-gold text-2xl font-bold"
             >
               <template v-for="(entry, i) in tree" :key="i">
-                <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">{{ entry.name }}</RouterLink>
+                <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">{{
+                  entry.name
+                }}</RouterLink>
                 <div v-show="entry.children" class="flex flex-col">
                   <MobileDropdown>
                     <template #title>{{ entry.name }}</template>
                     <template #children>
                       <div v-for="(child, j) in entry.children" :key="j">
                         <MobileDropdown>
-                          <template #title><span class="text-xl">{{ child.name }}</span></template>
+                          <template #title
+                            ><span class="text-xl">{{ child.name }}</span></template
+                          >
                           <template #children>
-                            <RouterLink v-for="(subchild, k) in child.children" :key="k" :to="subchild.url ? subchild.url : '#'" class="text-xl">
+                            <RouterLink
+                              v-for="(subchild, k) in child.children"
+                              :key="k"
+                              :to="subchild.url ? subchild.url : '#'"
+                              class="text-xl"
+                            >
                               {{ subchild.name }}
                             </RouterLink>
                           </template>

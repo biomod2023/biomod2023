@@ -11,7 +11,7 @@ import {
   HiSolidArrowSmRight,
   HiSolidArrowSmLeft
 } from 'oh-vue-icons/icons'
-import { VueWindowSizePlugin } from 'vue-window-size/plugin';
+import { VueWindowSizePlugin } from 'vue-window-size/plugin'
 
 addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine)
 
