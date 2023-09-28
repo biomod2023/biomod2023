@@ -70,6 +70,43 @@ Like `SingleColumn`, the titles require no tags, and other slots can be directly
 </SingleColumn>
 ```
 
+## CustomTable
+Tables in HTML are horrible. This makes it easier. `CustomTable` takes one prop named `tableData` which is shaped like the following:
+
+```JSON
+tableData: {
+    headers: string[]
+    rowHeaders: string[]
+    rowsPerRowHeader: number
+    data: number[][]
+  }
+```
+
+`rowsPerRowHeader` determines how many rows of content each row header should span.
+Provide data as a 2D array where each subarray is a row of content.
+
+### Example
+```javascript
+const tableData = {
+  headers: [
+    'Buffer',
+    'Buffer Concentration (U/mL)',
+    'Approximate beginning DNase I concentration (ng/mL)',
+    'Approximate final DNase I concentration (ng/mL)'
+  ],
+  rowHeaders: ["Manufacturer's Buffer", 'TE', 'HEPES'],
+  rowsPerRowHeader: 2,
+  data: [
+    [0.05, 70, 20],
+    [0.1, 70, 35],
+    [0.05, 90, 90],
+    [0.1, 90, 90],
+    [0.05, 35, 10],
+    [0.1, 65, 10]
+  ]
+}
+```
+
 ## Example Template
 
 ```html
