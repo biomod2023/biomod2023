@@ -125,7 +125,9 @@ const tableData = {
               <CustomTable :table-data="tableData" />
             </div>
             <p>
-              Table 1: Approximate concentration of DNase I in each buffer at the beginning and end of the fluorescence measuring period, based on the combined information of Figure 1 and Figure 2.
+              Table 1: Approximate concentration of DNase I in each buffer at the beginning and end
+              of the fluorescence measuring period, based on the combined information of Figure 1
+              and Figure 2.
             </p>
           </div>
         </template>
@@ -136,16 +138,43 @@ const tableData = {
         <template #body>
           <div class="flex flex-col gap-4">
             <p>
-              Since DNase I is an enzyme that degrades DNA (Nijland et al., 2010), the concentration of DNA determined from Figures 1 and 2 demonstrates that DNase I has minimal activity in the TE buffer and a relatively high amount of activity in the manufacturer's buffer and HEPES buffer. These results are supported because the EDTA in the TE buffer inactivates DNase by chelating with the metal cations it needs to function (Panda et al., 2019), causing less DNase I activity in the TE buffer than in the other buffers.
+              Since DNase I is an enzyme that degrades DNA (Nijland et al., 2010), the concentration
+              of DNA determined from Figures 1 and 2 demonstrates that DNase I has minimal activity
+              in the TE buffer and a relatively high amount of activity in the manufacturer's buffer
+              and HEPES buffer. These results are supported because the EDTA in the TE buffer
+              inactivates DNase by chelating with the metal cations it needs to function (Panda et
+              al., 2019), causing less DNase I activity in the TE buffer than in the other buffers.
             </p>
             <p>
-              While only DNAse I has been selected, a combination of enzymes would ideally be used in conjunction on the enzymosome to combat bacterial biofilms. For example, alpha amylase and alginate lyase inhibit biofilm formation by degrading the polysaccharides that compose the biofilm (Lahiri et al., 2021; Zhu & Yin, 2015), and incorporating these enzymes would further enhance the efficacy of the enzymosome. Due to time constraints, these enzymes were not added and assayed.
+              While only DNAse I has been selected, a combination of enzymes would ideally be used
+              in conjunction on the enzymosome to combat bacterial biofilms. For example, alpha
+              amylase and alginate lyase inhibit biofilm formation by degrading the polysaccharides
+              that compose the biofilm (Lahiri et al., 2021; Zhu & Yin, 2015), and incorporating
+              these enzymes would further enhance the efficacy of the enzymosome. Due to time
+              constraints, these enzymes were not added and assayed.
             </p>
             <p>
-              If alpha amylase were to be used, an assay would be performed adapted from the standard protocol of the Amylase Activity Assay kit (Sigma-Aldrich, 2014). 2mM Nitrophenol Standard would be added to solutions containing alpha amylase, and spectrometry would be used to determine alpha amylase activity from the absorbance of the Nitrophenol Standard. Absorbance would be measured at 405 nm to determine enzyme activity after 2 to 3 minutes, as well as every five minutes while the plate was incubated at 25°C and protected from light.
+              If alpha amylase were to be used, an assay would be performed adapted from the
+              standard protocol of the Amylase Activity Assay kit (Sigma-Aldrich, 2014). 2mM
+              Nitrophenol Standard would be added to solutions containing alpha amylase, and
+              spectrometry would be used to determine alpha amylase activity from the absorbance of
+              the Nitrophenol Standard. Absorbance would be measured at 405 nm to determine enzyme
+              activity after 2 to 3 minutes, as well as every five minutes while the plate was
+              incubated at 25°C and protected from light.
             </p>
             <p>
-              If alginate lyase were to be used, it would be beneficial to perform an assay to determine baseline enzyme activity. However, no current commercially available assay kits exist for alginate lyase, and it would be difficult to execute the series of assays needed to determine its baseline activity. Thus, no alginate lyase assay was performed due to time constraints. If the baseline activity of alginate lyase had to be determined, it would be done through using an orcinol assay with a Dische modification of the orcinol reaction (Dische, 1953), a thiobarbituric acid assay involving a modification of Weissbach and Hurwitz, and an ultraviolet absorption assay (Preiss & Ashwell, 1962). The orcinol assay determines alginate stability in the presence of alginate lyase, while the thiobarbituric acid and ultraviolet absorption assays determine alginate lyase activity through the compounds produced by alginate degradation (Preiss & Ashwell, 1962).
+              If alginate lyase were to be used, it would be beneficial to perform an assay to
+              determine baseline enzyme activity. However, no current commercially available assay
+              kits exist for alginate lyase, and it would be difficult to execute the series of
+              assays needed to determine its baseline activity. Thus, no alginate lyase assay was
+              performed due to time constraints. If the baseline activity of alginate lyase had to
+              be determined, it would be done through using an orcinol assay with a Dische
+              modification of the orcinol reaction (Dische, 1953), a thiobarbituric acid assay
+              involving a modification of Weissbach and Hurwitz, and an ultraviolet absorption assay
+              (Preiss & Ashwell, 1962). The orcinol assay determines alginate stability in the
+              presence of alginate lyase, while the thiobarbituric acid and ultraviolet absorption
+              assays determine alginate lyase activity through the compounds produced by alginate
+              degradation (Preiss & Ashwell, 1962).
             </p>
           </div>
         </template>
