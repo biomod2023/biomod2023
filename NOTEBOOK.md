@@ -42,6 +42,12 @@ The `SingleColumn` component also takes an option `always-dropdown` prop that wi
 </SingleColumn>
 ```
 
+To create a hanging indent for references, surround the body with
+
+```html
+<div class="pl-6 -indent-6"></div>
+```
+
 ### DoubleColumn
 The `DoubleColumn` component takes a `title`, `left-title`, `left-body`, `right-title`, and `right-body` slot.
 Like `SingleColumn`, the titles require no tags, and other slots can be directly populated with just `<p>` tags.
@@ -118,9 +124,11 @@ import DoubleColumn from "@/components/lab-notebook/DoubleColumn.vue"
                     References
                 </template>
                 <template #body>
-                    <p>
-                        Blah blah blah
-                    </p>
+                    <div class="pl-6 -indent-6">
+                        <p>
+                            Blah blah blah
+                        </p>
+                    </div>
                 </template>
             </SingleColumn>
         </template>

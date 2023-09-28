@@ -83,24 +83,17 @@ import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
       <SingleColumn :always-dropdown="true">
         <template #title> References </template>
         <template #body>
-          Dische, Z. (1953). Qualitative and quantitative colorimetric determination of heptoses.
-          Journal of Biological Chemistry, 204(2), 983–997. Lahiri, D., Nag, M., Banerjee, R.,
-          Mukherjee, D., Garai, S., Sarkar, T., Dey, A., Sheikh, H. I., Pathak, S. K., & Edinur, H.
-          A. (2021). Amylases: Biofilm inducer or biofilm inhibitor? Frontiers in Cellular and
-          Infection Microbiology, 11, 660048. Nijland, R., Hall, M. J., & Burgess, J. G. (2010).
-          Dispersal of biofilms by secreted, matrix degrading, bacterial DNase. PloS One, 5(12),
-          e15668. Panda, B. B., Meher, A. S., & Hazra, R. K. (2019). Comparison between different
-          methods of DNA isolation from dried blood spots for determination of malaria to determine
-          specificity and cost effectiveness. Journal of Parasitic Diseases, 43(3), 337–342. Preiss,
-          J., & Ashwell, G. (1962). Alginic acid metabolism in bacteria: I. Enzymatic formation of
-          unsaturated oligosaccharides and 4-deoxy-L-erythro-5-hexoseulose uronic acid. Journal of
-          Biological Chemistry, 237(2), 309–316. Scopes, R. K. (2001). Enzyme activity and assays. E
-          LS. Sigma-Aldrich. (2014). Amylase Activity Assay Kit.
-          https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/377/793/mak009bul.pdf
-          ThermoFischer Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit.
-          https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf
-          Zhu, B., & Yin, H. (2015). Alginate lyase: Review of major sources and classification,
-          properties, structure-function analysis and applications. Bioengineered, 6(3), 125–131.
+            <div class="pl-6 -indent-6">
+                <p>Dische, Z. (1953). Qualitative and quantitative colorimetric determination of heptoses. Journal of Biological Chemistry, 204(2), 983–997.</p>
+                <p>Lahiri, D., Nag, M., Banerjee, R., Mukherjee, D., Garai, S., Sarkar, T., Dey, A., Sheikh, H. I., Pathak, S. K., & Edinur, H. A. (2021). Amylases: Biofilm inducer or biofilm inhibitor? Frontiers in Cellular and Infection Microbiology, 11, 660048.</p>
+                <p>Nijland, R., Hall, M. J., & Burgess, J. G. (2010). Dispersal of biofilms by secreted, matrix degrading, bacterial DNase. PloS One, 5(12), e15668.</p>
+                <p>Panda, B. B., Meher, A. S., & Hazra, R. K. (2019). Comparison between different methods of DNA isolation from dried blood spots for determination of malaria to determine specificity and cost effectiveness. Journal of Parasitic Diseases, 43(3), 337–342.</p>
+                <p>Preiss, J., & Ashwell, G. (1962). Alginic acid metabolism in bacteria: I. Enzymatic formation of unsaturated oligosaccharides and 4-deoxy-L-erythro-5-hexoseulose uronic acid. Journal of Biological Chemistry, 237(2), 309–316.</p>
+                <p>Scopes, R. K. (2001). Enzyme activity and assays. E LS.</p>
+                <p>Sigma-Aldrich. (2014). Amylase Activity Assay Kit. https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/377/793/mak009bul.pdf</p>
+                <p>ThermoFischer Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit. https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf</p>
+                <p>Zhu, B., & Yin, H. (2015). Alginate lyase: Review of major sources and classification, properties, structure-function analysis and applications. Bioengineered, 6(3), 125–131.</p>
+            </div>
         </template>
       </SingleColumn>
     </template>
