@@ -2,6 +2,26 @@
 import Notebook from '@/components/lab-notebook/Notebook.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
+import CustomTable from '@/components/CustomTable.vue'
+
+const tableData = {
+  headers: [
+    'Buffer',
+    'Buffer Concentration (U/mL)',
+    'Approximate beginning DNase I concentration (ng/mL)',
+    'Approximate final DNase I concentration (ng/mL)'
+  ],
+  rowHeaders: ["Manufacturer's Buffer", 'TE', 'HEPES'],
+  rowsPerRowHeader: 2,
+  data: [
+    [0.05, 70, 20],
+    [0.1, 70, 35],
+    [0.05, 90, 90],
+    [0.1, 90, 90],
+    [0.05, 35, 10],
+    [0.1, 65, 10]
+  ]
+}
 </script>
 
 <template>
@@ -51,8 +71,9 @@ import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
         </template>
       </DoubleColumn>
       <SingleColumn>
-        <template #title> Methods (DNA I Assay) </template>
+        <template #title> Methods </template>
         <template #body>
+          <h3 class="text-subtitle-sm lg:text-subtitle text-white mb-4">DNA I Assay</h3>
           <p>
             The DNase I assay was adapted from the standard protocol of the Picogreen Assay kit
             (ThermoFischer Scientific, 2022). This kit uses a reaction buffer containing 1 M
@@ -80,6 +101,33 @@ import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
           </p>
         </template>
       </SingleColumn>
+      <SingleColumn>
+        <template #title>Results</template>
+        <template #graphic>
+          <div class="flex flex-col items-center">
+            <div class="w-48 h-48 bg-gray-300"></div>
+            <p>
+              Figure 1: Fluorescence of the DNase I Picogreen assay in the manufacturer’s buffer,
+              HEPES buffer and TE buffer.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="w-48 h-48 bg-gray-300"></div>
+            <p>
+              Figure 2: Calibration curve of the DNase I picogreen assay at DNA concentrations of 1,
+              10, 25, 50 and 100 ng/mL.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center w-full">
+            <div class="overflow-x-scroll w-full">
+              <CustomTable :table-data="tableData" />
+            </div>
+          </div>
+        </template>
+      </SingleColumn>
+
       <SingleColumn :always-dropdown="true">
         <template #title> References </template>
         <template #body>
