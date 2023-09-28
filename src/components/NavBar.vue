@@ -1,9 +1,75 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import Dropdown from '@/components/Dropdown.vue'
+import Dropside from '@/components/Dropside.vue'
 
 const sidebar = ref(false)
 let transitionAnimation = 'transition duration-100 ease-in'
+
+interface Tree {
+  name: string,
+  url?: string,
+  children?: Tree[]
+}
+
+const tree: Tree[] = [
+  {
+    name: "Home",
+    url: "/"},
+  {
+    name: "Ideas",
+    url: "/ideas"},
+  {
+    name: "Notebook",
+    children: [
+      {
+        name: "Enzymosome",
+        children: [
+          {
+            name: "Group A",
+            url: "/enzymosome/enzyme-activity-assays"
+          },
+          {
+            name: "Group B",
+            url: "#"
+          },
+          {
+            name: "Group C",
+            url: "#"
+          }
+        ]
+      },
+      {
+        name: "CADNano",
+        children: [
+          {
+            name: "Octahedron",
+            url: "#"
+          },
+          {
+            name: "Trigon",
+            url: "#"
+          },
+          {
+            name: "Pentahedron",
+            url: "#"
+          }
+        ]
+      }
+  ]},
+  {
+    name: "ELSI",
+    url: "#"},
+  {
+    name: "Team",
+    url: "/team"
+  },
+  {
+    name: "Sponsors",
+    url: "#"
+  }
+]
 </script>
 
 <template>
@@ -13,17 +79,39 @@ let transitionAnimation = 'transition duration-100 ease-in'
       class="hidden lg:flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
     >
       <div class="flex justify-center gap-16">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/ideas">Ideas</RouterLink>
-        <RouterLink to="#">Notebook</RouterLink>
+        <template v-for="(entry, i) in tree.slice(0, tree.length/2)" :key="i">
+          <RouterLink v-if="entry.url" :to="entry.url">{{ entry.name }}</RouterLink>
+          <Dropdown v-if="entry.children" to="#">
+            <template #text>{{ entry.name }}</template>
+            <template #content>
+              <ul>
+                <li v-for="(child, j) in entry.children" :key="j">
+                  <Dropside to="#">
+                    <template #text>{{ child.name }}</template>
+                    <template #content>
+                      <ul>
+                        <li v-for="(subchild, k) in child.children" :key="k" class="m-2">
+                          <RouterLink :to="subchild.url ? subchild.url : '#'">{{ subchild.name }}</RouterLink>
+                        </li>
+                      </ul>
+                    </template>
+                  </Dropside>
+                </li>
+              </ul>
+            </template>
+          </Dropdown>
+        </template>
       </div>
       <a href="/">
         <img src="../assets/logo.svg" alt="Biomod Logo" />
       </a>
       <div class="flex justify-center gap-16">
-        <RouterLink to="#">ELSI</RouterLink>
-        <RouterLink to="/team">Teams</RouterLink>
-        <RouterLink to="#">Sponsors</RouterLink>
+        <RouterLink
+          v-for="(entry, i) in tree.slice(tree.length/2, tree.length)"
+          :key="i" :to="entry.url ? entry.url : '#'"
+        >
+          {{ entry.name }}
+        </RouterLink>
       </div>
     </div>
   </template>
