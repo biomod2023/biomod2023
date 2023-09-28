@@ -28,21 +28,21 @@ const tree: Tree[] = [
         name: "Enzymosome",
         children: [
           {
-            name: "Group A",
+            name: "Enzyme Activity Assays",
             url: "/enzymosome/enzyme-activity-assays"
           },
           {
-            name: "Group B",
+            name: "Liposome Formation",
             url: "#"
           },
           {
-            name: "Group C",
+            name: "Enzyme Conjugation",
             url: "#"
           }
         ]
       },
       {
-        name: "CADNano",
+        name: "CADnano",
         children: [
           {
             name: "Octahedron",
