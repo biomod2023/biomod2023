@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import Dropdown from '@/components/Dropdown.vue'
-import Dropside from '@/components/Dropside.vue'
+import Dropdown from '@/components/navbar/Dropdown.vue'
+import Dropside from '@/components/navbar/Dropside.vue'
+import MobileDropdown from './MobileDropdown.vue'
 
 const sidebar = ref(false)
 let transitionAnimation = 'transition duration-100 ease-in'
@@ -80,8 +81,8 @@ const tree: Tree[] = [
     >
       <div class="flex justify-center gap-16">
         <template v-for="(entry, i) in tree.slice(0, tree.length/2)" :key="i">
-          <RouterLink v-if="entry.url" :to="entry.url">{{ entry.name }}</RouterLink>
-          <Dropdown v-if="entry.children" to="#">
+          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">{{ entry.name }}</RouterLink>
+          <Dropdown v-show="entry.children" to="#">
             <template #text>{{ entry.name }}</template>
             <template #content>
               <ul>
@@ -103,7 +104,7 @@ const tree: Tree[] = [
         </template>
       </div>
       <a href="/">
-        <img src="../assets/logo.svg" alt="Biomod Logo" />
+        <img src="../../assets/logo.svg" alt="Biomod Logo" />
       </a>
       <div class="flex justify-center gap-16">
         <RouterLink
@@ -122,7 +123,7 @@ const tree: Tree[] = [
       class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
-        <img class="-mr-1" src="../assets/logo.svg" alt="Biomod Logo" />
+        <img class="-mr-1" src="../../assets/logo.svg" alt="Biomod Logo" />
         <span class="text-[#FFC000] font-bold text-xl">UBC Biomod</span>
       </RouterLink>
       <button class="mr-10" @click="sidebar = !sidebar">
@@ -155,14 +156,28 @@ const tree: Tree[] = [
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
           >
             <div
-              class="flex flex-col h-full w-full py-20 ml-10 mb-20 gap-6 overflow-scroll justify-evenly text-gold text-2xl font-bold"
+              class="flex flex-col h-full w-full py-20 ml-10 mt-10 gap-6 overflow-scroll justify-evenly text-gold text-2xl font-bold"
             >
-              <RouterLink to="/">Home</RouterLink>
-              <RouterLink to="/ideas">Ideas</RouterLink>
-              <RouterLink to="#">Notebook</RouterLink>
-              <RouterLink to="#">ELSI</RouterLink>
-              <RouterLink to="/team">Teams</RouterLink>
-              <RouterLink to="#">Sponsors</RouterLink>
+              <template v-for="(entry, i) in tree" :key="i">
+                <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">{{ entry.name }}</RouterLink>
+                <div v-show="entry.children" class="flex flex-col">
+                  <MobileDropdown>
+                    <template #title>{{ entry.name }}</template>
+                    <template #children>
+                      <div v-for="(child, j) in entry.children" :key="j">
+                        <MobileDropdown>
+                          <template #title><span class="text-xl">{{ child.name }}</span></template>
+                          <template #children>
+                            <RouterLink v-for="(subchild, k) in child.children" :key="k" :to="subchild.url ? subchild.url : '#'" class="text-xl">
+                              {{ subchild.name }}
+                            </RouterLink>
+                          </template>
+                        </MobileDropdown>
+                      </div>
+                    </template>
+                  </MobileDropdown>
+                </div>
+              </template>
             </div>
           </div>
           <!-- </Transition> -->

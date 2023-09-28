@@ -7,7 +7,7 @@ import DoubleColumn from "@/components/lab-notebook/DoubleColumn.vue"
 <template>
     <div>
         <div class="m-auto">
-            <h1 class="text-center text-title-sm lg:text-title text-gold">Enzyme Activity Assays</h1>
+            <h1 class="font-title text-center text-title-sm lg:text-title text-gold">Enzyme Activity Assays</h1>
         </div>
         <Notebook>
             <SingleColumn>
