@@ -11,7 +11,7 @@ import Bubble from '@/components/lab-notebook/Bubble.vue'
             <div class="text-notebookText mb-6">
                 <slot name="body"></slot>
             </div>
-            <div class="m-auto text-center flex flex-col align-center gap-2 text-notebookText">
+            <div class="m-auto text-center flex flex-col items-center gap-2 text-notebookText">
                 <slot name="graphic"></slot>
             </div>
         </template>

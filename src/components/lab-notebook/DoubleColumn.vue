@@ -18,12 +18,11 @@ onMounted(() => {
             <slot name="title"></slot>
         </template>
         <template #body>
-            <div class="flex gap-8 w-full">
-                <div class="w-1/2 text-notebookText bg-slate p-6 rounded-[3.2em]">
-                    <slot name="left">
-                </slot>
+            <div class="flex gap-8 w-full overflow-x-scroll snap-x snap-mandatory lg:overflow-x-auto">
+                <div class="min-w-full lg:min-w-0 lg:w-1/2 text-notebookText bg-slate p-6 rounded-[3.2em] snap-center">
+                    <slot name="left"></slot>
                 </div>
-                <div class="w-1/2 text-notebookText bg-slate p-6 rounded-[3.2em]">
+                <div class="min-w-full lg:min-w-0 lg:w-1/2 text-notebookText bg-slate p-6 rounded-[3.2em] snap-center">
                     <slot name="right"></slot>
                 </div>
             </div>
