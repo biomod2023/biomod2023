@@ -16,13 +16,16 @@ onMounted(() => {
 
 const handleToggleActivated = (state: boolean) => {
   if (state) {
-    maxWidth.value = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
+    maxWidth.value = scrollWindow.value
+      ? scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth
+      : 0
   }
 }
 
-
 const onScroll = () => {
-  maxWidth.value = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
+  maxWidth.value = scrollWindow.value
+    ? scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth
+    : 0
   if (scrollWindow.value?.scrollLeft == 0) scrollPos.value = 0
   if (scrollWindow.value?.scrollLeft == maxWidth.value) scrollPos.value = maxWidth.value
 }
