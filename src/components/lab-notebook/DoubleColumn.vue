@@ -14,8 +14,9 @@ onMounted(() => {
 })
 
 const onScroll = () => {
+  const maxWidth = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
   if (scrollWindow.value?.scrollLeft == 0) scrollPos.value = 0
-  if (scrollWindow.value?.scrollLeft == 247) scrollPos.value = 247
+  if (scrollWindow.value?.scrollLeft == maxWidth) scrollPos.value = maxWidth
 }
 </script>
 
