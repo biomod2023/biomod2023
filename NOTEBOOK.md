@@ -73,13 +73,13 @@ Like `SingleColumn`, the titles require no tags, and other slots can be directly
 ## CustomTable
 Tables in HTML are horrible. This makes it easier. `CustomTable` takes one prop named `tableData` which is shaped like the following:
 
-```JSON
+```javascript
 tableData: {
     headers: string[]
     rowHeaders: string[]
     rowsPerRowHeader: number
     data: number[][]
-  }
+}
 ```
 
 `rowsPerRowHeader` determines how many rows of content each row header should span.
