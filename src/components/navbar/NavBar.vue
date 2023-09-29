@@ -35,7 +35,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Liposome Formation',
-            url: '#'
+            url: '/enzymosome/liposome-formation'
           },
           {
             name: 'Enzyme Conjugation',
