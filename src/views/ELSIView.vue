@@ -72,7 +72,9 @@ const setSelection = (num: number) => {
           :leave-active-class="activeAnim"
         >
           <span :key="currentSelection" class="ml-[-100%] mr-[-100%] md:mx-0">
-            <h1 class="text-title-sm lg:text-title text-gray-300 w-full text-center md:text-start md:pl-8 pb-2">
+            <h1
+              class="text-title-sm lg:text-title text-gray-300 w-full text-center md:text-start md:pl-8 pb-2"
+            >
               {{ categories[currentSelection].name }}
             </h1>
           </span>
