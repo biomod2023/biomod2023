@@ -63,7 +63,7 @@ const setSelection = (num: number) => {
 
       <ELSICardGallery @current-selection="setSelection" />
 
-      <div class="w-full flex flex-col py-8 px-8 md:px-10 xl:px-32 overflow-hidden">
+      <div class="w-full flex flex-col py-8 px-2 md:px-10 xl:px-32 overflow-hidden">
         <Transition
           mode="out-in"
           :enter-from-class="increasing ? fromRightAnim : fromLeftAnim"
