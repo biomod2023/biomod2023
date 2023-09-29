@@ -2,7 +2,6 @@
 import Notebook from '@/components/lab-notebook/Notebook.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
-import TripleColumn from '@/components/lab-notebook/TripleColumn.vue'
 import CustomTable from '@/components/CustomTable.vue'
 
 const tableData = {
@@ -102,15 +101,6 @@ const tableData = {
           </p>
         </template>
       </SingleColumn>
-      <TripleColumn>
-        <template #title>Title</template>
-        <template #left-title>Left Title</template>
-        <template #left-body>Left body stuff</template>
-        <template #mid-title>Mid Title</template>
-        <template #mid-body>Mid body stuff</template>
-        <template #right-title>Right Title</template>
-        <template #right-body>Right body stuff</template>
-      </TripleColumn>
       <SingleColumn>
         <template #title>Results</template>
         <template #graphic>

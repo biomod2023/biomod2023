@@ -7,7 +7,7 @@ You're welcome.
 All you need to get started is import is the `@/components/lab-notebook/Notebook.vue` file.
 The component takes two slots - `title` and `body`. Enter the section title directly into the `title` slot.
 
-For the `body` section, you can populate the content using the `SingleColumn` and `DoubleColumn` components.
+For the `body` section, you can populate the content using the `SingleColumn`, `DoubleColumn`, and `TripleColumn` components.
 Both components are already designed to be fully responsive - no need to account for resizing.
 The table of contents will also automatically populate with the titles provided to these components.
 
@@ -51,7 +51,7 @@ The `DoubleColumn` component takes a `title`, `left-title`, `left-body`, `right-
 Like `SingleColumn`, the titles require no tags, and other slots can be directly populated with just `<p>` tags.
 
 ```html
-<SingleColumn>
+<DoubleColumn>
   <template #title> Title </template>
 
   <template #left-title>Subheading 1</template>
@@ -63,7 +63,31 @@ Like `SingleColumn`, the titles require no tags, and other slots can be directly
   <template #right-body>
     <p>Right text</p>
   </template>
-</SingleColumn>
+</DoubleColumn>
+```
+
+### TripleColumn
+Now you're asking for it. FYI, I didn't implement NColumn because I'm not about to figure out how to make arbitrary-arity trees in Vue. This works the same way as `DoubleColumn`, just with a third `mid-` column.
+
+```html
+<TripleColumn>
+  <template #title> Title </template>
+
+  <template #left-title>Subheading 1</template>
+  <template #left-body>
+    <p>Left text</p>
+  </template>
+
+  <template #mid-title>Subheading 2</template>
+  <template #mid-body>
+    <p>Middle text</p>
+  </template>
+
+  <template #right-title>Subheading 3</template>
+  <template #right-body>
+    <p>Right text</p>
+  </template>
+</TripleColumn>
 ```
 
 ## CustomTable
