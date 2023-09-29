@@ -67,6 +67,7 @@ Like `SingleColumn`, the titles require no tags, and other slots can be directly
 ```
 
 ### TripleColumn
+
 Now you're asking for it. FYI, I didn't implement NColumn because I'm not about to figure out how to make arbitrary-arity trees in Vue. This works the same way as `DoubleColumn`, just with a third `mid-` column.
 
 ```html
