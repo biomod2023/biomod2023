@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted } from 'vue'
 import Bubble from './Bubble.vue'
 
 const title = ref()
@@ -14,12 +14,7 @@ onMounted(() => {
 
 })
 
-// watch(() => scrollWindow.value?.scrollLeft, (scroll) => {
-//   console.log(scroll)
-//   if (scroll) scrollPos.value = scroll
-// }, { immediate: true })
-
-const onScroll = (e: WheelEvent) => {
+const onScroll = () => {
   if (scrollWindow.value?.scrollLeft == 0) scrollPos.value = 0
   if (scrollWindow.value?.scrollLeft == 247) scrollPos.value = 247
 }
