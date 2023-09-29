@@ -6,6 +6,7 @@ const title = ref()
 const id = ref('')
 const scrollWindow = ref<HTMLElement>()
 const scrollPos = ref(0)
+const maxWidth = ref(0)
 
 onMounted(() => {
   if (title.value) {
@@ -13,16 +14,22 @@ onMounted(() => {
   }
 })
 
-const maxWidth = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
+const handleToggleActivated = (state: boolean) => {
+  if (state) {
+    maxWidth.value = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
+  }
+}
+
 
 const onScroll = () => {
+  maxWidth.value = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
   if (scrollWindow.value?.scrollLeft == 0) scrollPos.value = 0
-  if (scrollWindow.value?.scrollLeft == maxWidth) scrollPos.value = maxWidth
+  if (scrollWindow.value?.scrollLeft == maxWidth.value) scrollPos.value = maxWidth.value
 }
 </script>
 
 <template>
-  <Bubble :always-dropdown="false">
+  <Bubble :always-dropdown="false" @toggle-activated="handleToggleActivated">
     <template #title>
       <slot name="title"></slot>
     </template>
@@ -30,8 +37,8 @@ const onScroll = () => {
       <div class="flex flex-col items-center gap-4">
         <div
           ref="scrollWindow"
-          @scroll="onScroll"
           class="flex gap-8 w-full overflow-x-scroll snap-x snap-mandatory lg:overflow-x-auto"
+          @scroll="onScroll"
         >
           <div
             class="min-w-full lg:min-w-0 lg:w-1/2 text-notebookText bg-slate p-6 rounded-[3.2em] snap-center"

@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 
 defineProps<{ alwaysDropdown: boolean }>()
+defineEmits<{(e: 'toggleActivated', state: boolean): void}>()
 
 const title = ref()
 const id = ref('')
@@ -28,7 +29,10 @@ onMounted(() => {
         'flex justify-between items-center align-middle mr-4 active:opacity-60':
           $windowWidth < 1024 || alwaysDropdown
       }"
-      @click="() => (activated = !activated)"
+      @click="() => {
+        activated = !activated
+        $emit('toggleActivated', activated)
+      }"
     >
       <h2 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
         <slot name="title"></slot>

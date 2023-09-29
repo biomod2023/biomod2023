@@ -1,40 +1,44 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import Bubble from './Bubble.vue'
 
 const title = ref()
 const id = ref('')
 const scrollWindow = ref<HTMLElement>()
 const scrollPos = ref(0)
-let maxWidth = 0
+const maxWidth = ref(0)
 
 onMounted(() => {
   if (title.value) {
     id.value = title.value.textContent.trim()
   }
-  maxWidth = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
 })
 
-
+const handleToggleActivated = (state: boolean) => {
+  if (state) {
+    maxWidth.value = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
+  }
+}
 
 const onScroll = () => {
+  maxWidth.value = scrollWindow.value ? (scrollWindow.value?.scrollWidth - scrollWindow.value?.clientWidth) : 0
   if (scrollWindow.value?.scrollLeft == 0) scrollPos.value = 0
-  if (scrollWindow.value?.scrollLeft == maxWidth/2) scrollPos.value = maxWidth/2
-  if (scrollWindow.value?.scrollLeft == maxWidth) scrollPos.value = maxWidth
+  if (scrollWindow.value?.scrollLeft == maxWidth.value/2) scrollPos.value = maxWidth.value/2
+  if (scrollWindow.value?.scrollLeft == maxWidth.value) scrollPos.value = maxWidth.value
 }
 </script>
 
 <template>
-  <Bubble :always-dropdown="false">
+  <Bubble :always-dropdown="false" @toggle-activated="handleToggleActivated">
     <template #title>
       <slot name="title"></slot>
     </template>
     <template #body>
       <div class="flex flex-col items-center gap-4">
         <div
-          ref="scrollWindow"
-          @scroll="onScroll"
+          ref="scrollWindow"          
           class="flex gap-8 w-full overflow-x-scroll snap-x snap-mandatory lg:overflow-x-auto"
+          @scroll="onScroll"
         >
           <div
             class="min-w-full lg:min-w-0 lg:w-1/3 text-notebookText bg-slate p-6 rounded-[3.2em] snap-center"
