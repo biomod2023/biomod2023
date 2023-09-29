@@ -12,7 +12,7 @@ const dropdown = ref(false)
     @mouseleave="dropdown = false"
     class="flex flex-col items-center"
   >
-    <RouterLink :to="to" class="flex gap-2 w-full" :class="{'opacity-80': dropdown}">
+    <RouterLink :to="to" class="flex gap-2 w-full" :class="{ 'opacity-80': dropdown }">
       <slot name="text"></slot>
       <svg
         class="w-3 stroke-gold transition duration-100"
