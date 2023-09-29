@@ -51,7 +51,7 @@ onMounted(() => {
       </svg>
     </div>
     <div
-      class="overflow-hidden"
+      class="overflow-hidden lg:overflow-auto"
       :class="{
         'height-0 pb-0 pt-4 px-4': ($windowWidth < 1024 || alwaysDropdown) && !activated,
         'p-4': ($windowWidth >= 1024 && !alwaysDropdown) || activated

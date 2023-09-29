@@ -104,31 +104,33 @@ const tableData = {
       <SingleColumn>
         <template #title>Results</template>
         <template #graphic>
-          <div class="flex flex-col items-center">
-            <div class="w-48 h-48 bg-gray-300"></div>
-            <p>
-              Figure 1: Fluorescence of the DNase I Picogreen assay in the manufacturer’s buffer,
-              HEPES buffer and TE buffer.
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="w-48 h-48 bg-gray-300"></div>
-            <p>
-              Figure 2: Calibration curve of the DNase I picogreen assay at DNA concentrations of 1,
-              10, 25, 50 and 100 ng/mL.
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center w-full">
-            <div class="overflow-x-scroll w-full">
-              <CustomTable :table-data="tableData" />
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex flex-col lg:flex-row lg:justify-center items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div class="w-48 h-48 bg-gray-300"></div>
+                <p>
+                  Figure 1: Fluorescence of the DNase I Picogreen assay in the manufacturer’s
+                  buffer, HEPES buffer and TE buffer.
+                </p>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div class="w-48 h-48 bg-gray-300"></div>
+                <p>
+                  Figure 2: Calibration curve of the DNase I picogreen assay at DNA concentrations
+                  of 1, 10, 25, 50 and 100 ng/mL.
+                </p>
+              </div>
             </div>
-            <p>
-              Table 1: Approximate concentration of DNase I in each buffer at the beginning and end
-              of the fluorescence measuring period, based on the combined information of Figure 1
-              and Figure 2.
-            </p>
+            <div class="flex flex-col items-center w-full gap-2">
+              <div class="overflow-x-scroll w-full">
+                <CustomTable :table-data="tableData" />
+              </div>
+              <p>
+                Table 1: Approximate concentration of DNase I in each buffer at the beginning and
+                end of the fluorescence measuring period, based on the combined information of
+                Figure 1 and Figure 2.
+              </p>
+            </div>
           </div>
         </template>
       </SingleColumn>

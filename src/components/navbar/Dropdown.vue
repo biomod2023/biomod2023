@@ -12,10 +12,10 @@ const dropdown = ref(false)
     @mouseleave="dropdown = false"
     class="flex flex-col items-center"
   >
-    <RouterLink :to="to" class="flex gap-2 w-full">
+    <RouterLink :to="to" class="flex gap-2 w-full" :class="{ 'opacity-80': dropdown }">
       <slot name="text"></slot>
       <svg
-        class="w-3 stroke-gold"
+        class="w-3 stroke-gold transition duration-100"
         :class="{ 'rotate-180 ': dropdown }"
         viewBox="0 0 30 17"
         fill="none"
@@ -24,8 +24,8 @@ const dropdown = ref(false)
       </svg>
     </RouterLink>
 
-    <div v-if="dropdown" class="fixed pt-12">
-      <div class="bg-slate py-4 shadow-lg rounded-3xl">
+    <div v-if="dropdown" class="fixed pt-14">
+      <div class="bg-slate py-4 shadow-[0_25px_25px_rgba(0,0,0,0.4)] rounded-b-3xl">
         <slot name="content"></slot>
       </div>
     </div>

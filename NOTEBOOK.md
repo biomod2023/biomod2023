@@ -14,7 +14,7 @@ The table of contents will also automatically populate with the titles provided 
 ### SingleColumn
 
 The `SingleColumn` component takes a `title`, `body`, and optional centered `graphic` slot.
-Directly enter the title text with no tags needed. Directly populate the other slots with text - no need for divs, at most use some `<p>` tags for the body and `<img>` for the graphic.
+Directly enter the title text with no tags needed. Fill in the other slots with the body content. If you are writing paragraph blocks, I recommend wrapping all the `<p>` tags with a `<div class="flex flex-col gap-4"></div>`.
 
 ```html
 <SingleColumn>
