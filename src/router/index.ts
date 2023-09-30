@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import IdeasView from '@/views/IdeasView.vue'
 import TeamView from '@/views/TeamView.vue'
+import GroupAView from '@/views/enzymosome/GroupAView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +24,11 @@ const router = createRouter({
       name: 'team',
       component: TeamView
     },
-
+    {
+      path: '/enzymosome/enzyme-activity-assays',
+      name: 'enzyme-activity-assays',
+      component: GroupAView
+    },
     {
       path: '/about',
       name: 'about',

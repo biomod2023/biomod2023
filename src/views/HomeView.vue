@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LightButton from '../components/LightButton.vue'
+import LightButton from '@/components/LightButton.vue'
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
