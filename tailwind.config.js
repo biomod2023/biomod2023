@@ -22,14 +22,14 @@ module.exports = {
             fontWeight: '600'
           }
         ],
-        'title': [
+        title: [
           '5rem',
           {
             fontWeight: '600'
           }
         ],
         'subtitle-sm': ['1.2rem'],
-        'subtitle': ['1.35rem']
+        subtitle: ['1.35rem']
       }
     }
   },
