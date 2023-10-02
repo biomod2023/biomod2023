@@ -34,7 +34,6 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
 <template>
   <div class="flex flex-col h-max bg-slate">
-
     <div class="flex flex-col items-center w-full h-full">
       <!-- Header -->
       <div class="flex flex-col w-full items-center">
@@ -54,7 +53,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
       <div class="flex flex-row gap-x-[1rem] pb-[1rem]">
         <div
-          v-for="i in Math.ceil(members?.get(currTeam)?.length ?? 0 / maxMembers)"
+          v-for="i in Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers)"
           :key="i"
           :class="
             'w-[0.5rem] h-[0.5rem] rounded-full border-[#8f8d8b] border-2 ' +
@@ -99,7 +98,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
         </div>
 
         <v-icon
-          v-show="currIdx != Math.ceil(members?.get(currTeam)?.length ?? 0 / maxMembers) - 1"
+          v-show="currIdx != Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers) - 1"
           class="cursor-pointer relative bottom-[3rem]"
           name="ri-arrow-drop-right-line"
           scale="3.5"

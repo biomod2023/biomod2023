@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LightButton from '../components/LightButton.vue'
+import LightButton from '@/components/LightButton.vue'
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -37,7 +37,7 @@ const scrollToTop = () => {
           >
             <line y1="2" x2="127" y2="2" stroke="#E2B764" />
           </svg>
-          <LightButton> Learn More</LightButton>
+          <LightButton>Learn More</LightButton>
         </div>
       </div>
 

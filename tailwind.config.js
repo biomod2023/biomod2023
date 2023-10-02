@@ -9,6 +9,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        notebookBg: '#333333',
+        notebookText: '#8F8F90',
         slate: '#272727',
         dark: '#1E1E1E',
         gold: '#E2B764'
@@ -20,14 +22,14 @@ module.exports = {
             fontWeight: '600'
           }
         ],
-        'title': [
+        title: [
           '5rem',
           {
             fontWeight: '600'
           }
         ],
-        'subtitle-sm': ['1.15rem'],
-        'subtitle': ['1.35rem']
+        'subtitle-sm': ['1.2rem'],
+        subtitle: ['1.35rem']
       }
     }
   },
