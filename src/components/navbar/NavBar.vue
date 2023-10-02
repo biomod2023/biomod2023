@@ -64,7 +64,7 @@ const tree: Tree[] = [
   },
   {
     name: 'ELSI',
-    url: '#'
+    url: '/elsi'
   },
   {
     name: 'Team',
