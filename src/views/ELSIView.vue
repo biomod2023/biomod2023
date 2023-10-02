@@ -71,7 +71,7 @@ const setSelection = (num: number) => {
           :enter-active-class="activeAnim"
           :leave-active-class="activeAnim"
         >
-          <span :key="currentSelection" class="ml-[-100%] mr-[-100%] md:mx-0">
+          <span :key="currentSelection" class="flex justify-center text-center">
             <h1
               class="text-title-sm lg:text-title text-gray-300 w-full text-center md:text-start md:pl-8 pb-2"
             >
