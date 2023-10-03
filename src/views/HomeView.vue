@@ -57,14 +57,19 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row items-center justify-around lg:py-20 px-10 lg:mt-10 lg:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]">
-      <div class="lg:basis-1/2 pb-12 lg:pb-32 md:mt-12 lg:mt-10 pt-32 lg:pt-36 h-full px-20 md:px-32 lg:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] lg:bg-[45%_50%]">
-        <div class="m-auto w-64 h-64 lg:w-[30rem] lg:h-[30rem] bg-white rounded-full drop-shadow-[-40px_-10px_20px_rgba(0,0,0,1)]"></div>
+    <div
+      class="flex flex-col lg:flex-row items-center justify-around lg:py-20 px-10 lg:mt-10 lg:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]"
+    >
+      <div
+        class="lg:basis-1/2 pb-12 lg:pb-32 md:mt-12 lg:mt-10 pt-32 lg:pt-36 h-full px-20 md:px-32 lg:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] lg:bg-[45%_50%]"
+      >
+        <div
+          class="m-auto w-64 h-64 lg:w-[30rem] lg:h-[30rem] bg-white rounded-full drop-shadow-[-40px_-10px_20px_rgba(0,0,0,1)]"
+        ></div>
       </div>
 
       <div
-        class="flex flex-col items-center lg:items-start lg:justify-center text-center lg:text-left w-full lg:max-w-[50%] lg:h-full gap-4 lg:gap-10 lg:mt-0 lg:pr-4
-              lg:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
+        class="flex flex-col items-center lg:items-start lg:justify-center text-center lg:text-left w-full lg:max-w-[50%] lg:h-full gap-4 lg:gap-10 lg:mt-0 lg:pr-4 lg:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
       >
         <h1 class="font-title text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
@@ -78,8 +83,9 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="mask flex flex-col gap-2 pt-16 items-center bg-[url:theme('backgroundImage.video'),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center">
-
+    <div
+      class="mask flex flex-col gap-2 pt-16 items-center bg-[url:theme('backgroundImage.video'),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center"
+    >
       <div class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
       <svg
         width="150"
@@ -122,8 +128,8 @@ const scrollToTop = () => {
 @media only screen and (min-width: 1024px) {
   .bg {
     @apply w-full bg-no-repeat;
-    background-image: url('../assets/homepage/bg_rot_fade.png'), url('../assets/homepage/bg_top_fade.png'),
-      url('../assets/homepage/bg.png');
+    background-image: url('../assets/homepage/bg_rot_fade.png'),
+      url('../assets/homepage/bg_top_fade.png'), url('../assets/homepage/bg.png');
     background-position:
       -2% 5%,
       right 5%,
