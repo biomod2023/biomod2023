@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import IdeasView from '@/views/IdeasView.vue'
 import TeamView from '@/views/TeamView.vue'
 import ELSIView from '@/views/ELSIView.vue'
+import SponsorsView from '@/views/SponsorsView.vue'
 import GroupAView from '@/views/enzymosome/GroupAView.vue'
 
 const router = createRouter({
@@ -30,6 +31,11 @@ const router = createRouter({
       path: '/team',
       name: 'team',
       component: TeamView
+    },
+    {
+      path: '/sponsors',
+      name: 'sponsors',
+      component: SponsorsView
     },
     {
       path: '/enzymosome/enzyme-activity-assays',
