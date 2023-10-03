@@ -22,8 +22,8 @@ const scrollToTop = () => {
     </div>
 
     <div class="flex flex-col bg">
-      <span class="w-full h-40 rounded-b-[50%] bg-dark"></span>
-      <div class="p-4 lg:w-1/2 ml-4 lg:ml-28 mt-4 lg:mt-10">
+      <span class="w-full h-40 bg-gradient-to-b from-dark to-slate"></span>
+      <div class="p-4 lg:w-1/2 ml-4 lg:ml-28 mt-4 lg:mt-10 grad">
         <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
           The smallest of beginnings
         </h1>
@@ -57,11 +57,14 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row items-center justify-around py-16 lg:py-36 px-10">
-      <div class="w-72 h-72 lg:w-[30rem] lg:h-[30rem] bg-white"></div>
+    <div class="flex flex-col lg:flex-row items-center justify-around lg:py-20 px-10 lg:mt-10 lg:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]">
+      <div class="lg:basis-1/2 pb-12 lg:pb-32 md:mt-12 lg:mt-10 pt-32 lg:pt-36 h-full px-20 md:px-32 lg:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] lg:bg-[45%_50%]">
+        <div class="m-auto w-64 h-64 lg:w-[30rem] lg:h-[30rem] bg-white rounded-full drop-shadow-[-40px_-10px_20px_rgba(0,0,0,1)]"></div>
+      </div>
 
       <div
-        class="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:max-w-[50%] gap-4 lg:gap-10 mt-10 lg:mt-0"
+        class="flex flex-col items-center lg:items-start lg:justify-center text-center lg:text-left w-full lg:max-w-[50%] lg:h-full gap-4 lg:gap-10 lg:mt-0 lg:pr-4
+              lg:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
       >
         <h1 class="font-title text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
@@ -75,7 +78,8 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col gap-2 items-center bg-dark pt-4 pb-8">
+    <div class="flex flex-col gap-2 pt-16 items-center bg-[url:theme('backgroundImage.video'),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center">
+
       <div class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
       <svg
         width="150"
@@ -89,7 +93,7 @@ const scrollToTop = () => {
 
       <div class="bg-white w-5/6 lg:w-3/4 h-52 lg:h-[40rem] m-8"></div>
 
-      <button class="btn !py-4 my-2 group" @click="scrollToTop">
+      <button class="btn !py-4 mt-2 mb-8 group" @click="scrollToTop">
         <svg
           class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200"
           viewBox="0 0 24 36"
@@ -108,8 +112,8 @@ const scrollToTop = () => {
 <style>
 .bg {
   @apply w-full bg-no-repeat;
-  background-image: url('../assets/homepage_bg_rot_mobile.png'),
-    url('../assets/homepage_bg_top_mobile.png');
+  background-image: url('../assets/homepage/bg_rot_mobile_fade.png'),
+    url('../assets/homepage/bg_top_mobile_fade.png');
   background-position:
     -2% 5%,
     right 6%;
@@ -118,8 +122,8 @@ const scrollToTop = () => {
 @media only screen and (min-width: 1024px) {
   .bg {
     @apply w-full bg-no-repeat;
-    background-image: url('../assets/homepage_bg_rot.png'), url('../assets/homepage_bg_top.png'),
-      url('../assets/homepage_bg.png');
+    background-image: url('../assets/homepage/bg_rot_fade.png'), url('../assets/homepage/bg_top_fade.png'),
+      url('../assets/homepage/bg.png');
     background-position:
       -2% 5%,
       right 5%,
