@@ -42,7 +42,7 @@ const scrollToTop = () => {
       </div>
 
       <div
-        class="mt-20 flex flex-col gap-y-12 lg:flex-row justify-around items-center bg-dark opacity-90 p-10 lg:p-8"
+        class="mt-20 flex flex-col gap-y-12 lg:flex-row justify-around items-center bg-gradient-to-b from-slate via-dark to-slate opacity-90 p-10 lg:p-8"
       >
         <div v-for="index in 3" :key="index">
           <div class="flex flex-col w-80 gap-4">
@@ -78,7 +78,7 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col gap-2 pt-16 items-center bg-[url:theme('backgroundImage.video'),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center">
+    <div class="mask flex flex-col gap-2 pt-16 items-center bg-[url:theme('backgroundImage.video'),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center">
 
       <div class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
       <svg
@@ -129,5 +129,9 @@ const scrollToTop = () => {
       right 5%,
       right 25%;
   }
+}
+
+.mask {
+  mask: linear-gradient(to bottom, transparent, black 5%);
 }
 </style>
