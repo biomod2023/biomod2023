@@ -21,10 +21,10 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col bg">
-      <span class="w-full h-40 bg-gradient-to-b from-dark to-slate"></span>
-      <div class="flex">
-        <div class="p-4 lg:w-1/2 ml-4 lg:ml-28 mt-4 lg:mt-10">
+    <div class="flex flex-col bg mb-8">
+      <span class="w-full h-28 lg:h-40 bg-gradient-to-b from-dark to-slate"></span>
+      <div class="p-4 flex flex-col gap-4 lg:gap-0 lg:flex-row mx-4 lg:mx-28 lg:mt-10">
+        <div class="lg:w-1/2">
           <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
             The smallest of beginnings
           </h1>
@@ -40,8 +40,8 @@ const scrollToTop = () => {
             <LightButton>Learn More</LightButton>
           </div>
         </div>
-        <div class="p-4 lg:w-1/2 lg:mr-28 lg:mt-10">
-          <p class="mt-5 lg:text-subtitle text-right">
+        <div class="lg:w-1/2">
+          <p class="lg:mt-5 lg:text-subtitle lg:text-right">
             Our submission to the biomolecular design competition is a testament to our team's
             unwavering commitment to pushing the boundaries of what's possible in the field of
             biomolecular engineering. Our project not only addresses a pressing global health
@@ -116,8 +116,8 @@ const scrollToTop = () => {
   background-image: url('../assets/homepage/bg_rot_mobile_fade.png'),
     url('../assets/homepage/bg_top_mobile_fade.png');
   background-position:
-    left 5em,
-    100% 7em;
+    left 3em,
+    100% 5.5em;
 }
 
 @media only screen and (min-width: 1024px) {
