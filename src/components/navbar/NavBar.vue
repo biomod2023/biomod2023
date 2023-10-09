@@ -81,7 +81,7 @@ const tree: Tree[] = [
   <!-- Desktop Navbar -->
   <template v-if="$windowWidth >= 1024">
     <div
-      class="flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
+      class="flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
       <div class="flex justify-center gap-16">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
@@ -112,7 +112,7 @@ const tree: Tree[] = [
         </template>
       </div>
       <a href="/">
-        <img src="../../assets/logo.svg" alt="Biomod Logo" />
+        <img src="../../assets/logo.svg" alt="Biomod Logo" class="w-14" />
       </a>
       <div class="flex justify-center gap-16">
         <RouterLink
@@ -129,11 +129,11 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg"
+      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
-        <img class="-mr-1" src="../../assets/logo.svg" alt="Biomod Logo" />
-        <span class="text-[#FFC000] font-bold text-xl">UBC Biomod</span>
+        <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />
+        <span class="text-gold font-bold text-xl">UBC Biomod</span>
       </RouterLink>
       <button class="mr-10" @click="sidebar = !sidebar">
         <svg

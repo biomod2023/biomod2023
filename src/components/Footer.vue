@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router'
     </a>
 
     <RouterLink to="/" class="hidden lg:block">
-      <img src="../assets/biomod_footer.svg" alt="Biomod Logo" />
+      <img src="../assets/biomod_footer.png" alt="Biomod Logo" />
     </RouterLink>
   </div>
 </template>
