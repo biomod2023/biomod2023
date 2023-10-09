@@ -23,21 +23,28 @@ const scrollToTop = () => {
 
     <div class="flex flex-col bg">
       <span class="w-full h-40 bg-gradient-to-b from-dark to-slate"></span>
-      <div class="p-4 lg:w-1/2 ml-4 lg:ml-28 mt-4 lg:mt-10 grad">
-        <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
-          The smallest of beginnings
-        </h1>
-
-        <div class="flex items-center mt-2 gap-4 lg:gap-28">
-          <svg
-            class="w-16 lg:w-32 stroke-[6] lg:stroke-[3]"
-            viewBox="0 0 127 4"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line y1="2" x2="127" y2="2" stroke="#E2B764" />
-          </svg>
-          <LightButton>Learn More</LightButton>
+      <div class="flex">
+        <div class="p-4 lg:w-1/2 ml-4 lg:ml-28 mt-4 lg:mt-10">
+          <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
+            The smallest of beginnings
+          </h1>
+          <div class="flex items-center mt-2 gap-4 lg:gap-28">
+            <svg
+              class="w-16 lg:w-32 stroke-[6] lg:stroke-[3]"
+              viewBox="0 0 127 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line y1="2" x2="127" y2="2" stroke="#E2B764" />
+            </svg>
+            <LightButton>Learn More</LightButton>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 lg:mr-28 lg:mt-10">
+          <p class="mt-5 lg:text-subtitle text-right">
+            Our submission to the biomolecular design competition is a testament to our team's unwavering commitment to pushing the boundaries of what's possible in the field of biomolecular engineering.
+            Our project not only addresses a pressing global health concern but also showcases the immense potential of biomolecular design to provide innovative solutions to real-world problems. 
+          </p>
         </div>
       </div>
     </div>
@@ -106,19 +113,18 @@ const scrollToTop = () => {
   background-image: url('../assets/homepage/bg_rot_mobile_fade.png'),
     url('../assets/homepage/bg_top_mobile_fade.png');
   background-position:
-    -2% 5%,
-    right 6%;
+    left 5em,
+    100% 7em;
 }
 
 @media only screen and (min-width: 1024px) {
   .bg {
     @apply w-full bg-no-repeat;
     background-image: url('../assets/homepage/bg_rot_fade.png'),
-      url('../assets/homepage/bg_top_fade.png'), url('../assets/homepage/bg.png');
+      url('../assets/homepage/bg_top_fade.png');
     background-position:
       -2% 5%,
-      right 5%,
-      right 25%;
+      right 5%;
   }
 }
 
