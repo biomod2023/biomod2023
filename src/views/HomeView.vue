@@ -79,7 +79,7 @@ const scrollToTop = () => {
     </div>
 
     <div
-      class="mask flex flex-col gap-2 pt-16 items-center bg-[url:theme('backgroundImage.video'),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center"
+      class="mask flex flex-col gap-2 pt-16 items-center bg-[url:url(../assets/homepage/video_bg.png),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center"
     >
       <div class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
       <svg

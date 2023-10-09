@@ -8,9 +8,6 @@ module.exports = {
       title: ['Fira Sans', ...defaultTheme.fontFamily.sans]
     },
     extend: {
-      backgroundImage: {
-        video: 'url(./src/assets/homepage/video_bg.png)'
-      },
       colors: {
         notebookBg: '#333333',
         notebookText: '#8F8F90',
