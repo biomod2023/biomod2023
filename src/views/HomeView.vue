@@ -66,7 +66,7 @@ const scrollToTop = () => {
       <div
         class="flex flex-col items-center lg:items-start lg:justify-center text-center lg:text-left w-full lg:max-w-[50%] lg:h-full gap-4 lg:gap-10 lg:mt-0 lg:pr-4 lg:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
       >
-        <h1 class="font-title text-[5rem] text-gold">Abstract</h1>
+        <h1 class="font-title text-[4rem] lg:text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
