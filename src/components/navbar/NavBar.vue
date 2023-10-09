@@ -27,7 +27,20 @@ const tree: Tree[] = [
     name: 'Notebook',
     children: [
       {
-        name: 'Enzymosome',
+        name: 'Computational Simulation',
+        children: [
+          {
+            name: 'Structure Design',
+            url: '#'
+          },
+          {
+            name: 'Docking of Dnase I',
+            url: '#'
+          }
+        ]
+      },
+      {
+        name: 'Lab Validation',
         children: [
           {
             name: 'Enzyme Activity Assays',
@@ -38,24 +51,11 @@ const tree: Tree[] = [
             url: '#'
           },
           {
-            name: 'Enzyme Conjugation',
-            url: '#'
-          }
-        ]
-      },
-      {
-        name: 'CADnano',
-        children: [
-          {
-            name: 'Octahedron',
+            name: 'Octahedron Formation',
             url: '#'
           },
           {
-            name: 'Trigon',
-            url: '#'
-          },
-          {
-            name: 'Pentahedron',
+            name: 'Thiolation and Conjugation',
             url: '#'
           }
         ]
