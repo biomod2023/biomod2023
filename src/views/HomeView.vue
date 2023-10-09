@@ -42,8 +42,11 @@ const scrollToTop = () => {
         </div>
         <div class="p-4 lg:w-1/2 lg:mr-28 lg:mt-10">
           <p class="mt-5 lg:text-subtitle text-right">
-            Our submission to the biomolecular design competition is a testament to our team's unwavering commitment to pushing the boundaries of what's possible in the field of biomolecular engineering.
-            Our project not only addresses a pressing global health concern but also showcases the immense potential of biomolecular design to provide innovative solutions to real-world problems. 
+            Our submission to the biomolecular design competition is a testament to our team's
+            unwavering commitment to pushing the boundaries of what's possible in the field of
+            biomolecular engineering. Our project not only addresses a pressing global health
+            concern but also showcases the immense potential of biomolecular design to provide
+            innovative solutions to real-world problems.
           </p>
         </div>
       </div>
