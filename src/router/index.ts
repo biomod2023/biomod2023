@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import IdeasView from '@/views/IdeasView.vue'
-import TeamView from '@/views/TeamView.vue'
-import ELSIView from '@/views/ELSIView.vue'
-import GroupAView from '@/views/enzymosome/GroupAView.vue'
+const HomeView = () => import('@/views/HomeView.vue')
+const IdeasView = () => import('@/views/IdeasView.vue')
+const TeamView = () => import('@/views/TeamView.vue')
+const ELSIView = () => import('@/views/ELSIView.vue')
+const GroupAView = () => import('@/views/enzymosome/GroupAView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,14 +35,6 @@ const router = createRouter({
       path: '/enzymosome/enzyme-activity-assays',
       name: 'enzyme-activity-assays',
       component: GroupAView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
     }
   ]
 })
