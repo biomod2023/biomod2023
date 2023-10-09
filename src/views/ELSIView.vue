@@ -56,9 +56,9 @@ const setSelection = (num: number) => {
 </script>
 
 <template>
-  <div class="flex flex-col bg-slate">
+  <div class="flex flex-col bg-gradient-to-b from-dark to-slate to-30%">
     <div class="relative z-10 w-full flex flex-col items-center px-6">
-      <h1 class="font-title text-title-sm lg:text-title text-gold text-center mb-4">
+      <h1 class="font-title text-title-sm lg:text-title text-gold text-center my-4">
         Ethical, Legal, and Social Issues
       </h1>
 
