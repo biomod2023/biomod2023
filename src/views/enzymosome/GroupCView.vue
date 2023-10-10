@@ -129,7 +129,7 @@ const sectionTitleStyle = "text-subtitle-sm lg:text-subtitle text-white"
                 </p>
 
                 <div class="text-center">
-                  <div class="overflow-x-scroll w-full text-center">
+                  <div class="overflow-x-scroll w-full">
                     <CustomTable :table-data="tableData" />
                   </div>
                   <p> <b>Table 1.</b> <em>BSA dilution</em></p>

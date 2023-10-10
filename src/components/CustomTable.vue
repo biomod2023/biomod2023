@@ -12,7 +12,7 @@ const border = 'border-notebookText'
 </script>
 
 <template>
-  <table class="table-fixed border-collapse">
+  <table class="table-fixed border-collapse lg:w-full">
     <tr class="bg-slate">
       <th
         v-for="(header, i) in tableData.headers"
