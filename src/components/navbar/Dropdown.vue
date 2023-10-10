@@ -24,7 +24,7 @@ const dropdown = ref(false)
       </svg>
     </RouterLink>
 
-    <div v-if="dropdown" class="fixed pt-14">
+    <div v-if="dropdown" class="fixed pt-12">
       <div class="bg-slate py-4 shadow-[0_25px_25px_rgba(0,0,0,0.4)] rounded-b-3xl">
         <slot name="content"></slot>
       </div>
