@@ -42,13 +42,13 @@ const router = createRouter({
       path: '/enzymosome/enzyme-conjugation',
       name: 'enzyme-conjugation',
       component: GroupCView
-    }, 
+    },
     {
       path: '/octahedron/octahedron-formation',
       name: 'octahedron-formation',
       component: OctadedronFormation
     }
-  ]}
-)
+  ]
+})
 
 export default router
