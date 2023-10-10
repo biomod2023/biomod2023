@@ -11,7 +11,7 @@
     })
 </script>
 <template>
-    <div class="w-full overflow-x-scroll whitespace-nowrap bg-transparent invisible-scroller" ref="containerRef">
+    <div class="w-full overflow-x-scroll whitespace-nowrap bg-transparent invisible-scroller text-center" ref="containerRef">
     </div>
 </template>
 <!-- 
