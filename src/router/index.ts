@@ -4,6 +4,8 @@ const IdeasView = () => import('@/views/IdeasView.vue')
 const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
 const GroupAView = () => import('@/views/enzymosome/GroupAView.vue')
+const GroupCView = () => import('@/views/enzymosome/GroupCView.vue')
+const OctadedronFormation = () => import('@/views/Octahedron/OctahedronFormation.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +37,16 @@ const router = createRouter({
       path: '/enzymosome/enzyme-activity-assays',
       name: 'enzyme-activity-assays',
       component: GroupAView
+    },
+    {
+      path: '/enzymosome/enzyme-conjugation',
+      name: 'enzyme-conjugation',
+      component: GroupCView
+    },
+    {
+      path: '/octahedron/octahedron-formation',
+      name: 'octahedron-formation',
+      component: OctadedronFormation
     }
   ]
 })

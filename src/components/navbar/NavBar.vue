@@ -39,7 +39,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Enzyme Conjugation',
-            url: '#'
+            url: '/enzymosome/enzyme-conjugation'
           }
         ]
       },
@@ -48,7 +48,7 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Octahedron',
-            url: '#'
+            url: '/octahedron/octahedron-formation'
           },
           {
             name: 'Trigon',
