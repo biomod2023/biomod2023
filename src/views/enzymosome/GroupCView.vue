@@ -120,7 +120,7 @@ const sectionTitleStyle = "text-subtitle-sm lg:text-subtitle text-white"
                   reagent (WR), the following formula is used to determine the total volume required:
                 </p>
                 <div class="flex flex-col items-center">
-                  <Equation formula="(\text{\# standards}+\text{\# unknowns)}"/>
+                  <Equation formula="(\text{\# standards}+\text{\# unknowns)}(\text{\# replicates})(\text{volume of WE per sample}) = \text{total volume required}"/>
                   <Equation formula="(9 \text{ standards}+3 \text{ unknowns})(3 \text{ replicates})(200 \text{ L})=7200 \text{ L required}"/>
                 </div>
                 <p>

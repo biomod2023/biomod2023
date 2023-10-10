@@ -8,12 +8,10 @@
     
     onMounted(() => {
       katex.render(props.formula, containerRef.value, { throwOnError: false})
-      console.log("blehhhh")
     })
 </script>
 <template>
-    <div class="equation-container" ref="containerRef">
-
+    <div class="w-full overflow-x-scroll whitespace-nowrap bg-transparent invisible-scroller" ref="containerRef">
     </div>
 </template>
 <!-- 
