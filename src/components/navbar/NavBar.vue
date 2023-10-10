@@ -48,7 +48,7 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Octahedron',
-            url: '#'
+            url: '/octahedron/octahedron-formation'
           },
           {
             name: 'Trigon',
