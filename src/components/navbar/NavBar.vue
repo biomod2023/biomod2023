@@ -44,7 +44,7 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Enzyme Activity Assays',
-            url: '/enzymosome/enzyme-activity-assays'
+            url: '/lab-validation/enzyme-activity-assays'
           },
           {
             name: 'Liposome Formation',
@@ -52,11 +52,15 @@ const tree: Tree[] = [
           },
           {
             name: 'Octahedron Formation',
+            url: '/lab-validation/octahedron-formation'
+          },
+          {
+            name: 'Octahedron Liposome Formation',
             url: '#'
           },
           {
             name: 'Thiolation and Conjugation',
-            url: '#'
+            url: '/lab-validation/enzyme-conjugation'
           }
         ]
       }
