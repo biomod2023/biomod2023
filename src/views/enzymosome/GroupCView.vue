@@ -28,7 +28,7 @@ const tableData = {
   ]
 }
 
-const sectionTitleStyle = "text-subtitle-sm lg:text-subtitle text-white"
+const sectionTitleStyle = "text-subtitle-sm lg:text-subtitle text-white mb-4"
 </script>
 
 <template>
