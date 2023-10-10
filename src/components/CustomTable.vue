@@ -4,7 +4,7 @@ defineProps<{
     headers: string[]
     rowHeaders: string[]
     rowsPerRowHeader: number
-    data: number[][]
+    data: any[][]
   }
 }>()
 
