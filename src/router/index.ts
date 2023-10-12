@@ -34,17 +34,17 @@ const router = createRouter({
       component: TeamView
     },
     {
-      path: '/enzymosome/enzyme-activity-assays',
+      path: '/lab-validation/enzyme-activity-assays',
       name: 'enzyme-activity-assays',
       component: GroupAView
     },
     {
-      path: '/enzymosome/enzyme-conjugation',
+      path: '/lab-validation/enzyme-conjugation',
       name: 'enzyme-conjugation',
       component: GroupCView
     },
     {
-      path: '/octahedron/octahedron-formation',
+      path: '/lab-validation/octahedron-formation',
       name: 'octahedron-formation',
       component: OctadedronFormation
     }

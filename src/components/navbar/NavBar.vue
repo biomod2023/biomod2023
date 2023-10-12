@@ -27,36 +27,40 @@ const tree: Tree[] = [
     name: 'Notebook',
     children: [
       {
-        name: 'Enzymosome',
+        name: 'Computational Simulation',
+        children: [
+          {
+            name: 'Structure Design',
+            url: '#'
+          },
+          {
+            name: 'Docking of Dnase I',
+            url: '#'
+          }
+        ]
+      },
+      {
+        name: 'Lab Validation',
         children: [
           {
             name: 'Enzyme Activity Assays',
-            url: '/enzymosome/enzyme-activity-assays'
+            url: '/lab-validation/enzyme-activity-assays'
           },
           {
             name: 'Liposome Formation',
             url: '#'
           },
           {
-            name: 'Enzyme Conjugation',
-            url: '/enzymosome/enzyme-conjugation'
-          }
-        ]
-      },
-      {
-        name: 'CADnano',
-        children: [
-          {
-            name: 'Octahedron',
-            url: '/octahedron/octahedron-formation'
+            name: 'Octahedron Formation',
+            url: '/lab-validation/octahedron-formation'
           },
           {
-            name: 'Trigon',
+            name: 'Octahedron Liposome Formation',
             url: '#'
           },
           {
-            name: 'Pentahedron',
-            url: '#'
+            name: 'Thiolation and Conjugation',
+            url: '/lab-validation/enzyme-conjugation'
           }
         ]
       }
