@@ -24,12 +24,17 @@ const handleTeamChange = (team: string) => {
   currTeam.value = team
   changingTeam.value = true
   currIdx.value = 0
+  mobileTeamDropDown.value = false
 }
 let changingTeam: Ref<boolean> = ref(false)
 
 let activeAnimation: string = 'transition duration-[1000ms] ease-in-out absolute'
 let initialState: Ref<string> = ref('translate-x-full opacity-0')
 let finalState: Ref<string> = ref('-translate-x-full opacity-0')
+
+// Mobile
+let mobileTeamDropDown: Ref<boolean> = ref(false)
+let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "rounded-[1.45rem]"
 </script>
 
 <template>
@@ -41,7 +46,35 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
         <h2 class="text-subtitle text-gold">Behold the Amazing Folders!</h2>
       </div>
 
-      <div class="flex flex-row gap-x-[4rem] py-[2rem]">
+      <!-- Mobile -->
+      <div class="w-full px-[3.3rem] py-[2rem]
+        min-[866px]:hidden z-10" >
+        <div :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
+          dropDownStyle()"
+          @click="() => mobileTeamDropDown = !mobileTeamDropDown">
+          <v-icon class="grow-0" name="ri-team-fill" scale="2"/>
+          <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]"> Choose Team </h1>
+          <span class="w-[0.82rem] h-[0.82rem] bg-white rounded-full"></span>
+        </div>
+
+        <div class="relative">
+          <div class="w-full h-fit bg-gold/60 absolute flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]"
+            v-if="mobileTeamDropDown">
+            <TransparentButton
+              v-for="(team, i) in teams"
+              :key="'mobile_' + i"
+              :is-disabled="team == currTeam"
+              @click="handleTeamChange(team)"
+              >{{ team }}</TransparentButton
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop -->
+      <div class="hidden
+        min-[866px]:gap-x-[1rem] min-[866px]:py-[2rem] min-[866px]:flex min-[866px]:flex-row
+        lg:gap-x-[3rem]">
         <TransparentButton
           v-for="(team, i) in teams"
           :key="i"
@@ -63,7 +96,7 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
       </div>
 
       <!-- Team Carousel -->
-      <div class="flex justify-center items-center w-[68.5rem] h-[49.6rem]">
+      <div class="flex justify-center items-center w-[68.5rem] h-[49.6rem] relative z-0">
         <v-icon
           :class="'cursor-pointer relative bottom-[3rem] ' + (currIdx == 0 ? 'invisible' : '')"
           name="ri-arrow-drop-left-line"

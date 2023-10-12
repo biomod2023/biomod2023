@@ -8,12 +8,13 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons'
 import {
   RiArrowDropLeftLine,
   RiArrowDropRightLine,
+  RiTeamFill,
   HiSolidArrowSmRight,
   HiSolidArrowSmLeft
 } from 'oh-vue-icons/icons'
 import { VueWindowSizePlugin } from 'vue-window-size/plugin'
 
-addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine)
+addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine, RiTeamFill)
 
 const app = createApp(App)
 
