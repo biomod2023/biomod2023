@@ -129,7 +129,7 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
+      class="fixed z-30 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
         <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />
@@ -157,7 +157,7 @@ const tree: Tree[] = [
       :leave-active-class="transitionAnimation"
     >
       <template v-if="sidebar">
-        <div class="fixed z-50 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
+        <div class="fixed z-20 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
           <div
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
