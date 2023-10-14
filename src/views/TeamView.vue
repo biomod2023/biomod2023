@@ -6,6 +6,8 @@ import ProfileCard from '@/components/ProfileCard.vue'
 import TransparentButton from '@/components/TransparentButton.vue'
 import { teams, members } from '@/components/Member'
 
+import ClickDetection from '@/components/utils/ClickDetection.vue'
+
 let currIdx: Ref<number> = ref(0)
 const maxMembers = 6
 const handleClick = (inc: number) => {
@@ -47,29 +49,31 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
       </div>
 
       <!-- Mobile -->
-      <div class="w-full px-[3.3rem] py-[2rem]
-        min-[866px]:hidden z-10" >
-        <div :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
-          dropDownStyle()"
-          @click="() => mobileTeamDropDown = !mobileTeamDropDown">
-          <v-icon class="grow-0" name="ri-team-fill" scale="2"/>
-          <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]"> Choose Team </h1>
-          <span class="w-[0.82rem] h-[0.82rem] bg-white rounded-full"></span>
-        </div>
-
-        <div class="relative">
-          <div class="w-full h-fit bg-gold/60 absolute flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]"
-            v-if="mobileTeamDropDown">
-            <TransparentButton
-              v-for="(team, i) in teams"
-              :key="'mobile_' + i"
-              :is-disabled="team == currTeam"
-              @click="handleTeamChange(team)"
-              >{{ team }}</TransparentButton
-            >
+      <ClickDetection :callback="() => mobileTeamDropDown = false" v-slot="{setRef}">
+        <div class="w-full px-[3.3rem] py-[2rem]">
+          <div class="min-[866px]:hidden z-10 " :ref="(currRef) => setRef(currRef as HTMLElement)">
+            <div :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
+              dropDownStyle()"
+              @click="() => mobileTeamDropDown = !mobileTeamDropDown">
+              <v-icon class="grow-0" name="ri-team-fill" scale="2"/>
+              <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]"> Choose Team </h1>
+              <span class="w-[0.82rem] h-[0.82rem] bg-white rounded-full"></span>
+            </div>
+            <div class="relative" >
+              <div class="w-full h-fit bg-gold/60 absolute flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]"
+                v-if="mobileTeamDropDown">
+                <TransparentButton
+                  v-for="(team, i) in teams"
+                  :key="'mobile_' + i"
+                  :is-disabled="team == currTeam"
+                  @click="handleTeamChange(team)"
+                  >{{ team }}</TransparentButton
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </ClickDetection>
 
       <!-- Desktop -->
       <div class="hidden
