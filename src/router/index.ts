@@ -3,8 +3,8 @@ const HomeView = () => import('@/views/HomeView.vue')
 const IdeasView = () => import('@/views/IdeasView.vue')
 const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
-const GroupAView = () => import('@/views/computational-simulation/GroupAView.vue')
-const GroupCView = () => import('@/views/computational-simulation/GroupCView.vue')
+const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
+const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 
 const router = createRouter({
