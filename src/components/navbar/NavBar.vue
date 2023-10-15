@@ -43,8 +43,8 @@ const tree: Tree[] = [
         name: 'Lab Validation',
         children: [
           {
-            name: 'Enzyme Activity Assays',
-            url: '/lab-validation/enzyme-activity-assays'
+            name: 'Dnase I',
+            url: '/lab-validation/dnase-i'
           },
           {
             name: 'Liposome Formation',
@@ -55,12 +55,21 @@ const tree: Tree[] = [
             url: '/lab-validation/octahedron-formation'
           },
           {
-            name: 'Octahedron Liposome Formation',
+            name: 'Thiolation and Conjugation',
+            url: '/lab-validation/thiolation-and-conjugation'
+          }
+        ]
+      },
+      {
+        name: 'Future Directions',
+        children: [
+          {
+            name: 'Docking of Alginate Lyase and Alpha-Amylase',
             url: '#'
           },
           {
-            name: 'Thiolation and Conjugation',
-            url: '/lab-validation/enzyme-conjugation'
+            name: 'Liposome Formation Using Octahedron',
+            url: '#'
           }
         ]
       }
