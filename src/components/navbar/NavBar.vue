@@ -27,36 +27,40 @@ const tree: Tree[] = [
     name: 'Notebook',
     children: [
       {
-        name: 'Enzymosome',
+        name: 'Computational Simulation',
         children: [
           {
-            name: 'Enzyme Activity Assays',
-            url: '/enzymosome/enzyme-activity-assays'
+            name: 'Structure Design',
+            url: '#'
           },
           {
-            name: 'Liposome Formation',
-            url: '/enzymosome/liposome-formation'
-          },
-          {
-            name: 'Enzyme Conjugation',
+            name: 'Docking of Dnase I',
             url: '#'
           }
         ]
       },
       {
-        name: 'CADnano',
+        name: 'Lab Validation',
         children: [
           {
-            name: 'Octahedron',
+            name: 'Enzyme Activity Assays',
+            url: '/lab-validation/enzyme-activity-assays'
+          },
+          {
+            name: 'Liposome Formation',
+            url: '/lab-validation/liposome-formation'
+          },
+          {
+            name: 'Octahedron Formation',
+            url: '/lab-validation/octahedron-formation'
+          },
+          {
+            name: 'Octahedron Liposome Formation',
             url: '#'
           },
           {
-            name: 'Trigon',
-            url: '#'
-          },
-          {
-            name: 'Pentahedron',
-            url: '#'
+            name: 'Thiolation and Conjugation',
+            url: '/lab-validation/enzyme-conjugation'
           }
         ]
       }
@@ -81,7 +85,7 @@ const tree: Tree[] = [
   <!-- Desktop Navbar -->
   <template v-if="$windowWidth >= 1024">
     <div
-      class="flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
+      class="flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
       <div class="flex justify-center gap-16">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
@@ -112,7 +116,7 @@ const tree: Tree[] = [
         </template>
       </div>
       <a href="/">
-        <img src="../../assets/logo.svg" alt="Biomod Logo" />
+        <img src="../../assets/logo.svg" alt="Biomod Logo" class="w-14" />
       </a>
       <div class="flex justify-center gap-16">
         <RouterLink
@@ -129,11 +133,11 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg"
+      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
-        <img class="-mr-1" src="../../assets/logo.svg" alt="Biomod Logo" />
-        <span class="text-[#FFC000] font-bold text-xl">UBC Biomod</span>
+        <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />
+        <span class="text-gold font-bold text-xl">UBC Biomod</span>
       </RouterLink>
       <button class="mr-10" @click="sidebar = !sidebar">
         <svg

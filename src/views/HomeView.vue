@@ -21,49 +21,52 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col bg">
-      <span class="w-full h-40 rounded-b-[50%] bg-dark"></span>
-      <div class="p-4 lg:w-1/2 ml-4 lg:ml-28 mt-4 lg:mt-10">
-        <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
-          The smallest of beginnings
-        </h1>
-
-        <div class="flex items-center mt-2 gap-4 lg:gap-28">
-          <svg
-            class="w-16 lg:w-32 stroke-[6] lg:stroke-[3]"
-            viewBox="0 0 127 4"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line y1="2" x2="127" y2="2" stroke="#E2B764" />
-          </svg>
-          <LightButton>Learn More</LightButton>
-        </div>
-      </div>
-
-      <div
-        class="mt-20 flex flex-col gap-y-12 lg:flex-row justify-around items-center bg-dark opacity-90 p-10 lg:p-8"
-      >
-        <div v-for="index in 3" :key="index">
-          <div class="flex flex-col w-80 gap-4">
-            <div class="w-80 h-80 bg-white"></div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+    <div class="flex flex-col bg mb-8">
+      <span class="w-full h-28 lg:h-40 bg-gradient-to-b from-dark to-slate"></span>
+      <div class="p-4 flex flex-col gap-4 lg:gap-0 lg:flex-row mx-4 lg:mx-28 lg:mt-10">
+        <div class="lg:w-1/2">
+          <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
+            The smallest of beginnings
+          </h1>
+          <div class="flex items-center mt-2 gap-4 lg:gap-28">
+            <svg
+              class="w-16 lg:w-32 stroke-[6] lg:stroke-[3]"
+              viewBox="0 0 127 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line y1="2" x2="127" y2="2" stroke="#E2B764" />
+            </svg>
+            <LightButton>Learn More</LightButton>
           </div>
+        </div>
+        <div class="lg:w-1/2">
+          <p class="lg:mt-5 lg:text-subtitle lg:text-right">
+            Our submission to the biomolecular design competition is a testament to our team's
+            unwavering commitment to pushing the boundaries of what's possible in the field of
+            biomolecular engineering. Our project not only addresses a pressing global health
+            concern but also showcases the immense potential of biomolecular design to provide
+            innovative solutions to real-world problems.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row items-center justify-around py-16 lg:py-36 px-10">
-      <div class="w-72 h-72 lg:w-[30rem] lg:h-[30rem] bg-white"></div>
+    <div
+      class="flex flex-col lg:flex-row items-center justify-around lg:py-20 px-10 lg:mt-10 lg:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]"
+    >
+      <div
+        class="lg:basis-1/2 pb-12 lg:pb-32 md:mt-12 lg:mt-10 pt-32 lg:pt-36 h-full px-10 md:px-32 lg:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] lg:bg-[45%_50%]"
+      >
+        <div
+          class="m-auto w-64 h-64 lg:w-[30rem] lg:h-[30rem] bg-white rounded-full drop-shadow-[-40px_-10px_20px_rgba(0,0,0,1)]"
+        ></div>
+      </div>
 
       <div
-        class="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:max-w-[50%] gap-4 lg:gap-10 mt-10 lg:mt-0"
+        class="flex flex-col items-center lg:items-start lg:justify-center text-center lg:text-left w-full lg:max-w-[50%] lg:h-full gap-4 lg:gap-10 lg:mt-0 lg:pr-4 lg:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
       >
-        <h1 class="font-title text-[5rem] text-gold">Abstract</h1>
+        <h1 class="font-title text-[4rem] lg:text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -75,7 +78,9 @@ const scrollToTop = () => {
       </div>
     </div>
 
-    <div class="flex flex-col gap-2 items-center bg-dark pt-4 pb-8">
+    <div
+      class="mask flex flex-col gap-2 pt-16 items-center bg-[url:url(../assets/homepage/video_bg.png),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center"
+    >
       <div class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
       <svg
         width="150"
@@ -89,7 +94,7 @@ const scrollToTop = () => {
 
       <div class="bg-white w-5/6 lg:w-3/4 h-52 lg:h-[40rem] m-8"></div>
 
-      <button class="btn !py-4 my-2 group" @click="scrollToTop">
+      <button class="btn !py-4 mt-2 mb-8 group" @click="scrollToTop">
         <svg
           class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200"
           viewBox="0 0 24 36"
@@ -108,17 +113,25 @@ const scrollToTop = () => {
 <style>
 .bg {
   @apply w-full bg-no-repeat;
-  background-image: url('../assets/homepage_bg_rot_mobile.png'),
-    url('../assets/homepage_bg_top_mobile.png');
-  background-position: -2% 5%, right 6%;
+  background-image: url('../assets/homepage/bg_rot_mobile_fade.png'),
+    url('../assets/homepage/bg_top_mobile_fade.png');
+  background-position:
+    left 3em,
+    100% 5.5em;
 }
 
 @media only screen and (min-width: 1024px) {
   .bg {
     @apply w-full bg-no-repeat;
-    background-image: url('../assets/homepage_bg_rot.png'), url('../assets/homepage_bg_top.png'),
-      url('../assets/homepage_bg.png');
-    background-position: -2% 5%, right 5%, right 25%;
+    background-image: url('../assets/homepage/bg_rot_fade.png'),
+      url('../assets/homepage/bg_top_fade.png');
+    background-position:
+      -2% 5%,
+      right 5%;
   }
+}
+
+.mask {
+  mask: linear-gradient(to bottom, transparent, black 5%);
 }
 </style>

@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import IdeasView from '@/views/IdeasView.vue'
-import TeamView from '@/views/TeamView.vue'
-import ELSIView from '@/views/ELSIView.vue'
-import GroupAView from '@/views/enzymosome/GroupAView.vue'
-import GroupBView from '@/views/enzymosome/GroupBView.vue'
+const HomeView = () => import('@/views/HomeView.vue')
+const IdeasView = () => import('@/views/IdeasView.vue')
+const TeamView = () => import('@/views/TeamView.vue')
+const ELSIView = () => import('@/views/ELSIView.vue')
+const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
+const GroupBView = () => import('@/views/lab-validation/GroupBView.vue')
+const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
+const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,41 +16,40 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-
     {
       path: '/ideas',
       name: 'ideas',
       component: IdeasView
     },
-
     {
       path: '/elsi',
       name: 'elsi',
       component: ELSIView
     },
-
     {
       path: '/team',
       name: 'team',
       component: TeamView
     },
     {
-      path: '/enzymosome/enzyme-activity-assays',
+      path: '/lab-validation/enzyme-activity-assays',
       name: 'enzyme-activity-assays',
       component: GroupAView
     },
     {
-      path: '/enzymosome/liposome-formation',
+      path: '/lab-validation/liposome-formation',
       name: 'liposome-formation',
       component: GroupBView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/lab-validation/enzyme-conjugation',
+      name: 'enzyme-conjugation',
+      component: GroupCView
+    },
+    {
+      path: '/lab-validation/octahedron-formation',
+      name: 'octahedron-formation',
+      component: OctadedronFormation
     }
   ]
 })
