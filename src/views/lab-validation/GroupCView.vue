@@ -32,7 +32,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
 
 <template>
   <Notebook>
-    <template #title> Enzyme Conjunction </template>
+    <template #title> Thiolation and Conjunction </template>
     <template #body>
       <SingleColumn>
         <template #title> Intro </template>

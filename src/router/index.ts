@@ -3,9 +3,9 @@ const HomeView = () => import('@/views/HomeView.vue')
 const IdeasView = () => import('@/views/IdeasView.vue')
 const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
-const GroupAView = () => import('@/views/enzymosome/GroupAView.vue')
-const GroupCView = () => import('@/views/enzymosome/GroupCView.vue')
-const OctadedronFormation = () => import('@/views/Octahedron/OctahedronFormation.vue')
+const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
+const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
+const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,13 +34,13 @@ const router = createRouter({
       component: TeamView
     },
     {
-      path: '/lab-validation/enzyme-activity-assays',
-      name: 'enzyme-activity-assays',
+      path: '/lab-validation/dnase-i',
+      name: 'dnase-i',
       component: GroupAView
     },
     {
-      path: '/lab-validation/enzyme-conjugation',
-      name: 'enzyme-conjugation',
+      path: '/lab-validation/thiolation-and-conjugation',
+      name: 'thiolation-and-conjugation',
       component: GroupCView
     },
     {
