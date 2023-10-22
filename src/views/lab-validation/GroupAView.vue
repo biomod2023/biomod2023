@@ -26,7 +26,7 @@ const tableData = {
 
 <template>
   <Notebook>
-    <template #title>Enzyme Activity Assays</template>
+    <template #title>Dnase I</template>
     <template #body>
       <SingleColumn>
         <template #title> Intro </template>
