@@ -50,8 +50,8 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
 
       <!-- Mobile -->
       <ClickDetection :callback="() => mobileTeamDropDown = false" v-slot="{setRef}">
-        <div class="w-full px-[3.3rem] py-[2rem]">
-          <div class="min-[866px]:hidden z-10 " :ref="(currRef) => setRef(currRef as HTMLElement)">
+        <div class="w-full px-[3.3rem] py-[2rem] z-10">
+          <div class="min-[866px]:hidden  " :ref="(currRef) => setRef(currRef as HTMLElement)">
             <div :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
               dropDownStyle()"
               @click="() => mobileTeamDropDown = !mobileTeamDropDown">
@@ -102,7 +102,7 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
       <!-- Team Carousel -->
       <div class="flex justify-center items-center w-[68.5rem] h-[49.6rem] relative z-0">
         <v-icon
-          :class="'cursor-pointer relative bottom-[3rem] ' + (currIdx == 0 ? 'invisible' : '')"
+          :class="'cursor-pointer relative bottom-[3rem] grow-0 ' + (currIdx == 0 ? 'invisible' : '')"
           name="ri-arrow-drop-left-line"
           scale="3.5"
           fill="#8f8d8b"
@@ -110,7 +110,7 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
         />
 
         <!-- Content -->
-        <div class="relative h-full w-full overflow-hidden pl-[2.7rem]">
+        <div class="relative h-full w-full overflow-hidden pl-[2.7rem] grow">
           <TransitionGroup
             :enter-from-class="initialState"
             :leave-to-class="finalState"
@@ -136,7 +136,7 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
 
         <v-icon
           v-show="currIdx != Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers) - 1"
-          class="cursor-pointer relative bottom-[3rem]"
+          class="cursor-pointer relative bottom-[3rem] grow-0"
           name="ri-arrow-drop-right-line"
           scale="3.5"
           fill="#8f8d8b"
