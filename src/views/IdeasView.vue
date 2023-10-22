@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import IdeaCard from '@/components/IdeaCard.vue'
+import Timeline from '@/components/Timeline.vue'
 </script>
 
 <template>
@@ -237,4 +238,8 @@ import IdeaCard from '@/components/IdeaCard.vue'
       </div>
     </div>
   </div>
+  
+<Timeline/>
+
 </template>
+
