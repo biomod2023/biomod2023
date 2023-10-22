@@ -40,11 +40,6 @@ const router = createRouter({
       component: SponsorsView
     },
     {
-      path: '/sponsors',
-      name: 'sponsors',
-      component: SponsorsView
-    },
-    {
       path: '/lab-validation/dnase-i',
       name: 'dnase-i',
       component: GroupAView
