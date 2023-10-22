@@ -39,7 +39,7 @@ import SilverImgBackground from '@/components/sponsors/SilverImgBackground.vue';
     <SponsorItem>
       <template #img>
         <a href="https://vpstudents.ubc.ca/walter-gage/" target="_blank" class="hover:opacity-100">
-          <img src="../assets/sponsors/walter_gage.png" alt="Walter Gage Logo">
+          <img src="../assets/sponsors/walter_gage.png" alt="UBC Walter H. Gage Memorial Fund Logo">
         </a>
       </template>
       <template #title>
@@ -53,14 +53,20 @@ import SilverImgBackground from '@/components/sponsors/SilverImgBackground.vue';
     <SponsorTier color="bg-yellow-600">
       Bronze Tier
     </SponsorTier>
-    <SponsorItem>
-      <template #img>
-        <img src="../assets/sponsors/walter_gage.png" alt="Walter Gage Logo">
-      </template>
-      <template #description>
-        The Walter H. Gage Memorial Fund provides financial support for non-curricular student projects and activities that enhance the University’s reputation and have broad interest to students at UBC.
-      </template>
-    </SponsorItem>
+    <div class="grid md:grid-cols-2 gap-20 px-6 lg:px-36 my-6 lg:my-28 place-content-center">
+      <a href="https://ecoscope.microbiology.ubc.ca/" target="_blank">
+        <img src="../assets/sponsors/ecoscope.png" alt="ECOSCOPE Logo" class="w-full">
+      </a>
+      <a href="https://bme.ubc.ca/" target="_blank">
+        <img src="../assets/sponsors/sbme.jpg" alt="UBC School of Biomedical Engineering Logo" class="w-full">
+      </a>
+      <a href="https://biochem.ubc.ca/" target="_blank">
+        <img src="../assets/sponsors/fom.png" alt="UBC Faculty of Medicine Logo" class="w-full">
+      </a>
+      <a href="https://chbe.ubc.ca/" target="_blank">
+        <img src="../assets/sponsors/cbe.jpg" alt="UBC Department of Chemical and Biological Engineering Logo" class="w-full">
+      </a>
+    </div>
 
     
   </div>
