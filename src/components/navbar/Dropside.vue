@@ -15,7 +15,7 @@ const dropdown = ref(false)
       </svg>
     </div>
 
-    <div v-if="dropdown" class="fixed ml-[12.25rem] mt-8">
+    <div v-if="dropdown" class="fixed ml-[18.8rem] mt-8">
       <div class="bg-slate p-4 shadow-[5px_0_35px_rgba(0,0,0,0.4)] rounded-3xl">
         <slot name="content"></slot>
       </div>
