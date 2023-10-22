@@ -185,10 +185,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <p>
                 4mL of HEPES buffer was spun in a centrifuge at 4000 g for 10 minutes. 3.5-4 mL of
                 HEPES buffer is added to the filter device. After capping the device, it was placed
-                into the swinging-bucket centrifuge rotor or Amicon® Ultra devices and spun at 4,000
-                x g maximum and 7,500 x g maximum, respectively, for approximately 10-40 minutes.
-                Immediately after centrifugation, a pipette is inserted into the bottom of the
-                filter device and using a side-to-side sweeping motion, the concentrated solute
+                into the swinging-bucket centrifuge rotor or Amicon® Ultra devices and spun at
+                4,000 x g maximum and 7,500 x g maximum, respectively, for approximately 10-40
+                minutes. Immediately after centrifugation, a pipette is inserted into the bottom of
+                the filter device and using a side-to-side sweeping motion, the concentrated solute
                 could be recovered. 70% ethanol is added to the solute for storage, to prevent it
                 from drying out.
               </p>
