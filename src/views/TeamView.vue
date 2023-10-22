@@ -100,9 +100,9 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
       </div>
 
       <!-- Team Carousel -->
-      <div class="flex justify-center items-center w-[68.5rem] h-[49.6rem] relative z-0">
+      <div class="flex justify-center items-center w-full px-[12rem] h-[49.6rem] relative z-0">
         <v-icon
-          :class="'cursor-pointer relative bottom-[3rem] grow-0 ' + (currIdx == 0 ? 'invisible' : '')"
+          :class="'cursor-pointer relative bottom-[3rem] grow ' + (currIdx == 0 ? 'invisible' : '')"
           name="ri-arrow-drop-left-line"
           scale="3.5"
           fill="#8f8d8b"
@@ -135,8 +135,8 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
         </div>
 
         <v-icon
-          v-show="currIdx != Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers) - 1"
-          class="cursor-pointer relative bottom-[3rem] grow-0"
+          :class="'cursor-pointer relative bottom-[3rem] grow ' + 
+            (currIdx == Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers) - 1 ? 'invisible' : '')"
           name="ri-arrow-drop-right-line"
           scale="3.5"
           fill="#8f8d8b"
