@@ -189,14 +189,14 @@ const tree: Tree[] = [
                       <div v-for="(child, j) in entry.children" :key="j">
                         <MobileDropdown>
                           <template #title
-                            ><span class="text-xl">{{ child.name }}</span></template
+                            ><span class="text-lg md:text-xl">{{ child.name }}</span></template
                           >
                           <template #children>
                             <RouterLink
                               v-for="(subchild, k) in child.children"
                               :key="k"
                               :to="subchild.url ? subchild.url : '#'"
-                              class="text-xl font-normal"
+                              class="text-lg md:text-xl font-normal"
                             >
                               {{ subchild.name }}
                             </RouterLink>
