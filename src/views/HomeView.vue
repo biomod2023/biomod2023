@@ -9,9 +9,9 @@ const scrollToTop = () => {
 <template>
   <div class="flex flex-col bg-slate">
     <div class="px-6 flex flex-col justify-center min-h-[100dvh] bg-gradient-to-b from-dark via-dark via-90% to-slate">
-      <div class="flex relative justify-start items-center h-full lg:mt-16 lg:mb-28">
-        <img src="../assets/homepage/title_graphic.png" alt="" class="absolute right-0 h-full animate-breathe">
-        <div class="basis-4/6 h-full flex flex-col justify-center items-center bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[30%_50%]">
+      <div class="flex relative justify-center lg:justify-start lg:items-center h-full lg:mt-16 lg:mb-28">
+        <img src="../assets/homepage/title_graphic.png" alt="" class="absolute top-[5dvw] md:top-[3dvw] lg:top-0 right-[4dvw] md:right-[7dvw] lg:right-0 w-[80dvw] lg:w-auto lg:h-full animate-breathe">
+        <div class="z-10 lg:basis-4/6 h-full flex flex-col justify-center items-center mt-[2dvh] md:mt-20 lg:mt-0 bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[50%_80dvh] lg:bg-[30%_50%]">
           <h1 class="font-title text-title-sm lg:text-title text-center mb-4">
             Embrace the Nano Frontier
           </h1>
@@ -19,7 +19,7 @@ const scrollToTop = () => {
             Unleash the Nano Frontier, where a new era of technology begins. Pioneering advancements
             redefine possibilities. Embrace the future with us.
           </h2>
-          <button class="btn mt-16">Explore</button>
+          <button class="btn mt-8 lg:mt-16">Explore</button>
         </div>
       </div>
     </div>
