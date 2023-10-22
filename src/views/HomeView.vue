@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import LightButton from '@/components/LightButton.vue'
+import HomepageTitleGraphic from '@/components/HomepageTitleGraphic.vue'
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -8,21 +9,24 @@ const scrollToTop = () => {
 
 <template>
   <div class="flex flex-col bg-slate">
-    <div class="px-6 flex flex-col justify-center min-h-[80vh] bg-dark">
-      <div class="w-full flex flex-col items-center">
-        <h1 class="font-title text-title-sm lg:text-title text-center mb-4">
-          Embrace the Nano Frontier
-        </h1>
-        <h2 class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
-          Unleash the Nano Frontier, where a new era of technology begins. Pioneering advancements
-          redefine possibilities. Embrace the future with us.
-        </h2>
-        <button class="btn mt-20">Explore</button>
+    <div class="px-6 flex flex-col justify-center min-h-[100dvh] bg-gradient-to-b from-dark via-dark via-90% to-slate">
+      <div class="flex relative justify-start items-center h-full lg:mt-16 lg:mb-28">
+        <img src="../assets/homepage/title_graphic.png" alt="" class="absolute right-0 h-full">
+        <div class="basis-4/6 h-full flex flex-col justify-center items-center bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[30%_50%]">
+          <h1 class="font-title text-title-sm lg:text-title text-center mb-4">
+            Embrace the Nano Frontier
+          </h1>
+          <h2 class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
+            Unleash the Nano Frontier, where a new era of technology begins. Pioneering advancements
+            redefine possibilities. Embrace the future with us.
+          </h2>
+          <button class="btn mt-16">Explore</button>
+        </div>
       </div>
     </div>
 
     <div class="flex flex-col bg mb-8">
-      <span class="w-full h-28 lg:h-40 bg-gradient-to-b from-dark to-slate"></span>
+      <!-- <span class="w-full h-28 lg:h-40 bg-gradient-to-b from-dark to-slate"></span> -->
       <div class="p-4 flex flex-col gap-4 lg:gap-0 lg:flex-row mx-4 lg:mx-28 lg:mt-10">
         <div class="lg:w-1/2">
           <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
@@ -68,12 +72,22 @@ const scrollToTop = () => {
       >
         <h1 class="font-title text-[4rem] lg:text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
+          Biofilms are layers of bacterial communities that can adhere to one another within a
+          self-produced matrix. They can attach to a variety of surfaces including human tissue,
+          causing severe healthcare and environmental issues. Traditional strategies for combating
+          biofilms include the use of antibiotics and interference of bacterial layer formation.
+          However, removing biofilms using these methods can be challenging due to antibiotic
+          resistance and unexpected pathogenic features arising from interference strategies. To
+          address this issue, we aim to create a modular enzyme delivery vehicle. This structure
+          consists of a DNA-templated liposome, conjugated with variable enzymes, referred to as an
+          “enzymosome”. By forming our liposomes around DNA-origami structures, which can be altered
+          to modify their size and shape, we can create a customizable platform. Among the DNA
+          structures developed – a trihedron, pentahedron, and octahedron – all three demonstrated
+          high stability in CanDo©. Future investigations include testing enzyme synergy with
+          liposomes and validation of the platform in vitro. The modularity of the enzymosome can
+          address biofilms present in various environments such as in cystic fibrosis patients, food
+          facilities, and water systems. By changing the cargo type and liposome size, this delivery
+          vehicle provides potential to be used across a wide range of applications.
         </p>
       </div>
     </div>
@@ -115,9 +129,7 @@ const scrollToTop = () => {
   @apply w-full bg-no-repeat;
   background-image: url('../assets/homepage/bg_rot_mobile_fade.png'),
     url('../assets/homepage/bg_top_mobile_fade.png');
-  background-position:
-    left 3em,
-    100% 5.5em;
+  background-position: left 3em, 100% 5.5em;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -125,9 +137,7 @@ const scrollToTop = () => {
     @apply w-full bg-no-repeat;
     background-image: url('../assets/homepage/bg_rot_fade.png'),
       url('../assets/homepage/bg_top_fade.png');
-    background-position:
-      -2% 5%,
-      right 5%;
+    background-position: -2% 5%, right 5%;
   }
 }
 
