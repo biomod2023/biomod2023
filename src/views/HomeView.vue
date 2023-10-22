@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import LightButton from '@/components/LightButton.vue'
-import HomepageTitleGraphic from '@/components/HomepageTitleGraphic.vue'
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -11,7 +10,7 @@ const scrollToTop = () => {
   <div class="flex flex-col bg-slate">
     <div class="px-6 flex flex-col justify-center min-h-[100dvh] bg-gradient-to-b from-dark via-dark via-90% to-slate">
       <div class="flex relative justify-start items-center h-full lg:mt-16 lg:mb-28">
-        <img src="../assets/homepage/title_graphic.png" alt="" class="absolute right-0 h-full">
+        <img src="../assets/homepage/title_graphic.png" alt="" class="absolute right-0 h-full animate-breathe">
         <div class="basis-4/6 h-full flex flex-col justify-center items-center bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[30%_50%]">
           <h1 class="font-title text-title-sm lg:text-title text-center mb-4">
             Embrace the Nano Frontier
