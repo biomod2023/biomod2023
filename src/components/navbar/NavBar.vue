@@ -170,7 +170,7 @@ const tree: Tree[] = [
       :leave-active-class="transitionAnimation"
     >
       <template v-if="sidebar">
-        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
+        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90" @click.self="sidebar = !sidebar">
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
           <div
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
@@ -196,7 +196,7 @@ const tree: Tree[] = [
                               v-for="(subchild, k) in child.children"
                               :key="k"
                               :to="subchild.url ? subchild.url : '#'"
-                              class="text-xl"
+                              class="text-xl font-normal"
                             >
                               {{ subchild.name }}
                             </RouterLink>
