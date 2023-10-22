@@ -26,7 +26,7 @@ const scrollToTop = () => {
 
     <div class="flex flex-col bg mb-8">
       <!-- <span class="w-full h-28 lg:h-40 bg-gradient-to-b from-dark to-slate"></span> -->
-      <div class="p-4 flex flex-col gap-4 lg:gap-0 lg:flex-row mx-4 lg:mx-28 lg:mt-10">
+      <div class="p-4 flex flex-col gap-4 lg:gap-0 lg:flex-row mx-4 lg:mx-16 xl:mx-28 lg:mt-10">
         <div class="lg:w-1/2">
           <h1 class="font-title font-semibold text-[2.5rem] lg:text-title text-gold">
             The smallest of beginnings
@@ -56,10 +56,10 @@ const scrollToTop = () => {
     </div>
 
     <div
-      class="flex flex-col lg:flex-row items-center justify-around lg:py-20 px-10 lg:mt-10 lg:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]"
+      class="flex flex-col xl:flex-row items-center justify-around lg:pb-20 xl:py-20 px-10 lg:mt-10 xl:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]"
     >
       <div
-        class="lg:basis-1/2 pb-12 lg:pb-32 md:mt-12 lg:mt-10 pt-32 lg:pt-36 h-full px-10 md:px-32 lg:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] lg:bg-[45%_50%]"
+        class="xl:basis-1/2 pb-12 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-32 lg:pt-36 h-full px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] xl:bg-[45%_50%]"
       >
         <div
           class="m-auto w-64 h-64 lg:w-[30rem] lg:h-[30rem] bg-white rounded-full drop-shadow-[-40px_-10px_20px_rgba(0,0,0,1)]"
@@ -67,7 +67,7 @@ const scrollToTop = () => {
       </div>
 
       <div
-        class="flex flex-col items-center lg:items-start lg:justify-center text-center lg:text-left w-full lg:max-w-[50%] lg:h-full gap-4 lg:gap-10 lg:mt-0 lg:pr-4 lg:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
+        class="flex flex-col items-center xl:items-start xl:justify-center text-center xl:text-left w-full xl:max-w-[50%] xl:h-full gap-4 xl:gap-10 lg:mt-0 xl:pr-4 xl:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
       >
         <h1 class="font-title text-[4rem] lg:text-[5rem] text-gold">Abstract</h1>
         <p class="text-subtitle-sm lg:text-subtitle">
