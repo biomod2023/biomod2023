@@ -22,3 +22,4 @@ app.use(VueWindowSizePlugin)
 app.component('VIcon', OhVueIcon)
 
 app.mount('#app')
+

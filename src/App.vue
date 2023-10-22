@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+createApp(App).use(vuetify).mount('#app')
 import { RouterView } from 'vue-router'
 import NavBar from '@/components/navbar/NavBar.vue'
 import Footer from '@/components/Footer.vue'
