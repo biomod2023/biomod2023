@@ -33,6 +33,7 @@ const handleImgErr = (e: Event) => {
         key="main"
         :class="cardConfig + ' justify-center bg-gold/40'"
         @mouseenter="isHovering = true"
+        @touchend="isHovering = true"
       >
         <img
           :src="member?.image"
@@ -50,6 +51,7 @@ const handleImgErr = (e: Event) => {
         key="alt"
         :class="cardConfig + ' bg-gold'"
         @mouseleave="isHovering = false"
+        @touchend="isHovering = false"
       >
         <div class="flex flex-col items-center content-start gap-0 p-[0.5rem] max-h-full">
           <div class="text-lg font-bold text-white">{{ member?.name }}</div>
