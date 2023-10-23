@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Ref } from 'vue'
+import { useSwipe } from '@vueuse/core'
+import type { UseSwipeDirection } from '@vueuse/core'
 
 import ProfileCard from '@/components/ProfileCard.vue'
 import TransparentButton from '@/components/TransparentButton.vue'
 import { teams, members } from '@/components/Member'
 
 import ClickDetection from '@/components/utils/ClickDetection.vue'
+import type { StyleValue } from 'vue'
 
 let currIdx: Ref<number> = ref(0)
 const maxMember = window.innerWidth >= 768 ? 6 : 3
@@ -38,6 +41,35 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 // Mobile
 let mobileTeamDropDown: Ref<boolean> = ref(false)
 let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "rounded-[1.45rem]"
+const swipeableContainer = ref<HTMLElement | null>(null) as unknown as Ref<HTMLElement>
+const swipedStyle = ref({
+  left : '0px',
+  opacity : 1,
+  position : 'relative'
+})
+const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
+  {
+    passive: false,
+    onSwipeStart(e: TouchEvent) {
+      swipedStyle.value.position = 'absolute'
+    },
+    onSwipe(e: TouchEvent) {
+      const length = Math.abs(lengthX.value)
+      swipedStyle.value.left = `${-lengthX.value}px`
+      if (swipeableContainer.value?.offsetWidth) {
+        swipedStyle.value.opacity = (1.1 - length / swipeableContainer.value?.offsetWidth)
+      }
+    },
+    onSwipeEnd(e: TouchEvent, dir: UseSwipeDirection) {
+      const length = Math.abs(lengthX.value)
+      if (length >= swipeableContainer.value?.offsetWidth * 0.5) {
+        handleClick(length / lengthX.value)
+        swipedStyle.value.opacity = 0
+      }
+      swipedStyle.value.position = 'relative'
+    }
+  }
+)
 </script>
 
 <template>
@@ -106,6 +138,7 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
         xl:px-[8rem] xl:gap-x-[1rem]
         ">
         <v-icon
+          v-if="$windowWidth >= 450"
           :class="'cursor-pointer relative bottom-[3rem] bg-transparent grow ' + (currIdx == 0 ? 'invisible' : '')"
           name="ri-arrow-drop-left-line"
           scale="3.5"
@@ -114,13 +147,14 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
         />
 
         <!-- Content -->
-        <div class="relative h-full w-full overflow-hidden grow-0">
+        <div class="relative h-full w-full overflow-hidden grow-0"
+          ref="swipeableContainer" :style="(swipedStyle as StyleValue)">
           <TransitionGroup
             :enter-from-class="initialState"
             :leave-to-class="finalState"
             :enter-active-class="activeAnimation"
             :leave-active-class="activeAnimation"
-            :css="!changingTeam"
+            :css="!changingTeam && $windowWidth >= 450"
           >
             <div
               class="w-full"
@@ -143,6 +177,7 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
         </div>
 
         <v-icon
+          v-if="$windowWidth >= 450"
           :class="'cursor-pointer relative bottom-[3rem] bg-transparent grow ' + 
             (currIdx == Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMember) - 1 ? 'invisible' : '')"
           name="ri-arrow-drop-right-line"

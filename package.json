@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^10.5.0",
     "katex": "^0.16.9",
     "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.3.4",
