@@ -81,10 +81,11 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
       </div>
 
       <!-- Mobile -->
-      <ClickDetection :callback="() => mobileTeamDropDown = false" v-slot="{setRef}">
+      <ClickDetection v-slot="{setRef}" :callback="() => mobileTeamDropDown = false">
         <div class="w-full px-[3.3rem] py-[2rem] z-10">
-          <div class="min-[866px]:hidden  " :ref="(currRef) => setRef(currRef as HTMLElement)">
-            <div :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
+          <div :ref="(currRef) => setRef(currRef as HTMLElement)" class="min-[866px]:hidden  ">
+            <div
+:class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
               dropDownStyle()"
               @click="() => mobileTeamDropDown = !mobileTeamDropDown">
               <v-icon class="grow-0" name="ri-team-fill" scale="2"/>
@@ -92,8 +93,9 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
               <span class="w-[0.82rem] h-[0.82rem] bg-white rounded-full"></span>
             </div>
             <div class="relative" >
-              <div class="w-full h-fit bg-gold/60 absolute flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]"
-                v-if="mobileTeamDropDown">
+              <div
+v-if="mobileTeamDropDown"
+                class="w-full h-fit bg-gold/60 absolute flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]">
                 <TransparentButton
                   v-for="(team, i) in teams"
                   :key="'mobile_' + i"
@@ -108,7 +110,8 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
       </ClickDetection>
 
       <!-- Desktop -->
-      <div class="hidden
+      <div
+class="hidden
         min-[866px]:gap-x-[1rem] min-[866px]:py-[2rem] min-[866px]:flex min-[866px]:flex-row
         lg:gap-x-[3rem]">
         <TransparentButton
@@ -132,7 +135,8 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
       </div>
 
       <!-- Team Carousel -->
-      <div class="flex justify-center items-center w-full  h-[49.6rem] relative z-0
+      <div
+class="flex justify-center items-center w-full  h-[49.6rem] relative z-0
         lg:px-[2rem] lg:gap-x-[1rem]
         xl:px-[8rem] xl:gap-x-[1rem]
         ">
@@ -154,9 +158,9 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
             :leave-active-class="activeAnimation"
             :css="!changingTeam && $windowWidth >= 450">
             <div
-              class="w-full h-full overflow-hidden"
               :key="currIdx + 'wrapper'"
-              ref="swipeableContainer" 
+              ref="swipeableContainer"
+              class="w-full h-full overflow-hidden" 
               :style="$windowWidth >= 450 ? {} : (swipedStyle as StyleValue)">
               <div
                 class="grid grid-cols-1 place-items-center w-full h-fit gap-y-[2.47rem]

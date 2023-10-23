@@ -8,9 +8,9 @@ const dropdown = ref(false)
 
 <template>
   <div
+    class="flex flex-col items-center"
     @mouseenter="dropdown = true"
     @mouseleave="dropdown = false"
-    class="flex flex-col items-center"
   >
     <RouterLink :to="to" class="flex gap-2 w-full" :class="{ 'opacity-80': dropdown }">
       <slot name="text"></slot>

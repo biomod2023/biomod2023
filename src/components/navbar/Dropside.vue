@@ -7,7 +7,7 @@ const dropdown = ref(false)
 </script>
 
 <template>
-  <div @mouseenter="dropdown = true" @mouseleave="dropdown = false" class="flex items-center">
+  <div class="flex items-center" @mouseenter="dropdown = true" @mouseleave="dropdown = false">
     <div class="flex gap-2 py-4 px-8 hover:opacity-80 transition duration-200">
       <slot name="text"></slot>
       <svg class="w-3 stroke-gold -rotate-90" viewBox="0 0 30 17" fill="none">
