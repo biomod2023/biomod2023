@@ -85,7 +85,7 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
         <div class="w-full px-[3.3rem] py-[2rem] z-10">
           <div :ref="(currRef) => setRef(currRef as HTMLElement)" class="min-[866px]:hidden  ">
             <div
-:class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
+              :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
               dropDownStyle()"
               @click="() => mobileTeamDropDown = !mobileTeamDropDown">
               <v-icon class="grow-0" name="ri-team-fill" scale="2"/>
@@ -95,7 +95,8 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
             <div class="relative" >
               <div
 v-if="mobileTeamDropDown"
-                class="w-full h-fit bg-gold/60 absolute flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]">
+                class="w-full h-fit bg-gold/60 absolute pb-4
+                  flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]">
                 <TransparentButton
                   v-for="(team, i) in teams"
                   :key="'mobile_' + i"
