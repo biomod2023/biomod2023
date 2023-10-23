@@ -51,7 +51,6 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
   {
     passive: false,
     onSwipeStart(e: TouchEvent) {
-      swipedStyle.value.position = 'absolute'
     },
     onSwipe(e: TouchEvent) {
       const length = Math.abs(lengthX.value)
@@ -64,9 +63,9 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
       const length = Math.abs(lengthX.value)
       if (length >= swipeableContainer.value?.offsetWidth * 0.5) {
         handleClick(length / lengthX.value)
-        swipedStyle.value.opacity = 0
-      }
-      swipedStyle.value.position = 'relative'
+      } 
+      swipedStyle.value.opacity = 1
+      swipedStyle.value.left = '0px'
     }
   }
 )
@@ -147,22 +146,22 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
         />
 
         <!-- Content -->
-        <div class="relative h-full w-full overflow-hidden grow-0"
-          ref="swipeableContainer" :style="(swipedStyle as StyleValue)">
+        <div class="relative h-full w-full overflow-hidden grow-0">
           <TransitionGroup
             :enter-from-class="initialState"
             :leave-to-class="finalState"
             :enter-active-class="activeAnimation"
             :leave-active-class="activeAnimation"
-            :css="!changingTeam && $windowWidth >= 450"
-          >
+            :css="!changingTeam && $windowWidth >= 450">
             <div
-              class="w-full"
-              :key="currIdx + 'wrapper'">
+              class="w-full h-full overflow-hidden"
+              :key="currIdx + 'wrapper'"
+              ref="swipeableContainer" 
+              :style="$windowWidth >= 450 ? {} : (swipedStyle as StyleValue)">
               <div
-                class="grid grid-cols-1 place-items-center w-full h-full gap-y-[2.47rem]
+                class="grid grid-cols-1 place-items-center w-full h-fit gap-y-[2.47rem]
                 md:grid-cols-2"
-              >
+                >
                 <ProfileCard
                   v-for="member in members
                     ?.get(currTeam)
