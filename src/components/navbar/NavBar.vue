@@ -85,7 +85,7 @@ const tree: Tree[] = [
   },
   {
     name: 'Sponsors',
-    url: '#'
+    url: '/sponsors'
   }
 ]
 </script>
