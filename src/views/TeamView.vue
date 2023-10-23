@@ -76,8 +76,8 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
     <div class="flex flex-col items-center w-full h-full">
       <!-- Header -->
       <div class="flex flex-col w-full items-center">
-        <h1 class="text-title text-gold">Our Team</h1>
-        <h2 class="text-subtitle text-gold">Behold the Amazing Folders!</h2>
+        <h1 class="md:text-title text-title-sm text-center text-gold">Our Team</h1>
+        <h2 class="text-subtitle/2 text-center text-gold">Behold the Amazing Folders!</h2>
       </div>
 
       <!-- Mobile -->
