@@ -100,9 +100,12 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
       </div>
 
       <!-- Team Carousel -->
-      <div class="flex justify-center items-center w-full px-[12rem] h-[49.6rem] relative z-0">
+      <div class="flex justify-center items-center w-full  h-[49.6rem] relative z-0
+        lg:px-[2rem] lg:gap-x-[1rem]
+        xl:px-[8rem] xl:gap-x-[1rem]
+        ">
         <v-icon
-          :class="'cursor-pointer relative bottom-[3rem] grow ' + (currIdx == 0 ? 'invisible' : '')"
+          :class="'cursor-pointer relative bottom-[3rem] bg-transparent grow ' + (currIdx == 0 ? 'invisible' : '')"
           name="ri-arrow-drop-left-line"
           scale="3.5"
           fill="#8f8d8b"
@@ -110,7 +113,7 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
         />
 
         <!-- Content -->
-        <div class="relative h-full w-full overflow-hidden pl-[2.7rem] grow">
+        <div class="relative h-full w-full overflow-hidden grow-0">
           <TransitionGroup
             :enter-from-class="initialState"
             :leave-to-class="finalState"
@@ -119,23 +122,27 @@ let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "ro
             :css="!changingTeam"
           >
             <div
-              v-for="i in [currIdx]"
-              :key="i"
-              class="flex flex-wrap content-start h-full gap-x-[6.6rem] gap-y-[2.47rem]"
-            >
-              <ProfileCard
-                v-for="member in members
-                  ?.get(currTeam)
-                  ?.slice(currIdx * maxMembers, (currIdx + 1) * maxMembers)"
-                :key="member.name + currTeam"
-                :member="member"
-              />
+              class="w-full"
+              :key="currIdx + 'wrapper'">
+              <div
+                class="grid grid-cols-1 place-items-center w-full h-full gap-y-[2.47rem]
+                md:grid-cols-2"
+              >
+                <ProfileCard
+                  v-for="member in members
+                    ?.get(currTeam)
+                    ?.slice(currIdx * maxMembers, (currIdx + 1) * maxMembers)"
+                  :key="member.name + currTeam"
+                  :member="member"
+                  wrapper-style="w-[19.5rem] lg:w-[24rem] h-[13rem]"
+                />
+              </div>
             </div>
           </TransitionGroup>
         </div>
 
         <v-icon
-          :class="'cursor-pointer relative bottom-[3rem] grow ' + 
+          :class="'cursor-pointer relative bottom-[3rem] bg-transparent grow ' + 
             (currIdx == Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMembers) - 1 ? 'invisible' : '')"
           name="ri-arrow-drop-right-line"
           scale="3.5"

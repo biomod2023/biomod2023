@@ -5,11 +5,12 @@ import type { PropType } from 'vue'
 import emptyPic from '@/assets/empty_profile.png'
 
 import type { Member } from '@/components/Member'
-const props = defineProps({
-  member: Object as PropType<Member>
-})
+const props = defineProps<{
+  member: Member,
+  wrapperStyle?: string,
+}>()  
 const cardConfig: string =
-  'absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1'
+  'absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1 '
 const isHovering: Ref<boolean> = ref(false)
 
 const handleImgErr = (e: Event) => {
@@ -19,7 +20,7 @@ const handleImgErr = (e: Event) => {
 </script>
 
 <template>
-  <div class="relative w-[24rem] h-[13rem]">
+  <div :class="'relative  ' +  (props.wrapperStyle !== undefined ? props.wrapperStyle : '')">
     <TransitionGroup
       enter-active-class="transition-opacity duration-200 ease-in-out"
       leave-active-class="transition-opacity duration-200 ease-in"
