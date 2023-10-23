@@ -40,35 +40,32 @@ let finalState: Ref<string> = ref('-translate-x-full opacity-0')
 
 // Mobile
 let mobileTeamDropDown: Ref<boolean> = ref(false)
-let dropDownStyle = () => mobileTeamDropDown.value ? "rounded-t-[1.45rem]" : "rounded-[1.45rem]"
+let dropDownStyle = () => (mobileTeamDropDown.value ? 'rounded-t-[1.45rem]' : 'rounded-[1.45rem]')
 const swipeableContainer = ref<HTMLElement | null>(null) as unknown as Ref<HTMLElement>
 const swipedStyle = ref({
-  left : '0px',
-  opacity : 1,
-  position : 'relative'
+  left: '0px',
+  opacity: 1,
+  position: 'relative'
 })
-const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
-  {
-    passive: false,
-    onSwipeStart(e: TouchEvent) {
-    },
-    onSwipe(e: TouchEvent) {
-      const length = Math.abs(lengthX.value)
-      swipedStyle.value.left = `${-lengthX.value}px`
-      if (swipeableContainer.value?.offsetWidth) {
-        swipedStyle.value.opacity = (1.1 - length / swipeableContainer.value?.offsetWidth)
-      }
-    },
-    onSwipeEnd(e: TouchEvent, dir: UseSwipeDirection) {
-      const length = Math.abs(lengthX.value)
-      if (length >= swipeableContainer.value?.offsetWidth * 0.5) {
-        handleClick(length / lengthX.value)
-      } 
-      swipedStyle.value.opacity = 1
-      swipedStyle.value.left = '0px'
+const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, {
+  passive: false,
+  onSwipeStart(e: TouchEvent) {},
+  onSwipe(e: TouchEvent) {
+    const length = Math.abs(lengthX.value)
+    swipedStyle.value.left = `${-lengthX.value}px`
+    if (swipeableContainer.value?.offsetWidth) {
+      swipedStyle.value.opacity = 1.1 - length / swipeableContainer.value?.offsetWidth
     }
+  },
+  onSwipeEnd(e: TouchEvent, dir: UseSwipeDirection) {
+    const length = Math.abs(lengthX.value)
+    if (length >= swipeableContainer.value?.offsetWidth * 0.5) {
+      handleClick(length / lengthX.value)
+    }
+    swipedStyle.value.opacity = 1
+    swipedStyle.value.left = '0px'
   }
-)
+})
 </script>
 
 <template>
@@ -81,22 +78,25 @@ const {isSwiping, direction, lengthX, lengthY} = useSwipe(swipeableContainer,
       </div>
 
       <!-- Mobile -->
-      <ClickDetection v-slot="{setRef}" :callback="() => mobileTeamDropDown = false">
+      <ClickDetection v-slot="{ setRef }" :callback="() => (mobileTeamDropDown = false)">
         <div class="w-full px-[3.3rem] py-[2rem] z-10">
-          <div :ref="(currRef) => setRef(currRef as HTMLElement)" class="min-[866px]:hidden  ">
+          <div :ref="(currRef) => setRef(currRef as HTMLElement)" class="min-[866px]:hidden">
             <div
-              :class="'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
-              dropDownStyle()"
-              @click="() => mobileTeamDropDown = !mobileTeamDropDown">
-              <v-icon class="grow-0" name="ri-team-fill" scale="2"/>
-              <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]"> Choose Team </h1>
+              :class="
+                'w-full h-[3.4rem] bg-gold/60 flex flex-row items-center px-4 cursor-pointer ' +
+                dropDownStyle()
+              "
+              @click="() => (mobileTeamDropDown = !mobileTeamDropDown)"
+            >
+              <v-icon class="grow-0" name="ri-team-fill" scale="2" />
+              <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]">Choose Team</h1>
               <span class="w-[0.82rem] h-[0.82rem] bg-white rounded-full"></span>
             </div>
-            <div class="relative" >
+            <div class="relative">
               <div
-v-if="mobileTeamDropDown"
-                class="w-full h-fit bg-gold/60 absolute pb-4
-                  flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]">
+                v-if="mobileTeamDropDown"
+                class="w-full h-fit bg-gold/60 absolute pb-4 flex flex-col items-center gap-y-[1rem] rounded-b-[1.45rem]"
+              >
                 <TransparentButton
                   v-for="(team, i) in teams"
                   :key="'mobile_' + i"
@@ -112,9 +112,8 @@ v-if="mobileTeamDropDown"
 
       <!-- Desktop -->
       <div
-class="hidden
-        min-[866px]:gap-x-[1rem] min-[866px]:py-[2rem] min-[866px]:flex min-[866px]:flex-row
-        lg:gap-x-[3rem]">
+        class="hidden min-[866px]:gap-x-[1rem] min-[866px]:py-[2rem] min-[866px]:flex min-[866px]:flex-row lg:gap-x-[3rem]"
+      >
         <TransparentButton
           v-for="(team, i) in teams"
           :key="i"
@@ -137,13 +136,14 @@ class="hidden
 
       <!-- Team Carousel -->
       <div
-class="flex justify-center items-center w-full  h-[49.6rem] relative z-0
-        lg:px-[2rem] lg:gap-x-[1rem]
-        xl:px-[8rem] xl:gap-x-[1rem]
-        ">
+        class="flex justify-center items-center w-full h-[49.6rem] relative z-0 lg:px-[2rem] lg:gap-x-[1rem] xl:px-[8rem] xl:gap-x-[1rem]"
+      >
         <v-icon
           v-if="$windowWidth >= 450"
-          :class="'cursor-pointer relative bottom-[3rem] bg-transparent grow ' + (currIdx == 0 ? 'invisible' : '')"
+          :class="
+            'cursor-pointer relative bottom-[3rem] bg-transparent grow ' +
+            (currIdx == 0 ? 'invisible' : '')
+          "
           name="ri-arrow-drop-left-line"
           scale="3.5"
           fill="#8f8d8b"
@@ -157,16 +157,17 @@ class="flex justify-center items-center w-full  h-[49.6rem] relative z-0
             :leave-to-class="finalState"
             :enter-active-class="activeAnimation"
             :leave-active-class="activeAnimation"
-            :css="!changingTeam && $windowWidth >= 450">
+            :css="!changingTeam && $windowWidth >= 450"
+          >
             <div
               :key="currIdx + 'wrapper'"
               ref="swipeableContainer"
-              class="w-full h-full overflow-hidden" 
-              :style="$windowWidth >= 450 ? {} : (swipedStyle as StyleValue)">
+              class="w-full h-full overflow-hidden"
+              :style="$windowWidth >= 450 ? {} : (swipedStyle as StyleValue)"
+            >
               <div
-                class="grid grid-cols-1 place-items-center w-full h-fit gap-y-[2.47rem]
-                md:grid-cols-2"
-                >
+                class="grid grid-cols-1 place-items-center w-full h-fit gap-y-[2.47rem] md:grid-cols-2"
+              >
                 <ProfileCard
                   v-for="member in members
                     ?.get(currTeam)
@@ -182,8 +183,12 @@ class="flex justify-center items-center w-full  h-[49.6rem] relative z-0
 
         <v-icon
           v-if="$windowWidth >= 450"
-          :class="'cursor-pointer relative bottom-[3rem] bg-transparent grow ' + 
-            (currIdx == Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMember) - 1 ? 'invisible' : '')"
+          :class="
+            'cursor-pointer relative bottom-[3rem] bg-transparent grow ' +
+            (currIdx == Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMember) - 1
+              ? 'invisible'
+              : '')
+          "
           name="ri-arrow-drop-right-line"
           scale="3.5"
           fill="#8f8d8b"
