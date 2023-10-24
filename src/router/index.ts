@@ -3,6 +3,7 @@ const HomeView = () => import('@/views/HomeView.vue')
 const IdeasView = () => import('@/views/IdeasView.vue')
 const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
+const SponsorsView = () => import('@/views/SponsorsView.vue')
 const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
 const GroupBView = () => import('@/views/lab-validation/GroupBView.vue')
 const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
@@ -32,8 +33,13 @@ const router = createRouter({
       component: TeamView
     },
     {
-      path: '/lab-validation/enzyme-activity-assays',
-      name: 'enzyme-activity-assays',
+      path: '/sponsors',
+      name: 'sponsors',
+      component: SponsorsView
+    },
+    {
+      path: '/lab-validation/dnase-i',
+      name: 'dnase-i',
       component: GroupAView
     },
     {
@@ -42,8 +48,8 @@ const router = createRouter({
       component: GroupBView
     },
     {
-      path: '/lab-validation/enzyme-conjugation',
-      name: 'enzyme-conjugation',
+      path: '/lab-validation/thiolation-and-conjugation',
+      name: 'thiolation-and-conjugation',
       component: GroupCView
     },
     {

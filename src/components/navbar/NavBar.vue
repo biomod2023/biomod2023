@@ -43,8 +43,8 @@ const tree: Tree[] = [
         name: 'Lab Validation',
         children: [
           {
-            name: 'Enzyme Activity Assays',
-            url: '/lab-validation/enzyme-activity-assays'
+            name: 'Dnase I',
+            url: '/lab-validation/dnase-i'
           },
           {
             name: 'Liposome Formation',
@@ -55,12 +55,21 @@ const tree: Tree[] = [
             url: '/lab-validation/octahedron-formation'
           },
           {
-            name: 'Octahedron Liposome Formation',
+            name: 'Thiolation and Conjugation',
+            url: '/lab-validation/thiolation-and-conjugation'
+          }
+        ]
+      },
+      {
+        name: 'Future Directions',
+        children: [
+          {
+            name: 'Docking of Alginate Lyase and Alpha-Amylase',
             url: '#'
           },
           {
-            name: 'Thiolation and Conjugation',
-            url: '/lab-validation/enzyme-conjugation'
+            name: 'Liposome Formation Using Octahedron',
+            url: '#'
           }
         ]
       }
@@ -76,7 +85,7 @@ const tree: Tree[] = [
   },
   {
     name: 'Sponsors',
-    url: '#'
+    url: '/sponsors'
   }
 ]
 </script>
@@ -161,7 +170,10 @@ const tree: Tree[] = [
       :leave-active-class="transitionAnimation"
     >
       <template v-if="sidebar">
-        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
+        <div
+          class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90"
+          @click.self="sidebar = !sidebar"
+        >
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
           <div
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
@@ -180,14 +192,14 @@ const tree: Tree[] = [
                       <div v-for="(child, j) in entry.children" :key="j">
                         <MobileDropdown>
                           <template #title
-                            ><span class="text-xl">{{ child.name }}</span></template
+                            ><span class="text-lg md:text-xl">{{ child.name }}</span></template
                           >
                           <template #children>
                             <RouterLink
                               v-for="(subchild, k) in child.children"
                               :key="k"
                               :to="subchild.url ? subchild.url : '#'"
-                              class="text-xl"
+                              class="text-lg md:text-xl font-normal"
                             >
                               {{ subchild.name }}
                             </RouterLink>

@@ -22,7 +22,7 @@ const flyOut = 'translate-y-4 opacity-0'
       :enter-active-class="activeAnim"
       :leave-active-class="activeAnim + 'absolute'"
     >
-      <div v-if="activated" class="mt-1 ml-4 pr-4 flex flex-col gap-2 font-semibold">
+      <div v-if="activated" class="mt-1 ml-4 pr-4 flex flex-col gap-2 md:gap-4 font-semibold">
         <slot name="children"></slot>
       </div>
     </Transition>
