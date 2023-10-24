@@ -16,16 +16,3 @@ onMounted(() => {
     ref="containerRef"
   ></div>
 </template>
-<!-- 
-<template>
-    hello
-    <vue-mathjax :formula="formula"></vue-mathjax>
-</template>
-
-<script lang="ts">
-import { VueMathjax } from 'vue-mathjax'
-export default {
-  components: {
-    'vue-mathjax': VueMathjax
-  }}
-</script> -->
