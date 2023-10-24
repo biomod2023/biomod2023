@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-defineProps<{ alwaysDropdown: boolean, dark?: boolean }>()
+defineProps<{ alwaysDropdown: boolean; dark?: boolean }>()
 defineEmits<{ (e: 'toggleActivated', state: boolean): void }>()
 
 const title = ref()
