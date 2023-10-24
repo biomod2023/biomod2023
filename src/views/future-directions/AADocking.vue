@@ -51,6 +51,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <h4 class="font-bold">Alginate Lyase: PDB Identifier 1HV6 (Figure 1)</h4>
 
               <CaptionedGraphics modifier="w-full">
+                <template #graphics>
+                  <img src="../../assets/aa-docking/alginate-lyase-3d.png" alt="Picture of Alginate Lyase"
+                    class="w-full lg:w-1/2">
+                </template>
                 <template #caption>
                   <p>Figure 1. 3D representation of Alginate Lyase in Pymol</p>
                 </template>
@@ -61,6 +65,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <h4 class="font-bold">Alpha-Amylase: PDB Identifier 1MWO (Figure 2)</h4>
 
               <CaptionedGraphics modifier="w-full">
+                <template #graphics>
+                  <img src="../../assets/aa-docking/alpha-amylase-3d.png" alt="Picture of Alpha Amylase"
+                    class="w-full lg:w-1/2">
+                </template>
                 <template #caption>
                   <p>Figure 2. 3D representation of Alpha-Amylase in Pymol.</p>
                 </template>
@@ -96,6 +104,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <h3 :class="sectionTitleStyle">1. Interaction Between Alpha-Amylase and Maleimide</h3>
               <div class="flex flex-col gap-y-8">
                 <CaptionedGraphics modifier="w-full">
+                  <template #graphics>
+                    <img src="../../assets/aa-docking/alpha-amylase-maleimide.png"
+                      alt="Picture of Alpha Amylase and Maleimide interaction" class="w-full lg:w-1/2">
+                  </template>
                   <template #caption>
                     <p>
                       Figure 3. Interaction between Alpha Amylase and maleimide predicted by CB-Dock. The structure
@@ -104,6 +116,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                   </template>
                 </CaptionedGraphics>
                 <CaptionedGraphics modifier="w-full">
+                  <template #graphics>
+                    <img src="../../assets/aa-docking/alpha-amylase-maleimide-vina-score.png"
+                      alt="Table showing Alpha Amlyse/Maleimide Vina Score" class="w-full lg:w-1/2">
+                  </template>
                   <template #caption>
                     <p>
                       Figure 4. Vina Score of -4.6 is associated with the most favourable binding site of Alpha-Amylase.
@@ -117,6 +133,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <h3 :class="sectionTitleStyle">2. Interaction Between Alginate Lyase and Maleimide</h3>
               <div class="flex flex-col gap-y-8">
                 <CaptionedGraphics modifier="w-full">
+                  <template #graphics>
+                    <img src="../../assets/aa-docking/alginate-lyase-maleimide.png"
+                      alt="Picture of Alginate Lyase and Maleimide interaction" class="w-full lg:w-1/2">
+                  </template>
                   <template #caption>
                     <p>
                       Figure 5. Interaction between Alginate Lyase and maleimide predicted by CB-Dock. The structure
@@ -125,6 +145,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                   </template>
                 </CaptionedGraphics>
                 <CaptionedGraphics modifier="w-full">
+                  <template #graphics>
+                    <img src="../../assets/aa-docking/alginate-lyase-maleimide-vina-score.png"
+                      alt="Table showing Alginate Lyase/Maleimide Vina Score" class="w-full lg:w-1/2">
+                  </template>
                   <template #caption>
                     <p>
                       Figure 6. Vina Score of -4.3 is associated with the most favourable binding site of Alginate Lyase.
@@ -159,6 +183,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                   al, 2001).
                 </p>
                 <CaptionedGraphics modifier="w-full">
+                  <template #graphics>
+                    <img src="../../assets/aa-docking/alginate-lyase-active-site.jpg"
+                      alt="Picture of Alginate Lyase Active Site" class="w-full lg:w-1/2">
+                  </template>
                   <template #caption>
                     <p>
                       Figure 7. The bound trisaccharide molecule on the active site of Alginate Lyase. The Figure shows
@@ -184,6 +212,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                   residue (Asp289, Asp198), arginine residue (Arg196), and glutamic acid residue (Glu222).
                 </p>
                 <CaptionedGraphics modifier="w-full">
+                  <template #graphics>
+                    <img src="../../assets/aa-docking/alpha-amylase-active-site.jpg"
+                      alt="Picture of Alpha Amylase Active Site" class="w-full lg:w-1/4">
+                  </template>
                   <template #caption>
                     <p>
                       Figure 8. Active site residues of Alpha-Amylase. W stands for Trp, K stands for Lys, Y stands for
@@ -247,4 +279,5 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         </template>
       </SingleColumn>
     </template>
-  </Notebook></template>
+  </Notebook>
+</template>
