@@ -89,65 +89,162 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
       </SingleColumn>
 
       <SingleColumn>
-        <template #title> Methods </template>
+        <template #title> Results </template>
         <template #body>
-          <p>
-            We began by using a thermocycler to mix the scaffold and staple strands together,
-            increasing the probability of hydrogen bonding. The PCR tubes were labeled and the
-            appropriate volumes of each reagent was put into the PCR tubes (MgCl<sub>2</sub> (if
-            salt screening), Tris, EDTA, Scaffold, staple and water). The total volume in the PCR
-            tubes added to 60 μL. We ensured to mix the solution with the P200 before aliquoting.
-            Afterwards, the thermoramp was started by following the instructions listed below to
-            ensure the formation of the structure.
-          </p>
-          <ol class="list-decimal list-inside relative left-8 w-fit">
-            <li>80 °C for 5 min</li>
-            <li>Decrease to 65 °C at a rate of -1°C per 5 minutes.</li>
-            <li>Incubate at 65 °C for 20 min</li>
-            <li>Decrease to 25 °C at -1°C per 20 minutes</li>
-          </ol>
-          <p>
-            Finally, to verify the structure that was formed, gel electrophoresis was utilized. A 1%
-            agarose gel was made by adding 0.4 - 0.5 g agarose to 50ml of 0.5X TBE with 10mM MgCl2
-            in an erlenmeyer flask. This was microwaved for 15 seconds, swirling and repeated until
-            a homogenous mixture was formed. A gel cast tray of 50 ml was prepared and once the gel
-            had cooled, 2.5 μl of 10X Sybr safe was pipetted into the gel mix which was poured into
-            the gel cast tray. The gel electrophoresis was run in a 0.5X TBE buffer with 10mM MgCl2
-            for 3 hours at 60V.
-          </p>
+          <div class="flex flex-col gap-y-4">
+            <section>
+              <h3 :class="sectionTitleStyle">1. Interaction Between Alpha-Amylase and Maleimide</h3>
+              <div class="flex flex-col gap-y-8">
+                <CaptionedGraphics modifier="w-full">
+                  <template #caption>
+                    <p>
+                      Figure 3. Interaction between Alpha Amylase and maleimide predicted by CB-Dock. The structure
+                      represents the binding site of Alpha-Amylase.
+                    </p>
+                  </template>
+                </CaptionedGraphics>
+                <CaptionedGraphics modifier="w-full">
+                  <template #caption>
+                    <p>
+                      Figure 4. Vina Score of -4.6 is associated with the most favourable binding site of Alpha-Amylase.
+                    </p>
+                  </template>
+                </CaptionedGraphics>
+              </div>
+            </section>
+
+            <section>
+              <h3 :class="sectionTitleStyle">2. Interaction Between Alginate Lyase and Maleimide</h3>
+              <div class="flex flex-col gap-y-8">
+                <CaptionedGraphics modifier="w-full">
+                  <template #caption>
+                    <p>
+                      Figure 5. Interaction between Alginate Lyase and maleimide predicted by CB-Dock. The structure
+                      represents the binding site of Alginate Lyase.
+                    </p>
+                  </template>
+                </CaptionedGraphics>
+                <CaptionedGraphics modifier="w-full">
+                  <template #caption>
+                    <p>
+                      Figure 6. Vina Score of -4.3 is associated with the most favourable binding site of Alginate Lyase.
+                    </p>
+                  </template>
+                </CaptionedGraphics>
+              </div>
+            </section>
+          </div>
+        </template>
+      </SingleColumn>
+
+
+      <SingleColumn>
+        <template #title> Discussion </template>
+        <template #body>
+          <div class="flex flex-col gap-y-6">
+            <section>
+              <h3 :class="sectionTitleStyle">1. Literature Review</h3>
+            </section>
+
+            <section>
+              <h4 class="font-bold">a. Alginate Lyase</h4>
+
+              <div class="flex flex-col gap-y-6">
+                <p>
+                  The active site of Alginate Lyase includes glutamine residues (Gln134, Gln138), tyrosine residues
+                  (Tyr180,
+                  Tyr246, Tyr249) histidine residues (His192, His245), tryptophan residue (Trp141), asparagine residue
+                  (Asn191), aspartic acid residue (Asp314), and arginine residues (Arg88, Arg342, Arg306, Arg312) (Yoon,
+                  et.
+                  al, 2001).
+                </p>
+                <CaptionedGraphics modifier="w-full">
+                  <template #caption>
+                    <p>
+                      Figure 7. The bound trisaccharide molecule on the active site of Alginate Lyase. The Figure shows
+                      the
+                      bound trisaccharide molecule and the surrounding amino acid residues and water molecules interacting
+                      with the trisaccharide. The trisaccharide molecule is represented by means of an orange
+                      ball-and-stick
+                      model. The side chains of Tyr and Trp, Asn and Gln, Asp, Arg, and His residues are coloured yellow,
+                      green, red, cyan and purple, respectively (Yoon, et. al, 2001).
+                    </p>
+                  </template>
+                </CaptionedGraphics>
+              </div>
+            </section>
+
+            <section>
+              <h4 class="font-bold">b. Alpha-Amylase</h4>
+
+              <div class="flex flex-col gap-y-6">
+                <p>
+                  The active site of Alpha-Amylase includes tyrosine residue (Tyr199, Tyr62), tryptophan residue (Trp224),
+                  lysine residue (Lys201), histidine residue (His288), phenylalanine residue (Phe159), aspartic acid
+                  residue (Asp289, Asp198), arginine residue (Arg196), and glutamic acid residue (Glu222).
+                </p>
+                <CaptionedGraphics modifier="w-full">
+                  <template #caption>
+                    <p>
+                      Figure 8. Active site residues of Alpha-Amylase. W stands for Trp, K stands for Lys, Y stands for
+                      Tyr, E stands for Glu, F stands for Phe, D stands for Asp, H stands for His, and R stands for Arg
+                      (Linden, et. al, 2003).
+                    </p>
+                  </template>
+                </CaptionedGraphics>
+              </div>
+            </section>
+
+            <section>
+              <h3 :class="sectionTitleStyle">Maleimide and Alpha-Amylase Interaction</h3>
+              <p>
+                Based on the literature review we performed, Alpha-Amylase does not bind to maleimide with its active
+                site. The residues predicted by CB-Dock software do not align with the documented active site residues.
+                This means that the active site of Alpha-Amylase would remain unobstructed and the enzyme’s function will
+                not be disrupted.
+              </p>
+            </section>
+
+            <section>
+              <h3 :class="sectionTitleStyle">3. Maleimide and Alginate Lyase Interaction</h3>
+              <p>
+                Based on the literature review we performed, Alginate Lyase also does not bind to maleimide with its
+                active site. The residues predicted by CB-Dock software do not align with the documented active site
+                residues.
+              </p>
+            </section>
+          </div>
         </template>
       </SingleColumn>
 
       <SingleColumn>
-        <template #title> Results </template>
+        <template #title> Conclusion </template>
         <template #body>
-          <div class="flex flex-col gap-y-5">
-            <CaptionedGraphics>
-              <template #caption>
-                <p>
-                  <b>Figure 1.</b> Referencing the ladder, a known reference of DNA sizes, the
-                  staple mole ratios are made at 1:1, 1:2, 1:3, 1:5, 1:7, 1:10. The brighter the dot
-                  is the more DNA there is therefore indicating that the was more DNA at a 1:10
-                  scaffold ratio.
-                </p>
-              </template>
-            </CaptionedGraphics>
-            <p>
-              Ladder is the known sizes of DNA used as reference. The bright dot at the bottom is
-              staples, the brighter the dot the more dna there is (same logic for the band on top
-              which is the octahedron). Scaffold: staple mole ratios are made at 1:1, 1:2, 1:3, 1:5,
-              1:7, 1:10
-            </p>
-          </div>
+          <p>
+            Through a computational investigation, we have revealed that both Alginate Lyase and Alpha-Amylase maintain
+            their enzymatic functionalities without significant hindrance from Maleimide. Our study underscores the
+            potential feasibility of utilizing these enzymes for drug delivery purposes, without compromising their
+            essential catalytic activities.
+          </p>
         </template>
       </SingleColumn>
 
       <SingleColumn :always-dropdown="true">
         <template #title> References </template>
         <template #body>
-          <div class="pl-6 -indent-6">TBD!!!</div>
+          <div class="pl-6 -indent-6">
+            <p>
+              Linden, A., Mayans, O., Meyer-Klaucke, W., Antranikian, G., & Wilmanns, M. (2003). Differential regulation
+              of a hyperthermophilic α-amylase with a novel (ca,Zn) two-metal center by zinc. Journal of Biological
+              Chemistry, 278(11), 9875–9884. https://doi.org/10.1074/jbc.m211339200
+            </p>
+            <p>
+              Yoon, H.-J., Hashimoto, W., Miyake, O., Murata, K., & Mikami, B. (2001). Crystal structure of alginate lyase
+              A1-III complexed with Trisaccharide product at 2.0 Å Resolution. Journal of Molecular Biology, 307(1), 9–16.
+              https://doi.org/10.1006/jmbi.2000.4509
+            </p>
+          </div>
         </template>
       </SingleColumn>
     </template>
-  </Notebook>
-</template>
+  </Notebook></template>
