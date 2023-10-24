@@ -14,12 +14,12 @@ const tableData = {
   rowHeaders: ["Manufacturer's Buffer", 'TE', 'HEPES'],
   rowsPerRowHeader: 2,
   data: [
-    [0.05, 70, 20],
-    [0.1, 70, 35],
-    [0.05, 90, 90],
-    [0.1, 90, 90],
-    [0.05, 35, 10],
-    [0.1, 65, 10]
+    [0.05, 80, 20],
+    [0.1, 80, 50],
+    [0.05, 80, 90],
+    [0.1, 95, 90],
+    [0.05, 75, 25],
+    [0.1, 50, 20]
   ]
 }
 </script>
@@ -43,10 +43,6 @@ const tableData = {
             DNA within the biofilm, which can be used as a nutrient source by the bacteria that
             produce the biofilm (Nijland et al., 2010).
           </p>
-        </template>
-        <template #graphic>
-          <div class="w-48 h-48 bg-gray-300"></div>
-          <p>Figure 1. blah blah blah</p>
         </template>
       </SingleColumn>
       <DoubleColumn>
@@ -104,23 +100,23 @@ const tableData = {
       <SingleColumn>
         <template #title>Results</template>
         <template #graphic>
-          <div class="flex flex-col gap-4 w-full">
-            <div class="flex flex-col lg:flex-row lg:justify-center items-center">
-              <div class="flex flex-col items-center gap-2">
-                <div class="w-48 h-48 bg-gray-300"></div>
-                <p>
-                  Figure 1: Fluorescence of the DNase I Picogreen assay in the manufacturer’s
-                  buffer, HEPES buffer and TE buffer.
-                </p>
+          <div class="flex flex-col gap-8 w-full">
+            <div class="flex flex-col lg:flex-row lg:justify-center items-center gap-6">
+              <div class="basis-1/2">
+                <img src="../../assets/dnase-i/manu-buffer.png" alt="Graph of Manufacturer Buffer">
               </div>
-              <div class="flex flex-col items-center gap-2">
-                <div class="w-48 h-48 bg-gray-300"></div>
-                <p>
-                  Figure 2: Calibration curve of the DNase I picogreen assay at DNA concentrations
-                  of 1, 10, 25, 50 and 100 ng/mL.
-                </p>
+              <div class="basis-1/2">
+                <img src="../../assets/dnase-i/te-buffer.png" alt="Graph of TE Buffer">
               </div>
             </div>
+            <div class="w-full">
+              <img src="../../assets/dnase-i/hepes-buffer.png" alt="Graph of HEPES Buffer" class="lg:w-1/2 m-auto">
+            </div>
+            <p>
+              Figure 1: Exhibits the DNase I Picogreen Assay in Manufacturer, HEPES, and TE buffers. It displays the
+              generated DNA concentration in testing the activity of DNase I in different buffers. Panels a, b, and c
+              display Manufacturer, HEPES, and TE buffers respectively.
+            </p>
             <div class="flex flex-col items-center w-full gap-2">
               <div class="overflow-x-scroll w-full">
                 <CustomTable :table-data="tableData" />
