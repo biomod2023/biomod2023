@@ -54,8 +54,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
 
               <CaptionedGraphics modifier="w-full">
                 <template #graphics>
-                  <img src="../../assets/aa-docking/alginate-lyase-3d.png" alt="Picture of Alginate Lyase"
-                    class="w-full lg:w-1/2">
+                  <img
+                    src="../../assets/aa-docking/alginate-lyase-3d.png"
+                    alt="Picture of Alginate Lyase"
+                    class="w-full lg:w-1/2"
+                  />
                 </template>
                 <template #caption>
                   <p>Figure 1. 3D representation of Alginate Lyase in Pymol</p>
@@ -68,8 +71,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
 
               <CaptionedGraphics modifier="w-full">
                 <template #graphics>
-                  <img src="../../assets/aa-docking/alpha-amylase-3d.png" alt="Picture of Alpha Amylase"
-                    class="w-full lg:w-1/2">
+                  <img
+                    src="../../assets/aa-docking/alpha-amylase-3d.png"
+                    alt="Picture of Alpha Amylase"
+                    class="w-full lg:w-1/2"
+                  />
                 </template>
                 <template #caption>
                   <p>Figure 2. 3D representation of Alpha-Amylase in Pymol.</p>
@@ -109,8 +115,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <div class="flex flex-col gap-y-8">
                 <CaptionedGraphics modifier="w-full">
                   <template #graphics>
-                    <img src="../../assets/aa-docking/alpha-amylase-maleimide.png"
-                      alt="Picture of Alpha Amylase and Maleimide interaction" class="w-full lg:w-1/2">
+                    <img
+                      src="../../assets/aa-docking/alpha-amylase-maleimide.png"
+                      alt="Picture of Alpha Amylase and Maleimide interaction"
+                      class="w-full lg:w-1/2"
+                    />
                   </template>
                   <template #caption>
                     <p>
@@ -121,8 +130,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 </CaptionedGraphics>
                 <CaptionedGraphics modifier="w-full">
                   <template #graphics>
-                    <img src="../../assets/aa-docking/alpha-amylase-maleimide-vina-score.png"
-                      alt="Table showing Alpha Amlyse/Maleimide Vina Score" class="w-full lg:w-1/2">
+                    <img
+                      src="../../assets/aa-docking/alpha-amylase-maleimide-vina-score.png"
+                      alt="Table showing Alpha Amlyse/Maleimide Vina Score"
+                      class="w-full lg:w-1/2"
+                    />
                   </template>
                   <template #caption>
                     <p>
@@ -141,8 +153,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               <div class="flex flex-col gap-y-8">
                 <CaptionedGraphics modifier="w-full">
                   <template #graphics>
-                    <img src="../../assets/aa-docking/alginate-lyase-maleimide.png"
-                      alt="Picture of Alginate Lyase and Maleimide interaction" class="w-full lg:w-1/2">
+                    <img
+                      src="../../assets/aa-docking/alginate-lyase-maleimide.png"
+                      alt="Picture of Alginate Lyase and Maleimide interaction"
+                      class="w-full lg:w-1/2"
+                    />
                   </template>
                   <template #caption>
                     <p>
@@ -153,8 +168,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 </CaptionedGraphics>
                 <CaptionedGraphics modifier="w-full">
                   <template #graphics>
-                    <img src="../../assets/aa-docking/alginate-lyase-maleimide-vina-score.png"
-                      alt="Table showing Alginate Lyase/Maleimide Vina Score" class="w-full lg:w-1/2">
+                    <img
+                      src="../../assets/aa-docking/alginate-lyase-maleimide-vina-score.png"
+                      alt="Table showing Alginate Lyase/Maleimide Vina Score"
+                      class="w-full lg:w-1/2"
+                    />
                   </template>
                   <template #caption>
                     <p>
@@ -190,8 +208,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 </p>
                 <CaptionedGraphics modifier="w-full">
                   <template #graphics>
-                    <img src="../../assets/aa-docking/alginate-lyase-active-site.jpg"
-                      alt="Picture of Alginate Lyase Active Site" class="w-full lg:w-1/2">
+                    <img
+                      src="../../assets/aa-docking/alginate-lyase-active-site.jpg"
+                      alt="Picture of Alginate Lyase Active Site"
+                      class="w-full lg:w-1/2"
+                    />
                   </template>
                   <template #caption>
                     <p>
@@ -220,8 +241,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 </p>
                 <CaptionedGraphics modifier="w-full">
                   <template #graphics>
-                    <img src="../../assets/aa-docking/alpha-amylase-active-site.jpg"
-                      alt="Picture of Alpha Amylase Active Site" class="w-full lg:w-1/4">
+                    <img
+                      src="../../assets/aa-docking/alpha-amylase-active-site.jpg"
+                      alt="Picture of Alpha Amylase Active Site"
+                      class="w-full lg:w-1/4"
+                    />
                   </template>
                   <template #caption>
                     <p>
