@@ -4,6 +4,7 @@ const IdeasView = () => import('@/views/IdeasView.vue')
 const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
 const SponsorsView = () => import('@/views/SponsorsView.vue')
+const DockingDNASE = () => import('@/views/computational-simulation/DockingDNASE.vue')
 const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
 const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/sponsors',
       name: 'sponsors',
       component: SponsorsView
+    },
+    {
+      path: '/computational-simulation/docking-of-dnase-i',
+      name: 'docking-of-dnase-i',
+      component: DockingDNASE
     },
     {
       path: '/lab-validation/dnase-i',
