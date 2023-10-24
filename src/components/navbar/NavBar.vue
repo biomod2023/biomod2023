@@ -31,7 +31,7 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Structure Design',
-            url: '#'
+            url: '/computational-simulation/structure-design'
           },
           {
             name: 'Docking of Dnase I',
