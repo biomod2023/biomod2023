@@ -4,10 +4,17 @@ const props = defineProps<{ to: string }>()
 import { ref } from 'vue'
 
 const dropdown = ref(false)
+const toggle = ref(false)
 </script>
 
 <template>
-  <div @mouseenter="dropdown = true" @mouseleave="dropdown = false" class="flex items-center">
+  <div
+    class="flex items-center"
+    @mouseenter="() => { if (!toggle) dropdown = true }"
+    @mouseleave="() => { if (!toggle) dropdown = false }"
+    @focus="toggle = true"
+    @blur="toggle = false"
+  >
     <div class="flex gap-2 py-4 px-8 hover:opacity-80 transition duration-200">
       <slot name="text"></slot>
       <svg class="w-3 stroke-gold -rotate-90" viewBox="0 0 30 17" fill="none">
@@ -15,7 +22,7 @@ const dropdown = ref(false)
       </svg>
     </div>
 
-    <div v-if="dropdown" class="fixed ml-[18.8rem] mt-8">
+    <div v-if="dropdown || toggle" class="fixed ml-[18.8rem] mt-8">
       <div class="bg-slate p-4 shadow-[5px_0_35px_rgba(0,0,0,0.4)] rounded-3xl">
         <slot name="content"></slot>
       </div>
