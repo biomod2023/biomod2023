@@ -28,7 +28,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
 
 <template>
   <Notebook>
-    <template #title>Dnase I</template>
+    <template #title>DNase I</template>
     <template #body>
       <SingleColumn>
         <template #title> Intro </template>
@@ -134,7 +134,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </div>
           </div>
           <p>
-            Figure 1 demonstrates the DNA concentration over time in solutions with various concentrations of DNAse I
+            Figure 1 demonstrates the DNA concentration over time in solutions with various concentrations of DNase I
             and various buffers. This concentration appears to be relatively constant in the TE buffer, while decreasing
             gradually over time in the manufacturer’s buffer and the HEPES buffer.
           </p>
@@ -157,7 +157,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
           <h3 :class="sectionTitleStyle">Future Directions</h3>
           <div class="flex flex-col gap-4">
             <p>
-              While only DNAse I has been selected, a combination of enzymes would ideally be used
+              While only DNase I has been selected, a combination of enzymes would ideally be used
               in conjunction on the enzymosome to combat bacterial biofilms. For example, alpha
               amylase and alginate lyase inhibit biofilm formation by degrading the polysaccharides
               that compose the biofilm (Lahiri et al., 2021; Zhu & Yin, 2015), and incorporating
