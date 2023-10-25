@@ -262,7 +262,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </section>
 
             <section>
-              <h3 :class="sectionTitleStyle">Maleimide and Alpha-Amylase Interaction</h3>
+              <h3 :class="sectionTitleStyle"> 2. Maleimide and Alpha-Amylase Interaction</h3>
               <p>
                 Based on the literature review we performed, Alpha-Amylase does not bind to
                 maleimide with its active site. The residues predicted by CB-Dock software do not
