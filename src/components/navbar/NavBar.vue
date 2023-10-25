@@ -48,7 +48,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Liposome Formation',
-            url: '#'
+            url: '/lab-validation/liposome-formation'
           },
           {
             name: 'Octahedron Formation',

@@ -5,6 +5,7 @@ const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
 const SponsorsView = () => import('@/views/SponsorsView.vue')
 const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
+const GroupBView = () => import('@/views/lab-validation/GroupBView.vue')
 const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 const AADocking = () => import('@/views/future-directions/AADocking.vue')
@@ -18,19 +19,16 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-
     {
       path: '/ideas',
       name: 'ideas',
       component: IdeasView
     },
-
     {
       path: '/elsi',
       name: 'elsi',
       component: ELSIView
     },
-
     {
       path: '/team',
       name: 'team',
@@ -45,6 +43,11 @@ const router = createRouter({
       path: '/lab-validation/dnase-i',
       name: 'dnase-i',
       component: GroupAView
+    },
+    {
+      path: '/lab-validation/liposome-formation',
+      name: 'liposome-formation',
+      component: GroupBView
     },
     {
       path: '/lab-validation/thiolation-and-conjugation',
