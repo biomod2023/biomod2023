@@ -253,7 +253,47 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </p>
             <CaptionedGraphics modifier="w-full">
               <template #graphics>
-
+                <table class="table-fixed border-collapse w-full">
+                  <tr class="bg-slate">
+                    <th class="py-2 px-4 text-sm lg:text-base w-1/3"></th>
+                    <th class="py-2 px-4 text-sm lg:text-base w-2/3" colspan="2">
+                      Sample Type
+                    </th>
+                  </tr>
+                  <tbody class="bg-dark">
+                    <tr>
+                      <th class="text-sm lg:text-base bg-slate"></th>
+                      <td class="py-1 lg:text-lg text-center">
+                        <b>1:1</b>
+                      </td>
+                      <td class="py-1 lg:text-lg text-center">
+                        <b>10:1</b>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-sm lg:text-base">
+                        Z-Average (d.nm)
+                      </th>
+                      <td class="py-1 lg:text-lg text-center">
+                        74.09
+                      </td>
+                      <td class="py-1 lg:text-lg text-center">
+                        76.77
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-sm lg:text-base">
+                        PDI
+                      </th>
+                      <td class="py-1 lg:text-lg text-center">
+                        0.239
+                      </td>
+                      <td class="py-1 lg:text-lg text-center">
+                        0.254
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </template>
               <template #caption>
                 <p>
@@ -324,13 +364,14 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             <p>
               Maleimide Reaction Chemistry. Quanta BioDesign. (n.d.).
               https://www.quantabiodesign.com/maleimide-reaction-chemistry/
-          </p>
-          <p>
-            Theule, Stephanie. (n.d.). Reaction of SATA [Reaction Image]. ResearchGate.
-            https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224
-          </p>
-        </div>
-      </template>
-    </SingleColumn>
-  </template>
-</Notebook></template>
+            </p>
+            <p>
+              Theule, Stephanie. (n.d.). Reaction of SATA [Reaction Image]. ResearchGate.
+              https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224
+            </p>
+          </div>
+        </template>
+      </SingleColumn>
+    </template>
+  </Notebook>
+</template>
