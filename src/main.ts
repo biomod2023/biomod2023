@@ -22,3 +22,13 @@ app.use(VueWindowSizePlugin)
 app.component('VIcon', OhVueIcon)
 
 app.mount('#app')
+
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+
+Vue.use(Vuetify);
+
+new Vue({
+  // ...
+}).$mount('#app');
