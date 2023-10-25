@@ -69,7 +69,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Liposome Formation Using Octahedron',
-            url: '#'
+            url: '/future-directions/octahedron-liposome-formation'
           }
         ]
       }

@@ -50,6 +50,39 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </section>
 
             <section>
+<<<<<<< HEAD
+              <h4 class="font-bold">Alginate Lyase: PDB Identifier 1HV6 (Figure 1)</h4>
+
+              <CaptionedGraphics modifier="w-full">
+                <template #graphics>
+                  <img
+                    src="../../assets/aa-docking/alginate-lyase-3d.png"
+                    alt="Picture of Alginate Lyase"
+                    class="w-full lg:w-1/2"
+                  />
+                </template>
+                <template #caption>
+                  <p>Figure 1. 3D representation of Alginate Lyase in Pymol</p>
+                </template>
+              </CaptionedGraphics>
+            </section>
+
+            <section>
+              <h4 class="font-bold">Alpha-Amylase: PDB Identifier 1MWO (Figure 2)</h4>
+
+              <CaptionedGraphics modifier="w-full">
+                <template #graphics>
+                  <img
+                    src="../../assets/aa-docking/alpha-amylase-3d.png"
+                    alt="Picture of Alpha Amylase"
+                    class="w-full lg:w-1/2"
+                  />
+                </template>
+                <template #caption>
+                  <p>Figure 2. 3D representation of Alpha-Amylase in Pymol.</p>
+                </template>
+              </CaptionedGraphics>
+=======
               <div class="flex flex-col items-center lg:items-start gap-y-4">
                 <h4 class="font-bold">Alginate Lyase: PDB Identifier 1HV6 (Figure 1)</h4>
                 <CaptionedGraphics modifier="w-full">
@@ -84,6 +117,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                   </template>
                 </CaptionedGraphics>
               </div>
+>>>>>>> 9fb5d0796bd52e52dee2d580df06f145a20cf7f7
             </section>
 
             <section>
@@ -262,7 +296,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </section>
 
             <section>
+<<<<<<< HEAD
+              <h3 :class="sectionTitleStyle">Maleimide and Alpha-Amylase Interaction</h3>
+=======
               <h3 :class="sectionTitleStyle">2. Maleimide and Alpha-Amylase Interaction</h3>
+>>>>>>> 9fb5d0796bd52e52dee2d580df06f145a20cf7f7
               <p>
                 Based on the literature review we performed, Alpha-Amylase does not bind to
                 maleimide with its active site. The residues predicted by CB-Dock software do not
