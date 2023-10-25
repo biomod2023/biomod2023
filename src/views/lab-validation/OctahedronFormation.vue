@@ -65,6 +65,7 @@ const tableData = {
                 <tr>
                   <th scope="row"> {{ tableData.data[tableData.data.length - 1][0] }} </th>
                   <td v-for="(item, j) in tableData.data[tableData.data.length - 1].slice(1, tableData.data.length)"
+                    :key="j"
                     class="py-1 lg:text-lg text-center">
                     {{ item }}
                   </td>
