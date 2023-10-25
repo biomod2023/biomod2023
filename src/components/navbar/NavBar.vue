@@ -35,7 +35,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Docking of Dnase I',
-            url: '#'
+            url: '/computational-simulation/docking-of-dnase-i'
           }
         ]
       },
