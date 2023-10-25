@@ -4,11 +4,6 @@ import LightButton from '@/components/LightButton.vue'
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
-
-const scrollToBot = () => {
-  const video = document.getElementById("video")
-  if (video) video.scrollIntoView();
-}
 </script>
 
 <template>
@@ -25,9 +20,9 @@ const scrollToBot = () => {
           <h2 class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-2/3 text-center">
             Presented by the University of British Columbia 2023 Team
           </h2>
-          <button @click="scrollToBot" class="btn mt-8 lg:mt-16 hover:opacity-100">
+          <a href="#video" class="btn mt-8 lg:mt-16 hover:opacity-100">
             Explore
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -63,10 +58,10 @@ const scrollToBot = () => {
     <div
       class="flex flex-col xl:flex-row items-center justify-around lg:pb-20 xl:py-20 px-10 lg:mt-10 xl:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]">
       <div
-        class="xl:basis-1/2 pb-20 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-24 lg:pt-36 h-full px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] xl:bg-[45%_50%]">
+        class="xl:basis-1/2 pb-20 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-24 lg:pt-36 h-fit px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover xl:bg-auto bg-[50%_50%] xl:bg-[45%_50%]">
         <div
           class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,0.5)]">
-          <img src="../assets/homepage/abstract_graphic.gif" alt="BIOMOD team member holding up a test tube"
+          <img src="../assets/homepage/abstract_graphic.gif" alt="Animated GIF showing construction of DNA Octahedron and Liposome"
             class="rounded-full" />
         </div>
       </div>
@@ -74,21 +69,26 @@ const scrollToBot = () => {
       <div
         class="flex flex-col items-center xl:items-start xl:justify-center text-center xl:text-left w-full xl:max-w-[50%] xl:h-full gap-4 xl:gap-10 lg:mt-0 xl:pr-4 xl:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]">
         <h1 class="font-title text-[4rem] lg:text-[5rem] text-gold">Abstract</h1>
-        <p class="text-subtitle-sm lg:text-subtitle">
-          Biofilms are layers of bacterial communities that can adhere to one another within a self-produced matrix. They
-          can attach to a variety of surfaces including human tissue, causing severe healthcare and environmental issues.
-          Traditional strategies for combating biofilms include the use of antibiotics and interference of bacterial layer
-          formation. However, removing biofilms using these methods can be challenging due to antibiotic resistance and
-          unexpected pathogenic features arising from interference strategies. To address this issue, we aim to create a
-          modular enzyme delivery vehicle. This structure consists of a DNA-templated liposome, conjugated with variable
-          enzymes, referred to as an “enzymosome”. By forming our liposomes around DNA-origami structures, which can be
-          altered to modify their size and shape, we can create a customizable platform. Among the DNA structures
-          developed – a trigonal bipyramid, pentagonal bipyramid, and octahedron – all three demonstrated high stability
-          in CanDo©. Future investigations include testing enzyme synergy with liposomes and validation of the platform in
-          vitro. The modularity of the enzymosome can address biofilms present in various environments such as in cystic
-          fibrosis patients, food facilities, and water systems. By changing the cargo type and liposome size, this
-          delivery vehicle provides potential to be used across a wide range of applications.
-        </p>
+        <div class="flex flex-col gap-4 items-center xl:items-start">
+          <p class="text-subtitle-sm lg:text-subtitle">
+            Biofilms are layers of bacterial communities that can adhere to one another within a self-produced matrix. They
+            can attach to a variety of surfaces including human tissue, causing severe healthcare and environmental issues.
+            Traditional strategies for combating biofilms include the use of antibiotics and interference of bacterial layer
+            formation. However, removing biofilms using these methods can be challenging due to antibiotic resistance and
+            unexpected pathogenic features arising from interference strategies. To address this issue, we aim to create a
+            modular enzyme delivery vehicle. This structure consists of a DNA-templated liposome, conjugated with variable
+            enzymes, referred to as an “enzymosome”. By forming our liposomes around DNA-origami structures, which can be
+            altered to modify their size and shape, we can create a customizable platform. Among the DNA structures
+            developed – a trigonal bipyramid, pentagonal bipyramid, and octahedron – all three demonstrated high stability
+            in CanDo©. Future investigations include testing enzyme synergy with liposomes and validation of the platform in
+            vitro. The modularity of the enzymosome can address biofilms present in various environments such as in cystic
+            fibrosis patients, food facilities, and water systems. By changing the cargo type and liposome size, this
+            delivery vehicle provides potential to be used across a wide range of applications.
+          </p>
+          <RouterLink to="#">
+            <LightButton>Start Reading</LightButton>
+          </RouterLink>
+        </div>
       </div>
     </div>
 
