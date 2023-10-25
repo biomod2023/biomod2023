@@ -27,7 +27,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
       <SingleColumn>
         <template #title> Reagent List </template>
         <template #body>
-          <ul class="list-disc list-inside relative overflow-x-scroll">
+          <ul class="list-disc list-inside relative overflow-x-scroll sm:overflow-x-clip">
             <li>P7308, 10 nM</li>
             <li>Staple strands, 10nM</li>
             <li>DOPC (Dioleoylphosphatidylcholine), 94.2%</li>
