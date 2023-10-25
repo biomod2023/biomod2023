@@ -5,15 +5,20 @@ import { ref } from 'vue'
 
 const dropdown = ref(false)
 const toggle = ref(false)
+
+const handleClickOutside = () => {
+  toggle.value = false
+  dropdown.value = false
+}
 </script>
 
 <template>
   <div
+    v-click-outside="handleClickOutside"
     class="flex items-center"
     @mouseenter="() => { if (!toggle) dropdown = true }"
     @mouseleave="() => { if (!toggle) dropdown = false }"
-    @focus="toggle = true"
-    @blur="toggle = false"
+    @click="toggle = !toggle"
   >
     <div class="flex gap-2 py-4 px-8 hover:opacity-80 transition duration-200">
       <slot name="text"></slot>
