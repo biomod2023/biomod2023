@@ -7,6 +7,7 @@ const SponsorsView = () => import('@/views/SponsorsView.vue')
 const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
 const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
+const AADocking = () => import('@/views/future-directions/AADocking.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -53,6 +54,11 @@ const router = createRouter({
       path: '/lab-validation/octahedron-formation',
       name: 'octahedron-formation',
       component: OctadedronFormation
+    },
+    {
+      path: '/future-directions/aa-docking',
+      name: 'aa-docking',
+      component: AADocking
     }
   ]
 })
