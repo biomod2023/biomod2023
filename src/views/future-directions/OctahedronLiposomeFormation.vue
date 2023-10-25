@@ -78,7 +78,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         <template #body>
 
           <div class="flex flex-col gap-y-6">
-            <SingleColumn :always-dropdown="true" dark>
+            <SingleColumn :always-dropdown="true" dark nested>
               <template #title> Vesicle Preparation </template>
               <template #body>
                 <div class="flex flex-col gap-y-4 overflow-x-scroll lg:overflow-x-clip">
@@ -137,7 +137,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 </div>
               </template>
             </SingleColumn>
-            <SingleColumn :always-dropdown="true" dark>
+            <SingleColumn :always-dropdown="true" dark nested>
               <template #title> DNA Structure Encapsulation </template>
               <template #body>
                 <div class="flex flex-col gap-y-4 overflow-x-clip">

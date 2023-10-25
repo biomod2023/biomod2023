@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-defineProps<{ alwaysDropdown: boolean, dark?: boolean }>()
+defineProps<{ alwaysDropdown: boolean, dark?: boolean, nested?: boolean }>()
 defineEmits<{ (e: 'toggleActivated', state: boolean): void }>()
 
 const title = ref()
@@ -37,9 +37,16 @@ onMounted(() => {
         }
       "
     >
-      <h2 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
-        <slot name="title"></slot>
-      </h2>
+      <template v-if="nested">
+        <h3 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
+          <slot name="title"></slot>
+        </h3>
+      </template>
+      <template v-else>
+        <h2 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
+          <slot name="title"></slot>
+        </h2>
+      </template>
       <svg
         v-if="$windowWidth < 1024 || alwaysDropdown"
         class="w-8"

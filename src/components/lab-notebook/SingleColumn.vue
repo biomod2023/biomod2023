@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import Bubble from '@/components/lab-notebook/Bubble.vue'
 
-withDefaults(defineProps<{ alwaysDropdown?: boolean, dark?: boolean }>(), {
+withDefaults(defineProps<{ alwaysDropdown?: boolean, dark?: boolean, nested?: boolean }>(), {
   alwaysDropdown: false
 })
 </script>
 
 <template>
-  <Bubble :always-dropdown="alwaysDropdown" :dark="dark">
+  <Bubble :always-dropdown="alwaysDropdown" :dark="dark" :nested="nested">
     <template #title>
       <slot name="title"></slot>
     </template>
