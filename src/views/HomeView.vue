@@ -4,6 +4,11 @@ import LightButton from '@/components/LightButton.vue'
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+const scrollToBot = () => {
+  const video = document.getElementById("video")
+  if (video) video.scrollIntoView();
+}
 </script>
 
 <template>
@@ -20,9 +25,9 @@ const scrollToTop = () => {
           <h2 class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-2/3 text-center">
             Presented by the University of British Columbia 2023 Team
           </h2>
-          <RouterLink to="/computational-simulation/structure-design" class="btn mt-8 lg:mt-16 hover:opacity-100">
+          <button @click="scrollToBot" class="btn mt-8 lg:mt-16 hover:opacity-100">
             Explore
-          </RouterLink>
+          </button>
         </div>
       </div>
     </div>
@@ -46,11 +51,10 @@ const scrollToTop = () => {
         </div>
         <div class="lg:w-1/2">
           <p class="lg:mt-5 lg:text-subtitle lg:text-right">
-            Our submission to the biomolecular design competition is a testament to our team's
-            unwavering commitment to pushing the boundaries of what's possible in the field of
-            biomolecular engineering. Our project not only addresses a pressing global health
-            concern but also showcases the immense potential of biomolecular design to provide
-            innovative solutions to real-world problems.
+            In our project, numerous considerations had to be taken into account. From selecting the most effective
+            enzymes for degrading biofilm matrices to crafting precise liposomes using DNA origami templates, our research
+            journey explores innovative avenues in the battle against antibiotic-resistant bacterial biofilms.
+            Learn more about the factors that impacted our final design choices.
           </p>
         </div>
       </div>
@@ -60,7 +64,8 @@ const scrollToTop = () => {
       class="flex flex-col xl:flex-row items-center justify-around lg:pb-20 xl:py-20 px-10 lg:mt-10 xl:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]">
       <div
         class="xl:basis-1/2 pb-20 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-24 lg:pt-36 h-full px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] xl:bg-[45%_50%]">
-        <div class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,0.5)]">
+        <div
+          class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,0.5)]">
           <img src="../assets/homepage/abstract_graphic.gif" alt="BIOMOD team member holding up a test tube"
             class="rounded-full" />
         </div>
@@ -89,7 +94,7 @@ const scrollToTop = () => {
 
     <div
       class="mask flex flex-col gap-2 pt-16 items-center bg-[url:url(../assets/homepage/video_bg.png),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center">
-      <div class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
+      <div id="video" class="font-title text-title-sm lg:text-title text-center lg:-mb-4">Watch us Fold</div>
       <svg width="150" height="3" viewBox="0 0 150 3" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line y1="1.5" x2="150" y2="1.5" stroke="#E2B764" stroke-width="3" />
       </svg>
