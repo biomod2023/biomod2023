@@ -15,11 +15,10 @@ const scrollToTop = () => {
         <div
           class="z-10 lg:basis-4/6 h-full flex flex-col justify-center items-center mt-[2dvh] md:mt-20 lg:mt-0 bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[50%_80dvh] lg:bg-[30%_50%]">
           <h1 class="font-title text-title-sm lg:text-title text-center mb-4">
-            Embrace the Nano Frontier
+            A BIOMODular Enzyme Delivery Vehicle to Target Biofilms
           </h1>
-          <h2 class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
-            Unleash the Nano Frontier, where a new era of technology begins. Pioneering advancements
-            redefine possibilities. Embrace the future with us.
+          <h2 class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-2/3 text-center">
+            Presented by the University of British Columbia 2023 Team
           </h2>
           <RouterLink to="/computational-simulation/structure-design" class="btn mt-8 lg:mt-16 hover:opacity-100">
             Explore
@@ -61,8 +60,8 @@ const scrollToTop = () => {
       class="flex flex-col xl:flex-row items-center justify-around lg:pb-20 xl:py-20 px-10 lg:mt-10 xl:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]">
       <div
         class="xl:basis-1/2 pb-20 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-24 lg:pt-36 h-full px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover bg-[50%_50%] xl:bg-[45%_50%]">
-        <div class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,1)]">
-          <img src="../assets/homepage/abstract_graphic.jpg" alt="BIOMOD team member holding up a test tube"
+        <div class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,0.5)]">
+          <img src="../assets/homepage/abstract_graphic.gif" alt="BIOMOD team member holding up a test tube"
             class="rounded-full" />
         </div>
       </div>
