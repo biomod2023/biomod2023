@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import IdeaCard from '@/components/IdeaCard.vue'
+import Timeline from '@/components/Timeline.vue'
 </script>
 
 <template>
   <div class="flex flex-col h-screen overflow-y-auto">
     <NavBar />
 
-    <main class="pt-2 flex flex-col items-center">
+    <main class="pt-2 flex flex-col items-center mt-20">
       <h1 class="text-gold font-title text-title">Project Ideas</h1>
-      <p class="text-center">
+      <p class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
         Our project is always of our team's interest. Follow along to see how we incorperated our
         intersts into this year's project.
       </p>
@@ -78,88 +79,6 @@ import IdeaCard from '@/components/IdeaCard.vue'
 
           <template #text> Specifications </template>
         </IdeaCard>
-      </div>
-
-      <div class="flex mt-2 space-x-10">
-        <IdeaCard class="flex-grow">
-          <template #svg>
-            <svg
-              class="stroke-gold group-hover:stroke-white w-[100px] h-[100px] stroke-1 transition-all duration-200"
-              width="84"
-              height="99"
-              viewBox="0 0 84 99"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M66.9326 28.2033C67.003 28.0249 67.0741 27.8448 67.1458 27.6632L70.2563 19.7818C70.3575 19.5253 70.2313 19.2345 69.9744 19.1323C69.7175 19.0301 69.4272 19.1552 69.3259 19.4118L66.3832 26.868L66.4317 26.9859C66.6017 27.399 66.7687 27.8047 66.9326 28.2033ZM63.7456 33.6206C61.2134 40.2837 59.9303 44.6606 59.9693 49.6908C60.0194 56.1357 62.223 61.4905 66.5226 71.938L66.5628 72.0357L69.7955 79.891C69.9007 80.1467 70.193 80.2695 70.4483 80.1652C70.7036 80.0609 70.8253 79.7691 70.7201 79.5134L67.4874 71.6581C63.1381 61.0896 61.0177 55.9174 60.9693 49.6867C60.9336 45.0893 62.0349 41.0589 64.296 35.0019C64.1193 34.5543 63.9358 34.0943 63.7456 33.6206Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M67.2186 65.7157C69.7507 59.0527 71.0338 54.6757 70.9948 49.6455C70.9447 43.2006 68.7411 37.8459 64.4415 27.3983L64.4013 27.3006L61.1686 19.4453C61.0634 19.1896 60.7711 19.0669 60.5158 19.1712C60.2605 19.2755 60.1388 19.5673 60.244 19.823L63.4768 27.6783C67.826 38.2468 69.9464 43.419 69.9948 49.6496C70.0305 54.247 68.9292 58.2775 66.6682 64.3344C66.8448 64.782 67.0283 65.2421 67.2186 65.7157ZM64.5809 72.4684L64.5324 72.3504C64.3624 71.9374 64.1954 71.5317 64.0315 71.133C63.9611 71.3115 63.89 71.4915 63.8183 71.6732L60.7078 79.5545C60.6066 79.8111 60.7328 80.1019 60.9897 80.2041C61.2466 80.3062 61.5369 80.1811 61.6382 79.9246L64.5809 72.4684Z"
-              />
-              <path
-                d="M72.5 9.5C72.5 14.5545 69.0651 18.5 65 18.5C60.9349 18.5 57.5 14.5545 57.5 9.5C57.5 4.44548 60.9349 0.5 65 0.5C69.0651 0.5 72.5 4.44548 72.5 9.5Z"
-              />
-              <path
-                d="M72.5 89.5C72.5 94.5545 69.0651 98.5 65 98.5C60.9349 98.5 57.5 94.5545 57.5 89.5C57.5 84.4455 60.9349 80.5 65 80.5C69.0651 80.5 72.5 84.4455 72.5 89.5Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M51.9326 28.2033C52.003 28.0249 52.0741 27.8448 52.1458 27.6632L55.2563 19.7818C55.3575 19.5253 55.2313 19.2345 54.9744 19.1323C54.7175 19.0301 54.4272 19.1552 54.3259 19.4118L51.3832 26.868L51.4317 26.9859C51.6017 27.399 51.7687 27.8047 51.9326 28.2033ZM48.7456 33.6206C46.2134 40.2837 44.9303 44.6606 44.9693 49.6908C45.0194 56.1357 47.223 61.4905 51.5226 71.938L51.5628 72.0357L54.7955 79.891C54.9007 80.1467 55.193 80.2695 55.4483 80.1652C55.7036 80.0609 55.8253 79.7691 55.7201 79.5134L52.4874 71.6581C48.1381 61.0896 46.0177 55.9174 45.9693 49.6867C45.9336 45.0893 47.0349 41.0589 49.296 35.0019C49.1193 34.5543 48.9358 34.0943 48.7456 33.6206Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M52.2186 65.7157C54.7507 59.0527 56.0338 54.6757 55.9948 49.6455C55.9447 43.2006 53.7411 37.8459 49.4415 27.3983L49.4013 27.3006L46.1686 19.4453C46.0634 19.1896 45.7711 19.0669 45.5158 19.1712C45.2605 19.2755 45.1388 19.5673 45.244 19.823L48.4768 27.6783C52.826 38.2468 54.9464 43.419 54.9948 49.6496C55.0305 54.247 53.9292 58.2775 51.6682 64.3344C51.8448 64.782 52.0283 65.2421 52.2186 65.7157ZM49.5809 72.4684L49.5324 72.3504C49.3624 71.9374 49.1954 71.5317 49.0315 71.133C48.9611 71.3115 48.89 71.4915 48.8183 71.6732L45.7078 79.5545C45.6066 79.8111 45.7328 80.1019 45.9897 80.2041C46.2466 80.3062 46.5369 80.1811 46.6382 79.9246L49.5809 72.4684Z"
-              />
-              <path
-                d="M57.5 9.5C57.5 14.5545 54.0651 18.5 50 18.5C45.9349 18.5 42.5 14.5545 42.5 9.5C42.5 4.44548 45.9349 0.5 50 0.5C54.0651 0.5 57.5 4.44548 57.5 9.5Z"
-              />
-              <path
-                d="M57.5 89.5C57.5 94.5545 54.0651 98.5 50 98.5C45.9349 98.5 42.5 94.5545 42.5 89.5C42.5 84.4455 45.9349 80.5 50 80.5C54.0651 80.5 57.5 84.4455 57.5 89.5Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M35.9326 28.2033C36.003 28.0249 36.0741 27.8448 36.1458 27.6632L39.2563 19.7818C39.3575 19.5253 39.2313 19.2345 38.9744 19.1323C38.7175 19.0301 38.4272 19.1552 38.3259 19.4118L35.3832 26.868L35.4317 26.9859C35.6017 27.399 35.7687 27.8047 35.9326 28.2033ZM32.7456 33.6206C30.2134 40.2837 28.9303 44.6606 28.9693 49.6908C29.0194 56.1357 31.223 61.4905 35.5226 71.938L35.5628 72.0357L38.7955 79.891C38.9007 80.1467 39.193 80.2695 39.4483 80.1652C39.7036 80.0609 39.8253 79.7691 39.7201 79.5134L36.4874 71.6581C32.1381 61.0896 30.0177 55.9174 29.9693 49.6867C29.9336 45.0893 31.0349 41.0589 33.296 35.0019C33.1193 34.5543 32.9358 34.0943 32.7456 33.6206Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M36.2186 65.7157C38.7507 59.0527 40.0338 54.6757 39.9948 49.6455C39.9447 43.2006 37.7411 37.8459 33.4415 27.3983L33.4013 27.3006L30.1686 19.4453C30.0634 19.1896 29.7711 19.0669 29.5158 19.1712C29.2605 19.2755 29.1388 19.5673 29.244 19.823L32.4768 27.6783C36.826 38.2468 38.9464 43.419 38.9948 49.6496C39.0305 54.247 37.9292 58.2775 35.6682 64.3344C35.8448 64.782 36.0283 65.2421 36.2186 65.7157ZM33.5809 72.4684L33.5324 72.3504C33.3624 71.9374 33.1954 71.5317 33.0315 71.133C32.9611 71.3115 32.89 71.4915 32.8183 71.6732L29.7078 79.5545C29.6066 79.8111 29.7328 80.1019 29.9897 80.2041C30.2466 80.3062 30.5369 80.1811 30.6382 79.9246L33.5809 72.4684Z"
-              />
-              <path
-                d="M41.5 9.5C41.5 14.5545 38.0651 18.5 34 18.5C29.9349 18.5 26.5 14.5545 26.5 9.5C26.5 4.44548 29.9349 0.5 34 0.5C38.0651 0.5 41.5 4.44548 41.5 9.5Z"
-              />
-              <path
-                d="M41.5 89.5C41.5 94.5545 38.0651 98.5 34 98.5C29.9349 98.5 26.5 94.5545 26.5 89.5C26.5 84.4455 29.9349 80.5 34 80.5C38.0651 80.5 41.5 84.4455 41.5 89.5Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M19.9326 28.2033C20.003 28.0249 20.0741 27.8448 20.1458 27.6632L23.2563 19.7818C23.3575 19.5253 23.2313 19.2345 22.9744 19.1323C22.7175 19.0301 22.4272 19.1552 22.3259 19.4118L19.3832 26.868L19.4317 26.9859C19.6017 27.399 19.7687 27.8047 19.9326 28.2033ZM16.7456 33.6206C14.2134 40.2837 12.9303 44.6606 12.9693 49.6908C13.0194 56.1357 15.223 61.4905 19.5226 71.938L19.5628 72.0357L22.7955 79.891C22.9007 80.1467 23.193 80.2695 23.4483 80.1652C23.7036 80.0609 23.8253 79.7691 23.7201 79.5134L20.4874 71.6581C16.1381 61.0896 14.0177 55.9174 13.9693 49.6867C13.9336 45.0893 15.0349 41.0589 17.296 35.0019C17.1193 34.5543 16.9358 34.0943 16.7456 33.6206Z"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M20.2186 65.7157C22.7507 59.0527 24.0338 54.6757 23.9948 49.6455C23.9447 43.2006 21.7411 37.8459 17.4415 27.3983L17.4013 27.3006L14.1686 19.4453C14.0634 19.1896 13.7711 19.0669 13.5158 19.1712C13.2605 19.2755 13.1388 19.5673 13.244 19.823L16.4768 27.6783C20.826 38.2468 22.9464 43.419 22.9948 49.6496C23.0305 54.247 21.9292 58.2775 19.6682 64.3344C19.8448 64.782 20.0283 65.2421 20.2186 65.7157ZM17.5809 72.4684L17.5324 72.3504C17.3624 71.9374 17.1954 71.5317 17.0315 71.133C16.9611 71.3115 16.89 71.4915 16.8183 71.6732L13.7078 79.5545C13.6066 79.8111 13.7328 80.1019 13.9897 80.2041C14.2466 80.3062 14.5369 80.1811 14.6382 79.9246L17.5809 72.4684Z"
-              />
-              <path
-                d="M25.5 9.5C25.5 14.5545 22.0651 18.5 18 18.5C13.9349 18.5 10.5 14.5545 10.5 9.5C10.5 4.44548 13.9349 0.5 18 0.5C22.0651 0.5 25.5 4.44548 25.5 9.5Z"
-              />
-              <path
-                d="M25.5 89.5C25.5 94.5545 22.0651 98.5 18 98.5C13.9349 98.5 10.5 94.5545 10.5 89.5C10.5 84.4455 13.9349 80.5 18 80.5C22.0651 80.5 25.5 84.4455 25.5 89.5Z"
-              />
-            </svg>
-          </template>
-
-          <template #text> Liposome </template>
-        </IdeaCard>
 
         <IdeaCard class="flex-grow">
           <template #svg>
@@ -186,55 +105,200 @@ import IdeaCard from '@/components/IdeaCard.vue'
 
           <template #text> Design </template>
         </IdeaCard>
-
-        <IdeaCard class="flex-grow">
-          <template #svg>
-            <svg
-              class="w-[100px] h-[100px] stroke-gold group-hover:stroke-white stroke-2 transition-all duration-200"
-              width="110"
-              height="112"
-              viewBox="0 0 110 112"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M68.25 56C68.25 63.4644 62.3093 69.5 55 69.5C47.6907 69.5 41.75 63.4644 41.75 56C41.75 48.5356 47.6907 42.5 55 42.5C62.3093 42.5 68.25 48.5356 68.25 56Z"
-              />
-              <path d="M46 65L32 79" stroke-linejoin="round" />
-              <path d="M46 47L30 30" stroke-linejoin="round" />
-              <path
-                d="M86.5833 79.3333C86.5833 84.2204 82.6947 88.1667 77.9167 88.1667C73.1387 88.1667 69.25 84.2204 69.25 79.3333C69.25 74.4463 73.1387 70.5 77.9167 70.5C82.6947 70.5 86.5833 74.4463 86.5833 79.3333Z"
-              />
-              <path
-                d="M100.333 56C100.333 60.887 96.4447 64.8333 91.6667 64.8333C86.8887 64.8333 83 60.887 83 56C83 51.1129 86.8887 47.1667 91.6667 47.1667C96.4447 47.1667 100.333 51.1129 100.333 56Z"
-              />
-              <path d="M83 56H69" stroke-linejoin="round" />
-              <path d="M65 66L72 73" stroke-linejoin="round" />
-              <path
-                d="M100.333 23.3333C100.333 30.7977 94.3927 36.8333 87.0834 36.8333C79.7741 36.8333 73.8334 30.7977 73.8334 23.3333C73.8334 15.869 79.7741 9.83333 87.0834 9.83333C94.3927 9.83333 100.333 15.869 100.333 23.3333Z"
-              />
-              <path d="M77.9166 32.6667L64.1666 46.6667" stroke-linejoin="round" />
-              <path
-                d="M31.5833 23.3333C31.5833 28.2204 27.6947 32.1667 22.9167 32.1667C18.1387 32.1667 14.25 28.2204 14.25 23.3333C14.25 18.4463 18.1387 14.5 22.9167 14.5C27.6947 14.5 31.5833 18.4463 31.5833 23.3333Z"
-              />
-              <path
-                d="M36.1666 88.6667C36.1666 96.131 30.2259 102.167 22.9166 102.167C15.6073 102.167 9.66663 96.131 9.66663 88.6667C9.66663 81.2023 15.6073 75.1667 22.9166 75.1667C30.2259 75.1667 36.1666 81.2023 36.1666 88.6667Z"
-              />
-            </svg>
-          </template>
-
-          <template #text> Enzyme </template>
-        </IdeaCard>
       </div>
     </div>
 
-    <div class="flex flex-col items-center mt-6">
-      <div class="font-title text-title text-white text-5xl">Relevance</div>
 
-      <div class="grid-cols-2 content-center">
-        <div class="text-subtitle text-gold text-xl font-semibold">Background</div>
-        <div class="text-subtitle text-gold text-xl font-semibold">Solution</div>
+<div>   
+ <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+  <div class="font-title text-title text-white text-5xl">Relevance</div>
+
+
+  <div>
+
+    <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+    <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Bacterial Biofilms</h2>
+    <p class="p-4">
+      A bacterial biofilm is a structure of bacteria embedded within a self-produced matrix of proteins, 
+      polysaccharides, and eDNA that often play roles in the pathogenicity of infectious diseases due to 
+      increased resistance to immune responses and antimicrobial therapy (Vetsby et al., 2020). The presence 
+      of bacterial biofilms has been associated with several severe health complications for humans. For example,
+      cystic fibrosis is a genetic condition in which mucus builds up in the body and can induce the growth of 
+      pathogenic bacterial biofilms. Bacterial biofilms of Pseudomonas aeruginosa (P. aeruginosa) and 
+      Staphylococcus aureus (S. aureus) are two common bacterial biofilms that have also been isolated in 
+      patients diagnosed with cystic fibrosis and are credited for damaging lung tissue by causing chronic
+      inflammation (Høiby et al., 2010) and pulmonary infections (Esposito et al., 2019). Bacterial biofilms, 
+      particularly of various Staphylococci, have also been frequently discovered on medical devices and in 
+      hospital environments, and can be detrimentally transferred to patients as they are resistant to both 
+      chemical and physical antibacterial sterilization measures, highlighting the need for more efficient 
+      and effective therapeutic treatments for bacterial biofilm infections (Zheng et al., 2018). 
+    </p>
+    <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Conventional Therapies</h2>
+    <p class="p-4">
+      Antibiotic treatments for bacterial biofilm infections in humans involve introducing drugs that will inhibit
+      the life processes of bacteria. Currently, biofilm infections in patients are primarily treated by antibiotics
+      either inhaled, ingested, or injected into the body via the bloodstream (Manos, 2021). However, there are several
+      concerns with current practices including:
+        <ul class="list-disc pl-10">
+          <li> inability of antibiotics to penetrate biofilms and organ tissues, such as requiring specific particle or 
+          droplet sizes to reach certain airways of the lungs (Høiby, 2011)</li>
+          <li> historically, biofilms such as S. aureus and P. aeruginosa infections often occur concurrently, so patients
+          receive multiple antibiotic treatments simultaneously that may adversely react and potentially pose toxicity hazards
+          in the bloodstream (Esposito et al., 2019)</li>
+          <li> concerns about biofilm antibiotic tolerance and mutational resistance undermining the ability of antibiotic
+          treatments to eradicate biofilms on their own</li>
+        </ul>
+
+      <p class="p-4">
+        Physical therapy to remove bacterial colonies in patients by expelling mucus from airways, which is commonly infected by
+        biofilms, is often used conjointly with antibiotics. Treatments include postural drainage, percussion therapy, forced
+        expiratory methods, and breathing techniques (Manos, 2021). Limitations include:
+        <ul class="list-disc pl-10">
+          <li> inconclusive findings of the effectiveness of physical therapy, particularly if not performed correctly
+          (Manos, 2021)</li>
+          <li> not recommended for use on children, and some methods are physically intensive (Manos, 2021) </li>
+          <li> does not directly address bacterial infections so are not suitable as the sole treatment (Manos, 2021) </li>
+        </ul>
+      </p>
+    </p>
+
+    <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Scientific Interests</h2>
+    <p class="p-4">
+      To circumnavigate the challenges of antibiotics penetrating biofilms, some emerging research focuses on 
+      the prospective use of materials, such as enzymes, capable of disrupting biofilm matrices in conjunction 
+      with antibiotics (Yin et al., 2022). These enzymes work by disrupting biofilm matrices to reduce the resistance 
+      of bacteria, allowing antibiotics to take effect. Our project attempts to test the efficacy of the enzyme DNase 
+      I as part of a liposome platform to degrade biofilms in the hopes of developing a possible practical treatment for 
+      bacterial biofilm infections. DNase I is an endonuclease that is currently being studied to disrupt P. aeruginosa 
+      biofilms due to its ability to hydrolyze phosphodiester linkages present in eDNA in biofilms (Yin et al., 2022). A 
+      critical component of our project involves testing the ability and efficiency of DNase I to degrade DNA after it has 
+      been treated to conjugate with liposomes, thereby demonstrating the proof of concept and feasibility of enzymosomes 
+      for use in treatment. 
+    </p>
+
+    <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Technological Interest</h2>
+    <p class="p-4">
+      This project endeavors to create a method that consistently produces a delivery device capable of transporting controlled 
+      payloads of potentially useful drugs and enzymes for biofilm degradation for the treatment of bacterial infections. The ability 
+      of liposomes to be conjugated to enzymes to create a delivery vehicle capable of destabilizing biofilms was investigated. Synergistic
+      properties of several combinations of enzymes with different functions and properties were researched to actualize a future extension
+      of assembling a modular platform of liposomes conjugated to several enzymes capable of treating biofilm infection in a more comprehensive
+      manner. The production method of bipyramidal DNA structures (known as “n-gonal bipyramids”) made by DNA Origami technology, and its usage
+      as a precise template that could catalyze the formation of uniform-sized liposomes at the nanoscale was also evaluated.
+    </p>
+
+    <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Aims</h2>
+      <p class="p-4">
+        To address the current limitations of treatments against antibiotic-resistant bacteria, our project aims to create conjugated enzymosome
+        systems of DNase I enzymes and liposomes that are:
+          <ul class="list-disc pl-10">
+            <li> able to reach regions not typically accessible to previous treatments</li>
+            <li> capable of targeting and degrading biofilms </li>
+            <li> more uniform in size for precise and consistent drug dosages when created by a DNA n-gonal bipyramid template in the future </li>
+          </ul>
+      </p>
+
+    <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Future Extensions</h2>
+    <p class="p-4">
+      In the future, after we have seen positive results of the viability of our experiments with DNase I, a possible extension of our project
+      is to test our liposome with different combinations of enzymes to design a modular enzymosome platform that could simultaneously disrupt
+      various biofilm components. Current treatments involving DNase I face challenges of eDNA in mature biofilms resisting DNase I, possibly
+      by binding to polysaccharides and proteins that protect from enzymatic degradation or due to reduced dependency on eDNA in aged biofilms
+      (Yin et al., 2022). This indicates a need for various enzyme activities that not only target eDNA but also other components of biofilm
+      matrices (Jiang et al., 2020). A modular platform composed of various enzyme constituents could allow for a more efficient destabilization
+      of biofilms by combining the activity of different enzymes to target not only eDNA but also other key components of the extracellular matrix,
+      such as polysaccharides and proteins. We would hypothesize that the efficacy of our enzymosomes would compound, enhancing their capability to
+      disrupt biofilms. Two other enzymes we have researched that have been shown in past studies to have synergistic effects, and thus could be
+      viable to work together as a unit with DNase I, are Alginate Lyase and Alpha Amylase.
+        <ul class="list-disc pl-10">
+          <li> Alginate Lyase is an enzyme that degrades alginate by cleaving the β-1,4 glycosidic bond (Zhu & Yin, 2015). In mucoid strains of P. aeruginosa
+               biofilms, alginate has been found to be a major polysaccharide overproduced in biofilm matrices (Colvin et al., 2011). Thus, alginate lyase could
+              be useful in reducing eDNA resistance to DNase I and assist in dispersing biofilms by weakening bonded polysaccharides. Several studies have already
+              demonstrated a significant decrease in the survival of P. aeruginosa colonies treated with alginate lyase (Cotton et al., 2009).</li>
+          <li> Alpha Amylase is an enzyme capable of cleaving α-1,4-glycosidic bonds of various starches (Lahiri et al., 2021). This property may address the
+              need to target polysaccharides bound to eDNA to increase the effectiveness of DNase I treatment in mature biofilms (Lahiri et al., 2021). Alpha
+              amylase has also been shown to be effective at inhibiting biofilms in isolation (Craigen et al., 2011)</li>
+        </ul>
+        <p class="p-4">
+          Presently alginate lyase has been tested in combination with both DNase I and alpha amylase. Antimicrobial treatments co-administered with both DNase I
+          and alginate lyase have been proven to induce improved activity in reducing biofilm growth (Alipour et al., 2009). Previous experiments employing alginate
+          lyase and alpha amylase in enzyme cocktails have indicated positive efficacy when the enzymes are used together (Kaur et al., 2021). While alpha amylase 
+          treatments in conjunction with DNase I had not been tested, a report did find that alpha amylase enzymes treated with DNase I prior to being exposed to
+          biofilms retained their activity to destabilize biofilms (while several other enzyme treatments degraded the alpha amylase) (Kalpana et al., 2012). So,
+          while it is unclear if they will increase the activity of one another, it is known that enzyme activity will not be impaired. Further investigation on
+          DNase I and alpha amylase combinations would be necessary to quantify if the tandem usage yields more effective biofilm degradation as part of the
+          enzymosome co-delivery platform.
+        </p>
+      </p>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+    <div class="font-title text-title text-white text-5xl">Merit</div>
+
+    <div>
+      <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What Sets Our Poroject Apart from Others?</h2>
+        <p class="p-4">
+          This project is a novel combination of past research into using DNA nanotemplates to create uniform liposomes (Yang et al., 2016) and attaching enzymes to the outside
+          of liposomes for effective delivery (Corvo et al., 2015) in order to degrade biofilms. This can be applied to a wide variety of situations where biofilms are involved,
+          such as medical conditions like cystic fibrosis. The advantages of our project are as follows:
+            <ul class="list-disc pl-10">
+              <li>
+                <h2 class="text-white p-4 my-4 text-subtitle font-semibold">Uniform Liposomes with Controlled Enzyme Dosage</h2>
+                <p>
+                  Using the DNA ring nanotemplate, we are able to create controlled uniform sizes of liposomes (Yang et al., 2016). Each liposome is saturated with a controlled
+                  dose of enzymes that will degrade biofilms, allowing for effective and predictable use. This is important because it allows for more consistency and predictability
+                  when the enzymosomes are used to treat biofilms, with a given number of liposomes always degrading the same amount of biofilm. For medical usage, such as for
+                  patients diagnosed with cystic fibrosis, this allows treatment to be accurately tailored to the amount of biofilm found in patients to completely degrade them,
+                  eliminating uncertainty about whether the biofilms have been degraded.
+                </p>
+              </li>
+              <li>
+                <h2 class="text-white p-4 my-4 text-subtitle font-semibold">Liposomal Delivery to Regions not Reachable by Cleaning Agents</h2>
+                <p>
+                  Biofilms pose a recurring problem in the area of health and medicine. From the formation of biofilms on medical devices, notably by Staphylococci bacteria
+                  (Zheng et al., 2018), to biofilm growth in the lungs of patients diagnosed with Cystic Fibrosis, they possess a diverse array of targets (Høiby et al., 2010).
+                  However, these areas may not be easily reachable, making drug delivery difficult. With the aid of a smaller form of transportation such as a liposome saturated
+                  with enzymes, these regions can become accessible to drug delivery.
+                </p>
+              </li>
+            </ul>
+          </p>
       </div>
     </div>
   </div>
+
+  <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+    <div class="font-title text-title text-white text-5xl">Specifications</div>
+
+    <div>
+      <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Placeholder text for now</h2>
+        <p class="p-4">
+          Our project aims to create an enzymosome structure that can serve as a platform for attaching enzymes and cargo. This platform is intended to enhance the efficiency of
+          biofilm degradation in patient-related scenarios, such as cystic fibrosis, as well as in the context of environmental biofilms found on medical equipment.
+
+
+          <p class="p-4 mt-2">
+          The following diagram outlines the project’s proposed wet-lab timeline, with key milestones and goals marked for each month. 
+          </p>
+
+          <Timeline />
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+
 </template>
+
