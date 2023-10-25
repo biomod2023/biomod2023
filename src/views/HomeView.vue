@@ -85,7 +85,7 @@ const scrollToTop = () => {
             fibrosis patients, food facilities, and water systems. By changing the cargo type and liposome size, this
             delivery vehicle provides potential to be used across a wide range of applications.
           </p>
-          <RouterLink to="#">
+          <RouterLink to="/computational-simulation/structure-design">
             <LightButton>Start Reading</LightButton>
           </RouterLink>
         </div>
