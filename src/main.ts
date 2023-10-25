@@ -12,23 +12,24 @@ import {
   HiSolidArrowSmLeft
 } from 'oh-vue-icons/icons'
 import { VueWindowSizePlugin } from 'vue-window-size/plugin'
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 
 addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine)
 
 const app = createApp(App)
 
 app.use(router)
+app.use(vuetify)
 app.use(VueWindowSizePlugin)
 app.component('VIcon', OhVueIcon)
 
 app.mount('#app')
-
-import Vue from 'vue';
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
-
-Vue.use(Vuetify);
-
-new Vue({
-  // ...
-}).$mount('#app');
