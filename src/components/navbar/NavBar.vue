@@ -65,11 +65,11 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Docking of Alginate Lyase and Alpha-Amylase',
-            url: '#'
+            url: '/future-directions/aa-docking'
           },
           {
             name: 'Liposome Formation Using Octahedron',
-            url: '#'
+            url: '/future-directions/octahedron-liposome-formation'
           }
         ]
       }
