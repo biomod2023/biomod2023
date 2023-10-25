@@ -4,24 +4,24 @@ import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
 import Section from '@/components/lab-notebook/Section.vue'
 import CaptionedGraphics from '@/components/CaptionedGraphics.vue'
-import figure1 from '@/assets/docking-dnase/DNAse1 Pymol.png'
+import figure1 from '@/assets/docking-dnase/DNase1 Pymol.png'
 import figure2 from '@/assets/docking-dnase/Maleimide Pymol.png'
-import figure3 from '@/assets/docking-dnase/DNAse1+Maleimdie.png'
-import figure4 from '@/assets/docking-dnase/DNAse1+Maleimide vina score.png'
-import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
+import figure3 from '@/assets/docking-dnase/DNase1+Maleimdie.png'
+import figure4 from '@/assets/docking-dnase/DNase1+Maleimide vina score.png'
+import figure5 from '@/assets/docking-dnase/DNase1 active site.jpg'
 </script>
 
 <template>
   <Notebook>
-    <template #title> Docking of Dnase I </template>
+    <template #title> Docking of DNase I </template>
     <template #body>
       <SingleColumn>
         <template #title> Abstract </template>
         <template #body>
           <p>
             This study employs computational tools such as Pymol and CB-Dock to investigate the
-            interaction between DNAse I and Maleimide, a crucial element in liposomal formulations.
-            By exploring the active site of DNAse I, we reveal that Maleimide does not bind to the
+            interaction between DNase I and Maleimide, a crucial element in liposomal formulations.
+            By exploring the active site of DNase I, we reveal that Maleimide does not bind to the
             enzyme's catalytic center, suggesting their compatibility.
           </p>
         </template>
@@ -35,7 +35,7 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
             on the interaction between enzymes and Maleimide, a critical component of liposomes.
             <br />
             Our primary objective is to comprehensively evaluate the binding affinities and
-            structural compatibilities of DNAse I enzyme with Maleimide, solely from a computational
+            structural compatibilities of DNase I enzyme with Maleimide, solely from a computational
             standpoint. Leveraging advanced computational tools, such as Pymol, CB Dock, and
             existing databases, our research endeavours to shed light on the intricacies of these
             interactions. By conducting docking simulations, we aim to unveil the molecular dynamics
@@ -56,7 +56,7 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
                 We retrieved the 3D structures of the enzymes used in this study from the Protein
                 Data Bank (PDB). The specific PDB identifiers for the enzymes are as follows:
                 <br />
-                DNAse I: PDB Identifier 4AWN (Figure 1)
+                DNase I: PDB Identifier 4AWN (Figure 1)
               </p>
               <br />
               <CaptionedGraphics>
@@ -64,10 +64,10 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
                   <img
                     class="w-full max-w-[544px]"
                     :src="figure1"
-                    alt="Figure 1. 3D representation of DNAse I in Pymol"
+                    alt="Figure 1. 3D representation of DNase I in Pymol"
                   />
                 </template>
-                <template #caption> Figure 1. 3D representation of DNAse I in Pymol </template>
+                <template #caption> Figure 1. 3D representation of DNase I in Pymol </template>
               </CaptionedGraphics>
             </template>
           </Section>
@@ -110,7 +110,7 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
                 <br />
                 <br />
                 The purpose of this step is to evaluate the potential binding interactions between
-                the enzyme DNAse I and the ligand, Maleimide.
+                the enzyme DNase I and the ligand, Maleimide.
               </p>
             </template>
           </Section>
@@ -120,7 +120,7 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
             <template #content>
               <p>
                 A comprehensive literature review was conducted to ascertain the active site of
-                DNAse I. This information was important in the interpretation of the docking
+                DNase I. This information was important in the interpretation of the docking
                 results, as it provided valuable context and insights into the biological relevance
                 of the interactions observed.
               </p>
@@ -133,10 +133,10 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
         <template #title> Results </template>
         <template #body>
           <Section>
-            <template #sub-title> Interaction between DNAse I and Maleimide </template>
+            <template #sub-title> Interaction between DNase I and Maleimide </template>
             <template #content>
               <p>
-                Using CB-Dock binding interaction between DNAse I and Maleimide was assessed. Vina
+                Using CB-Dock binding interaction between DNase I and Maleimide was assessed. Vina
                 score is used to estimate the binding affinity between a protein and a ligand. It
                 calculates the binding energy of the protein-ligand complex, incorporating various
                 parameters such as intermolecular interactions, steric clashes, and hydrogen
@@ -150,27 +150,27 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
                       <img
                         class="object-scale-down max-h-full"
                         :src="figure3"
-                        alt="Figure 3. Interaction between DNAse I and maleimide predicted by CB-Dock. The structure represents the binding site of DNAse I."
+                        alt="Figure 3. Interaction between DNase I and maleimide predicted by CB-Dock. The structure represents the binding site of DNase I."
                       />
                     </div>
                   </template>
                   <template #caption>
-                    Figure 3. Interaction between DNAse I and maleimide predicted by CB-Dock. The
-                    structure represents the binding site of DNAse I.
+                    Figure 3. Interaction between DNase I and maleimide predicted by CB-Dock. The
+                    structure represents the binding site of DNase I.
                   </template>
                 </CaptionedGraphics>
                 <CaptionedGraphics>
                   <template #graphics>
                     <img
                       :src="figure4"
-                      alt="Figure 4. The Vina scoring function aims to predict the most energetically favourable binding conformation of a ligand within the binding site of a protein. Vina Score of -4.1 is associated with the most favourable binding site of DNAse I."
+                      alt="Figure 4. The Vina scoring function aims to predict the most energetically favourable binding conformation of a ligand within the binding site of a protein. Vina Score of -4.1 is associated with the most favourable binding site of DNase I."
                     />
                   </template>
                   <template #caption>
                     Figure 4. The Vina scoring function aims to predict the most energetically
                     favourable binding conformation of a ligand within the binding site of a
                     protein. Vina Score of -4.1 is associated with the most favourable binding site
-                    of DNAse I.
+                    of DNase I.
                   </template>
                 </CaptionedGraphics>
               </div>
@@ -187,12 +187,12 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
             <template #content>
               <p>
                 In this short literature review, we embark on a systematic exploration of the active
-                site of DNAse I. By navigating the structural data available within the PDB and
+                site of DNase I. By navigating the structural data available within the PDB and
                 relevant scientific literature, we define the catalytic center of this enzyme.
               </p>
               <br />
               <section>
-                <h4 class="text-lg"><b>a. DNAse I</b></h4>
+                <h4 class="text-lg"><b>a. DNase I</b></h4>
                 <p>
                   The active site of DNase I includes histidine residues (His134 and His252),
                   glutamic acid residue (Glu78) and aspartic acid residue (Asp 212) (Lazarus &
@@ -221,22 +221,22 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
           </Section>
 
           <Section>
-            <template #sub-title> 2. Maleimide and DNAse I Interaction </template>
+            <template #sub-title> 2. Maleimide and DNase I Interaction </template>
             <template #content>
               <p>
-                In the context of developing an enzymosome for the delivery of DNAse I, the fact
-                that Maleimide does not bind to the active site of DNAse I can be considered a
+                In the context of developing an enzymosome for the delivery of DNase I, the fact
+                that Maleimide does not bind to the active site of DNase I can be considered a
                 positive outcome for the following reasons.
               </p>
               <br />
               <section>
                 <h4 class="text-lg"><b>a. Preservation of Enzyme Activity</b></h4>
                 <p>
-                  DNAse I is an enzyme with a specific catalytic function — cleaving DNA molecules.
+                  DNase I is an enzyme with a specific catalytic function — cleaving DNA molecules.
                   For this enzyme to be effective in its intended role within the enzymosome, it is
                   crucial that its active site remains accessible and unobstructed. If Maleimide
                   were to bind to the active site, it could potentially inhibit or disrupt the
-                  enzyme's function. The absence of binding to the active site ensures that DNAse I
+                  enzyme's function. The absence of binding to the active site ensures that DNase I
                   retains its enzymatic activity when encapsulated in the enzymosome.
                 </p>
               </section>
@@ -245,7 +245,7 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
                 <h4 class="text-lg"><b>b. Specificity and Control</b></h4>
                 <p>
                   Enzymes are highly specific in their interactions with substrates. By not binding
-                  to the active site of DNAse I, control over the enzyme's function can be
+                  to the active site of DNase I, control over the enzyme's function can be
                   maintained and it can be ensured that the enzyme acts only on its intended target
                   (in this case, DNA) when released from the enzymosome. This specificity is
                   essential for targeted enzymatic reactions.
@@ -255,8 +255,8 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
               <section>
                 <h4 class="text-lg"><b>c. Customization</b></h4>
                 <p>
-                  The enzymosome can be designed to have a controlled release mechanism for DNAse I.
-                  By not binding to the active site, the release and activation of DNAse I can be
+                  The enzymosome can be designed to have a controlled release mechanism for DNase I.
+                  By not binding to the active site, the release and activation of DNase I can be
                   finely tuned, allowing for precise control of its enzymatic function.
                 </p>
               </section>
@@ -270,11 +270,11 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
         <template #body>
           <p>
             In conclusion, the study's use of advanced computational tools, including Pymol and
-            CB-Dock, provided crucial insights into the interaction between DNAse I and Maleimide, a
+            CB-Dock, provided crucial insights into the interaction between DNase I and Maleimide, a
             pivotal component of liposomes. The absence of binding between Maleimide and the active
-            site of DNAse I indicated the potential for the successful binding of the enzyme without
+            site of DNase I indicated the potential for the successful binding of the enzyme without
             compromising its enzymatic activity. This finding not only ensures the preservation of
-            DNAse I function within the enzymosome but also permits precise control over its release
+            DNase I function within the enzymosome but also permits precise control over its release
             and activity, paving the way for targeted enzymatic reactions in drug delivery
             applications.
           </p>
