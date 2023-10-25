@@ -13,7 +13,7 @@ import figure5 from '@/assets/docking-dnase/DNAse1 active site.jpg'
 
 <template>
   <Notebook>
-    <template #title> Docking of DNASE I </template>
+    <template #title> Docking of Dnase I </template>
     <template #body>
       <SingleColumn>
         <template #title> Abstract </template>
