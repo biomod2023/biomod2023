@@ -120,7 +120,9 @@ const tableData = {
         <template #body>
           <div class="flex flex-col gap-y-4">
             <div class="flex flex-col items-center">
-              <CustomTable :table-data="tableData" />
+              <div class="w-full overflow-scroll">
+                <CustomTable :table-data="tableData" />
+              </div>
               <p class="text-sm text-center">
                 Table 1: Liposome Particle Size Distribution under 3 Conditions - Pre-purification, Post-purification (via
                 Amicon filtration), and Post-incorporation of Maleimide Groups. Samples measured using dynamic light
