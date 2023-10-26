@@ -2,6 +2,51 @@
 import SponsorItem from '@/components/sponsors/SponsorItem.vue'
 import SponsorTier from '@/components/sponsors/SponsorTier.vue'
 import SilverImgBackground from '@/components/sponsors/SilverImgBackground.vue'
+import StevenHallam from '@/assets/sponsors/Steven.jpg'
+import HanCock from '@/assets/sponsors/Dr_Hancock.jpg'
+import BrandonKieft from '@/assets/sponsors/Brandon_Kieft-e1662700315238.jpeg'
+import AbishekWadhwa from '@/assets/sponsors/Abishek_Wadhwa.jpg'
+import AdrianJanGredwosk from '@/assets/sponsors/Adrian_Jan_Grezedowski.jpg'
+import DanBizzotto from '@/assets/sponsors/Dan_Bizzotto.jpg'
+
+const advisors = [
+  {
+    name : "Dr. Steven Hallam",
+    profile : StevenHallam,
+    position : "Associate Professor",
+    location: "University of British Columbia"
+  },
+  {
+    name : "Dr. Robert E Hancock",
+    profile : HanCock,
+    position : "Professor",
+    location: "University of British Columbia"
+  },
+  {
+    name : "Brandon Kieft",
+    profile : BrandonKieft,
+    position : "Postdoctoral Research Fellow",
+    location: "University of British Columbia"
+  },
+  {
+    name : "Abishek Wadhwa",
+    profile : AbishekWadhwa,
+    position : "Graduate Student Research Assistant",
+    location: "University of British Columbia"
+  },
+  {
+    name : "Adrian Jan Gredwosk",
+    profile : AdrianJanGredwosk,
+    position : "Graduate Student",
+    location: "University of British Columbia"
+  },
+  {
+    name : "Dan Bizzotto",
+    profile : DanBizzotto,
+    position : "Associate Professor",
+    location: "University of British Columbia"
+  },
+]
 </script>
 
 <template>
@@ -76,6 +121,28 @@ import SilverImgBackground from '@/components/sponsors/SilverImgBackground.vue'
           class="w-full"
         />
       </a>
+    </div>
+
+    <h1 class="text-title-sm lg:text-title text-gold text-center">
+      Advisors
+    </h1>
+    <div class="grid grid-cols-3 gap-5 place-content-center">
+      <div class="w-[20rem] h-[22rem] bg-gold/40 gap-y-4
+        flex flex-col justify-center items-center" 
+        v-for="(advisor, i) in advisors"
+        :key="advisor.name + i">
+        <img class="w-[12rem] h-[12rem] rounded-[5.7rem] object-top object-cover" 
+          :src="advisor.profile"/>
+          <div class="text-center">
+            <div class="">
+              <b> {{ advisor.name }} </b>
+            </div>
+            <div class="text-sm">
+              <p> {{ advisor.position }} </p>
+              <p> {{ advisor.location }} </p>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
 </template>
