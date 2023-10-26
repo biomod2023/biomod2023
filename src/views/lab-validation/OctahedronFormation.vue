@@ -91,45 +91,47 @@ const tableData = {
               Subsequently, for each of the scaffold:staple ratios, we combined the appropriate
               volumes of the reagents as outlined in Table 1 into PCR tubes.
             </p>
-            <div class="overflow-x-scroll">
-              <table class="table-auto border-collapse lg:w-full">
-                <tr class="bg-slate h-12">
-                  <th colspan="7">Volumes for each Ratio (μL)</th>
-                </tr>
-                <tbody class="bg-dark">
-                  <tr v-for="(row, i) in tableData.data.slice(0, -1)" :key="i">
-                    <th scope="row" class="w-1/4 text-sm lg:text-md">
-                      {{ row[0] }}
-                    </th>
-                    <td
-                      v-for="(item, j) in row.slice(1)"
-                      :key="j"
-                      class="py-1 px-2 lg:text-lg text-center"
-                    >
-                      {{ item }}
-                    </td>
+            <div class="flex flex-col items-center w-full">
+              <div class="overflow-x-scroll w-full">
+                <table class="table-auto border-collapse lg:w-full">
+                  <tr class="bg-slate h-12">
+                    <th colspan="7">Volumes for each Ratio (μL)</th>
                   </tr>
-                </tbody>
-                <tfoot class="bg-slate">
-                  <tr>
-                    <th scope="row">{{ tableData.data[tableData.data.length - 1][0] }}</th>
-                    <td
-                      v-for="(item, j) in tableData.data[tableData.data.length - 1].slice(
-                        1,
-                        tableData.data.length
-                      )"
-                      :key="j"
-                      class="py-1 px-2 lg:text-lg text-center"
-                    >
-                      {{ item }}
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
+                  <tbody class="bg-dark">
+                    <tr v-for="(row, i) in tableData.data.slice(0, -1)" :key="i">
+                      <th scope="row" class="w-1/4 text-sm lg:text-md">
+                        {{ row[0] }}
+                      </th>
+                      <td
+                        v-for="(item, j) in row.slice(1)"
+                        :key="j"
+                        class="py-1 px-2 lg:text-lg text-center"
+                      >
+                        {{ item }}
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="bg-slate">
+                    <tr>
+                      <th scope="row">{{ tableData.data[tableData.data.length - 1][0] }}</th>
+                      <td
+                        v-for="(item, j) in tableData.data[tableData.data.length - 1].slice(
+                          1,
+                          tableData.data.length
+                        )"
+                        :key="j"
+                        class="py-1 px-2 lg:text-lg text-center"
+                      >
+                        {{ item }}
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <p class="text-sm text-center">
+                Table 1. Reagent Volumes for Scaffold:Staple Ratios.
+              </p>
             </div>
-            <p class="text-sm text-center">
-              Table 1. Reagent Volumes for Scaffold:Staple Ratios.
-            </p>
             <p>
               Using a thermocycler to cause the scaffold and staple strands to anneal and form a
               structure, a thermoramp was started by following the instructions listed below to ensure
