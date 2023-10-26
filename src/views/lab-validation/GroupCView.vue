@@ -235,21 +235,12 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               </template>
             </CaptionedGraphics>
             <p>
-              For determining the most optimal ratio of the SATA to DNase I in order to generate the most thiolated-DNase
-              1,
-              different concentrations of SATA were used to titrate with the targeted enzyme. According to Figure 3, over
-              time, the highest concentration of DNA or the least amount of thiolated enzymes were developed when the SATA
-              to DNase I ratio was 8:1 shown in the green line. In other words, in the 8:1 ratio, the high generation of
-              the
-              DNA compared to the other two ratios indicates that most DNase I were still functional and not thiolated. In
-              1:1 and 4:1 ratios, the activity of DNase I was not observed as by the end of the 250 seconds the generated
-              DNA concentration was close to zero. Moreover, this suggests that both 4:1 and 1:1 SATA to DNase I ratios
-              lead
-              to the generation of the most thiolated-enzyme where it causes the substantial loss of enzyme activity.
-              These
-              ratios or more specifically the 1:1 ratio of the SATA: DNase I could be used for the upscale production of
-              the
-              targeted thiolated enzyme.
+              For determining the most optimal ratio of the SATA to DNase 1 in order to generate the most thiolated-DNase
+              1 while maintaining activity, different concentrations of SATA were used to titrate with the targeted
+              enzyme. According to Figure 3, thiolated DNase 1 still retain their activity. SATA: DNase 1, 1:1 and 4:1,
+              had the greatest activity of degrading ~250ng/mL of DNA in ~30s. 8:1 had less activity as it only degraded
+              ~130ng/mL of DNA in the same time and never got to 0ng/mL which could suggest loss of activity over time.
+              1:1 SATA: DNase 1 can be used for future thiolation procedures.
             </p>
             <CaptionedGraphics modifier="w-full">
               <template #graphics>
@@ -321,21 +312,42 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
       <SingleColumn>
         <template #title> Discussion </template>
         <template #body>
-          <p>
-            According to Table 2, in both maleimide-liposomes to thiolated DNase I 1:1 and 10:1 ratios, the mean particle
-            size was 74.09 d.nm and 76.77 d.nm respectively and the Z-Average increased notably to the mean particle size
-            of the maleimide-liposomes only, 32.36 d.nm (REFERENCE THE liposome writeup). The increase in the mean
-            particle size suggests the conjugation of the thiolated DNase I to maleimide-liposomes. Additionally, the PDI
-            of both 1:1 and 10:1 ratios, 0.239 and 0.254 respectively, were higher than the PDI of only
-            maleimide-liposomes, 0.206. As PDI refers to the distribution of molecular weights in a given solution, the
-            higher PDI indicates the presence of multiple particle sizes. In other words, in this case refers to the
-            presence of thiolated DNase I, liposomes, and conjugated maleimide-liposomes to thiolated DNase I in the given
-            solution. There was not a substantial difference between the mean particle sizes of 1:1 and 10:1 ratios and
-            despite that the given solution was not undergone purification, only one population was observed in DLS. The
-            regularization method in DLS presumes the presence of multiple particle populations and could detect the
-            particles if their sizes aren’t 3-5 times different. To add, when the particles are close in size the light
-            scattering for the particles is alike and does not result in different peaks. …
-          </p>
+          <div class="flex flex-col gap-y-4">
+            <p>
+              Conjugation of maleimide-liposomes to thiolated DNase I is inconclusive; however, thiolation of DNase 1 was
+              successful. It supported and confirmed the thiolation modelling’s findings that thiolation will not occur in
+              the active site. Nevertheless, there was some reduction in activity at 8:1, SATA: DNase I ratio. A possible
+              reason for the lower activity of the 8:1 could be due to the excess thiolation of the enzyme which causes
+              deformation within the 3D structure. Changes in the structure and polarity of side groups could lead to
+              changes elsewhere in the protein. For instance, those changes could occur at the active site, which explains
+              why the optimation to ensure DNase 1 is thiolated but not in excess is critical. Different enzymes and
+              proteins may have optimal SATA ratios to ensure through thiolation.
+            </p>
+            <p>
+              According to Table 2, in both maleimide-liposomes to thiolated DNase I 1:1 and 10:1 ratios, the mean
+              particle size was 74.09 d.nm and 76.77 d.nm respectively and the Z-Average increased notably to the mean
+              particle size of the maleimide-liposomes only, 32.36 d.nm. The increase in the mean particle size suggests
+              the conjugation of the thiolated DNase I to maleimide-liposomes. Additionally, the PDI of both 1:1 and 10:1
+              ratios, 0.239 and 0.254 respectively, were higher than the PDI of only maleimide-liposomes, 0.206 (Table 2 &
+              Liposome Formation, Table 1). As PDI refers to the distribution of molecular weights in a given solution,
+              the higher PDI indicates the presence of multiple particle sizes. In other words, in this case refers to the
+              presence of thiolated DNase I, liposomes, and conjugated maleimide-liposomes to thiolated DNase I in the
+              given solution. There was not a substantial difference between the mean particle sizes of 1:1 and 10:1
+              ratios and despite that the given solution had not undergone purification, only one population was observed
+              in DLS. The regularization method in DLS presumes the presence of multiple particle populations and could
+              detect the particles if their sizes are 3-5 times different within the detection limits of the DLS (Wyatt
+              Technology, n.d.). This technique can detect particle sizes approximately between 0.3nm-10µm (Raval et al.,
+              2019). By using the molecular weight of DNase I (30.33 kDa) and the partial specific volume (0.73 cm³/g),
+              the approximate diameter of DNase I is calculated to be 4.13 nm (Parsiegla et al., 2013 & Erickson, 2009).
+              The reason why only one population of particles was observed in DLS could be that the subpopulations did not
+              scatter the light strongly and only resulted in one peak (Filipe et al., 2010).
+            </p>
+            <p>
+              To further verify the conjugation of the maleimide-liposomes to thiolated DNase I, techniques such as
+              cyro-TEM (transmission electron microscopy), cyro-SEM (scanning electron microscopy, and size exclusion
+              chromatography could be used before making conclusions regarding its effectiveness.
+            </p>
+          </div>
         </template>
       </SingleColumn>
 
@@ -344,34 +356,57 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         <template #body>
           <div class="pl-6 -indent-6">
             <p>
-              Deng, Y., & Tsao, B. P. (2013). Genetics of Human SLE. Dubois’ Lupus Erythematosus and
-              Related Syndromes, 35–45. https://doi.org/10.1016/b978-1-4377-1893-5.00004-2
+              Deng, Y., & Tsao, B. P. (2013). Genetics of Human SLE. Dubois’ Lupus Erythematosus and Related Syndromes,
+              35–45. https://doi.org/10.1016/b978-1-4377-1893-5.00004-2
+            </p>
+            <p>
+              Erickson, H. P. (2009, May 15). Size and shape of protein molecules at the nanometer level determined by
+              sedimentation, gel filtration, and electron microscopy. Biological procedures online.
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3055910/
+            </p>
+            <p>
+              Filipe, V., Hawe, A., & Jiskoot, W. (2010, May). Critical evaluation of nanoparticle tracking analysis (NTA)
+              by NanoSight for the measurement of nanoparticles and protein aggregates. Pharmaceutical research.
+              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2852530/
             </p>
             <p>
               Instructions SATA and SATP. Thermo Scientific. (n.d.).
               https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0011179_SATA_SATP_UG.pdf
             </p>
             <p>
-              Heeremans, J. L. M., Kraaijenga, J. J., Los, P., Kluft, C., & Crommelin, D. J. A.
-              (1992). Development of a procedure for coupling the homing device glu-plasminogen to
-              liposomes. BBA-General Subjects, 1117(3), 258-264. Doi: 10.1016/0304-4165(92)90022-M
+              Heeremans, J. L. M., Kraaijenga, J. J., Los, P., Kluft, C., & Crommelin, D. J. A. (1992). Development of a
+              procedure for coupling the homing device glu-plasminogen to liposomes. BBA-General Subjects, 1117(3),
+              258-264. Doi: 10.1016/0304-4165(92)90022-M
             </p>
             <p>
-              Kishi, K., Toshihiro, Y., Takeshita, H. (2001) DNase I: structure, function, and use
-              in medicine and forensic science. Legal Medicine, 3(2), 69-83. doi:
-              10.1016/S1344-6223(01)00004-9
+              Kishi, K., Toshihiro, Y., & Takeshita, H. (2001). DNase I: structure, function, and use in medicine and
+              forensic science. Legal Medicine, 3(2), 69-83. doi: 10.1016/S1344-6223(01)00004-9
             </p>
             <p>
               Maleimide Reaction Chemistry. Quanta BioDesign. (n.d.).
               https://www.quantabiodesign.com/maleimide-reaction-chemistry/
             </p>
             <p>
-              Theule, Stephanie. (n.d.). Reaction of SATA [Reaction Image]. ResearchGate.
-              https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224
+              Parsiegla, G., Noguere, C., Santell, L., Lazarus, R. A., & Bourne, Y. (2013, January 9). 4AWN: Structure of
+              recombinant human dnase I (rhdnasei) in complex with magnesium and phosphate. RCSB PDB.
+              https://www.rcsb.org/structure/4awn
             </p>
-          </div>
-        </template>
-      </SingleColumn>
-    </template>
-  </Notebook>
-</template>
+            <p>
+              Raval , N., Maheshwari, R., Kalyane, D., Youngren-Ortiz , S. R., Chougule, M. B., Tekade, R. K., 6, &
+              AbstractWith increasing importance of nanoparticles in pharmaceutical applications. (2019, January 11).
+              Importance of physicochemical characterization of nanoparticles in pharmaceutical product development. Basic
+            Fundamentals of Drug Delivery. https://www.sciencedirect.com/science/article/pii/B9780128179093000108
+          </p>
+          <p>
+            Theule, Stephanie. (n.d.). Reaction of SATA [Reaction Image]. ResearchGate.
+            https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224
+          </p>
+          <p>
+            Understanding Dynamic Light Scattering. Waters | Wyatt Technology. (n.d.).
+            https://www.wyatt.com/library/theory/dynamic-light-scattering-theory.html#:~:text=In%20dynamic%20light%20scattering%20(DLS,to%20the%20particles%27%20hydrodynamic%20radii
+          </p>
+        </div>
+      </template>
+    </SingleColumn>
+  </template>
+</Notebook></template>
