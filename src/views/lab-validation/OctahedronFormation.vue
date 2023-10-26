@@ -98,13 +98,13 @@ const tableData = {
                 </tr>
                 <tbody class="bg-dark">
                   <tr v-for="(row, i) in tableData.data.slice(0, -1)" :key="i">
-                    <th scope="row" class="w-1/4">
+                    <th scope="row" class="w-1/4 text-sm lg:text-md">
                       {{ row[0] }}
                     </th>
                     <td
                       v-for="(item, j) in row.slice(1)"
                       :key="j"
-                      class="py-1 lg:text-lg text-center"
+                      class="py-1 px-2 lg:text-lg text-center"
                     >
                       {{ item }}
                     </td>
@@ -119,17 +119,17 @@ const tableData = {
                         tableData.data.length
                       )"
                       :key="j"
-                      class="py-1 lg:text-lg text-center"
+                      class="py-1 px-2 lg:text-lg text-center"
                     >
                       {{ item }}
                     </td>
                   </tr>
                 </tfoot>
-                <caption align="bottom" class="text-sm">
-                  Table 1. Reagent Volumes for Scaffold:Staple Ratios.
-                </caption>
               </table>
             </div>
+            <p class="text-sm text-center">
+              Table 1. Reagent Volumes for Scaffold:Staple Ratios.
+            </p>
             <p>
               Using a thermocycler to cause the scaffold and staple strands to anneal and form a
               structure, a thermoramp was started by following the instructions listed below to ensure
