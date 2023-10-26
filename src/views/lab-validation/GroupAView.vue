@@ -79,11 +79,11 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             <p>
               The DNase I assay was adapted from the standard protocol of the Picogreen Assay kit
               (ThermoFischer Scientific, 2022). This kit uses a reaction buffer containing 1 M
-              Tris-HCl (pH 7.5), 1 M MgCl2, and 1 M CaCl2 (ThermoFischer Scientific, 2022), which
+              Tris-HCl (pH 7.5), 1 M MgCl<sub>2</sub>, and 1 M CaCl<sub>2</sub> (ThermoFischer Scientific, 2022), which
               will be referred to as the manufacturer’s buffer. 0.05 U/mL and 0.1 U/mL DNase I
               solutions were prepared in the manufacturer’s buffer and the HEPES buffer separately
               for use in the activity assay. 0.05 U/mL and 0.1 U/mL concentrations of DNase I in
-              HEPES buffer contained 55mM CaCl₂ and 10mM MgCl. The HEPES buffer was also used for
+              HEPES buffer contained 55mM CaCl<sub>2</sub> and 10mM MgCl. The HEPES buffer was also used for
               thiolation treatment and conjugation to the liposome.
             </p>
             <p>
