@@ -11,6 +11,7 @@ const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 const AADocking = () => import('@/views/future-directions/AADocking.vue')
 const OctahedronLiposomeFormation = () => import('@/views/future-directions/OctahedronLiposomeFormation.vue')
+const NotFoundView = () => import('@/views/NotFoundView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,7 +75,11 @@ const router = createRouter({
       path: '/future-directions/octahedron-liposome-formation',
       name: 'octahedron-liposome-formation',
       component: OctahedronLiposomeFormation
-    }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: '404-not-found',
+      component: NotFoundView },
   ]
 })
 
