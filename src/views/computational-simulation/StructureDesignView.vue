@@ -250,7 +250,7 @@ const tableData = {
           </p>
 
           <section v-for="(structure, i) in structures" :key="i" class="py-2">
-            <h3 class="text-base text-white"> {{ structure.label }} </h3>
+            <h3 :class="sectionStyle"> {{ structure.label }} </h3>
             <p v-if="i == 0">
               Note while this structure has been formed already, it is easier for us to take the original Cadnano
               structure to provide a relative comparison. The original Cadnano structure was obtained from Dr. Steven
