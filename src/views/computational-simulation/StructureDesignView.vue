@@ -282,12 +282,15 @@ const tableData = {
             A point of interest across these structures is the presence of a segment or edge that isn't as stable as the
             others. This unstable segment could be a pivotal factor in understanding why some DNA structures have the
             ability to connect or polymerize. Research by Lin et. al supports this notion, demonstrating that specific DNA
-            structures can link together, forming chains that are illustrated in their provided figure (Figure X).
+            structures can link together, forming chains that are illustrated in their provided figure (Figure X) (Lin et al., 2019).
           </p>
           <br />
           <CaptionedGraphics>
             <template #graphics>
               <img src="../../assets/structure-design/nanoscale.png" alt="" class="w-full lg:w-1/2">
+            </template>
+            <template #caption>
+              Figure 6. Provied Figure X from Research by Lin et. al (Lin et al., 2019).
             </template>
           </CaptionedGraphics>
         </template>
