@@ -63,20 +63,21 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 <img src="../../assets/thiolation-and-conjunction/reaction-of-sata.png" alt="" />
               </template>
               <template #caption>
-                <p>Figure 1: Reacting SATA with amine to generate sulfhydryl group (Theule, n.d.).</p>
+                <p>
+                  Figure 1: Reacting SATA with amine to generate sulfhydryl group (Theule, n.d.).
+                </p>
               </template>
             </CaptionedGraphics>
 
             <p>
-              The other side of the equation to conjugate the thiolated enzyme,
-              DNase 1 to the liposome, maleimide is the thiol-Michael addition
-              reaction. Figure 2 depicts the sulfur group donating its electron
-              to the olefin of a maleimide molecule, forming a covalent bond
-              between the two. A proton is removed in this process, generating a
-              thiosuccinimide molecule that is stable under non-aqueous
-              conditions (Quanta BioDesign, n.d.). The Michael addition reaction
-              allows for simple and fast modifications of cysteine residues to
-              conjugate specific biomolecules (Quanta BioDesign, n.d.). 
+              The other side of the equation to conjugate the thiolated enzyme, DNase 1 to the
+              liposome, maleimide is the thiol-Michael addition reaction. Figure 2 depicts the
+              sulfur group donating its electron to the olefin of a maleimide molecule, forming a
+              covalent bond between the two. A proton is removed in this process, generating a
+              thiosuccinimide molecule that is stable under non-aqueous conditions (Quanta
+              BioDesign, n.d.). The Michael addition reaction allows for simple and fast
+              modifications of cysteine residues to conjugate specific biomolecules (Quanta
+              BioDesign, n.d.).
             </p>
             <CaptionedGraphics modifier="w-full">
               <template #graphics>
