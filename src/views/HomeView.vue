@@ -99,7 +99,7 @@ const scrollToTop = () => {
         <line y1="1.5" x2="150" y2="1.5" stroke="#E2B764" stroke-width="3" />
       </svg>
 
-      <div class="bg-white w-5/6 lg:w-3/4 h-52 lg:h-[40rem] m-8"></div>
+      <iframe src="https://drive.google.com/file/d/1FsKPm0quTu6jz-VjVHRz34LC_HEArTgR/preview" class="mt-4 w-4/5 lg:w-3/5 h-[40dvw] lg:h-[35dvw]"></iframe>
 
       <button class="btn !py-4 mt-2 mb-8 group" @click="scrollToTop">
         <svg class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200" viewBox="0 0 24 36"
