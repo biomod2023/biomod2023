@@ -4,6 +4,7 @@ import Timeline from '@/components/Timeline.vue'
 import CustomTable2 from '@/components/CustomTable2.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 
+
 const tableData = {
   headers: [
     'Enzyme',
@@ -103,11 +104,13 @@ const tableData = {
     </div>
 
 
-    <div>
-      <div class="mb-10"></div>
-      <div class="flex flex-col items-center mt-6">
-        <h1 class="font-title text-title text-white text-5xl">Relevance</h1>
-        <div>
+<div>   
+ <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+  <div class="font-title text-title text-white text-5xl">Relevance</div>
+
+
+  <div>
 
           <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
             <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Bacterial Biofilms</h2>
@@ -276,9 +279,9 @@ const tableData = {
       </div>
     </div>
 
-    <div class="mb-10"></div>
-    <div class="flex flex-col items-center mt-6">
-      <div class="font-title text-title text-white text-5xl">Merit</div>
+  <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+    <div class="font-title text-title text-white text-5xl">Merit</div>
 
       <div>
         <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
@@ -324,9 +327,9 @@ const tableData = {
       </div>
     </div>
 
-    <div class="mb-10"></div>
-    <div class="flex flex-col items-center mt-6">
-      <div class="font-title text-title text-white text-5xl">Specifications</div>
+  <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+    <div class="font-title text-title text-white text-5xl">Specifications</div>
 
       <div>
         <div class="bg-dark p-8 max-w-6xl rounded-3xl mt-4">
@@ -362,8 +365,15 @@ const tableData = {
       </div>
     </div>
 
-    <div class="flex flex-col items-center mt-28">
-      <div class="font-title text-title text-white text-5xl">Design Process and Logic</div>
+
+
+
+
+  </div>
+
+  <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+    <div class="font-title text-title text-white text-5xl">Design Process and Logic</div>
 
       <div>
         <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
