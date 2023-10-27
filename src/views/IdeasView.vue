@@ -40,7 +40,7 @@ const tableData = {
         </p>
       </main>
 
-      <div class="px-4 flex justify-center w-full space-x-10 overflow-x-scroll">
+      <div class="px-4 flex justify-center w-full lg:w-auto space-x-10 overflow-x-scroll">
         <IdeaCard class="flex-grow">
           <template #svg>
             <svg
@@ -387,7 +387,7 @@ const tableData = {
             substantial presence of DNA in biofilms, and synergistic effects with other enzymes that could be useful for
             future experiments.
           </p>
-          <div class="flex flex-col items-center w-full">
+          <div class="flex flex-col items-center w-full px-4">
             <div class="overflow-x-scroll w-full">
               <CustomTable2 :table-data="tableData" />
             </div>
