@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useScroll } from '@vueuse/core'
 import SponsorItem from '@/components/sponsors/SponsorItem.vue'
 import SponsorTier from '@/components/sponsors/SponsorTier.vue'
 import SilverImgBackground from '@/components/sponsors/SilverImgBackground.vue'
@@ -8,6 +10,25 @@ import BrandonKieft from '@/assets/sponsors/Brandon_Kieft-e1662700315238.jpeg'
 import AbishekWadhwa from '@/assets/sponsors/Abishek_Wadhwa.jpg'
 import AdrianJanGredwosk from '@/assets/sponsors/Adrian_Jan_Grezedowski.jpg'
 import DanBizzotto from '@/assets/sponsors/Dan_Bizzotto.jpg'
+import { onMounted } from 'vue'
+
+const advisorCarousel = ref<HTMLElement | null>(null)
+const currIdx = ref<Number>(0)
+const maxCarouselPage = ref(0)
+const widthPerCarouselPage = ref(0)
+const { x } = useScroll(advisorCarousel)
+watch(x, (newX) => {
+  currIdx.value = Math.ceil(newX / widthPerCarouselPage.value)
+})
+onMounted(() => {
+  if (advisorCarousel.value && advisorCarousel.value?.children[0]) {
+    widthPerCarouselPage.value = advisorCarousel.value?.children[0].clientWidth
+    maxCarouselPage.value = Math.ceil(
+      Math.ceil(advisorCarousel.value?.children.length / 2)
+        / Math.floor(advisorCarousel.value.clientWidth / widthPerCarouselPage.value))
+  }
+  console.log(maxCarouselPage)
+})
 
 const advisors = [
   {
@@ -123,25 +144,45 @@ const advisors = [
       </a>
     </div>
 
-    <h1 class="text-title-sm lg:text-title text-gold text-center">
-      Advisors
-    </h1>
-    <div class="grid grid-cols-3 gap-5 place-content-center">
-      <div class="w-[20rem] h-[22rem] bg-gold/40 gap-y-4
-        flex flex-col justify-center items-center" 
-        v-for="(advisor, i) in advisors"
-        :key="advisor.name + i">
-        <img class="w-[12rem] h-[12rem] rounded-[5.7rem] object-top object-cover" 
-          :src="advisor.profile"/>
-          <div class="text-center">
-            <div class="">
-              <b> {{ advisor.name }} </b>
+    <div class="w-full flex flex-col items-center">
+      <h1 class="text-title-sm lg:text-title text-gold text-center">
+        Advisors
+      </h1>
+      <div class="flex flex-col flex-wrap flex-none w-full h-[36rem] gap-x-2 gap-y-5 overflow-x-scroll
+        snap-x snap-proximity place-content-stretch
+        md:gap-x-7 md:grid md:grid-cols-3 md:w-fit md:h-fit md:place-content-stretch md:overflow-x-clip"
+        ref="advisorCarousel">
+        <div class="w-[15rem] h-[17rem] bg-gold/40 gap-y-4 snap-center
+          flex flex-col justify-center items-center
+          md:w-auto
+          lg:w-[20rem] lg:h-[22rem]"
+          v-for="(advisor, i) in advisors"
+          :key="advisor.name + i">
+          <img class="w-[8rem] h-[8rem] rounded-full object-top object-cover
+            lg:w-[12rem] lg:h-[12rem] "
+            :src="advisor.profile"/>
+            <div class="text-center">
+              <div class="">
+                <b> {{ advisor.name }} </b>
+              </div>
+              <div class="text-sm">
+                <p> {{ advisor.position }} </p>
+                <p> {{ advisor.location }} </p>
+              </div>
             </div>
-            <div class="text-sm">
-              <p> {{ advisor.position }} </p>
-              <p> {{ advisor.location }} </p>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-4"
+        v-if="$windowWidth < 768">
+        <span
+          :class="{
+            'bg-notebookText' : currIdx == (i - 1),
+            'border border-notebookText': currIdx != (i - 1)
+          }"
+          class="w-2 h-2 rounded-full transition duration-500"
+          v-for="i in maxCarouselPage"
+          :key="i"
+        ></span>
       </div>
     </div>
   </div>
