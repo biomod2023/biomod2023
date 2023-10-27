@@ -4,6 +4,7 @@ import Timeline from '@/components/Timeline.vue'
 import CustomTable2 from '@/components/CustomTable2.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 
+
 const tableData = {
   headers: [
     'Enzyme',
