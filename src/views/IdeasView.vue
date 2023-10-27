@@ -28,19 +28,18 @@ const tableData = {
 </script>
 
 <template>
-  <div class="flex flex-col h-screen overflow-y-auto">
-    <NavBar />
+  <div class="flex flex-col">
 
-    <main class="pt-2 flex flex-col items-center mt-20">
-      <h1 class="text-gold font-title text-title">Project Ideas</h1>
-      <p class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
-        Our project is always of our team's interest. Follow along to see how we incorperated our
-        intersts into this year's project.
-      </p>
-    </main>
+    <div class="flex flex-col items-center gap-y-20">
+      <main class="pt-2 flex flex-col items-center">
+        <h1 class="text-gold font-title text-title">Project Ideas</h1>
+        <p class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
+          Our project is always of our team's interest. Follow along to see how we incorperated our
+          intersts into this year's project.
+        </p>
+      </main>
 
-    <div class="flex flex-col items-center justify-center h-screen">
-      <div class="flex space-x-10 mt-10">
+      <div class="flex space-x-10">
         <IdeaCard class="flex-grow">
           <template #svg>
             <svg
@@ -107,9 +106,7 @@ const tableData = {
     <div>
       <div class="mb-10"></div>
       <div class="flex flex-col items-center mt-6">
-        <div class="font-title text-title text-white text-5xl">Relevance</div>
-
-
+        <h1 class="font-title text-title text-white text-5xl">Relevance</h1>
         <div>
 
           <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
@@ -342,7 +339,7 @@ const tableData = {
           </p>
 
 
-          <p class="mt-2">
+          <p class="px-4 mt-2">
             The following diagram outlines the project’s proposed wet-lab timeline, with key milestones and goals marked
             for each month.
           </p>
@@ -363,19 +360,13 @@ const tableData = {
           </p>
         </div>
       </div>
-
-
-
-
-
     </div>
 
-    <div class="mb-10"></div>
-    <div class="flex flex-col items-center mt-6">
+    <div class="flex flex-col items-center mt-28">
       <div class="font-title text-title text-white text-5xl">Design Process and Logic</div>
 
       <div>
-        <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+        <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
           <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">How was the Enzyme Selected?</h2>
           <p class="p-4">
             P. aeruginosa and S. aureus biofilms are two bacterial pathogens commonly associated with antimicrobial
@@ -504,23 +495,7 @@ const tableData = {
             imaging techniques.
           </p>
         </div>
-
-
-
-
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
     </div>
 
     <div class="flex flex-col items-center">
@@ -600,113 +575,104 @@ const tableData = {
               Subtilis S8-18 Against Biofilm Forming Human Bacterial Pathogens. Applied Biochemistry and
               Biotechnology, 167,1778–94. https://doi.org/10.1007/s12010-011-9526-2.
             </p>
-          <p>
-            Kaur, A., Soni, S. K., Vij, S., & Rishi, P. (2021). Cocktail of Carbohydrases from Aspergillus Niger: An
-            Economical and Eco-Friendly Option for Biofilm Clearance from Biopolymer Surfaces.
-            AMB Express, 11. https://doi.org/10.1186/s13568-021-01183-y.
-          </p>
-          <p>
-            Kim, H. T., Chung, J. H., Wang, D., Lee, J., Woo, H. C., Choi, I. G., & Kim, K. H., (2012). Depolymerization
-            of Alginate into a Monomeric Sugar Acid using Alg17C, an Exo-oligoalginate Lyase
-            Cloned from Saccharophagus Degradans 2-40. Applied Microbiol Biotechnology, 93(5), 2233-2239.
-            https://doi.org/10.1007/s00253-012-3882-x.
-          </p>
-          <p>
-            Kishi, K., Toshihiro, Y., & Takeshita, H. (2001) DNase I: structure, function, and use in medicine and
-            forensic science. Legal Medicine, 3(2), 69-83
-            https://doi.org/10.1016/S1344-6223(01)00004-9
-          </p>
-          <p>
-            Lahiri, D., Nag, M., Banerjee, R., Mukherjee, D., Garai, S., Sarkar, T., Dey, A., Sheikh, H. I., Pathak, S.
-            K., Edinur, H. A., Pati, S., & Ray, R. R. (2021). Amylases: Biofilm Inducer or
-            Biofilm Inhibitor? Frontiers in Cellular and Infection Microbiology, 11.
-            https://doi.org/10.3389/fcimb.2021.660048
-          </p>
-          <p>
-            Larson, S. B., Day, J. S., & McPherson, A. (2011). X-ray Crystallographic Analyses of Pig Pancreatic
-            α-Amylase with Limit Dextrin, Oligosaccharide and α-Cyclodextrin. Biochemistry, 49(14),
-            3101-3115. https://doi.org/10.1021/bi902183w.
-          </p>
-          <p>
-            Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F., Maheden,
-            K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a
-            Repeatable DNA Nanohinge System Supporting Higher Order Structure Formation. bioRxiv.
-            https://doi.org/10.1101/2023.05.26.542516
-          </p>
-          <p>
-            Li, Y. & Qi, B. (2017). Progress toward Understanding Protein S-acylation: Prospective in Plants. Front.
-            Plant Sci, 8, 346. https://doi.org/10.3389/fpls.2017.00346
-          </p>
-          <p>
-            Manos, J. (2021). Current and Emerging Therapies to Combat Cystic Fibrosis Lung Infections. Microorganisms,
-            9(9), 1874. https://doi.org/10.3390/microorganisms9091874
-          </p>
-          <p>
-            Nijland, R., Hall, M. J., & Burgess, J. G. (2010). Dispersal of biofilms by secreted, matrix degrading,
-            bacterial DNase. PLoS ONE, 5(12). https://doi.org/10.1371/journal.pone.0015668
-          </p>
-          <p>
-            Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To
-            Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. https://doi.org/10.1021/nn5011914.
-          </p>
-          <p>
-            Sky-Peck, H.H., & Thuvasethakul, P. (1977). Human pancreatic alpha-amylase. II. Effects of pH, substrate and
-            ions on the activity of the enzyme. Annals of Clinical & Laboratory Science,
-            7(4), 310-317.
-          </p>
-          <p>
-            ThermoFischer Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit.
-            https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf
-          </p>
-          <p>
-            Vestby, L. K., Grønseth, T., Simm, R., & Nesse, L. L. (2020). Bacterial Biofilm and its Role in the
-            Pathogenesis of Disease. Antibiotics (Basel), 9(2), 59. https://doi.org/10.3390/antibiotics9020059.
-          </p>
-          <p>
-            Wang, X., Liu, S., Sun, Y., Yu, X., Lee, S. M., Cheng, Q., Wei, T., Gong, J., Robinson, J., Zhang, D., Lian,
-            X., Basak, P., & Siegwart, D. J. (2022). Preparation of selective organ-targeting (SORT) lipid nanoparticles
-            (LNPs) using multiple technical methods for tissue-specific mRNA delivery. Nature Protocols, 18, 265-291.
-            https://doi.org/10.1038/s41596-022-00755-x
-          </p>
-          <p>
-            Xu, F., Wang, P., Zhang, Y., & Chen, X. (2018). Diversity of three-dimensional structures and catalytic
-            mechanisms of alginate lyases. Applied and Environmental Microbiology, 84(3).
-            https://doi.org/10.1128/AEM.02040-17
-          </p>
-          <p>
-            Yang, Y., Wang, J., Shigematsu, H., Xu, W., Shih, W. M., Rothman, J. E., & Lin, C. (2016). Self-assembly of
-            size-controlled liposomes on DNA nanotemplates. Nature Chemistry, 8(5), 476–483.
-            https://doi.org/10.1038/nchem.2472
-          </p>
-          <p>
-            Yin, R., Cheng, J., Wang, J., Li, P. & Lin, J. (2022). Treatment of Pseudomonas aeruginosa Infectious
-            Biofilms: Challenges and Strategies. Frontiers in Microbiology, 13.
-            https://doi.org/10.3389/fmicb.2022.955286
-          </p>
-          <p>
-            Zheng, Y., He, L., Asiamah, T. K., & Otto, M. (2018). Colonization of medical devices by staphylococci.
-            Environmental Microbiology, 20(9), 3141–3153. https://doi.org/10.1111/1462-2920.14129
-          </p>
-          <p>
-            Zhu, B., & Yin, H. (2015). Alginate Lyase: Review of Major Sources and Classification, Properties,
-            Structure-Function Analysis and Applications. Bioengineered, 6(3), 125–131.
-            https://doi.org/10.1080/21655979.2015.1030543
-          </p>
-        </div>
-      </template>
-    </SingleColumn>
+            <p>
+              Kaur, A., Soni, S. K., Vij, S., & Rishi, P. (2021). Cocktail of Carbohydrases from Aspergillus Niger: An
+              Economical and Eco-Friendly Option for Biofilm Clearance from Biopolymer Surfaces.
+              AMB Express, 11. https://doi.org/10.1186/s13568-021-01183-y.
+            </p>
+            <p>
+              Kim, H. T., Chung, J. H., Wang, D., Lee, J., Woo, H. C., Choi, I. G., & Kim, K. H., (2012). Depolymerization
+              of Alginate into a Monomeric Sugar Acid using Alg17C, an Exo-oligoalginate Lyase
+              Cloned from Saccharophagus Degradans 2-40. Applied Microbiol Biotechnology, 93(5), 2233-2239.
+              https://doi.org/10.1007/s00253-012-3882-x.
+            </p>
+            <p>
+              Kishi, K., Toshihiro, Y., & Takeshita, H. (2001) DNase I: structure, function, and use in medicine and
+              forensic science. Legal Medicine, 3(2), 69-83
+              https://doi.org/10.1016/S1344-6223(01)00004-9
+            </p>
+            <p>
+              Lahiri, D., Nag, M., Banerjee, R., Mukherjee, D., Garai, S., Sarkar, T., Dey, A., Sheikh, H. I., Pathak, S.
+              K., Edinur, H. A., Pati, S., & Ray, R. R. (2021). Amylases: Biofilm Inducer or
+              Biofilm Inhibitor? Frontiers in Cellular and Infection Microbiology, 11.
+              https://doi.org/10.3389/fcimb.2021.660048
+            </p>
+            <p>
+              Larson, S. B., Day, J. S., & McPherson, A. (2011). X-ray Crystallographic Analyses of Pig Pancreatic
+              α-Amylase with Limit Dextrin, Oligosaccharide and α-Cyclodextrin. Biochemistry, 49(14),
+              3101-3115. https://doi.org/10.1021/bi902183w.
+            </p>
+            <p>
+              Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F., Maheden,
+              K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a
+              Repeatable DNA Nanohinge System Supporting Higher Order Structure Formation. bioRxiv.
+              https://doi.org/10.1101/2023.05.26.542516
+            </p>
+            <p>
+              Li, Y. & Qi, B. (2017). Progress toward Understanding Protein S-acylation: Prospective in Plants. Front.
+              Plant Sci, 8, 346. https://doi.org/10.3389/fpls.2017.00346
+            </p>
+            <p>
+              Manos, J. (2021). Current and Emerging Therapies to Combat Cystic Fibrosis Lung Infections. Microorganisms,
+              9(9), 1874. https://doi.org/10.3390/microorganisms9091874
+            </p>
+            <p>
+              Nijland, R., Hall, M. J., & Burgess, J. G. (2010). Dispersal of biofilms by secreted, matrix degrading,
+              bacterial DNase. PLoS ONE, 5(12). https://doi.org/10.1371/journal.pone.0015668
+            </p>
+            <p>
+              Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To
+              Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. https://doi.org/10.1021/nn5011914.
+            </p>
+            <p>
+              Sky-Peck, H.H., & Thuvasethakul, P. (1977). Human pancreatic alpha-amylase. II. Effects of pH, substrate and
+              ions on the activity of the enzyme. Annals of Clinical & Laboratory Science,
+              7(4), 310-317.
+            </p>
+            <p>
+              ThermoFischer Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit.
+              https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf
+            </p>
+            <p>
+              Vestby, L. K., Grønseth, T., Simm, R., & Nesse, L. L. (2020). Bacterial Biofilm and its Role in the
+              Pathogenesis of Disease. Antibiotics (Basel), 9(2), 59. https://doi.org/10.3390/antibiotics9020059.
+            </p>
+            <p>
+              Wang, X., Liu, S., Sun, Y., Yu, X., Lee, S. M., Cheng, Q., Wei, T., Gong, J., Robinson, J., Zhang, D., Lian,
+              X., Basak, P., & Siegwart, D. J. (2022). Preparation of selective organ-targeting (SORT) lipid nanoparticles
+              (LNPs) using multiple technical methods for tissue-specific mRNA delivery. Nature Protocols, 18, 265-291.
+              https://doi.org/10.1038/s41596-022-00755-x
+            </p>
+            <p>
+              Xu, F., Wang, P., Zhang, Y., & Chen, X. (2018). Diversity of three-dimensional structures and catalytic
+              mechanisms of alginate lyases. Applied and Environmental Microbiology, 84(3).
+              https://doi.org/10.1128/AEM.02040-17
+            </p>
+            <p>
+              Yang, Y., Wang, J., Shigematsu, H., Xu, W., Shih, W. M., Rothman, J. E., & Lin, C. (2016). Self-assembly of
+              size-controlled liposomes on DNA nanotemplates. Nature Chemistry, 8(5), 476–483.
+              https://doi.org/10.1038/nchem.2472
+            </p>
+            <p>
+              Yin, R., Cheng, J., Wang, J., Li, P. & Lin, J. (2022). Treatment of Pseudomonas aeruginosa Infectious
+              Biofilms: Challenges and Strategies. Frontiers in Microbiology, 13.
+              https://doi.org/10.3389/fmicb.2022.955286
+            </p>
+            <p>
+              Zheng, Y., He, L., Asiamah, T. K., & Otto, M. (2018). Colonization of medical devices by staphylococci.
+              Environmental Microbiology, 20(9), 3141–3153. https://doi.org/10.1111/1462-2920.14129
+            </p>
+            <p>
+              Zhu, B., & Yin, H. (2015). Alginate Lyase: Review of Major Sources and Classification, Properties,
+              Structure-Function Analysis and Applications. Bioengineered, 6(3), 125–131.
+              https://doi.org/10.1080/21655979.2015.1030543
+            </p>
+          </div>
+        </template>
+      </SingleColumn>
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-</div></template>
+</template>
 
 
 
