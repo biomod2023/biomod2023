@@ -413,7 +413,7 @@ const tableData = {
             so we hypothesized this would work with our selected enzyme, DNase I.
           </p>
           <div class="flex flex-col items-center gap-2">
-            <img src="../assets/thiolation.png" class="w-full" />
+            <img src="../assets/thiolation.png" class="w-full lg:w-3/5" />
             <p class="text-sm">
               Fig 1. Visualization of the attachment of a thiolated target enzyme to maleimide-PEG liposomes.
             </p>
