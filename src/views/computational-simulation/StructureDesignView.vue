@@ -2,7 +2,6 @@
 <script setup lang="ts">
 import Notebook from '@/components/lab-notebook/Notebook.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
-import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
 import CustomTable from '@/components/CustomTable.vue'
 import CaptionedGraphics from '@/components/CaptionedGraphics.vue'
 import Equation from '@/components/Equation.vue'
@@ -21,17 +20,17 @@ const sectionStyle = 'text-subtitle-sm lg:text-subtitle text-white mt-6 mb-4'
 const structureHeadings = ['Highest RMSF (nm)', 'LOWEST RMSF (nm)', '95% CI  (nm)']
 const structures = [
   {
-    label: "Structure (4-gon): CONTROL",
+    label: "Structure (Octahedron): CONTROL",
     graphics: [FourGon1, FourGon2, FourGon3],
     values: [1.090856, 2.946035, 2.508811]
   },
   {
-    label: "Structure: 3-gon",
+    label: "Structure: Trigonal Bipyramid",
     graphics: [ThreeGon1, ThreeGon2, ThreeGon3],
     values: [1.090856, 2.946035, 2.508811]
   },
   {
-    label: "Structure: 5-gon",
+    label: "Structure: Pentagonal Bipyramid",
     graphics: [FiveGon1, FiveGon2, FiveGon3],
     values: [1.090856, 2.946035, 2.508811]
   }]
@@ -416,7 +415,7 @@ const tableData = {
           </section>
 
           <section>
-            <h3 :class="sectionStyle"> Axial Edge </h3>
+            <h3 :class="sectionStyle"> Diameter to Number of Nucleotides </h3>
             <p>
               Suppose we had
               <Equation formula="h=6" /> helices per edge. We would require a conversion factor to convert from length to
@@ -492,7 +491,7 @@ const tableData = {
               <Equation formula="a, b" /> to exist. It should be noted that, given
               <Equation formula="a \in \mathbb{Z}" />,
               <Equation formula="N/n \equiv a\text{ mod }2 \Longrightarrow n | N" />. However,
-              <Equation formula="n|N" />, while the parity equation developed above is less complicated to employ since
+              <Equation formula="n|N" /> is a difficult criteria to satisfy, while the parity equation developed above is less complicated to employ since
               only tiny adjustments to
               <Equation formula="a,b" /> would be necessary to obtain the closest even or odd number that satisfies the
               condition.
