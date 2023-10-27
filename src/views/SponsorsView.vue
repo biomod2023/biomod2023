@@ -10,6 +10,8 @@ import BrandonKieft from '@/assets/sponsors/Brandon_Kieft-e1662700315238.jpeg'
 import AbishekWadhwa from '@/assets/sponsors/Abishek_Wadhwa.jpg'
 import AdrianJanGredwosk from '@/assets/sponsors/Adrian_Jan_Grezedowski.jpg'
 import DanBizzotto from '@/assets/sponsors/Dan_Bizzotto.jpg'
+import ResmiRadhamony from '@/assets/sponsors/Resmi-Radhamony-min.jpg'
+import MarleneChow from '@/assets/sponsors/Marlene_Chow.png'
 import { onMounted } from 'vue'
 
 const advisorCarousel = ref<HTMLElement | null>(null)
@@ -23,11 +25,11 @@ watch(x, (newX) => {
 onMounted(() => {
   if (advisorCarousel.value && advisorCarousel.value?.children[0]) {
     widthPerCarouselPage.value = advisorCarousel.value?.children[0].clientWidth
-    maxCarouselPage.value = Math.ceil(
-      Math.ceil(advisorCarousel.value?.children.length / 2)
-        / Math.floor(advisorCarousel.value.clientWidth / widthPerCarouselPage.value))
+    let numCols = Math.ceil(advisorCarousel.value?.children.length / 2)
+    let numColsPerPage = Math.floor(advisorCarousel.value.clientWidth / widthPerCarouselPage.value)
+    maxCarouselPage.value = Math.ceil(numCols / numColsPerPage) + 
+      (numColsPerPage % 2 == 0 ? 1 : 0)
   }
-  console.log(maxCarouselPage)
 })
 
 const advisors = [
@@ -38,10 +40,10 @@ const advisors = [
     location: "University of British Columbia"
   },
   {
-    name : "Dr. Robert E Hancock",
-    profile : HanCock,
-    position : "Professor",
-    location: "University of British Columbia"
+    name : "Resmi Radhamony",
+    profile : ResmiRadhamony,
+    position : "Hallam Lab manager",
+    location : "University of British Columbia"
   },
   {
     name : "Brandon Kieft",
@@ -56,17 +58,29 @@ const advisors = [
     location: "University of British Columbia"
   },
   {
-    name : "Adrian Jan Gredwosk",
-    profile : AdrianJanGredwosk,
-    position : "Graduate Student",
-    location: "University of British Columbia"
+    name : "Marlene Chow",
+    profile : MarleneChow,
+    position : "Director of Academic Programs, Administration and Resources",
+    location : "University of British Columbia"
   },
-  {
-    name : "Dan Bizzotto",
-    profile : DanBizzotto,
-    position : "Associate Professor",
-    location: "University of British Columbia"
-  },
+  // {
+  //   name : "dr. robert e hancock",
+  //   profile : hancock,
+  //   position : "professor",
+  //   location: "university of british columbia"
+  // },
+  // {
+  //   name : "Adrian Jan Gredwosk",
+  //   profile : AdrianJanGredwosk,
+  //   position : "Graduate Student",
+  //   location: "University of British Columbia"
+  // },
+  // {
+  //   name : "Dan Bizzotto",
+  //   profile : DanBizzotto,
+  //   position : "Associate Professor",
+  //   location: "University of British Columbia"
+  // },
 ]
 </script>
 
