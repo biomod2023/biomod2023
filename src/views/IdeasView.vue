@@ -373,6 +373,7 @@ const tableData = {
       <div class="flex flex-col items-center mt-28 w-full">
         <div class="font-title text-title-sm lg:text-title text-white text-center">Design Process and Logic</div>
         <div class="bg-dark p-4 rounded-3xl mt-4 w-full">
+          <h2 class="p-4 text-2xl lg:text-3xl">Enzyme</h2>
           <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">How was the Enzyme Selected?</h2>
           <p class="p-4">
             P. aeruginosa and S. aureus biofilms are two bacterial pathogens commonly associated with antimicrobial
@@ -429,6 +430,7 @@ const tableData = {
             amino group at an N-terminus active-site that enzymes compatible with this
             method, like Alginate Lyase, possess (Xu et al, 2018).
           </p>
+          <h2 class="p-4 text-2xl lg:text-3xl">Liposome</h2>
           <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What are Liposomes?</h2>
           <p class="p-4">
             Liposomes are artificial, spherical vesicles created from cholesterol and phospholipids (Akbarzadeh et al.,
@@ -467,6 +469,7 @@ const tableData = {
             liposome to form bonds between the structures (Girão et al., 2021), before being
             reacted with the previously synthesized PEGylated liposomes to form the enzymosome structure.
           </p>
+          <h2 class="p-4 text-2xl lg:text-3xl">N-Gonal Bipyramids</h2>
           <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">How was DNA Origami used?</h2>
           <p class="p-4">
             DNA origami structures were designed for future use as templates to achieve more precise liposome formation
