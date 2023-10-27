@@ -32,6 +32,8 @@ onMounted(() => {
   }
 })
 
+const acknowledgements = ["Dr. Hancock", "Dr. Miffy Cheng", "Dr Steven D. Perrault",
+  "Dr. William Shih", "Dr. Thorsten-Lars Schmidt"]
 const advisors = [
   {
     name : "Dr. Steven Hallam",
@@ -63,24 +65,18 @@ const advisors = [
     position : "Director of Academic Programs, Administration and Resources",
     location : "University of British Columbia"
   },
-  // {
-  //   name : "dr. robert e hancock",
-  //   profile : hancock,
-  //   position : "professor",
-  //   location: "university of british columbia"
-  // },
-  // {
-  //   name : "Adrian Jan Gredwosk",
-  //   profile : AdrianJanGredwosk,
-  //   position : "Graduate Student",
-  //   location: "University of British Columbia"
-  // },
-  // {
-  //   name : "Dan Bizzotto",
-  //   profile : DanBizzotto,
-  //   position : "Associate Professor",
-  //   location: "University of British Columbia"
-  // },
+  {
+    name : "Adrian Jan Gredwosk",
+    profile : AdrianJanGredwosk,
+    position : "Graduate Student",
+    location: "University of British Columbia"
+  },
+  {
+    name : "Dan Bizzotto",
+    profile : DanBizzotto,
+    position : "Associate Professor",
+    location: "University of British Columbia"
+  },
 ]
 </script>
 
@@ -198,6 +194,16 @@ const advisors = [
           :key="i"
         ></span>
       </div>
+    </div>
+
+    <div>
+      <h1 class="text-[1.8rem] font-medium text-gold text-center lg:text-[3rem]">
+        Acknowledgements
+      </h1>
+      <section class="text-center">
+        <h3 class="text-subtitle-sm"
+          v-for="p in acknowledgements" :key="p"> {{ p }} </h3>
+      </section>
     </div>
   </div>
 </template>
