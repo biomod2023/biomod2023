@@ -698,6 +698,7 @@ const tableData = {
         </SingleColumn>
       </div>
     </div>
+  </div>
 </template>
 
 
