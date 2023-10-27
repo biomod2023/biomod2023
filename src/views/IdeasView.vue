@@ -112,7 +112,7 @@ const tableData = {
 
         <div>
 
-          <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+          <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
             <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Bacterial Biofilms</h2>
             <p class="p-4">
               A bacterial biofilm is a structure of bacteria embedded within a self-produced matrix of proteins,
@@ -139,15 +139,15 @@ const tableData = {
               concerns with current practices including:
             </p>
             <ul class="list-disc pl-10">
-              <li> inability of antibiotics to penetrate biofilms and organ tissues, such as requiring specific particle
+              <li>Inability of antibiotics to penetrate biofilms and organ tissues, such as requiring specific particle
                 or
                 droplet sizes to reach certain airways of the lungs (Høiby, 2011)</li>
-              <li> historically, biofilms such as S. aureus and P. aeruginosa infections often occur concurrently, so
+              <li>Historically, biofilms such as S. aureus and P. aeruginosa infections often occur concurrently, so
                 patients
                 receive multiple antibiotic treatments simultaneously that may adversely react and potentially pose
                 toxicity hazards
                 in the bloodstream (Esposito et al., 2019)</li>
-              <li> concerns about biofilm antibiotic tolerance and mutational resistance undermining the ability of
+              <li>Concerns about biofilm antibiotic tolerance and mutational resistance undermining the ability of
                 antibiotic
                 treatments to eradicate biofilms on their own</li>
             </ul>
@@ -160,14 +160,14 @@ const tableData = {
               expiratory methods, and breathing techniques (Manos, 2021). Limitations include:
             </p>
             <ul class="list-disc pl-10">
-              <li> inconclusive findings of the effectiveness of physical therapy, particularly if not performed correctly
+              <li>Inconclusive findings of the effectiveness of physical therapy, particularly if not performed correctly
                 (Manos, 2021)</li>
-              <li> not recommended for use on children, and some methods are physically intensive (Manos, 2021) </li>
-              <li> does not directly address bacterial infections so are not suitable as the sole treatment (Manos, 2021)
+              <li>Not recommended for use on children, and some methods are physically intensive (Manos, 2021) </li>
+              <li>Does not directly address bacterial infections so are not suitable as the sole treatment (Manos, 2021)
               </li>
             </ul>
 
-            <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Scientific Interests</h2>
+            <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Scientific Interest</h2>
             <p class="p-4">
               To circumnavigate the challenges of antibiotics penetrating biofilms, some emerging research focuses on
               the prospective use of materials, such as enzymes, capable of disrupting biofilm matrices in conjunction
@@ -212,9 +212,9 @@ const tableData = {
               create conjugated enzymosome
               systems of DNase I enzymes and liposomes that are:
             <ul class="list-disc pl-10">
-              <li> able to reach regions not typically accessible to previous treatments</li>
-              <li> capable of targeting and degrading biofilms </li>
-              <li> more uniform in size for precise and consistent drug dosages when created by a DNA n-gonal bipyramid
+              <li>Able to reach regions not typically accessible to previous treatments</li>
+              <li>Capable of targeting and degrading biofilms </li>
+              <li>More uniform in size for precise and consistent drug dosages when created by a DNA n-gonal bipyramid
                 template in the future </li>
             </ul>
             </p>
@@ -332,7 +332,7 @@ const tableData = {
       <div class="font-title text-title text-white text-5xl">Specifications</div>
 
       <div>
-        <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+        <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
           <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Placeholder text for now</h2>
           <p class="p-4">
             Our project aims to create an enzymosome structure that can serve as a platform for attaching enzymes and
@@ -454,7 +454,7 @@ const tableData = {
             such as drug loading.
           </p>
 
-          <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What are Enzymosomes </h2>
+          <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What are Enzymosomes?</h2>
 
           <p class="p-4">
             A liposome conjugated to one or more enzymes produces a modular platform called an enzymosome, which is often
