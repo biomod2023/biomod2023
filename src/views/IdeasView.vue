@@ -281,44 +281,44 @@ const tableData = {
       <div class="font-title text-title text-white text-5xl">Merit</div>
 
       <div>
-        <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
-          <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What Sets Our Poroject Apart from Others?</h2>
+        <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
+          <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What Sets Our Project Apart from Others?</h2>
           <p class="p-4">
             This project is a novel combination of past research into using DNA nanotemplates to create uniform liposomes
             (Yang et al., 2016) and attaching enzymes to the outside
             of liposomes for effective delivery (Corvo et al., 2015) in order to degrade biofilms. This can be applied to
             a wide variety of situations where biofilms are involved,
             such as medical conditions like cystic fibrosis. The advantages of our project are as follows:
+          </p>
           <ul class="list-disc pl-10">
             <li>
-              <h2 class="text-white p-4 my-4 text-subtitle font-semibold">Uniform Liposomes with Controlled Enzyme Dosage
-              </h2>
-              <p>
-                Using the DNA ring nanotemplate, we are able to create controlled uniform sizes of liposomes (Yang et al.,
-                2016). Each liposome is saturated with a controlled
-                dose of enzymes that will degrade biofilms, allowing for effective and predictable use. This is important
-                because it allows for more consistency and predictability
-                when the enzymosomes are used to treat biofilms, with a given number of liposomes always degrading the
-                same amount of biofilm. For medical usage, such as for
-                patients diagnosed with cystic fibrosis, this allows treatment to be accurately tailored to the amount of
-                biofilm found in patients to completely degrade them,
-                eliminating uncertainty about whether the biofilms have been degraded.
-              </p>
-            </li>
-            <li>
-              <h2 class="text-white p-4 my-4 text-subtitle font-semibold">Liposomal Delivery to Regions not Reachable by
-                Cleaning Agents</h2>
-              <p>
-                Biofilms pose a recurring problem in the area of health and medicine. From the formation of biofilms on
-                medical devices, notably by Staphylococci bacteria
-                (Zheng et al., 2018), to biofilm growth in the lungs of patients diagnosed with Cystic Fibrosis, they
-                possess a diverse array of targets (Høiby et al., 2010).
-                However, these areas may not be easily reachable, making drug delivery difficult. With the aid of a
-                smaller form of transportation such as a liposome saturated
-                with enzymes, these regions can become accessible to drug delivery.
-              </p>
+              <h2 class="text-white p-4 my-4 text-subtitle font-semibold">Uniform Liposomes with Controlled Enzyme Dosage</h2>
             </li>
           </ul>
+          <p>
+            Using the DNA ring nanotemplate, we are able to create controlled uniform sizes of liposomes (Yang et al.,
+            2016). Each liposome is saturated with a controlled
+            dose of enzymes that will degrade biofilms, allowing for effective and predictable use. This is important
+            because it allows for more consistency and predictability
+            when the enzymosomes are used to treat biofilms, with a given number of liposomes always degrading the
+            same amount of biofilm. For medical usage, such as for
+            patients diagnosed with cystic fibrosis, this allows treatment to be accurately tailored to the amount of
+            biofilm found in patients to completely degrade them,
+            eliminating uncertainty about whether the biofilms have been degraded.
+          </p>
+          <ul class="list-disc pl-10">
+            <li>
+              <h2 class="text-white p-4 my-4 text-subtitle font-semibold">Liposomal Delivery to Regions not Reachable by Cleaning Agents</h2>
+            </li>
+          </ul>
+          <p class="pb-4">
+            Biofilms pose a recurring problem in the area of health and medicine. From the formation of biofilms on
+            medical devices, notably by Staphylococci bacteria
+            (Zheng et al., 2018), to biofilm growth in the lungs of patients diagnosed with Cystic Fibrosis, they
+            possess a diverse array of targets (Høiby et al., 2010).
+            However, these areas may not be easily reachable, making drug delivery difficult. With the aid of a
+            smaller form of transportation such as a liposome saturated
+            with enzymes, these regions can become accessible to drug delivery.
           </p>
         </div>
       </div>
@@ -329,9 +329,9 @@ const tableData = {
       <div class="font-title text-title text-white text-5xl">Specifications</div>
 
       <div>
-        <div class="bg-dark p-4 max-w-6xl rounded-3xl mt-4">
+        <div class="bg-dark p-8 max-w-6xl rounded-3xl mt-4">
           <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Placeholder text for now</h2>
-          <p class="p-4">
+          <p class="">
             Our project aims to create an enzymosome structure that can serve as a platform for attaching enzymes and
             cargo. This platform is intended to enhance the efficiency of
             biofilm degradation in patient-related scenarios, such as cystic fibrosis, as well as in the context of
@@ -339,7 +339,7 @@ const tableData = {
           </p>
 
 
-          <p class="px-4 mt-2">
+          <p class="mt-4">
             The following diagram outlines the project’s proposed wet-lab timeline, with key milestones and goals marked
             for each month.
           </p>
@@ -381,7 +381,7 @@ const tableData = {
             future experiments.
           </p>
 
-          <div class="overflow-x-scroll w-full">
+          <div class="p-4 overflow-x-scroll w-full">
             <CustomTable2 :table-data="tableData" />
           </div>
 
