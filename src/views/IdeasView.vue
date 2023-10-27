@@ -1,6 +1,30 @@
 <script setup lang="ts">
 import IdeaCard from '@/components/IdeaCard.vue'
 import Timeline from '@/components/Timeline.vue'
+import CustomTable2 from '@/components/CustomTable2.vue'
+import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
+
+const tableData = {
+  headers: [
+    'Enzyme',
+    'Biofilm Component Targeted',
+    'Optimal pH',
+    'Size'
+  ],
+  rowHeaders: ["DNase I (specifically bovine pancreatic DNaseI)", 'Alginate-Lyase (specifically Alg17C)','Alpha-Amylase (specifically pancreatic α-amylase)'],
+  rowsPerRowHeader: 1,
+  data: [
+    ['Hydrolyzes both single-and double-stranded DNA in extracellular matrices and on the surface of bacterial cells (Yin et al., 2022). In biofilms, eDNA is critical for early adhesion and formation of biofilms (Nijland et al., 2010).',
+    '~6.5 (Kishi et al., 2001)',
+    '4.5x4x3.5nm 63nm3 (Chen, 2006)'],
+    ['Cleaves β-1,4 glycosidic bonds in Alginate (Zhu & Yin, 2015). Alginate is an exopolysaccharide often produced in the extracellular matrix of P. aeruginosa biofilms that has structural and protective functions in the biofilm (Colvin et al., 2011).',
+    '~6 (Kim et al., 2012)', 
+    'Various sizes (Zhu & Yin, 2015)'],
+    ['Degrades α-1,4-glycosidic bonds of various starches (Lahiri et al., 2021). Starches are the substrate for amylase, a polysaccharide of amylose and amylopectin, commonly found in biofilm matrices (Lahiri et al., 2021).',
+    '~7(Sky-peck & Thuvasethakul, 1977)',
+     '7x11.4x11.8nm 941(nm3) (Larson et al., 2011)']
+  ]
+}
 </script>
 
 <template>
@@ -285,20 +309,292 @@ import Timeline from '@/components/Timeline.vue'
           biofilm degradation in patient-related scenarios, such as cystic fibrosis, as well as in the context of environmental biofilms found on medical equipment.
 
 
-          <p class="p-4 mt-2">
+          <p class="mt-2">
           The following diagram outlines the project’s proposed wet-lab timeline, with key milestones and goals marked for each month. 
           </p>
 
           <Timeline />
+
+          <p class="mt-2">
+            While our project's overarching goals are ambitious, we have streamlined our methods to establish a strong foundation and proof-of-concept for future research.
+            In terms of feasibility, our decision to concentrate solely on the conjugation of DNase I is supported by a clear rationale for enzyme selection and allows for
+            adequate troubleshooting time. To showcase the potential for modular utilization of our structure, we also supplement experiments that cannot be conducted in the
+            lab with models, simulations, and well-developed protocols for future studies. Through this approach, as evidenced in our lab notebook, we effectively manage the
+            availability of resources, including reagents and equipment, necessary for the successful execution of the proposed experiments.
+          </p>
         </p>
       </div>
     </div>
 
 
+
+
+
   </div>
 
-</div>
+  <div class="mb-10"></div>
+  <div class="flex flex-col items-center mt-6">
+    <div class="font-title text-title text-white text-5xl">Design Process and Logic</div>
+
+    <div>
+      <div class="bg-[#1e1e1e] p-4 max-w-6xl rounded-3xl mt-4">
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">How was the Enzyme Selected?</h2>
+        <p class="p-4">
+          P. aeruginosa and S. aureus biofilms are two bacterial pathogens commonly associated with antimicrobial resistance. Antibiotic treatment often cannot eradicate
+          these biofilm infections due to antibiotic tolerance and mutational resistance. These bacteria have the ability to form biofilms in many environments, because
+          they are able to grow in moist conditions with simple nutritional requirements, including distilled water. Our project intended to focus on the dispersal of these
+          two biofilms, so research into enzymes capable of degrading P. aeruginosa and S. aureus was undergone. Ultimately, DNase I was selected due to sourcing availability,
+          substantial presence of DNA in biofilms, and synergistic effects with other enzymes that could be useful for future experiments.
+        </p>
+
+        <div class="overflow-x-scroll w-full">
+          <CustomTable2 :table-data="tableData" />
+        </div>
+
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Enzyme Conjugation Rationale</h2>
+        <p class="p-4">
+          Previous proven methods of enzyme modification– specifically for liposome conjugation–were investigated, including attaching hydrophobic moieties such as fatty
+          acid chains to enzymes and then linking them to the liposome. Examples of these methods include using a Glycosylphosphatidylinositol (GPI) lipid anchor, attaching
+          an acyl group to cysteine residues of the target protein (S-acylation), and modifying N-terminal glycines of the protein (N-myristoylation) (Li & Qi, 2017).
+        </p>
+
+        <p class="p-4">
+          Based on previous scientific articles and studies on enzyme-liposome conjugation, we planned on modifying the enzymes through thiolation. This mechanism consists
+          of attaching a molecule with a thiol group (S-H) to the target enzyme, then reacting the enzymes with PEGylated liposomes modified with maleimide groups to yield
+          the desired enzymosomes (Heeremans et al, 1992). Several previous studies have successfully thiolated similar enzymes while maintaining their functionality (Corvo et al, 2015)
+          so we hypothesized this would work with our selected enzyme, DNase I.
+        </p>
+        
+        <div class="flex flex-col items-center gap-2">
+          <img src=".../asset/thiolation.png" class="w-full" />
+          <p>
+          Fig.1 Visualization of the attachment of a thiolated target enzyme to maleimide-PEG liposomes.
+          </p>
+        </div>
+        
+
+        <p class="p-4">
+          Another method we previously considered was acylation, which consists of attaching an acyl group (a molecule consisting of a C=O bond) to the target enzyme. This mechanism involves
+          attaching a fatty acyl chain to the epsilon-amino (-NH2) group of a free lysine residue on an enzyme, introducing a hydrophobic tail to the enzyme that can be inserted into the liposome
+          and produce an enzyme-conjugated liposomes. However, previous literature showed this method may not be compatible with our chosen enzyme, DNase I. This is because DNase I contains an
+          epsilon-amino group on the amino acid Glutamine within its active site (Kishi et al, 2001), instead of on an amino group at an N-terminus active-site that enzymes compatible with this
+          method, like Alginate Lyase, possess (Xu et al, 2018).
+        </p>
+
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What are Liposomes?</h2>
+
+        <p class="p-4">
+          Liposomes are artificial, spherical vesicles created from cholesterol and phospholipids (Akbarzadeh et al., 2013). Due to their biocompatible properties, hydrophobic and hydrophilic
+          characteristics, as well as their size, there is potential to use liposomes as future drug delivery systems (Akbarzadeh et al., 2013).  
+        </p>
+
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Liposome Synthesis Workflow </h2>
+
+        <p class="p-4">
+          Liposomes were synthesized via a protocol for lipid nanoparticle synthesis outlined in a 2022 paper (Wang et al., 2022). During synthesis, maleimide dissolved in a solvent was introduced
+          to the lipid stocks to add maleimide groups to the liposome necessary for later conjugation to an enzyme. Afterwards, the liposomes were evaluated to assess the size and uniformity of the
+          final products, which was critical to ensure accuracy in subsequent steps and potential future applications such as drug loading.  
+        </p>
+
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">What are Enzymosomes </h2>
+
+        <p class="p-4">
+          A liposome conjugated to one or more enzymes produces a modular platform called an enzymosome, which is often synthesized to improve the effective therapeutic activity of enzymes for
+          prolonged periods of time–particularly in vivo (Corvo et al., 2015). Typically, when unmodified enzymes are administered in vivo, the enzymatic activity at the target site is limited
+          due to clearance via glomerular filtration, however, in enzymosomes this complication is addressed by attaching the enzymes to liposomes that act as carrier systems with longer circulation
+          times (Corvo et al., 2015). 
+        </p>
+
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Enzymosomes Formulation Workflow</h2>
+
+        <p class="p-4">
+          The workflow began by determining enzyme activity in various solvents of our selected enzyme, DNase I, based on a Picogreen Enzyme Activity Assay and spectrometry standard protocols
+          (ThermoFischer Scientific, 2022). This was necessary to determine the effects the solvents used in subsequent stages had on the enzyme activity of the final produced liposome. Next,
+          the enzymes were thiolated because of the ability of thiol groups to react with maleimide groups on the liposome to form bonds between the structures (Girão et al., 2021), before being
+          reacted with the previously synthesized PEGylated liposomes to form the enzymosome structure. 
+        </p>
+
+        <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">How was DNA Origami used?</h2>
+
+        <p class="p-4">
+          DNA origami structures were designed for future use as templates to achieve more precise liposome formation and eventual enzyme attachment. The DNA origami template structure is an n-gonal
+          bipyramid type endoskeleton used as a design strategy to encapsulate a lipid membrane over a DNA endoskeleton scaffold, where n-gon refers to a polygon with n number of edges(n∈ℕ), however,
+          our project only performed experiments where n=3, 4, and 5. It should be noted that, throughout our research, the term “octahedron” is used interchangeably to refer to the n=4 square bipyramid,
+          due to the structure formed being representative of both terms. This was hypothesized to produce liposomes with more uniformity between sample sizes and shapes and to provide high structural support
+          necessary for prolonged surface-enzyme activity, since the liposome would be encasing a precisely designed endoskeleton. The project was inspired by a paper that explored a mechanism of natural systems,
+          such as viruses, which encapsulate their genetic material within a lipid envelope to prevent degradation during infection, to protect the structural integrity of their DNA nanostructures in vivo
+          (Perrault & Shih, 2014). A software called caDNAno, which runs on python and uses 2D representations to design 3D DNA origami structures, was used to design our DNA endoskeleton. Previous UBC
+          BIOMOD teams developed python scripts that check for possible complications, including DNA trapped in local energy minima during the folding process or the relative length of staple strands
+          affecting the annealing process (Law et al., 2023). The workflow began with determining the shape of the structure and the helices layout, followed by computational design and testing structure
+          using online simulation tools such as mrDNA and Cando. After verifying the structures computationally, they are formed in the lab using oligo-annealing protocols and verified with a variety of
+          imaging techniques.
+        </p>
+      </div>
+
+
+
+
+
+
+
+
+
+        </div>
+      
+
+
+
+
+
+      
+    </div>
+
+  <div class="flex flex-col items-center">
+    <SingleColumn :always-dropdown="true" class="mt-10 max-w-6xl">
+        <template #title> References </template>
+        <template #body>
+          <div class="pl-6 -indent-6">
+            <p>
+              Akbarzadeh, A., Rezaei-Sadabady, R., Davaran, S., Joo, S. W., Zarghami, N., Hanifehpour, Y., Samiei, M., Kouhi, M., & Nejati-Koshki, K. (2013).
+              Liposome: Classification, Preparation, and Applications. Nanoscale Research Letters, 8(1). https://doi.org/10.1186/1556-276x-8-102 
+            </p>
+            <p>
+              Alipour, M., Suntre, Z. E., & Omri, A. (2009). Importance of DNase and Alginate Lyase for Enhancing Free and Liposome Encapsulated Aminoglycoside Activity
+              against Pseudomonas Aeruginosa. Journal of Antimicrobial Chemotherapy 64(2). https://doi.org/10.1093/jac/dkp165.
+            </p>
+            <p>
+              Chen, W. (2006). Structure and Function of Bovine Pancreatic Deoxyribonuclease I. Protein & Peptide Letters, 13(5). https://doi.org/10.2174/092986606776819475.
+            </p>
+            <p>
+              Colvin, K. M., Irie, Y., Tart, C. S., Urbano, R., Whitney, J. C., Ryder, C., Howell, P. L., Wozniak, D. J. & Parsek, M. R. (2011). The Pel and Psl Polysaccharides
+              Provide Pseudomonas Aeruginosa Structural Redundancy Within the Biofilm Matrix. Environmental Microbiology, 14(8). https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3840794/
+            </p>
+            <p>
+              Corvo, M. L., Marinho, H. S., Marcelino, P., Lopes, R. M., Vale, C. A., Marques, C. R., Martins, L. C., Laverman, P., Storm, G., & Martins, M. B. A. (2015). Superoxide
+              dismutase enzymosomes: Carrier capacity optimization, in vivo behaviour and therapeutic activity. Pharmaceutical Research, 32, 91–102. https://doi.org/10.1007/s11095-014-1447-7
+            </p>
+            <p>
+              Cotton, L. A., Graham, R. J., & Lee, R. J. (2009). The Role of Alginate in P. Aeruginosa PAO1 Biofilm Structural Resistance to Gentamicin and Ciprofloxacin. Journal of
+              Experimental Microbiology and Immunology, 13, 58–62.
+            </p>
+            <p>
+              Craigen, B., Dashiff, A., & Kadouri, D. E. (2011). The Use of Commercially Available Alpha-Amylase Compounds to Inhibit and Remove Staphylococcus Aureus Biofilms. The Open
+              Microbiology Journal, 5, 21–31. https://doi.org/10.2174/1874285801105010021
+            </p>
+            <p>
+              Esposito, S., Pennoni, G., Mencarini, V., Palladino, N., Peccini, L., & Principi, N. (2019). Antimicrobial Treatment of Staphylococcus aureus in Patients With Cystic Fibrosis.
+              Frontiers in Pharmacology, 10, 849. https://doi.org/10.3389/fphar.2019.00849
+            </p>
+            <p>
+              Girão, L. F. C., Carvalheiro, M. C., Ferreira-Silva, M., da Rocha, S. L. G., Perales, J., Martins, M. B. F., Ferrara, M. A., Bon, E. P. S., & Corvo, M. L. (2021). ASP-Enzymosomes
+              with Saccharomyces cerevisiae Asparaginase II Expressed in Pichia pastoris: Formulation Design and In Vitro Studies of a Potential Antileukemic Drug. International Journal of Molecular
+              Sciences, 22(20), 11120. https://doi.org/10.3390/ijms222011120
+            </p>
+            <p>
+              Heeremans, J. L. M., Kraaijenga, J. J., Los, P., Kluft, C., & Crommelin, D. J. A. (1992). Development of a procedure for coupling the homing device glu-plasminogen to liposomes. BBA-General
+              Subjects, 1117(3), 258-264. https://doi.org/10.1016/0304-4165(92)90022-M.
+            </p>
+            <p>
+              Høiby, N. (2011). Recent advances in the treatment of Pseudomonas Aeruginosa Infections in Cystic Fibrosis. BMC Med, 9(32). https://doi.org/10.1186/1741-7015-9-32
+            </p>
+            <p>
+              Høiby, N., Ciofu, O., & Bjarnsholt, T. (2010). Pseudomonas aeruginosa biofilms in cystic fibrosis. Future Microbiology, 5(11), 1663–1674. https://doi.org/10.2217/fmb.10.125
+            </p>
+            <p>
+              Jiang, Y., Geng, M., & Bai, L. (2020). Targeting Biofilms Therapy: Current Research Strategies and Development Hurdles. Microorganisms, 8(8), 1222.  https://doi.org/10.3390/microorganisms8081222
+            </p>
+            <p>
+              Kalpana, B. J., Aarthy, S., & Pandian, S. K. (2012). Antibiofilm Activity of α-Amylase from Bacillus Subtilis S8-18 Against Biofilm Forming Human Bacterial Pathogens. Applied Biochemistry and
+               Biotechnology, 167,1778–94. https://doi.org/10.1007/s12010-011-9526-2.
+            </p>
+            <p>
+              Kaur, A., Soni, S. K., Vij, S., & Rishi, P. (2021). Cocktail of Carbohydrases from Aspergillus Niger: An Economical and Eco-Friendly Option for Biofilm Clearance from Biopolymer Surfaces.
+              AMB Express, 11. https://doi.org/10.1186/s13568-021-01183-y.
+            </p>
+            <p>
+              Kim, H. T., Chung, J. H., Wang, D., Lee, J., Woo, H. C., Choi, I. G., & Kim, K. H., (2012). Depolymerization of Alginate into a Monomeric Sugar Acid using Alg17C, an Exo-oligoalginate Lyase
+              Cloned from Saccharophagus Degradans 2-40. Applied Microbiol Biotechnology, 93(5), 2233-2239. https://doi.org/10.1007/s00253-012-3882-x.
+            </p>
+            <p>
+              Kishi, K., Toshihiro, Y., & Takeshita, H. (2001) DNase I: structure, function, and use in medicine and forensic science. Legal Medicine, 3(2), 69-83
+              https://doi.org/10.1016/S1344-6223(01)00004-9
+            </p>
+            <p>
+              Lahiri, D., Nag, M., Banerjee, R., Mukherjee, D., Garai, S., Sarkar, T., Dey, A., Sheikh, H. I., Pathak, S. K., Edinur, H. A., Pati, S., & Ray, R. R. (2021). Amylases: Biofilm Inducer or
+              Biofilm Inhibitor? Frontiers in Cellular and Infection Microbiology, 11. https://doi.org/10.3389/fcimb.2021.660048
+            </p>
+            <p>
+              Larson, S. B., Day, J. S., & McPherson, A. (2011). X-ray Crystallographic Analyses of Pig Pancreatic α-Amylase with Limit Dextrin, Oligosaccharide and α-Cyclodextrin. Biochemistry, 49(14),
+              3101-3115. https://doi.org/10.1021/bi902183w.
+            </p>
+            <p>
+              Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F., Maheden, K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a
+              Repeatable DNA Nanohinge System Supporting Higher Order Structure Formation. bioRxiv. https://doi.org/10.1101/2023.05.26.542516
+            </p>
+            <p>
+              Li, Y. & Qi, B. (2017). Progress toward Understanding Protein S-acylation: Prospective in Plants. Front. Plant Sci, 8, 346. https://doi.org/10.3389/fpls.2017.00346
+            </p>
+            <p>
+              Manos, J. (2021). Current and Emerging Therapies to Combat Cystic Fibrosis Lung Infections. Microorganisms, 9(9), 1874. https://doi.org/10.3390/microorganisms9091874
+            </p>
+            <p>
+              Nijland, R., Hall, M. J., & Burgess, J. G. (2010). Dispersal of biofilms by secreted, matrix degrading, bacterial DNase. PLoS ONE, 5(12). https://doi.org/10.1371/journal.pone.0015668
+            </p>
+            <p>
+              Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. https://doi.org/10.1021/nn5011914.
+            </p>
+            <p>
+              Sky-Peck, H.H., & Thuvasethakul, P. (1977). Human pancreatic alpha-amylase. II. Effects of pH, substrate and ions on the activity of the enzyme. Annals of Clinical & Laboratory Science,
+              7(4), 310-317. 
+            </p>
+            <p>
+              ThermoFischer Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit. https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf
+            </p>
+            <p>
+              Vestby, L. K., Grønseth, T., Simm, R., & Nesse, L. L. (2020). Bacterial Biofilm and its Role in the Pathogenesis of Disease. Antibiotics (Basel), 9(2), 59. https://doi.org/10.3390/antibiotics9020059.
+            </p>
+            <p>
+              Wang, X., Liu, S., Sun, Y., Yu, X., Lee, S. M., Cheng, Q., Wei, T., Gong, J., Robinson, J., Zhang, D., Lian, X., Basak, P., & Siegwart, D. J. (2022). Preparation of selective organ-targeting (SORT) lipid nanoparticles
+              (LNPs) using multiple technical methods for tissue-specific mRNA delivery. Nature Protocols, 18, 265-291. https://doi.org/10.1038/s41596-022-00755-x
+            </p>
+            <p>
+              Xu, F., Wang, P., Zhang, Y., & Chen, X. (2018). Diversity of three-dimensional structures and catalytic mechanisms of alginate lyases. Applied and Environmental Microbiology, 84(3). https://doi.org/10.1128/AEM.02040-17
+            </p>
+            <p>
+              Yang, Y., Wang, J., Shigematsu, H., Xu, W., Shih, W. M., Rothman, J. E., & Lin, C. (2016). Self-assembly of size-controlled liposomes on DNA nanotemplates. Nature Chemistry, 8(5), 476–483. https://doi.org/10.1038/nchem.2472
+            </p>
+            <p>
+              Yin, R., Cheng, J., Wang, J., Li, P. & Lin, J. (2022). Treatment of Pseudomonas aeruginosa Infectious Biofilms: Challenges and Strategies. Frontiers in Microbiology, 13. https://doi.org/10.3389/fmicb.2022.955286
+            </p>
+            <p>
+              Zheng, Y., He, L., Asiamah, T. K., & Otto, M. (2018). Colonization of medical devices by staphylococci. Environmental Microbiology, 20(9), 3141–3153. https://doi.org/10.1111/1462-2920.14129
+            </p>
+            <p>
+              Zhu, B., & Yin, H. (2015). Alginate Lyase: Review of Major Sources and Classification, Properties, Structure-Function Analysis and Applications. Bioengineered, 6(3), 125–131. https://doi.org/10.1080/21655979.2015.1030543
+            </p>
+          </div>
+        </template>
+      </SingleColumn>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+  </div>
+
+
 
 
 </template>
+
+
+
+
+
 
