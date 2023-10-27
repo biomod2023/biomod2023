@@ -5,6 +5,7 @@ import CustomTable2 from '@/components/CustomTable2.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 
 
+
 const tableData = {
   headers: [
     'Enzyme',
@@ -29,10 +30,10 @@ const tableData = {
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col bg-[url('../assets/sponsors/dna.png')] bg-repeat-y bg-contain bg-[center_top_58%] lg:bg-[center_top_65%]">
 
     <div class="flex flex-col items-center gap-y-20">
-      <main class="pt-2 flex flex-col items-center">
+      <main class="pt-2 flex flex-col items-center mt-40">
         <h1 class="text-gold font-title text-title text-center">Project Ideas</h1>
         <p class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
           Our project is always of our team's interest. Follow along to see how we incorperated our
@@ -113,8 +114,8 @@ const tableData = {
 
     <div class="px-4 lg:px-40">
       <div>
-        <div class="mb-10"></div>
-        <div class="flex flex-col items-center mt-6">
+        <div class="mt-60"></div>
+        <div class="flex flex-col items-center">
           <h1 id="relevance" class="font-title text-title-sm lg:text-title text-white">Relevance</h1>
           <div>
             <div class="bg-dark p-4 rounded-3xl mt-4">
@@ -316,7 +317,7 @@ const tableData = {
                 </h2>
               </li>
             </ul>
-            <p>
+            <p class="p-4">
               Using the DNA ring nanotemplate, we are able to create controlled uniform sizes of liposomes (Yang et al.,
               2016). Each liposome is saturated with a controlled
               dose of enzymes that will degrade biofilms, allowing for effective and predictable use. This is important
@@ -333,7 +334,7 @@ const tableData = {
                   Cleaning Agents</h2>
               </li>
             </ul>
-            <p class="pb-4">
+            <p class="p-4 pb-4">
               Biofilms pose a recurring problem in the area of health and medicine. From the formation of biofilms on
               medical devices, notably by Staphylococci bacteria
               (Zheng et al., 2018), to biofilm growth in the lungs of patients diagnosed with Cystic Fibrosis, they
