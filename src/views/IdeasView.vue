@@ -498,7 +498,7 @@ const tableData = {
       </div>
     </div>
 
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center mb-8">
       <SingleColumn :always-dropdown="true" class="mt-10 max-w-6xl">
         <template #title> References </template>
         <template #body>
