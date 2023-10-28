@@ -8,12 +8,20 @@ const scrollToTop = () => {
 
 <template>
   <div class="flex flex-col bg-slate">
-    <div class="px-6 flex flex-col justify-center min-h-[100dvh] bg-gradient-to-b from-dark via-dark via-90% to-slate">
-      <div class="flex relative justify-center lg:justify-start lg:items-center h-full lg:mt-16 lg:mb-28">
-        <img src="../assets/homepage/title_graphic.png" alt=""
-          class="absolute top-[5dvw] md:top-[3dvw] lg:top-0 right-[4dvw] md:right-[7dvw] lg:right-0 w-[80dvw] lg:w-auto lg:h-full animate-breathe" />
+    <div
+      class="px-6 flex flex-col justify-center min-h-[100dvh] bg-gradient-to-b from-dark via-dark via-90% to-slate"
+    >
+      <div
+        class="flex relative justify-center lg:justify-start lg:items-center h-full lg:mt-16 lg:mb-28"
+      >
+        <img
+          src="../assets/homepage/title_graphic.png"
+          alt=""
+          class="absolute top-[5dvw] md:top-[3dvw] lg:top-0 right-[4dvw] md:right-[7dvw] lg:right-0 w-[80dvw] lg:w-auto lg:h-full animate-breathe"
+        />
         <div
-          class="z-10 lg:basis-4/6 h-full flex flex-col justify-center items-center mt-[2dvh] md:mt-20 lg:mt-0 bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[50%_80dvh] lg:bg-[30%_50%]">
+          class="z-10 lg:basis-4/6 h-full flex flex-col justify-center items-center mt-[2dvh] md:mt-20 lg:mt-0 bg-[url('../assets/homepage/title_background.svg')] bg-no-repeat bg-[50%_80dvh] lg:bg-[30%_50%]"
+        >
           <h1 class="font-title text-title-sm lg:text-title text-center mb-4">
             A BIOMODular Enzyme Delivery Vehicle to Target Biofilms
           </h1>
@@ -34,8 +42,12 @@ const scrollToTop = () => {
           </h1>
           <RouterLink to="/ideas">
             <div class="flex items-center mt-2 gap-4 lg:gap-28">
-              <svg class="w-16 lg:w-32 stroke-[6] lg:stroke-[3]" viewBox="0 0 127 4" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg
+                class="w-16 lg:w-32 stroke-[6] lg:stroke-[3]"
+                viewBox="0 0 127 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <line y1="2" x2="127" y2="2" stroke="#E2B764" />
               </svg>
               <LightButton>Learn More</LightButton>
@@ -44,9 +56,10 @@ const scrollToTop = () => {
         </div>
         <div class="lg:w-1/2">
           <p class="lg:mt-5 lg:text-subtitle lg:text-right">
-            From the tiniest building blocks of life to a grand vision of combatting bacterial biofilms, our team explores
-            it all. As we delve into the intricacies of enzyme modification and creating DNA endoskeletons of various
-            sizes, our research lays the groundwork for a modular platform to tackle biofilms challenges. Discover the key
+            From the tiniest building blocks of life to a grand vision of combatting bacterial
+            biofilms, our team explores it all. As we delve into the intricacies of enzyme
+            modification and creating DNA endoskeletons of various sizes, our research lays the
+            groundwork for a modular platform to tackle biofilms challenges. Discover the key
             factors influencing our design choices.
           </p>
         </div>
@@ -54,18 +67,25 @@ const scrollToTop = () => {
     </div>
 
     <div
-      class="flex flex-col xl:flex-row items-center justify-around lg:pb-20 xl:py-20 px-10 lg:mt-10 xl:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]">
+      class="flex flex-col xl:flex-row items-center justify-around lg:pb-20 xl:py-20 px-10 lg:mt-10 xl:bg-[url('../assets/homepage/abstract_bg.png')] bg-no-repeat bg-[23%_3%]"
+    >
       <div
-        class="xl:basis-1/2 pb-20 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-24 lg:pt-36 h-fit px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover xl:bg-auto bg-[50%_50%] xl:bg-[45%_50%]">
+        class="xl:basis-1/2 pb-20 lg:pb-32 md:mt-12 lg:mt-0 xl:mt-10 pt-24 lg:pt-36 h-fit px-10 md:px-32 xl:px-20 bg-[url('../assets/homepage/abstract_image_bg.png')] bg-no-repeat bg-cover xl:bg-auto bg-[50%_50%] xl:bg-[45%_50%]"
+      >
         <div
-          class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,0.5)]">
-          <img src="../assets/homepage/abstract_graphic.gif"
-            alt="Animated GIF showing construction of DNA Octahedron and Liposome" class="rounded-full" />
+          class="m-auto w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] drop-shadow-[-40px_-10px_20px_rgba(0,0,0,0.5)]"
+        >
+          <img
+            src="../assets/homepage/abstract_graphic.gif"
+            alt="Animated GIF showing construction of DNA Octahedron and Liposome"
+            class="rounded-full"
+          />
         </div>
       </div>
 
       <div
-        class="flex flex-col items-center xl:items-start xl:justify-center text-center xl:text-left w-full xl:max-w-[50%] xl:h-full gap-4 xl:gap-10 lg:mt-0 xl:pr-4 xl:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]">
+        class="flex flex-col items-center xl:items-start xl:justify-center text-center xl:text-left w-full xl:max-w-[50%] xl:h-full gap-4 xl:gap-10 lg:mt-0 xl:pr-4 xl:bg-[url('../assets/homepage/abstract_title_bg.png')] bg-no-repeat bg-[10%_0%]"
+      >
         <h1 class="font-title text-[4rem] lg:text-[5rem] text-gold">Abstract</h1>
         <div class="flex flex-col gap-4 items-center xl:items-start">
           <p class="text-subtitle-sm lg:text-subtitle">
@@ -95,25 +115,42 @@ const scrollToTop = () => {
     </div>
 
     <div
-      class="mask flex flex-col gap-2 pt-16 items-center bg-[url:url(../assets/homepage/video_bg.png),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center">
+      class="mask flex flex-col gap-2 pt-16 items-center bg-[url:url(../assets/homepage/video_bg.png),theme('backgroundImage.gradient-to-b')] from-slate via-dark via-10% to-dark bg-cover bg-no-repeat bg-center"
+    >
       <div id="video" class="font-title text-title-sm lg:text-title text-center lg:-mb-4">
         Watch us Fold
       </div>
-      <svg width="150" height="3" viewBox="0 0 150 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        width="150"
+        height="3"
+        viewBox="0 0 150 3"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <line y1="1.5" x2="150" y2="1.5" stroke="#E2B764" stroke-width="3" />
       </svg>
 
-      <iframe class="mt-4 w-4/5 lg:w-3/5 h-[40dvw] lg:h-[35dvw]"
-        src="https://www.youtube.com/embed/krcnwXdkRuU?si=3uzEiIuDTUkkHPDK" title="YouTube video player" frameborder="0"
+      <iframe
+        class="mt-4 w-4/5 lg:w-3/5 h-[40dvw] lg:h-[35dvw]"
+        src="https://www.youtube.com/embed/krcnwXdkRuU?si=3uzEiIuDTUkkHPDK"
+        title="YouTube video player"
+        frameborder="0"
         allow="accelerometer;
       autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-      web-share" allowfullscreen></iframe>
+      web-share"
+        allowfullscreen
+      ></iframe>
 
       <button class="btn !py-4 mt-2 mb-8 group" @click="scrollToTop">
-        <svg class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200" viewBox="0 0 24 36"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200"
+          viewBox="0 0 24 36"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
-            d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 36L13.5 2H10.5L10.5 36H13.5Z" />
+            d="M13.0607 0.939339C12.4749 0.353554 11.5251 0.353554 10.9393 0.939339L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 36L13.5 2H10.5L10.5 36H13.5Z"
+          />
         </svg>
       </button>
     </div>
