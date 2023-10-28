@@ -210,11 +210,13 @@
         <template #title> References </template>
         <template #body>
           <div class="pl-6 -indent-6">
-            <p>Lazarus, R. A., & Wagener, J. S. (2019). Recombinant Human Deoxyribonuclease I. Pharmaceutical Biotechnology, 471–488. https://doi.org/10.1007/978-3-030-00710-2_22</p>
-            <p>Parsiegla, G., Noguere, C., Santell, L., Lazarus, R. A., & Bourne, Y. (2012). The Structure of Human DNase I Bound to Magnesium and Phosphate Ions Points to a Catalytic Mechanism Common to Members of the DNase I-like Superfamily. Biochemistry, 51(51), 10250–10258. https://doi.org/10.1021/bi300873f</p>
-            <p>Priya, R., Vinoth, M., & Radha, M. (2022). In-silico analysis of polycystic kidney disease using molecular docking and virtual screening. International Journal of Advanced Research in Biological Sciences, 9(5), 98-107. http://doi.org/10.22192/ijarbs.2022.09.05.01.011</p>
-            <p>PubChem. (2021). Maleimide Chemical Structure. U.S. National Library of Medicine. https://pubchem.ncbi.nlm.nih.gov/compound/10935#section=InChIKey </p>
-            <p>Sadybekov, A. V., & Katritch, V. (2023). Computational Approaches Streamlining Drug Discovery. Nature, 616(7958), 673–685. https://doi.org/10.1038/s41586-023-05905-z</p>
+            <p>Lazarus, R. A., & Wagener, J. S. (2019). Recombinant Human
+            Deoxyribonuclease I. Pharmaceutical Biotechnology, 471–488.
+            <a href="https://doi.org/10.1007/978-3-030-00710-2_22">https://doi.org/10.1007/978-3-030-00710-2_22</a></p>
+            <p>Parsiegla, G., Noguere, C., Santell, L., Lazarus, R. A., & Bourne, Y. (2012). The Structure of Human DNase I Bound to Magnesium and Phosphate Ions Points to a Catalytic Mechanism Common to Members of the DNase I-like Superfamily. Biochemistry, 51(51), 10250–10258. <a href="https://doi.org/10.1021/bi300873f">https://doi.org/10.1021/bi300873f</a></p>
+            <p>Priya, R., Vinoth, M., & Radha, M. (2022). In-silico analysis of polycystic kidney disease using molecular docking and virtual screening. International Journal of Advanced Research in Biological Sciences, 9(5), 98-107. <a href="http://doi.org/10.22192/ijarbs.2022.09.05.01.011">http://doi.org/10.22192/ijarbs.2022.09.05.01.011</a></p>
+            <p>PubChem. (2021). Maleimide Chemical Structure. U.S. National Library of Medicine. <a href="https://pubchem.ncbi.nlm.nih.gov/compound/10935#section=InChIKey">https://pubchem.ncbi.nlm.nih.gov/compound/10935#section=InChIKey</a> </p>
+            <p>Sadybekov, A. V., & Katritch, V. (2023). Computational Approaches Streamlining Drug Discovery. Nature, 616(7958), 673–685. <a href="https://doi.org/10.1038/s41586-023-05905-z">https://doi.org/10.1038/s41586-023-05905-z</a></p>
           </div>
         </template>
       </SingleColumn>
