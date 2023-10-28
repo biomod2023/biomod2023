@@ -56,7 +56,7 @@ const setSelection = (num: number) => {
 </script>
 
 <template>
-  <div class="flex flex-col bg-gradient-to-b from-dark to-slate to-30%">
+  <div class="flex flex-col bg-slate bg-[url('../assets/elsi-graphic.png')] bg-no-repeat bg-[length:80dvw] md:bg-[length:50dvw] lg:bg-[length:40dvw] bg-[50dvw_-10dvw] md:bg-[60dvw_-8dvw] lg:bg-[70dvw_-10dvw]">
     <div class="relative z-10 w-full flex flex-col items-center px-6">
       <h1 class="font-title text-title-sm lg:text-title text-gold text-center my-4">
         Ethical, Legal, and Social Issues
@@ -96,7 +96,7 @@ const setSelection = (num: number) => {
         </div>
       </div>
     </div>
-    <div class="-ml-20 -mt-10 lg:-mt-14 w-full lg:w-[80%] xl:w-[70%]">
+    <div class="-mt-[18dvw] lg:-mt-[15dvw] w-[90dvw] lg:w-[60dvw]">
       <HandSVG />
     </div>
   </div>
