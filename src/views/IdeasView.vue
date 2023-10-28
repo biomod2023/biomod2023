@@ -36,8 +36,8 @@ const tableData = {
       <main class="pt-2 flex flex-col items-center mt-40">
         <h1 class="text-gold font-title text-title text-center">Project Ideas</h1>
         <p class="text-subtitle-sm lg:text-subtitle w-3/4 lg:w-1/2 text-center">
-          Our project is always of our team's interest. Follow along to see how we incorperated our
-          intersts into this year's project.
+          This project focuses on addressing the challenges posed by bacterial biofilms, structures that play a significant role in infectious diseases and are highly resistant to conventional antibiotic treatments. 
+          Follow along to see what factors played a role in our decisions.
         </p>
       </main>
 
