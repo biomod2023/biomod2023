@@ -4,12 +4,26 @@ import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
 import DoubleColumn from '@/components/lab-notebook/DoubleColumn.vue'
 import CustomTable from '@/components/CustomTable.vue'
 
-const tableData = {
+const tableOneData = {
+  headers: ['Buffer', 'Buffer DNase I Concentration (U/mL)', 'Volume of Buffer (µL)',
+    'Volume of DNase I (µL)'],
+    rowHeaders: ['Manufacturer’s buffer', 'TE', 'HEPES'],
+    rowsPerRowHeader: 2,
+    data: [
+      [0.05, 32, 4],
+      [0.1, 28, 8],
+      [0.05, 32, 4],
+      [0.1, 28, 8],
+      [0.05, 32, 4],
+      [0.1, 28, 8]
+    ]
+}
+const tableTwoData = {
   headers: [
     'Buffer',
-    'Buffer Concentration (U/mL)',
-    'Approximate beginning DNase I concentration (ng/mL)',
-    'Approximate final DNase I concentration (ng/mL)'
+    'Buffer DNase I Concentration (U/mL)',
+    'Approximate initial DNA concentration (ng/mL)',
+    'Approximate final DNA concentration (ng/mL)'
   ],
   rowHeaders: ["Manufacturer's Buffer", 'TE', 'HEPES'],
   rowsPerRowHeader: 2,
@@ -77,30 +91,43 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
           <h3 class="text-subtitle-sm lg:text-subtitle text-white mb-4">DNA I Assay</h3>
           <div class="flex flex-col gap-y-4">
             <p>
-              The DNase I assay was adapted from the standard protocol of the Picogreen Assay kit
-              (ThermoFischer Scientific, 2022). This kit uses a reaction buffer containing 1 M
-              Tris-HCl (pH 7.5), 1 M MgCl<sub>2</sub>, and 1 M CaCl<sub>2</sub> (ThermoFischer Scientific, 2022), which
-              will be referred to as the manufacturer’s buffer. 0.05 U/mL and 0.1 U/mL DNase I
-              solutions were prepared in the manufacturer’s buffer and the HEPES buffer separately
-              for use in the activity assay. 0.05 U/mL and 0.1 U/mL concentrations of DNase I in
-              HEPES buffer contained 55mM CaCl<sub>2</sub> and 10mM MgCl. The HEPES buffer was also used for
+              The DNase I assay was adapted from the standard protocol of the
+              Picogreen Assay kit (ThermoFisher Scientific, 2022). This kit uses a
+              reaction buffer containing 1 M Tris-HCl (pH 7.5), 1 M MgCl<sub>2</sub>, and 1 M
+              CaCl<sub>2</sub> (ThermoFisher Scientific, 2022), which will be referred to as
+              the manufacturer’s buffer. 0.05 U/mL and 0.1 U/mL DNase I solutions
+              were prepared in the manufacturer’s buffer, the TE buffer and the
+              HEPES buffer separately for use in the activity assay. Buffer DNase
+              concentration is given in units of DNase activity per mL (U/mL),
+              with the activity unit defined as the complete degradation of 1 µg
+              of plasmid DNA at 37°C by one unit of DNase I in 10 minutes
+              (ThermoFisher Scientific, 2011). The HEPES buffer was also used for
               thiolation treatment and conjugation to the liposome.
             </p>
             <p>
-              1 μM DNA Probe was added to six wells of the 96 well plate to generate 0, 4, 8, 12,
-              16, and 20 pmol/well standards of 50 μL total volume. The manufacturer’s buffer, the
-              HEPES buffer, and DNase I with the manufacturer’s buffer and DNase I with the HEPES
-              buffer were added to separate wells of the 96-well plate, with each solution being
-              added to two wells and 50 μL of solution in each well. These were the negative and
-              experimental controls. 50 μL of molecular biology grade water was also added to two
-              wells as a background control. 50 μL of only Sample Reaction Mix was also added to two
-              wells as a positive control. 50 μL of Sample Reaction Mix was also added to each of
-              the negative, background, experimental and positive control wells for a total of 100μL
-              of solution in each well. Fluorescence was measured at an excitation wavelength of
-              about 480 nm and an emission wavelength of about 520 nm to determine enzyme activity
-              using a fluorometer-spectrophotometer in kinetic mode every minute for at least 10
-              minutes.
+              An aqueous working solution of the Quant-iT™PicoGreen™ dsDNA Reagent was
+              prepared in the TE buffer by using the buffer to dilute it 200 fold. A 2 µg/mL
+              stock solution of lambda dsDNA was prepared in the TE buffer as well by using
+              the buffer to dilute it 50 fold. In a 96 well plate, the controls were created
+              by adding water, the manufacturer's buffer, the TE buffer, and the HEPES buffer
+              to twelve wells such that each solution type had three wells of 80 µL each. For
+              the other treatments, 40 µL of the aqueous working solution of the Quant-iT™
+              PicoGreen™ dsDNA Reagent was added each well, followed by the designated amount
+              of buffer for each treatment shown in Table 1 as well as 4 µL of the stock
+              solution of lambda dsDNA. The wells were incubated for five minutes at room
+              temperature with protection from light before adding the corresponding volume of
+              DNase I indicated in Table 1. Fluorescence was measured at an excitation
+              wavelength of about 480 nm and an emission wavelength of about 520 nm to
+              determine enzyme activity using a fluorometer-spectrophotometer in kinetic mode
+              every 2 minutes for at least 10 minutes. These treatments were performed three
+              times to obtain a triplicate.
             </p>
+            <div class="overflow-x-scroll w-full md:overflow-clip">
+              <CustomTable :table-data="tableOneData"/>
+              <p class="text-center text-sm">
+                Table 1: Designated buffer and DNA volumes for each treatment. 
+              </p>
+            </div>
           </div>
         </template>
       </SingleColumn>
@@ -127,17 +154,17 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               />
             </div>
             <p class="text-center text-sm">
-              Figure 1: Exhibits the DNase I Picogreen Assay in Manufacturer, HEPES, and TE buffers.
+              Figure 1. Exhibits the DNase I Picogreen Assay in Manufacturer, HEPES, and TE buffers.
               It displays the generated DNA concentration in testing the activity of DNase I in
               different buffers. Panels a, b, and c display Manufacturer, HEPES, and TE buffers
               respectively.
             </p>
             <div class="flex flex-col items-center w-full gap-2">
               <div class="overflow-x-scroll w-full">
-                <CustomTable :table-data="tableData" />
+                <CustomTable :table-data="tableTwoData" />
               </div>
               <p class="text-center text-sm">
-                Table 1: Approximate concentration of DNase I in each buffer at the beginning and
+                Table 2. Approximate concentration of DNase I in each buffer at the beginning and
                 end of the fluorescence measuring period, based on the combined information of
                 Figure 1 and Figure 2.
               </p>
@@ -210,47 +237,49 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             <p>
               Dische, Z. (1953). Qualitative and quantitative colorimetric determination of
               heptoses. Journal of Biological Chemistry, 204(2), 983–997.
-              https://doi.org/10.1016/S0021-9258(18)66101-0
+              <a href="https://doi.org/10.1016/S0021-9258(18)66101-0">https://doi.org/10.1016/S0021-9258(18)66101-0</a>
             </p>
             <p>
               Lahiri, D., Nag, M., Banerjee, R., Mukherjee, D., Garai, S., Sarkar, T., Dey, A.,
               Sheikh, H. I., Pathak, S. K., & Edinur, H. A. (2021). Amylases: Biofilm inducer or
               biofilm inhibitor? Frontiers in Cellular and Infection Microbiology, 11, 660048.
-              https://doi.org/10.3389/fcimb.2021.660048
+              <a href="https://doi.org/10.3389/fcimb.2021.660048">https://doi.org/10.3389/fcimb.2021.660048</a>
             </p>
             <p>
               Nijland, R., Hall, M. J., & Burgess, J. G. (2010). Dispersal of biofilms by secreted,
               matrix degrading, bacterial DNase. PloS One, 5(12), e15668.
-              https://doi.org/10.1371/journal.pone.0015668
+              <a href="https://doi.org/10.1371/journal.pone.0015668">https://doi.org/10.1371/journal.pone.0015668</a>
             </p>
             <p>
               Panda, B. B., Meher, A. S., & Hazra, R. K. (2019). Comparison between different
               methods of DNA isolation from dried blood spots for determination of malaria to
               determine specificity and cost effectiveness. Journal of Parasitic Diseases, 43(3),
-              337–342. https://doi.org/10.1007/s12639-019-01136-0
+              337–342. 
+              <a href="https://doi.org/10.1007/s12639-019-01136-0">https://doi.org/10.1007/s12639-019-01136-0</a>
             </p>
             <p>
               Preiss, J., & Ashwell, G. (1962). Alginic acid metabolism in bacteria: I. Enzymatic
               formation of unsaturated oligosaccharides and 4-deoxy-L-erythro-5-hexoseulose uronic
               acid. Journal of Biological Chemistry, 237(2), 309–316.
-              https://doi.org/10.1016/S0021-9258(18)93920-7
+              <a href="https://doi.org/10.1016/S0021-9258(18)93920-7">https://doi.org/10.1016/S0021-9258(18)93920-7</a>
             </p>
             <p>
               Scopes, R. K. (2001). Enzyme activity and assays. Encyclopedia of Life Sciences.
-              https://doi.org/10.1038/npg.els.0000712
+              <a href="https://doi.org/10.1038/npg.els.0000712">https://doi.org/10.1038/npg.els.0000712</a>
             </p>
             <p>
               Sigma-Aldrich. (2014). Amylase Activity Assay Kit.
-              https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/377/793/mak009bul.pdf
+              <a href="https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/377/793/mak009bul.pdf">https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/377/793/mak009bul.pdf</a>
             </p>
             <p>
               ThermoFisher Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit.
-              https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf
+              <a href="https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf">https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf</a>
             </p>
             <p>
               Zhu, B., & Yin, H. (2015). Alginate lyase: Review of major sources and classification,
               properties, structure-function analysis and applications. Bioengineered, 6(3),
-              125–131. https://doi.org/10.1080/21655979.2015.1030543
+              125–131. 
+              <a href="https://doi.org/10.1080/21655979.2015.1030543">https://doi.org/10.1080/21655979.2015.1030543</a>
             </p>
           </div>
         </template>
