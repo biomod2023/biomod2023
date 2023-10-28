@@ -16,18 +16,18 @@ import vClickOutside from 'v-click-outside'
 
 addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine)
 
-const { bind, unbind } = vClickOutside.directive;
+const { bind, unbind } = vClickOutside.directive
 
 const app = createApp(App)
 
 app.directive('click-outside', {
   mounted(el, bindling) {
-    bind(el, { value: bindling.value });
+    bind(el, { value: bindling.value })
   },
   beforeUnmount(el) {
-    unbind(el);
-  },
-});
+    unbind(el)
+  }
+})
 app.use(router)
 app.use(VueWindowSizePlugin)
 app.component('VIcon', OhVueIcon)

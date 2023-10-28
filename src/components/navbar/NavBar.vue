@@ -98,7 +98,11 @@ const tree: Tree[] = [
     >
       <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'" class="h-full py-4 px-12">
+          <RouterLink
+            v-show="entry.url"
+            :to="entry.url ? entry.url : '#'"
+            class="h-full py-4 px-12"
+          >
             {{ entry.name }}
           </RouterLink>
           <Dropdown v-show="entry.children" to="#">
