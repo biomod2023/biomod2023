@@ -96,9 +96,9 @@ const tree: Tree[] = [
     <div
       class="flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">
+          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'" class="h-full py-4 px-12">
             {{ entry.name }}
           </RouterLink>
           <Dropdown v-show="entry.children" to="#">
@@ -124,14 +124,15 @@ const tree: Tree[] = [
           </Dropdown>
         </template>
       </div>
-      <a href="/">
+      <a href="/" class="shrink-0 w-14">
         <img src="../../assets/logo.svg" alt="Biomod Logo" class="w-14" />
       </a>
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <RouterLink
           v-for="(entry, i) in tree.slice(tree.length / 2, tree.length)"
           :key="i"
           :to="entry.url ? entry.url : '#'"
+          class="h-full py-4 px-12"
         >
           {{ entry.name }}
         </RouterLink>
