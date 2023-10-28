@@ -115,9 +115,7 @@ const scrollToTop = () => {
   @apply w-full bg-no-repeat;
   background-image: url('../assets/homepage/bg_rot_mobile_fade.png'),
     url('../assets/homepage/bg_top_mobile_fade.png');
-  background-position:
-    left 3em,
-    100% 5.5em;
+  background-position: left 3em, 100% 5.5em;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -125,9 +123,7 @@ const scrollToTop = () => {
     @apply w-full bg-no-repeat;
     background-image: url('../assets/homepage/bg_rot_fade.png'),
       url('../assets/homepage/bg_top_fade.png');
-    background-position:
-      -2% 5%,
-      right 5%;
+    background-position: -2% 5%, right 5%;
   }
 }
 

@@ -11,7 +11,8 @@ const GroupBView = () => import('@/views/lab-validation/GroupBView.vue')
 const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 const AADocking = () => import('@/views/future-directions/AADocking.vue')
-const OctahedronLiposomeFormation = () => import('@/views/future-directions/OctahedronLiposomeFormation.vue')
+const OctahedronLiposomeFormation = () =>
+  import('@/views/future-directions/OctahedronLiposomeFormation.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
