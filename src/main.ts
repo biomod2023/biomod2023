@@ -14,6 +14,12 @@ import {
 } from 'oh-vue-icons/icons'
 import { VueWindowSizePlugin } from 'vue-window-size/plugin'
 import vClickOutside from 'v-click-outside'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+
+const vuetify = createVuetify({
+  components
+})
 
 addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine, RiTeamFill)
 
@@ -30,6 +36,7 @@ app.directive('click-outside', {
   }
 })
 app.use(router)
+app.use(vuetify)
 app.use(VueWindowSizePlugin)
 app.component('VIcon', OhVueIcon)
 
