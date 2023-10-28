@@ -3,6 +3,7 @@ import IdeaCard from '@/components/IdeaCard.vue'
 import Timeline from '@/components/Timeline.vue'
 import CustomTable2 from '@/components/CustomTable2.vue'
 import SingleColumn from '@/components/lab-notebook/SingleColumn.vue'
+import CaptionedGraphics from '@/components/CaptionedGraphics.vue'
 
 const tableData = {
   headers: ['Enzyme', 'Biofilm Component Targeted', 'Optimal pH', 'Size'],
@@ -271,6 +272,17 @@ const tableData = {
                   n-gonal bipyramid template in the future
                 </li>
               </ul>
+              <br />
+              <CaptionedGraphics>
+                <template #graphics>
+                  <img src="../assets/enzymosome-formation.png" alt="">
+                </template>
+                <template #caption>
+                  <p>
+                    An overview of our enzymosome formation, in which the pink structure represents enzymes and the lipid ring represents liposomes. 
+                  </p>
+                </template>
+              </CaptionedGraphics>
               <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Future Extensions</h2>
               <p class="p-4">
                 In the future, after we have seen positive results of the viability of our
