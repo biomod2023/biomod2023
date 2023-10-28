@@ -31,7 +31,7 @@ onMounted(() => {
 })
 
 const acknowledgements = [
-  'Dr. Hancock',
+  'Dr. Bob Hancock',
   'Dr. Miffy Cheng',
   'Dr. Steven D. Perrault',
   'Dr. William Shih',
@@ -203,7 +203,7 @@ const advisors = [
         Acknowledgements
       </h1>
       <section class="text-center">
-        <h3 class="text-subtitle-sm" v-for="p in acknowledgements" :key="p">{{ p }}</h3>
+        <h3 v-for="p in acknowledgements" :key="p" class="text-subtitle-sm">{{ p }}</h3>
       </section>
     </div>
   </div>
