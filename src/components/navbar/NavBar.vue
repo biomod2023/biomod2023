@@ -27,36 +27,49 @@ const tree: Tree[] = [
     name: 'Notebook',
     children: [
       {
-        name: 'Enzymosome',
+        name: 'Computational Simulation',
         children: [
           {
-            name: 'Enzyme Activity Assays',
-            url: '/enzymosome/enzyme-activity-assays'
-          },
-          {
-            name: 'Liposome Formation',
+            name: 'Structure Design',
             url: '#'
           },
           {
-            name: 'Enzyme Conjugation',
-            url: '#'
+            name: 'Docking of Dnase I',
+            url: '/computational-simulation/docking-of-dnase-i'
           }
         ]
       },
       {
-        name: 'CADnano',
+        name: 'Lab Validation',
         children: [
           {
-            name: 'Octahedron',
-            url: '#'
+            name: 'Dnase I',
+            url: '/lab-validation/dnase-i'
           },
           {
-            name: 'Trigon',
-            url: '#'
+            name: 'Liposome Formation',
+            url: '/lab-validation/liposome-formation'
           },
           {
-            name: 'Pentahedron',
-            url: '#'
+            name: 'Octahedron Formation',
+            url: '/lab-validation/octahedron-formation'
+          },
+          {
+            name: 'Thiolation and Conjugation',
+            url: '/lab-validation/thiolation-and-conjugation'
+          }
+        ]
+      },
+      {
+        name: 'Future Directions',
+        children: [
+          {
+            name: 'Docking of Alginate Lyase and Alpha-Amylase',
+            url: '/future-directions/aa-docking'
+          },
+          {
+            name: 'Liposome Formation Using Octahedron',
+            url: '/future-directions/octahedron-liposome-formation'
           }
         ]
       }
@@ -72,7 +85,7 @@ const tree: Tree[] = [
   },
   {
     name: 'Sponsors',
-    url: '#'
+    url: '/sponsors'
   }
 ]
 </script>
@@ -81,11 +94,15 @@ const tree: Tree[] = [
   <!-- Desktop Navbar -->
   <template v-if="$windowWidth >= 1024">
     <div
-      class="flex justify-center items-center bg-slate font-semibold text-gold py-3 gap-44 drop-shadow-lg"
+      class="z-20 flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">
+          <RouterLink
+            v-show="entry.url"
+            :to="entry.url ? entry.url : '#'"
+            class="h-full py-4 px-12"
+          >
             {{ entry.name }}
           </RouterLink>
           <Dropdown v-show="entry.children" to="#">
@@ -111,14 +128,15 @@ const tree: Tree[] = [
           </Dropdown>
         </template>
       </div>
-      <a href="/">
-        <img src="../../assets/logo.svg" alt="Biomod Logo" />
+      <a href="/" class="shrink-0 w-14">
+        <img src="../../assets/logo.svg" alt="Biomod Logo" class="w-14" />
       </a>
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <RouterLink
           v-for="(entry, i) in tree.slice(tree.length / 2, tree.length)"
           :key="i"
           :to="entry.url ? entry.url : '#'"
+          class="h-full py-4 px-12"
         >
           {{ entry.name }}
         </RouterLink>
@@ -129,11 +147,11 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-3 drop-shadow-lg"
+      class="fixed z-30 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
-        <img class="-mr-1" src="../../assets/logo.svg" alt="Biomod Logo" />
-        <span class="text-[#FFC000] font-bold text-xl">UBC Biomod</span>
+        <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />
+        <span class="text-gold font-bold text-xl">UBC Biomod</span>
       </RouterLink>
       <button class="mr-10" @click="sidebar = !sidebar">
         <svg
@@ -157,7 +175,10 @@ const tree: Tree[] = [
       :leave-active-class="transitionAnimation"
     >
       <template v-if="sidebar">
-        <div class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
+        <div
+          class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90"
+          @click.self="sidebar = !sidebar"
+        >
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
           <div
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
@@ -176,14 +197,14 @@ const tree: Tree[] = [
                       <div v-for="(child, j) in entry.children" :key="j">
                         <MobileDropdown>
                           <template #title
-                            ><span class="text-xl">{{ child.name }}</span></template
+                            ><span class="text-lg md:text-xl">{{ child.name }}</span></template
                           >
                           <template #children>
                             <RouterLink
                               v-for="(subchild, k) in child.children"
                               :key="k"
                               :to="subchild.url ? subchild.url : '#'"
-                              class="text-xl"
+                              class="text-lg md:text-xl font-normal"
                             >
                               {{ subchild.name }}
                             </RouterLink>

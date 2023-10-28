@@ -4,7 +4,7 @@ defineProps<{
     headers: string[]
     rowHeaders: string[]
     rowsPerRowHeader: number
-    data: number[][]
+    data: any[][]
   }
 }>()
 
@@ -12,7 +12,7 @@ const border = 'border-notebookText'
 </script>
 
 <template>
-  <table class="table-fixed border-collapse">
+  <table class="table-fixed border-collapse lg:w-full">
     <tr class="bg-slate">
       <th
         v-for="(header, i) in tableData.headers"
@@ -32,7 +32,7 @@ const border = 'border-notebookText'
         >
           {{ tableData.rowHeaders[i / tableData.rowsPerRowHeader] }}
         </th>
-        <td v-for="(item, j) in row" :key="j" class="py-1 lg:text-lg">{{ item }}</td>
+        <td v-for="(item, j) in row" :key="j" class="py-1 lg:text-lg text-center">{{ item }}</td>
       </tr>
     </tbody>
   </table>

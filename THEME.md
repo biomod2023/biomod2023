@@ -24,6 +24,14 @@ The notebook text and bubble background colors can be accessed with the `noteboo
 </div>
 ```
 
+The notebook text and bubble background colors can be accessed with the `notebookBg` and `notebookText` keywords:
+
+```html
+<div class="bg-notebookBg">
+  <p class="text-notebookText">Body</p>
+</div>
+```
+
 ## Typography
 
 The Montserrat and Fira Sans fonts have been added to the project. Montserrat has been set as the default font, and Fira Sans can be accessed with `font-title`.
