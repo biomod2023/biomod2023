@@ -375,14 +375,16 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               Chan, Y. M., Van Lengerich, B., & Boxer, S. G. (2009). Effects of linker sequences on
               vesicle fusion mediated by lipid-anchored DNA oligonucleotides. Proceedings of the
               National Academy of Sciences of the United States of America, 106(4), 979–984.
-              <a href="https://doi.org/10.1073/pnas.0812356106">https://doi.org/10.1073/pnas.0812356106</a>
+              <a href="https://doi.org/10.1073/pnas.0812356106"
+                >https://doi.org/10.1073/pnas.0812356106</a
+              >
             </p>
             <p>
               Leung, A. K. K., Hafez, I., Baoukina, S., Belliveau, N. M., Zhigaltsev, I. V.,
               Afshinmanesh, E., Tieleman, D. P., Hansen, C. L., Hope, M. J., & Cullis, P. R. (2012).
               Lipid nanoparticles containing siRNA synthesized by microfluidic mixing exhibit an
               Electron-Dense nanostructured core. Journal of Physical Chemistry C, 116(34),
-              18440–18450. 
+              18440–18450.
               <a href="https://doi.org/10.1021/jp303267y">https://doi.org/10.1021/jp303267y</a>
             </p>
             <p>
@@ -393,7 +395,9 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             <p>
               Perrault, S. D., & Shih, W. M. (2016). Lipid membrane encapsulation of a 3D DNA nano
               octahedron. In Methods in molecular biology (pp. 165–184).
-              <a href="https://doi.org/10.1007/978-1-4939-6454-3_12">https://doi.org/10.1007/978-1-4939-6454-3_12</a>
+              <a href="https://doi.org/10.1007/978-1-4939-6454-3_12"
+                >https://doi.org/10.1007/978-1-4939-6454-3_12</a
+              >
             </p>
           </div>
         </template>
