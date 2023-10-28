@@ -172,8 +172,14 @@ const Maggie: Member = {
   Breasts and Eggs by Mieko Kawakami.'
 }
 
-const teams: string[] = ['Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video']
+const teams: string[] = ['All','Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video']
 const members: Map<string, Member[]> = new Map<string, Member[]>([
+  [
+    'All',
+    [
+      Kshemaka, Miguel, Ethan, Melanie, Karina, Paniz, Vivian, Maggie
+    ]
+  ],
   [
     'Leads',
     [

@@ -25,7 +25,7 @@ const handleClick = (inc: number) => {
   console.log(initialState)
 }
 
-let currTeam: Ref<string> = ref('Leads')
+let currTeam: Ref<string> = ref('All')
 const handleTeamChange = (team: string) => {
   currTeam.value = team
   changingTeam.value = true
@@ -89,7 +89,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
               @click="() => (mobileTeamDropDown = !mobileTeamDropDown)"
             >
               <v-icon class="grow-0" name="ri-team-fill" scale="2" />
-              <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]">Choose Team</h1>
+              <h1 class="text-[1.1rem] font-semibold grow text-center pr-[25.3px]">{{ currTeam }}</h1>
               <span class="w-[0.82rem] h-[0.82rem] bg-white rounded-full"></span>
             </div>
             <div class="relative">

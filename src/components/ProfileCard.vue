@@ -49,7 +49,7 @@ const handleImgErr = (e: Event) => {
       <div
         v-show="isHovering"
         key="alt"
-        :class="cardConfig + ' bg-gold'"
+        :class="cardConfig + ' bg-gold/80'"
         @mouseleave="isHovering = false"
         @touchend="isHovering = false"
       >
