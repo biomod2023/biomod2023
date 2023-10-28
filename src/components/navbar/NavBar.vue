@@ -180,7 +180,7 @@ const tree: Tree[] = [
     >
       <template v-if="sidebar">
         <div
-          class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90"
+          class="fixed z-20 h-full w-full left-0 flex justify-end bg-black bg-opacity-90"
           @click.self="sidebar = !sidebar"
         >
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
