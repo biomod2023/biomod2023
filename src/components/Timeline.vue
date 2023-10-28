@@ -1,6 +1,5 @@
 <template>
-  <v-timeline
-    :side="$windowWidth < 768 ? 'end' : ''">
+  <v-timeline :side="$windowWidth < 768 ? 'end' : undefined">
     <v-timeline-item
       dot-color="#E2B764"
       size="small"
