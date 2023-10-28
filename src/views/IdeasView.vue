@@ -48,7 +48,7 @@ const tableData = {
         </p>
       </main>
 
-      <div class="px-4 flex justify-center w-full lg:w-auto space-x-10 overflow-x-scroll">
+      <div class="px-4 flex justify-center w-full lg:w-auto space-x-10 overflow-x-scroll md:overflow-x-auto">
         <a href="#relevance" class="hover:opacity-100">
           <IdeaCard class="flex-grow">
             <template #svg>

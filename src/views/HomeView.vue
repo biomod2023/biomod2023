@@ -59,7 +59,7 @@ const scrollToTop = () => {
             From the tiniest building blocks of life to a grand vision of combatting bacterial
             biofilms, our team explores it all. As we delve into the intricacies of enzyme
             modification and creating DNA endoskeletons of various sizes, our research lays the
-            groundwork for a modular platform to tackle biofilms challenges. Discover the key
+            groundwork for a modular platform to tackle biofilm challenges. Discover the key
             factors influencing our design choices.
           </p>
         </div>
