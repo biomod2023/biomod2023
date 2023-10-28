@@ -154,8 +154,10 @@ const tableData = {
           </ol>
           <br />
           There are a number of computational software tools used:
-          <CustomTable :table-data="tableData" />
           </p>
+          <div class="w-full overflow-x-scroll">
+            <CustomTable :table-data="tableData" />
+          </div>
 
           <h3 :class="sectionStyle"> Specific N-gonal Bipyramid Design Workflow </h3>
           <p>

@@ -20,7 +20,7 @@ onMounted(() => {
 </script>
 <template>
   <span
-    class="w-full overflow-x-scroll whitespace-nowrap bg-transparent invisible-scroller text-center"
+    class="w-full overflow-x-scroll bg-transparent invisible-scroller text-center"
     ref="containerRef"
   ></span>
 </template>
