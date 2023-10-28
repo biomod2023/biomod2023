@@ -21,7 +21,13 @@ const vuetify = createVuetify({
   components
 })
 
-addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine, RiTeamFill)
+addIcons(
+  HiSolidArrowSmLeft,
+  HiSolidArrowSmRight,
+  RiArrowDropRightLine,
+  RiArrowDropLeftLine,
+  RiTeamFill
+)
 
 const { bind, unbind } = vClickOutside.directive
 
