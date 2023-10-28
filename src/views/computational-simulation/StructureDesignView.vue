@@ -22,7 +22,7 @@ import Figure9 from '@/assets/structure-design/nanoscale_polymerization_v2_w_tra
 import Figure11 from '@/assets/structure-design/polygons-with-flat-spherical-tiling.png'
 
 const sectionStyle = 'text-subtitle-sm lg:text-subtitle text-white mt-6 mb-4'
-const structureHeadings = ['Highest RMSF (nm)', 'LOWEST RMSF (nm)', '95% CI  (nm)']
+const structureHeadings = ['LOWEST RMSF (nm)', 'Highest RMSF (nm)', '95% CI  (nm)']
 const structures = [
   {
     label: 'Structure (Octahedron): CONTROL',
