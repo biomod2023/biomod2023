@@ -16,15 +16,14 @@ const OctahedronLiposomeFormation = () =>
   import('@/views/future-directions/OctahedronLiposomeFormation.vue')
 const NotFoundView = () => import('@/views/NotFoundView.vue')
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   // 3am hack :))
   // @ts-ignore
   scrollBehavior(to, from, savedPosition) {
-    if(to.hash) {
+    if (to.hash) {
       return {
-        el: to.hash,
+        el: to.hash
       }
     } else if (savedPosition) {
       return {
@@ -32,7 +31,7 @@ const router = createRouter({
         behavior: 'instant'
       }
     } else {
-      return { 
+      return {
         top: 0,
         behavior: 'instant'
       }
