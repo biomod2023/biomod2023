@@ -10,13 +10,13 @@ module.exports = {
     extend: {
       keyframes: {
         breathe: {
-          '0%, 100%': { transform: 'scale(1.01)'},
-          '50%': { transform: 'scale(1)'}
+          '0%, 100%': { transform: 'scale(1.01)' },
+          '50%': { transform: 'scale(1)' }
         }
       },
       animation: {
         breathe: 'breathe 3s ease-in-out infinite'
-      },  
+      },
       colors: {
         notebookBg: '#333333',
         notebookText: '#8F8F90',
