@@ -215,9 +215,10 @@ const tableData = {
               them. The total number of insertions matched the final number of deletions. These insertions and deletions
               aimed to introduce curvature into the structure without geometrically stiffening the crossovers, thereby
               leading to a thermodynamically favorable, curved formation.
+
               <CaptionedGraphics>
                 <template #graphics>
-                  <img :src="Figure5" alt="Geometric Perspective"/>
+                  <img :src="Figure5" alt="Geometric Perspective" class="mt-2" />
                 </template>
                 <template #caption>
                   Figure 5. The effect of insertions and deletions on the bending of a structure, shown from a geometric
@@ -249,74 +250,91 @@ const tableData = {
       <SingleColumn>
         <template #title> Results and Discussion </template>
         <template #body>
-          <p>
-            We primarily used CanDO for structure prediction. This tool is useful if we effectively eliminate the
-            requirement for mechanism-dependent fluctuations — variations in the DNA structure that could be influenced by
-            adjacent DNA strands, such as the nanohinge done by our team previously (UBC BIOMOD 2022). In CanDO, the Root
-            Mean Square Deviation (RMSD) is visualized through a gradient transitioning from red to blue, illustrating the
-            average distance molecules stray from their starting positions. Importantly, our post-design evaluation
-            revealed no major discrepancies, and the peak Root Mean Square Fluctuation (RMSF) values remained notably low
-            for all studied structures. The subsequent schematic illustrates the minimum, maximum, and average RMSF
-            values, all presented within the 95% CI, for the 3-gon, 4-gon, and 5-gon, respectively. These are paired with
-            their respective CanDO images. To clarify, when we reference the "RMSF values at the 95% CI," we are
-            indicating the range of RMSF values (minimum, maximum, and average) for each structure, where we possess 95%
-            confidence that the actual RMSF value resides within this interval. A broad confidence interval signifies
-            increased uncertainty, while a tighter interval reflects a higher level of precision.
-          </p>
-
-          <section v-for="(structure, i) in structures" :key="i" class="py-2">
-            <h3 :class="sectionStyle"> {{ structure.label }} </h3>
-            <p v-if="i == 0">
-              Note while this structure has been formed already, it is easier for us to take the original Cadnano
-              structure to provide a relative comparison. The original Cadnano structure was obtained from Dr. Steven
-              Perrault.
+          <div class="flex flex-col gap-y-4">
+            <p>
+              We primarily used CanDO for structure prediction. This tool is useful if we effectively eliminate the
+              requirement for mechanism-dependent fluctuations — variations in the DNA structure that could be influenced
+              by
+              adjacent DNA strands, such as the nanohinge done by our team previously (UBC BIOMOD 2022). In CanDO, the
+              Root
+              Mean Square Deviation (RMSD) is visualized through a gradient transitioning from red to blue, illustrating
+              the
+              average distance molecules stray from their starting positions. Importantly, our post-design evaluation
+              revealed no major discrepancies, and the peak Root Mean Square Fluctuation (RMSF) values remained notably
+              low
+              for all studied structures. The subsequent schematic illustrates the minimum, maximum, and average RMSF
+              values, all presented within the 95% CI, for the 3-gon, 4-gon, and 5-gon, respectively. These are paired
+              with
+              their respective CanDO images. To clarify, when we reference the "RMSF values at the 95% CI," we are
+              indicating the range of RMSF values (minimum, maximum, and average) for each structure, where we possess 95%
+              confidence that the actual RMSF value resides within this interval. A broad confidence interval signifies
+              increased uncertainty, while a tighter interval reflects a higher level of precision.
             </p>
-
+            <section v-for="(structure, i) in structures" :key="i" class="py-2">
+              <h3 :class="sectionStyle"> {{ structure.label }} </h3>
+              <p v-if="i == 0">
+                Note while this structure has been formed already, it is easier for us to take the original Cadnano
+                structure to provide a relative comparison. The original Cadnano structure was obtained from Dr. Steven
+                Perrault.
+              </p>
+              <CaptionedGraphics>
+                <template #graphics>
+                  <img :src="structure.preview" />
+                </template>
+                <template #caption>
+                  {{ structure.captions }}
+                </template>
+              </CaptionedGraphics>
+              <p class="text-center text-xl mt-4 mb-2"> RMSF View </p>
+              <div class="grid grid-cols-3">
+                <div v-for="j in 3" :key="j">
+                  <CaptionedGraphics>
+                    <template #graphics>
+                      <img :src="structure.graphics[j - 1]" alt="">
+                    </template>
+                  </CaptionedGraphics>
+                  <p class="text-center text-sm lg:text-md mt-2"> {{ structureHeadings[j - 1] }} </p>
+                  <p class="text-center text-sm lg:text-md"> {{ structure.values[j - 1] }} </p>
+                </div>
+              </div>
+            </section>
+            <p>
+              In the realm of DNA modeling, CanDo is a notable tool, but it's not without its limitations . Specifically,
+              it doesn't account for the natural repelling forces between DNA strands, such as electrostatic or Van der
+              Waals forces (Kim et. al, 2012). The CanDo models don't offer a universal measurement scale, but rather,
+              each model has its own relative scale (Kim et. al, 2012). However, it's reassuring to note that when
+              assessing the minimum, maximum, and average values across these models, the units of measurement remain
+              consistent.
+            </p>
+            <p>
+              This consistent approach enables a more structured comparison across various DNA structures. Our
+              observations indicate that, for the most part, these structures maintain a similar level of stability. Our
+              reference structure, which serves as a benchmark, displays certain intertwined edges (Perrault, Shih 2019).
+              This interconnectedness is also evident, albeit to a reduced degree in the pentagonal bipyramid and trigonal
+              bipyramids.
+            </p>
+            <p>
+              A point of interest across these structures is the presence of a segment or edge that isn't as stable as the
+              others. This unstable segment could be a pivotal factor in understanding why some DNA structures have the
+              ability to connect or polymerize. While the octahedral structure is more prone to polymerization due to its
+              high RMSF values at the edges, both trigonal and pentagonal bipyramids are less likely to undergo
+              polymerization due to either lower maximum RMSF values or due to different localization. This is because
+              their maximum RMSF values are significantly lower, suggesting that purification processes may be easier in
+              comparison to the octahedral structure. Research by Lin et. al supports this notion, demonstrating that the
+              octahedron can link together using edges and vertices, forming chains that are illustrated in Figure 9 (Lin
+              et al., 2019).
+            </p>
+            <br />
             <CaptionedGraphics>
               <template #graphics>
-                <img :src="structure.preview"/>
+                <img :src="Figure9" alt="" class="w-full lg:w-[70%]">
               </template>
               <template #caption>
-                {{ structure.captions }}
+                Figure 9. A schematic illustration of the polymerization potential of the octahedrons. Adapted from Lin et
+                al. 2019.
               </template>
             </CaptionedGraphics>
-            <p class="text-center text-lg"> RMSF View </p>
-            <div class="grid grid-cols-3">
-              <div v-for="j in 3" :key="j">
-                <CaptionedGraphics>
-                  <template #graphics>
-                    <img :src="structure.graphics[j - 1]" alt="">
-                  </template>
-                </CaptionedGraphics>
-                <p class="text-center text-sm lg:text-md mt-2"> {{ structureHeadings[j - 1] }} </p>
-                <p class="text-center text-sm lg:text-md"> {{ structure.values[j - 1] }} </p>
-              </div>
-            </div>
-          </section>
-          <p>
-            In the realm of DNA modeling, CanDo is a notable tool, but it's not without its limitations. Specifically, it
-            doesn't account for the natural repelling forces between DNA strands, such as electrostatic or Van der Waals
-            forces. The CanDo models don't offer a universal measurement scale, but rather, each model has its own
-            relative scale. However, it's reassuring to note that when assessing the minimum, maximum, and average values
-            across these models, the units of measurement remain consistent.
-            This consistent approach enables a more structured comparison across various DNA structures. Our observations
-            indicate that, for the most part, these structures maintain a similar level of stability. Our reference
-            structure, which serves as a benchmark, displays certain interconnected segments. This interconnectedness is
-            also evident, albeit to a reduced degree, in another structure called the 5-gon.
-            A point of interest across these structures is the presence of a segment or edge that isn't as stable as the
-            others. This unstable segment could be a pivotal factor in understanding why some DNA structures have the
-            ability to connect or polymerize. Research by Lin et. al supports this notion, demonstrating that specific DNA
-            structures can link together, forming chains that are illustrated in figure 9 (Lin et al., 2019).
-          </p>
-          <br />
-          <CaptionedGraphics>
-            <template #graphics>
-              <img :src="Figure9" alt="" class="w-full lg:w-[70%]">
-            </template>
-            <template #caption>
-              Figure 9. A schematic illustration of the polymerization potential of the octahedrons. Adapted from Lin et al. 2019.
-            </template>
-          </CaptionedGraphics>
+          </div>
         </template>
       </SingleColumn>
 
@@ -356,7 +374,7 @@ const tableData = {
             </p>
           </section>
 
-          <section>
+          <section class="flex flex-col gap-y-4">
             <h3 :class="sectionStyle"> Spherical Bipyramids </h3>
             <p>
               We formed regular, right, and symmetric bipyramids from the n-polygons. A pyramid was formed when all
@@ -379,7 +397,7 @@ const tableData = {
             </p>
             <CaptionedGraphics>
               <template #graphics>
-                <img :src="Figure11" alt=""/>
+                <img :src="Figure11" alt="" />
               </template>
               <template #caption>
                 Figure 11. Examples of polygons with flat and spherical tiling ("Bipyramid," 2022)
@@ -521,7 +539,8 @@ const tableData = {
               <Equation formula="a, b" /> to exist. It should be noted that, given
               <Equation formula="a \in \mathbb{Z}" />,
               <Equation formula="N/n \equiv a\text{ mod }2 \Longrightarrow n | N" />. However,
-              <Equation formula="n|N" /> is a difficult criteria to satisfy, while the parity equation developed above is less complicated to employ since
+              <Equation formula="n|N" /> is a difficult criteria to satisfy, while the parity equation developed above is
+              less complicated to employ since
               only tiny adjustments to
               <Equation formula="a,b" /> would be necessary to obtain the closest even or odd number that satisfies the
               condition.
@@ -564,18 +583,35 @@ const tableData = {
         <template #title> References </template>
         <template #body>
           <div class="pl-6 -indent-6">
-            <p>Bipyramid. (2022, February 3). In Wikipedia. <a href="https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629">https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629</a></p>
-            <p>Dey, S., Fan, C., Gothelf, K. V., Li, J., Lin, C., Liu, L., Liu, N., Nijenhuis, M. A. D., Saccà, B., Simmel, F. C., Yan, H., & Zhan, P. (2021). DNA Origami. Nat. Rev. Methods Primer, 1(13). <a href="https://doi.org/10.1038/s43586-020-00009-8">https://doi.org/10.1038/s43586-020-00009-8</a></p>
-            <p>Fauske, K. M (2007). Example: Regular Polygons. TeXample.net. <a href="https://texample.net/tikz/examples/regular-polygons/">https://texample.net/tikz/examples/regular-polygons/</a> (Online; accessed 19th March 2022).</p>
-            <p>Kim, D. N., Kilchherr, F., Dietz, H., & Bathe, M. (2012). Quantitative prediction of 3D solution shape and flexibility of nucleic acid nanostructures. Nucleic acids research, 40(7), 2862–2868. <a href="https://doi.org/10.1093/nar/gkr1173">https://doi.org/10.1093/nar/gkr1173</a> </p>
-            <p>Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F., Maheden, K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a Repeatable DNA Nanohinge System Supporting Higher Order Structure Formation. bioRxiv. <a href="https://doi.org/10.1101/2023.05.26.542516">https://doi.org/10.1101/2023.05.26.542516</a></p>
-            <p>Lin, Z., Xiong, Y., Xiang, S., & Gang, O. (2019). Controllable covalent-bound nanoarchitectures from DNA frames. Journal of the American Chemical Society, 141(17), 6797–6801. <a href="https://doi.org/10.1021/jacs.9b01510">https://doi.org/10.1021/jacs.9b01510</a></p>
-            <p>Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. <a href="https://doi.org/10.1021/nn5011914">https://doi.org/10.1021/nn5011914</a></p>
-            <p>Rajkumar, E., Inaba, F., Geng, Q. (2023). UBC Biomod DNA Origami Design. Github. <a href="https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023">https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023</a></p>
-            <p>Rothemund, P. W. K. (2006). Folding DNA to Create Nanoscale Shapes and Patterns. Nature, 440, 297–302. <a href="https://doi.org/10.1038/nature04586">https://doi.org/10.1038/nature04586</a></p>
-          </div>
-        </template>
-      </SingleColumn>
-    </template>
-  </Notebook>
-</template>
+            <p>Bipyramid. (2022, February 3). In Wikipedia. <a
+                href="https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629">https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629</a>
+            </p>
+            <p>Dey, S., Fan, C., Gothelf, K. V., Li, J., Lin, C., Liu, L., Liu, N., Nijenhuis, M. A. D., Saccà, B.,
+              Simmel, F. C., Yan, H., & Zhan, P. (2021). DNA Origami. Nat. Rev. Methods Primer, 1(13). <a
+                href="https://doi.org/10.1038/s43586-020-00009-8">https://doi.org/10.1038/s43586-020-00009-8</a></p>
+            <p>Fauske, K. M (2007). Example: Regular Polygons. TeXample.net. <a
+                href="https://texample.net/tikz/examples/regular-polygons/">https://texample.net/tikz/examples/regular-polygons/</a>
+              (Online; accessed 19th March 2022).</p>
+            <p>Kim, D. N., Kilchherr, F., Dietz, H., & Bathe, M. (2012). Quantitative prediction of 3D solution shape and
+              flexibility of nucleic acid nanostructures. Nucleic acids research, 40(7), 2862–2868. <a
+                href="https://doi.org/10.1093/nar/gkr1173">https://doi.org/10.1093/nar/gkr1173</a> </p>
+            <p>Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F.,
+              Maheden, K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a Repeatable DNA
+              Nanohinge System Supporting Higher Order Structure Formation. bioRxiv. <a
+                href="https://doi.org/10.1101/2023.05.26.542516">https://doi.org/10.1101/2023.05.26.542516</a></p>
+            <p>Lin, Z., Xiong, Y., Xiang, S., & Gang, O. (2019). Controllable covalent-bound nanoarchitectures from DNA
+              frames. Journal of the American Chemical Society, 141(17), 6797–6801. <a
+                href="https://doi.org/10.1021/jacs.9b01510">https://doi.org/10.1021/jacs.9b01510</a></p>
+            <p>Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To
+              Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. <a
+                href="https://doi.org/10.1021/nn5011914">https://doi.org/10.1021/nn5011914</a></p>
+            <p>Rajkumar, E., Inaba, F., Geng, Q. (2023). UBC Biomod DNA Origami Design. Github. <a
+                href="https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023">https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023</a>
+            </p>
+            <p>Rothemund, P. W. K. (2006). Folding DNA to Create Nanoscale Shapes and Patterns. Nature, 440, 297–302. <a
+              href="https://doi.org/10.1038/nature04586">https://doi.org/10.1038/nature04586</a></p>
+        </div>
+      </template>
+    </SingleColumn>
+  </template>
+</Notebook></template>
