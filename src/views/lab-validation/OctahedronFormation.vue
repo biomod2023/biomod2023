@@ -230,7 +230,9 @@ const tableData = {
             <p>
               Perrault, S. D., & Shih, W. M. (2016). Lipid membrane encapsulation of a 3D DNA nano
               octahedron. Methods in Molecular Biology, 165–184.
-              <a href="https://doi.org/10.1007/978-1-4939-6454-3_12">https://doi.org/10.1007/978-1-4939-6454-3_12</a>
+              <a href="https://doi.org/10.1007/978-1-4939-6454-3_12"
+                >https://doi.org/10.1007/978-1-4939-6454-3_12</a
+              >
             </p>
           </div>
         </template>
