@@ -171,7 +171,7 @@ const tableData = {
                 has been associated with several severe health complications for humans. For
                 example, cystic fibrosis is a genetic condition in which mucus builds up in the body
                 and can induce the growth of pathogenic bacterial biofilms. Bacterial biofilms of
-                Pseudomonas aeruginosa (P. aeruginosa) and Staphylococcus aureus (S. aureus) are two
+                Pseudomonas aeruginosa (<i>P. aeruginosa</i>) and Staphylococcus aureus (<i>S. aureus</i>) are two
                 common bacterial biofilms that have also been isolated in patients diagnosed with
                 cystic fibrosis and are credited for damaging lung tissue by causing chronic
                 inflammation (Høiby et al., 2010) and pulmonary infections (Esposito et al., 2019).
@@ -197,7 +197,7 @@ const tableData = {
                   (Høiby, 2011)
                 </li>
                 <li>
-                  Historically, biofilms such as S. aureus and P. aeruginosa infections often occur
+                  Historically, biofilms such as <i>S. aureus</i> and <i>P. aeruginosa</i> infections often occur
                   concurrently, so patients receive multiple antibiotic treatments simultaneously
                   that may adversely react and potentially pose toxicity hazards in the bloodstream
                   (Esposito et al., 2019)
@@ -306,12 +306,12 @@ const tableData = {
               <ul class="list-disc pl-10">
                 <li>
                   Alginate Lyase is an enzyme that degrades alginate by cleaving the β-1,4
-                  glycosidic bond (Zhu & Yin, 2015). In mucoid strains of P. aeruginosa biofilms,
+                  glycosidic bond (Zhu & Yin, 2015). In mucoid strains of <i>P. aeruginosa</i> biofilms,
                   alginate has been found to be a major polysaccharide overproduced in biofilm
                   matrices (Colvin et al., 2011). Thus, alginate lyase could be useful in reducing
                   eDNA resistance to DNase I and assist in dispersing biofilms by weakening bonded
                   polysaccharides. Several studies have already demonstrated a significant decrease
-                  in the survival of P. aeruginosa colonies treated with alginate lyase (Cotton et
+                  in the survival of <i>P. aeruginosa</i> colonies treated with alginate lyase (Cotton et
                   al., 2009).
                 </li>
                 <li>
@@ -439,13 +439,13 @@ const tableData = {
             How was the Enzyme Selected?
           </h2>
           <p class="p-4">
-            P. aeruginosa and S. aureus biofilms are two bacterial pathogens commonly associated
+            <i>P. aeruginosa</i> and <i>S. aureus</i> biofilms are two bacterial pathogens commonly associated
             with antimicrobial resistance. Antibiotic treatment often cannot eradicate these biofilm
             infections due to antibiotic tolerance and mutational resistance. These bacteria have
             the ability to form biofilms in many environments, because they are able to grow in
             moist conditions with simple nutritional requirements, including distilled water. Our
             project intended to focus on the dispersal of these two biofilms, so research into
-            enzymes capable of degrading P. aeruginosa and S. aureus was undergone. Ultimately,
+            enzymes capable of degrading <i>P. aeruginosa</i> and <i>S. aureus</i> was undergone. Ultimately,
             DNase I was selected due to sourcing availability, substantial presence of DNA in
             biofilms, and synergistic effects with other enzymes that could be useful for future
             experiments.
