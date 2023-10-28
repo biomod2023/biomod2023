@@ -11,29 +11,49 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
     <template #title> Structure Imaging </template>
     <template #body>
       <SingleColumn>
-        <template #title> Abstract </template>
+        <template #title> Overview </template>
         <template #body>
           <p>
-            This section focuses on investigating the potential interactions between Maleimide and
-            two key enzymes, Alginate Lyase and Alpha-Amylase, through molecular docking analysis.
-            Utilizing computational tools, we identified the active sites of the enzymes and
-            evaluated their compatibility with Maleimide binding. The results indicate that neither
-            enzyme is hindered by the presence of Maleimide, suggesting potential applicability for
-            future delivery systems.
+            To visualize the formation of the octahedron, Atomic Force Microscopy (AFM) was employed due to its capacity
+            for high-resolution imaging and its established utility in visualizing DNA origami structures. An attempt was
+            made to observe octahedron formation; however, this endeavor was impeded by a machine calibration malfunction,
+            preventing a conclusive determination of the success of octahedron formation. Although the acquired images
+            suggest a probable formation of the octahedron structure, future attempts are imperative, using the same
+            methods outlined below, in order to definitively confirm its formation.
           </p>
         </template>
       </SingleColumn>
 
       <SingleColumn>
-        <template #title> Introduction </template>
+        <template #title> Background </template>
         <template #body>
           <p>
-            We explore the potential binding of Maleimide with Alginate Lyase and Alpha-Amylase. By
-            leveraging molecular docking analysis and active site identification using Pymol,
-            CB-Dock, and literature review we draw conclusions on the compatibility of these enzymes
-            with a liposome, considering the implications for future applications in drug delivery
-            systems.
+            Atomic Force Microscopy (AFM) is a technique used to obtain high-resolution images of nanoscale structures,
+            including DNA origami and protein assemblies (Kolbeck et al., 2023). AFM employs a sharp probe to scan the
+            surface of the sample mechanically. The interaction between the probe tip and the sample surface generates a
+            topographical/3D map, which can be magnified for detailed examination(Kolbeck et al., 2023). This allows
+            researchers to visualize intricate structures at the nanometer scale without the need for electron beams
+            (Kolbeck et al., 2023). AFM is particularly useful for studying biological samples, as it does not require a
+            vacuum environment or special sample preparation, making it more versatile for a wide range of applications
+            (Kolbeck et al., 2023).
           </p>
+        </template>
+      </SingleColumn>
+
+      <SingleColumn>
+        <template #title> Aims </template>
+        <template #body>
+          <ol class="list-decimal pl-8">
+            <li>
+              To observe and confirm the synthesis of DNA origami structures, to serve as a scaffold for imaging
+            </li>
+            <li>
+              To determine the extent of chaining/polymerization for octahedrons
+            </li>
+            <li>
+              To demonstrate the viability of using AFM for DNA origami methods
+            </li>
+          </ol>
         </template>
       </SingleColumn>
 
@@ -41,70 +61,25 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         <template #title> Methods </template>
         <template #body>
           <div class="flex flex-col gap-y-4">
-            <section>
-              <h3 :class="sectionTitleStyle">1. Protein Structure Acquisition</h3>
-              <p>
-                3D structures of the described enzymes used were retrieved from the Protein Data
-                Bank (PDB). The specific PDB identifiers for the enzymes are as follows:
-              </p>
-            </section>
-
-            <section>
-              <div class="flex flex-col items-center lg:items-start gap-y-4">
-                <h4 class="font-bold">Alginate Lyase: PDB Identifier 1HV6 (Figure 1)</h4>
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alginate-lyase-3d.png"
-                      alt="Picture of Alginate Lyase"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>Figure 1. 3D representation of Alginate Lyase in Pymol</p>
-                  </template>
-                </CaptionedGraphics>
-              </div>
-            </section>
-
-            <section>
-              <div class="flex flex-col items-center lg:items-start gap-y-4">
-                <h4 class="font-bold mb-2">Alpha-Amylase: PDB Identifier 1MWO (Figure 2)</h4>
-
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alpha-amylase-3d.png"
-                      alt="Picture of Alpha Amylase"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>Figure 2. 3D representation of Alpha-Amylase in Pymol.</p>
-                  </template>
-                </CaptionedGraphics>
-              </div>
-            </section>
-
-            <section>
-              <h3 :class="sectionTitleStyle">2. Molecular Docking Analysis</h3>
-              <p>
-                CB-Dock was used to predict the binding interactions between each enzyme and
-                Maleimide. The binding site of the enzymes allows us to understand whether it would
-                be possible to deliver these in the future using a liposome.
-              </p>
-            </section>
-
-            <section>
-              <h3 :class="sectionTitleStyle">
-                3. Active Site Identification and Literature Review
-              </h3>
-              <p>
-                We conducted a literature review to identify the active site of Alginate Lyase and
-                Alpha-Amylase. This information allowed us to interpret the docking results and
-                identify whether the activity of the enzymes is being compromised.
-              </p>
-            </section>
+            <p>
+              The method was adapted by Lv et al., 2015. To capture detailed AFM (Atomic Force Microscopy) images of DNA
+              nanostructures, a mica surface was employed as the substrate. Mica is a silicate mineral that is frequently
+              used in microscopy due to its smooth, reactive surface. Initially, the mica surface was prepared by cleaving
+              it with a sterilized, sharp scalpel, although Scotch tape can also be employed for this task. Following the
+              cleavage, we applied a prepared buffer onto the mica and let it incubate for 5 minutes. To ensure complete
+              removal of the buffer, the surface was washed with 1 mL of double-distilled water (ddH2O). This washing step
+              was conducted three times.
+            </p>
+            <p>
+              Subsequently, 2.5µL of previously prepared DNA nanostructures were applied onto the mica. The sample was
+              then allowed to incubate for 5 minutes, ensuring that the DNA would securely adhere to the mica surface for
+              stable imaging. To minimize the risk of salt contamination, we rinsed the mica surface with 1 mL of either
+              Millipore water or ddH2O. After washing, the mica surface was immediately dried under Argon for 1 minute.
+            </p>
+            <p>
+              Finally, with both the mica surface and DNA nanostructures properly prepared, the sample was ready for AFM
+              imaging.
+            </p>
           </div>
         </template>
       </SingleColumn>
@@ -113,79 +88,30 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         <template #title> Results </template>
         <template #body>
           <div class="flex flex-col gap-y-4">
-            <section>
-              <h3 :class="sectionTitleStyle">1. Interaction Between Alpha-Amylase and Maleimide</h3>
-              <div class="flex flex-col gap-y-8">
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alpha-amylase-maleimide.png"
-                      alt="Picture of Alpha Amylase and Maleimide interaction"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>
-                      Figure 3. Interaction between Alpha Amylase and maleimide predicted by
-                      CB-Dock. The structure represents the binding site of Alpha-Amylase.
-                    </p>
-                  </template>
-                </CaptionedGraphics>
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alpha-amylase-maleimide-vina-score.png"
-                      alt="Table showing Alpha Amlyse/Maleimide Vina Score"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>
-                      Figure 4. Vina Score of -4.6 is associated with the most favourable binding
-                      site of Alpha-Amylase.
-                    </p>
-                  </template>
-                </CaptionedGraphics>
-              </div>
-            </section>
-
-            <section>
-              <h3 :class="sectionTitleStyle">
-                2. Interaction Between Alginate Lyase and Maleimide
-              </h3>
-              <div class="flex flex-col gap-y-8">
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alginate-lyase-maleimide.png"
-                      alt="Picture of Alginate Lyase and Maleimide interaction"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>
-                      Figure 5. Interaction between Alginate Lyase and maleimide predicted by
-                      CB-Dock. The structure represents the binding site of Alginate Lyase.
-                    </p>
-                  </template>
-                </CaptionedGraphics>
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alginate-lyase-maleimide-vina-score.png"
-                      alt="Table showing Alginate Lyase/Maleimide Vina Score"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>
-                      Figure 6. Vina Score of -4.3 is associated with the most favourable binding
-                      site of Alginate Lyase.
-                    </p>
-                  </template>
-                </CaptionedGraphics>
-              </div>
-            </section>
+            <CaptionedGraphics>
+              <template #graphics>
+                <div class="grid md:grid-cols-2 grid-rows-2 gap-10 lg:w-3/4">
+                  <img src="../../assets/structure-imaging/sample-1.jpeg" alt="" class="h-full">
+                  <img src="../../assets/structure-imaging/sample-2.jpeg" alt="" class="h-full">
+                  <img src="../../assets/structure-imaging/sample-3.jpeg" alt="" class="h-full">
+                  <img src="../../assets/structure-imaging/sample-4.jpeg" alt="" class="h-full">
+                </div>
+              </template>
+              <template #caption>
+                <p>
+                  Figure 1. Four AFM images of the area of Octahedron sample (25 nM). The X axis represents width and the
+                  Y axis represents length of the samples. The range of values on the sidebars represent the heights of
+                  samples (length in the Z dimension). It should be noted that these values are not reliable due to
+                  calibration errors of the machine.
+                </p>
+              </template>
+            </CaptionedGraphics>
+            <p>
+              In the acquired images, we observed distinct white "blobs" that may potentially represent octahedron
+              structures. However, it is important to note that the reliability of the xyz axes is compromised due to a
+              calibration malfunction in the imaging machine. As a result, we are unable to provide conclusive information
+              regarding the sizes of these structures, even when using a standard reference sample.
+            </p>
           </div>
         </template>
       </SingleColumn>
@@ -194,106 +120,22 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         <template #title> Discussion </template>
         <template #body>
           <div class="flex flex-col gap-y-6">
-            <section>
-              <h3 :class="sectionTitleStyle">1. Literature Review</h3>
-            </section>
-
-            <section>
-              <h4 class="font-bold">a. Alginate Lyase</h4>
-
-              <div class="flex flex-col gap-y-6">
-                <p>
-                  The active site of Alginate Lyase includes glutamine residues (Gln134, Gln138),
-                  tyrosine residues (Tyr180, Tyr246, Tyr249) histidine residues (His192, His245),
-                  tryptophan residue (Trp141), asparagine residue (Asn191), aspartic acid residue
-                  (Asp314), and arginine residues (Arg88, Arg342, Arg306, Arg312) (Yoon, et. al,
-                  2001).
-                </p>
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alginate-lyase-active-site.jpg"
-                      alt="Picture of Alginate Lyase Active Site"
-                      class="w-full lg:w-1/2"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>
-                      Figure 7. The bound trisaccharide molecule on the active site of Alginate
-                      Lyase. The Figure shows the bound trisaccharide molecule and the surrounding
-                      amino acid residues and water molecules interacting with the trisaccharide.
-                      The trisaccharide molecule is represented by means of an orange ball-and-stick
-                      model. The side chains of Tyr and Trp, Asn and Gln, Asp, Arg, and His residues
-                      are coloured yellow, green, red, cyan and purple, respectively (Yoon, et. al,
-                      2001).
-                    </p>
-                  </template>
-                </CaptionedGraphics>
-              </div>
-            </section>
-
-            <section>
-              <h4 class="font-bold">b. Alpha-Amylase</h4>
-
-              <div class="flex flex-col gap-y-6">
-                <p>
-                  The active site of Alpha-Amylase includes tyrosine residue (Tyr199, Tyr62),
-                  tryptophan residue (Trp224), lysine residue (Lys201), histidine residue (His288),
-                  phenylalanine residue (Phe159), aspartic acid residue (Asp289, Asp198), arginine
-                  residue (Arg196), and glutamic acid residue (Glu222).
-                </p>
-                <CaptionedGraphics modifier="w-full">
-                  <template #graphics>
-                    <img
-                      src="../../assets/aa-docking/alpha-amylase-active-site.jpg"
-                      alt="Picture of Alpha Amylase Active Site"
-                      class="w-full lg:w-1/4"
-                    />
-                  </template>
-                  <template #caption>
-                    <p>
-                      Figure 8. Active site residues of Alpha-Amylase. W stands for Trp, K stands
-                      for Lys, Y stands for Tyr, E stands for Glu, F stands for Phe, D stands for
-                      Asp, H stands for His, and R stands for Arg (Linden, et. al, 2003).
-                    </p>
-                  </template>
-                </CaptionedGraphics>
-              </div>
-            </section>
-
-            <section>
-              <h3 :class="sectionTitleStyle">2. Maleimide and Alpha-Amylase Interaction</h3>
-              <p>
-                Based on the literature review we performed, Alpha-Amylase does not bind to
-                maleimide with its active site. The residues predicted by CB-Dock software do not
-                align with the documented active site residues. This means that the active site of
-                Alpha-Amylase would remain unobstructed and the enzyme’s function will not be
-                disrupted.
-              </p>
-            </section>
-
-            <section>
-              <h3 :class="sectionTitleStyle">3. Maleimide and Alginate Lyase Interaction</h3>
-              <p>
-                Based on the literature review we performed, Alginate Lyase also does not bind to
-                maleimide with its active site. The residues predicted by CB-Dock software do not
-                align with the documented active site residues.
-              </p>
-            </section>
+            <p>
+              While the features observed in the AFM images resemble octahedrons, they could also potentially be salt
+              crystals, specifically MgCl2, which is commonly used in the thermoramp protocol for forming octahedrons from
+              scaffold and staple strands. However, it's important to note that the absence of an accurate scale bar makes
+              it inappropriate to draw conclusions without further verification. Therefore, retesting AFM or employing an
+              alternative validation method is necessary. The gel electrophoresis results did exhibit a noticeable band
+              shift for the formed structure compared to the scaffold. Nevertheless, it's worth noting that gel
+              electrophoresis provides more of a qualitative assessment, and for greater confidence in the successful
+              formation of octahedrons, we need to complement it with AFM or other visualization techniques. In our future
+              experiments, we plan to utilize AFM in conjunction with TEM (Transmission Electron Microscopy) to establish
+              two reliable methods for confirming the structure's formation. AFM will be our initial choice due to its
+              quicker results. However, it's essential to recognize that AFM primarily confirms the DNA aspects of the
+              octahedron. For a comprehensive understanding of liposome formation templated on the octahedron, cryo-TEM
+              remains the most suitable method.
+            </p>
           </div>
-        </template>
-      </SingleColumn>
-
-      <SingleColumn>
-        <template #title> Conclusion </template>
-        <template #body>
-          <p>
-            Through a computational investigation, we have revealed that both Alginate Lyase and
-            Alpha-Amylase maintain their enzymatic functionalities without significant hindrance
-            from Maleimide. Our study underscores the potential feasibility of utilizing these
-            enzymes for drug delivery purposes, without compromising their essential catalytic
-            activities.
-          </p>
         </template>
       </SingleColumn>
 
@@ -302,20 +144,17 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
         <template #body>
           <div class="pl-6 -indent-6">
             <p>
-              Linden, A., Mayans, O., Meyer-Klaucke, W., Antranikian, G., & Wilmanns, M. (2003).
-              Differential regulation of a hyperthermophilic α-amylase with a novel (ca,Zn)
-              two-metal center by zinc. Journal of Biological Chemistry, 278(11), 9875–9884.
-              https://doi.org/10.1074/jbc.m211339200
+              Kolbeck, P. J., Dass, M., Martynenko, I. V., van Dijk-Moes, R. J. A., Brouwer, K. J. H., van Blaaderen, A.,
+              Vanderlinden, W., Liedl, T., & Lipfert, J. (2023). DNA Origami Fiducial for Accurate 3D Atomic Force
+              Microscopy Imaging. Nano Letters, 23(4), 1236–1243. https://doi.org/10.1021/acs.nanolett.2c04299
             </p>
             <p>
-              Yoon, H.-J., Hashimoto, W., Miyake, O., Murata, K., & Mikami, B. (2001). Crystal
-              structure of alginate lyase A1-III complexed with Trisaccharide product at 2.0 Å
-              Resolution. Journal of Molecular Biology, 307(1), 9–16.
-              https://doi.org/10.1006/jmbi.2000.4509
+              Lv, Y., Hu, R., Zhu, G., Zhang, X., Mei, L., Liu, Q., Qiu, L., Wu, C., & Tan, W. (2015). Preparation and
+              biomedical applications of programmable and multifunctional DNA nanoflowers. Nature Protocols, 10(10),
+              1508–1524. https://doi.org/10.1038/nprot.2015.078
             </p>
           </div>
         </template>
       </SingleColumn>
-    </template>
-  </Notebook>
-</template>
+  </template>
+</Notebook></template>
