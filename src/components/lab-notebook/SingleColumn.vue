@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Bubble from '@/components/lab-notebook/Bubble.vue'
 
-withDefaults(defineProps<{ alwaysDropdown?: boolean, dark?: boolean, nested?: boolean }>(), {
+withDefaults(defineProps<{ alwaysDropdown?: boolean; dark?: boolean; nested?: boolean }>(), {
   alwaysDropdown: false
 })
 </script>
