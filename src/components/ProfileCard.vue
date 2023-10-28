@@ -5,10 +5,10 @@ import emptyPic from '@/assets/empty_profile.png'
 
 import type { Member } from '@/components/Member'
 const props = defineProps<{
-  member: Member,
-  wrapperStyle?: string,
+  member: Member
+  wrapperStyle?: string
   currentTeam: string
-}>()  
+}>()
 const cardConfig: string =
   'absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1 '
 const isHovering: Ref<boolean> = ref(false)
@@ -20,7 +20,7 @@ const handleImgErr = (e: Event) => {
 </script>
 
 <template>
-  <div :class="'relative  ' +  (props.wrapperStyle !== undefined ? props.wrapperStyle : '')">
+  <div :class="'relative  ' + (props.wrapperStyle !== undefined ? props.wrapperStyle : '')">
     <TransitionGroup
       enter-active-class="transition-opacity duration-200 ease-in-out"
       leave-active-class="transition-opacity duration-200 ease-in"
@@ -42,7 +42,9 @@ const handleImgErr = (e: Event) => {
         />
         <div class="flex flex-col items-center gap-0">
           <div class="text-base font-bold text-white">{{ member?.name }}</div>
-          <div class="text-base font-normal text-gold">{{ member?.positions.get(currentTeam) }}</div>
+          <div class="text-base font-normal text-gold">
+            {{ member?.positions.get(currentTeam) }}
+          </div>
         </div>
       </div>
 
