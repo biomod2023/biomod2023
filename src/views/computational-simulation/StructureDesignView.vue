@@ -145,16 +145,15 @@ const tableData = {
         <template #title>Design Process</template>
         <template #body>
           <p>
-            The development of DNA Origami Structures is iterative consisting of 3 general processes
-          <ol class="list-decimal list-inside pl-4 lg:px-8">
+            The development of DNA Origami Structures is iterative consisting of 3 general processes:
+          </p>
+          <ol class="list-decimal list-inside my-2 pl-4 lg:px-8">
             <li>Finding the 3D locations folding and hybridization for the shorter staple strands relative to the long
               scaffold strand.</li>
             <li>Scrutinizing the design files to pinpoint any potential weak spots or errors.</li>
             <li>Utilizing simulations or predictive models to forecast the eventual formation of the structure</li>
           </ol>
-          <br />
           There are a number of computational software tools used:
-          </p>
           <div class="w-full overflow-x-scroll">
             <CustomTable :table-data="tableData" />
           </div>
