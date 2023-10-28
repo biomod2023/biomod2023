@@ -360,9 +360,9 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </p>
             <p>
               To further verify the conjugation of the maleimide-liposomes to thiolated DNase I,
-              techniques such as cyro-TEM (transmission electron microscopy), cyro-SEM (scanning
+              techniques such as cryo-TEM (transmission electron microscopy), cryo-SEM (scanning
               electron microscopy, and size exclusion chromatography could be used before making
-              conclusions regarding its effectiveness.
+              conclusions regarding its effectiveness).
             </p>
           </div>
         </template>

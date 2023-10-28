@@ -22,7 +22,7 @@ import Figure9 from '@/assets/structure-design/nanoscale_polymerization_v2_w_tra
 import Figure11 from '@/assets/structure-design/polygons-with-flat-spherical-tiling.png'
 
 const sectionStyle = 'text-subtitle-sm lg:text-subtitle text-white mt-6 mb-4'
-const structureHeadings = ['Highest RMSF (nm)', 'LOWEST RMSF (nm)', '95% CI  (nm)']
+const structureHeadings = ['LOWEST RMSF (nm)', 'Highest RMSF (nm)', '95% CI  (nm)']
 const structures = [
   {
     label: 'Structure (Octahedron): CONTROL',
@@ -38,7 +38,7 @@ const structures = [
     graphics: [ThreeGon1, ThreeGon2, ThreeGon3],
     captions:
       'Figure 7. A systematic of the Trigonal Bipyramid showing the number of edges and position of edges to each other. Labelling of edges is the same as the CADnano files.',
-    values: [1.090856, 2.946035, 2.508811]
+    values: [0.891485, 2.505012, 2.098468]
   },
   {
     label: 'Structure: Pentagonal Bipyramid',
@@ -46,7 +46,7 @@ const structures = [
     graphics: [FiveGon1, FiveGon2, FiveGon3],
     captions:
       'Figure 8. A systematic of the Pentagonal Bipyramid showing the number of edges and position of edges to each other. Labelling of edges is the same as the CADnano files.',
-    values: [1.090856, 2.946035, 2.508811]
+    values: [0.956679, 2.518227, 1.793869]
   }
 ]
 const tableData = {

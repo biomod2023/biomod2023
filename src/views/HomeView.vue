@@ -56,11 +56,11 @@ const scrollToTop = () => {
         </div>
         <div class="lg:w-1/2">
           <p class="lg:mt-5 lg:text-subtitle lg:text-right">
-            In our project, numerous considerations had to be taken into account. From selecting the
-            most effective enzymes for degrading biofilm matrices to crafting precise liposomes
-            using DNA origami templates, our research journey explores innovative avenues in the
-            battle against antibiotic-resistant bacterial biofilms. Learn more about the factors
-            that impacted our final design choices.
+            From the tiniest building blocks of life to a grand vision of combatting bacterial
+            biofilms, our team explores it all. As we delve into the intricacies of enzyme
+            modification and creating DNA endoskeletons of various sizes, our research lays the
+            groundwork for a modular platform to tackle biofilm challenges. Discover the key
+            factors influencing our design choices.
           </p>
         </div>
       </div>

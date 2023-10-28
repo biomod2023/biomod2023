@@ -18,6 +18,25 @@ const NotFoundView = () => import('@/views/NotFoundView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  // 3am hack :))
+  // @ts-ignore
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash
+      }
+    } else if (savedPosition) {
+      return {
+        top: savedPosition.top,
+        behavior: 'instant'
+      }
+    } else {
+      return {
+        top: 0,
+        behavior: 'instant'
+      }
+    }
+  },
   routes: [
     {
       path: '/',

@@ -5,7 +5,6 @@ import SponsorItem from '@/components/sponsors/SponsorItem.vue'
 import SponsorTier from '@/components/sponsors/SponsorTier.vue'
 import SilverImgBackground from '@/components/sponsors/SilverImgBackground.vue'
 import StevenHallam from '@/assets/sponsors/Steven.jpg'
-import HanCock from '@/assets/sponsors/Dr_Hancock.jpg'
 import BrandonKieft from '@/assets/sponsors/Brandon_Kieft-e1662700315238.jpeg'
 import AbishekWadhwa from '@/assets/sponsors/Abishek_Wadhwa.jpg'
 import AdrianJanGredwosk from '@/assets/sponsors/Adrian_Jan_Grezedowski.jpg'
@@ -32,7 +31,7 @@ onMounted(() => {
 })
 
 const acknowledgements = [
-  'Dr. Hancock',
+  'Dr. Bob Hancock',
   'Dr. Miffy Cheng',
   'Dr. Steven D. Perrault',
   'Dr. William Shih',
@@ -204,7 +203,7 @@ const advisors = [
         Acknowledgements
       </h1>
       <section class="text-center">
-        <h3 class="text-subtitle-sm" v-for="p in acknowledgements" :key="p">{{ p }}</h3>
+        <h3 v-for="p in acknowledgements" :key="p" class="text-subtitle-sm">{{ p }}</h3>
       </section>
     </div>
   </div>

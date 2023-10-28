@@ -24,7 +24,7 @@ const tree: Tree[] = [
     url: '/ideas'
   },
   {
-    name: 'Notebook',
+    name: 'Lab Notebook',
     children: [
       {
         name: 'Computational Simulation',
