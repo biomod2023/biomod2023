@@ -30,7 +30,7 @@ const tableData = {
 </script>
 
 <template>
-  <div class="flex flex-col bg-[url('../assets/sponsors/dna.png')] bg-repeat-y bg-contain bg-[center_top_58%] lg:bg-[center_top_65%]">
+  <div class="flex flex-col bg-[url('../assets/dna_mobile.png')] lg:bg-[url('../assets/sponsors/dna.png')] bg-repeat-round bg-contain bg-[center_top_58%] lg:bg-[center_top_65%]">
 
     <div class="flex flex-col items-center gap-y-20">
       <main class="pt-2 flex flex-col items-center mt-40">
