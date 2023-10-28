@@ -35,7 +35,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Docking of Dnase I',
-            url: '#'
+            url: '/computational-simulation/docking-of-dnase-i'
           }
         ]
       },
@@ -48,7 +48,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Liposome Formation',
-            url: '#'
+            url: '/lab-validation/liposome-formation'
           },
           {
             name: 'Octahedron Formation',
@@ -65,11 +65,11 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Docking of Alginate Lyase and Alpha-Amylase',
-            url: '#'
+            url: '/future-directions/aa-docking'
           },
           {
             name: 'Liposome Formation Using Octahedron',
-            url: '#'
+            url: '/future-directions/octahedron-liposome-formation'
           }
         ]
       }
@@ -85,7 +85,7 @@ const tree: Tree[] = [
   },
   {
     name: 'Sponsors',
-    url: '#'
+    url: '/sponsors'
   }
 ]
 </script>
@@ -96,9 +96,9 @@ const tree: Tree[] = [
     <div
       class="z-20 flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">
+          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'" class="h-full py-4 px-12">
             {{ entry.name }}
           </RouterLink>
           <Dropdown v-show="entry.children" to="#">
@@ -124,14 +124,15 @@ const tree: Tree[] = [
           </Dropdown>
         </template>
       </div>
-      <a href="/">
+      <a href="/" class="shrink-0 w-14">
         <img src="../../assets/logo.svg" alt="Biomod Logo" class="w-14" />
       </a>
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <RouterLink
           v-for="(entry, i) in tree.slice(tree.length / 2, tree.length)"
           :key="i"
           :to="entry.url ? entry.url : '#'"
+          class="h-full py-4 px-12"
         >
           {{ entry.name }}
         </RouterLink>
@@ -170,7 +171,10 @@ const tree: Tree[] = [
       :leave-active-class="transitionAnimation"
     >
       <template v-if="sidebar">
-        <div class="fixed z-20 h-full w-full left-0 flex justify-end bg-black bg-opacity-90">
+        <div
+          class="fixed z-10 h-full w-full left-0 flex justify-end bg-black bg-opacity-90"
+          @click.self="sidebar = !sidebar"
+        >
           <!-- <Transition enter-from-class="translate-x-full" leave-to-class="-translate-x-full" :enter-active-class="transitionAnimation" :leave-active-class="transitionAnimation"> -->
           <div
             class="flex flex-col justify-center p-4 h-full w-[70vh] min-w-[35%] max-w-[70%] bg-slate"
@@ -189,14 +193,14 @@ const tree: Tree[] = [
                       <div v-for="(child, j) in entry.children" :key="j">
                         <MobileDropdown>
                           <template #title
-                            ><span class="text-xl">{{ child.name }}</span></template
+                            ><span class="text-lg md:text-xl">{{ child.name }}</span></template
                           >
                           <template #children>
                             <RouterLink
                               v-for="(subchild, k) in child.children"
                               :key="k"
                               :to="subchild.url ? subchild.url : '#'"
-                              class="text-xl"
+                              class="text-lg md:text-xl font-normal"
                             >
                               {{ subchild.name }}
                             </RouterLink>
