@@ -390,8 +390,8 @@ const tableData = {
         </h1>
         <div>
           <div class="bg-dark p-8 rounded-3xl mt-4">
-            <h2 class="text-gold p-4 mt-4 text-subtitle font-semibold">Placeholder text for now</h2>
-            <p class="">
+            <h2 class="text-gold mt-4 text-subtitle font-semibold">What are we Creating?</h2>
+            <p class="mt-4">
               Our project aims to create an enzymosome structure that can serve as a platform for
               attaching enzymes and cargo. This platform is intended to enhance the efficiency of
               biofilm degradation in patient-related scenarios, such as cystic fibrosis, as well as
