@@ -15,23 +15,35 @@ import ThreeGon3 from '@/assets/structure-design/3gon_view3.png'
 import FiveGon1 from '@/assets/structure-design/5gon_view1.png'
 import FiveGon2 from '@/assets/structure-design/5gon_view2.png'
 import FiveGon3 from '@/assets/structure-design/5gon_view3.png'
+import Figure5 from '@/assets/structure-design/geometric-perspective.png'
+import Figure6 from '@/assets/structure-design/Octahedron.png'
+import Figure7 from '@/assets/structure-design/Trigonal.png'
+import Figure8 from '@/assets/structure-design/Pentagonal.png'
+import Figure9 from '@/assets/structure-design/nanoscale_polymerization_v2_w_trans.png'
+import Figure11 from '@/assets/structure-design/polygons-with-flat-spherical-tiling.png'
 
 const sectionStyle = 'text-subtitle-sm lg:text-subtitle text-white mt-6 mb-4'
 const structureHeadings = ['Highest RMSF (nm)', 'LOWEST RMSF (nm)', '95% CI  (nm)']
 const structures = [
   {
     label: "Structure (Octahedron): CONTROL",
+    preview: Figure6,
     graphics: [FourGon1, FourGon2, FourGon3],
+    captions: "Figure 6. A schematic of the Octahedron showing the number of edges and position of edges relative  to each other. Labelling of edges is the same as the CADnano files.",
     values: [1.090856, 2.946035, 2.508811]
   },
   {
     label: "Structure: Trigonal Bipyramid",
+    preview: Figure7,
     graphics: [ThreeGon1, ThreeGon2, ThreeGon3],
+    captions: "Figure 7. A systematic of the Trigonal Bipyramid showing the number of edges and position of edges to each other. Labelling of edges is the same as the CADnano files.",
     values: [1.090856, 2.946035, 2.508811]
   },
   {
     label: "Structure: Pentagonal Bipyramid",
+    preview: Figure8,
     graphics: [FiveGon1, FiveGon2, FiveGon3],
+    captions: "Figure 8. A systematic of the Pentagonal Bipyramid showing the number of edges and position of edges to each other. Labelling of edges is the same as the CADnano files.",
     values: [1.090856, 2.946035, 2.508811]
   }]
 const tableData = {
@@ -106,7 +118,7 @@ const tableData = {
             shifts from binding to one section of the scaffold strand to a different section, even if those sections are
             not immediately next to each other. For instance , if a length of DNA has areas labeled A, B, and C, the
             introduction of a staple strand can make the DNA curve, pulling areas A and C closer in a three-dimensional
-            configuration. This folding process is crucial for the creation of DNA origami structures.
+            configuration. This folding process is crucial for the creation of DNA origami structures (Figure 1).
           </p>
 
           <CaptionedGraphics>
@@ -114,7 +126,7 @@ const tableData = {
               <img src="../../assets/structure-design/origami-overview.png" />
             </template>
             <template #caption>
-              <p> Figure 1: A quick overview of DNA origami. </p>
+              <p> Figure 1. A quick overview of DNA origami. </p>
             </template>
           </CaptionedGraphics>
 
@@ -161,7 +173,7 @@ const tableData = {
                   <img src="../../assets/structure-design/net-like-structure.png" alt="">
                 </template>
                 <template #caption>
-                  Figure 2: Conversion from the intended 3D conformation of a triangular bipyramid to a net-like
+                  Figure 2. Conversion from the intended 3D conformation of a triangular bipyramid to a net-like
                   structure. The vector used here is the p7308 vector which is 7308 base pairs long.
                 </template>
               </CaptionedGraphics>
@@ -176,7 +188,7 @@ const tableData = {
                   <img src="../../assets/structure-design/arb-scaffold.png" alt="">
                 </template>
                 <template #caption>
-                  Figure 3: An arbitrary DNA scaffold
+                  Figure 3. An arbitrary DNA scaffold
                 </template>
               </CaptionedGraphics>
             </li>
@@ -190,7 +202,7 @@ const tableData = {
                   <img src="../../assets/structure-design/arb-scaffold-staples.png" alt="">
                 </template>
                 <template #caption>
-                  Figure 4: An Arbitrary DNA scaffold with staples. This will fold into a specific conformation
+                  Figure 4. An Arbitrary DNA scaffold with staples. This will fold into a specific conformation
                   afterwards.
                 </template>
               </CaptionedGraphics>
@@ -204,8 +216,11 @@ const tableData = {
               aimed to introduce curvature into the structure without geometrically stiffening the crossovers, thereby
               leading to a thermodynamically favorable, curved formation.
               <CaptionedGraphics>
+                <template #graphics>
+                  <img :src="Figure5" alt="Geometric Perspective"/>
+                </template>
                 <template #caption>
-                  Figure 5: The effect of insertions and deletions on the bending of a structure, shown from a geometric
+                  Figure 5. The effect of insertions and deletions on the bending of a structure, shown from a geometric
                   perspective in CanDO
                 </template>
               </CaptionedGraphics>
@@ -256,6 +271,15 @@ const tableData = {
               structure to provide a relative comparison. The original Cadnano structure was obtained from Dr. Steven
               Perrault.
             </p>
+
+            <CaptionedGraphics>
+              <template #graphics>
+                <img :src="structure.preview"/>
+              </template>
+              <template #caption>
+                {{ structure.captions }}
+              </template>
+            </CaptionedGraphics>
             <p class="text-center text-lg"> RMSF View </p>
             <div class="grid grid-cols-3">
               <div v-for="j in 3" :key="j">
@@ -282,15 +306,15 @@ const tableData = {
             A point of interest across these structures is the presence of a segment or edge that isn't as stable as the
             others. This unstable segment could be a pivotal factor in understanding why some DNA structures have the
             ability to connect or polymerize. Research by Lin et. al supports this notion, demonstrating that specific DNA
-            structures can link together, forming chains that are illustrated in their provided figure (Figure X) (Lin et al., 2019).
+            structures can link together, forming chains that are illustrated in figure 9 (Lin et al., 2019).
           </p>
           <br />
           <CaptionedGraphics>
             <template #graphics>
-              <img src="../../assets/structure-design/nanoscale.png" alt="" class="w-full lg:w-1/2">
+              <img :src="Figure9" alt="" class="w-full lg:w-[70%]">
             </template>
             <template #caption>
-              Figure 6. Provied Figure X from Research by Lin et. al (Lin et al., 2019).
+              Figure 9. A schematic illustration of the polymerization potential of the octahedrons. Adapted from Lin et al. 2019.
             </template>
           </CaptionedGraphics>
         </template>
@@ -309,14 +333,14 @@ const tableData = {
             <h3 :class="sectionStyle"> Regular N-gon </h3>
             <p><i>N</i>-gon refers to a polygon with n edges, where n ∈ Z+ and regular refers to the polygons' equilateral
               edges (which are all of the same length). Within our experiments, we specifically used only n = 3, 4, and 5.
-              Figure 1 shows examples of polygons. Note that any line intersecting the centre of the polygon and the
+              Figure 10 shows examples of polygons. Note that any line intersecting the centre of the polygon and the
               midpoint of any edge will be orthogonal to that edge.</p>
             <CaptionedGraphics>
               <template #graphics>
                 <img src="../../assets/structure-design/regular-polygons.png" alt="">
               </template>
               <template #caption>
-                Figure 7: A few examples of regular n-polygons, where n is stated above each polygon (Fauske, 2007).
+                Figure 10. A few examples of regular n-polygons, where n is stated above each polygon (Fauske, 2007).
               </template>
             </CaptionedGraphics>
             <p>
@@ -351,11 +375,14 @@ const tableData = {
 
             <p>
               Spherical refers to the tiling of the bipyramid, where the surfaces of the bipyramids are “mapped" to the
-              bounding spheres, as seen in Figure 2.
+              bounding spheres, as seen in Figure 11.
             </p>
             <CaptionedGraphics>
+              <template #graphics>
+                <img :src="Figure11" alt=""/>
+              </template>
               <template #caption>
-                Figure 2: Examples of polygons with flat and spherical tiling ("Bipyramid," 2022)
+                Figure 11. Examples of polygons with flat and spherical tiling ("Bipyramid," 2022)
               </template>
             </CaptionedGraphics>
             <p>
@@ -537,24 +564,15 @@ const tableData = {
         <template #title> References </template>
         <template #body>
           <div class="pl-6 -indent-6">
-            <p>Bipyramid. (2022, February 3). In Wikipedia.
-              https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629</p>
-            <p>Dey, S., Fan, C., Gothelf, K. V., Li, J., Lin, C., Liu, L., Liu, N., Nijenhuis, M. A. D., Saccà, B.,
-              Simmel, F. C., Yan, H., & Zhan, P. (2021). DNA Origami. Nat. Rev. Methods Primer, 1(13).
-              https://doi.org/10.1038/s43586-020-00009-8</p>
-            <p>Fauske, K. M (2007). Example: Regular Polygons. TeXample.net.
-              https://texample.net/tikz/examples/regular-polygons/ (Online; accessed 19th March 2022).</p>
-            <p>Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F.,
-              Maheden, K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a Repeatable DNA
-              Nanohinge System Supporting Higher Order Structure Formation. bioRxiv.
-              https://doi.org/10.1101/2023.05.26.542516</p>
-            <p>Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To
-              Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. https://doi.org/10.1021/nn5011914</p>
-            <p>Rajkumar, E., Inaba, F., Geng, Q. (2023). UBC Biomod DNA Origami Design. Github.
-              https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023</p>
-            <p>Rothemund, P. W. K. (2006). Folding DNA to Create Nanoscale Shapes and Patterns. Nature, 440, 297–302.
-              https://doi.org/10.1038/nature04586</p>
-            <p>Rajkumar, E (2023): </p>
+            <p>Bipyramid. (2022, February 3). In Wikipedia. <a href="https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629">https://en.wikipedia.org/w/index.php?title=Bipyramid&oldid=1069671629</a></p>
+            <p>Dey, S., Fan, C., Gothelf, K. V., Li, J., Lin, C., Liu, L., Liu, N., Nijenhuis, M. A. D., Saccà, B., Simmel, F. C., Yan, H., & Zhan, P. (2021). DNA Origami. Nat. Rev. Methods Primer, 1(13). <a href="https://doi.org/10.1038/s43586-020-00009-8">https://doi.org/10.1038/s43586-020-00009-8</a></p>
+            <p>Fauske, K. M (2007). Example: Regular Polygons. TeXample.net. <a href="https://texample.net/tikz/examples/regular-polygons/">https://texample.net/tikz/examples/regular-polygons/</a> (Online; accessed 19th March 2022).</p>
+            <p>Kim, D. N., Kilchherr, F., Dietz, H., & Bathe, M. (2012). Quantitative prediction of 3D solution shape and flexibility of nucleic acid nanostructures. Nucleic acids research, 40(7), 2862–2868. <a href="https://doi.org/10.1093/nar/gkr1173">https://doi.org/10.1093/nar/gkr1173</a> </p>
+            <p>Law, M., Susham, C., Mackay, D., Nguyen, S., Nicholas, R., Tsai, M. R. G., Rajkumar, E., Inaba, F., Maheden, K., Abdi, I., Ho, J. C. H., Kieft, B., & Hallam, S. J. (2023). Self-Assembly of a Repeatable DNA Nanohinge System Supporting Higher Order Structure Formation. bioRxiv. <a href="https://doi.org/10.1101/2023.05.26.542516">https://doi.org/10.1101/2023.05.26.542516</a></p>
+            <p>Lin, Z., Xiong, Y., Xiang, S., & Gang, O. (2019). Controllable covalent-bound nanoarchitectures from DNA frames. Journal of the American Chemical Society, 141(17), 6797–6801. <a href="https://doi.org/10.1021/jacs.9b01510">https://doi.org/10.1021/jacs.9b01510</a></p>
+            <p>Perrault, S. D., & Shih, W. M. (2014). Virus-Inspired Membrane Encapsulation of DNA Nanostructures To Achieve In Vivo Stability. ACS Nano, 8(5), 5132–5140. <a href="https://doi.org/10.1021/nn5011914">https://doi.org/10.1021/nn5011914</a></p>
+            <p>Rajkumar, E., Inaba, F., Geng, Q. (2023). UBC Biomod DNA Origami Design. Github. <a href="https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023">https://github.com/ubcbiomod/DNA_Origami_Design/tree/main/BIOMOD_2023</a></p>
+            <p>Rothemund, P. W. K. (2006). Folding DNA to Create Nanoscale Shapes and Patterns. Nature, 440, 297–302. <a href="https://doi.org/10.1038/nature04586">https://doi.org/10.1038/nature04586</a></p>
           </div>
         </template>
       </SingleColumn>
