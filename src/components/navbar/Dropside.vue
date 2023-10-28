@@ -16,8 +16,16 @@ const handleClickOutside = () => {
   <div
     v-click-outside="handleClickOutside"
     class="flex items-center"
-    @mouseenter="() => { if (!toggle) dropdown = true }"
-    @mouseleave="() => { if (!toggle) dropdown = false }"
+    @mouseenter="
+      () => {
+        if (!toggle) dropdown = true
+      }
+    "
+    @mouseleave="
+      () => {
+        if (!toggle) dropdown = false
+      }
+    "
     @click="toggle = !toggle"
   >
     <div class="flex gap-2 py-4 px-8 hover:opacity-80 transition duration-200">
