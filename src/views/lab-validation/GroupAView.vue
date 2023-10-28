@@ -288,6 +288,10 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               >
             </p>
             <p>
+              ThermoFisher Scientific. (2011). COA: DNase I, RNase-free, #EN0521.
+              <a href="https://www.thermofisher.com/document-connect/document-connect.html?url=https%3A%2F%2Fassets.thermofisher.com%2FTFS-Assets%2FLSG%2Fbrochures%2Fcoa_en0521.pdf">https://www.thermofisher.com/document-connect/document-connect.html?url=https%3A%2F%2Fassets.thermofisher.com%2FTFS-Assets%2FLSG%2Fbrochures%2Fcoa_en0521.pdf</a>
+            </p>
+            <p>
               ThermoFisher Scientific. (2022). Quant-iTTM PicoGreenTM dsDNA Reagent and Kit.
               <a
                 href="https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets%2FLSG%2Fmanuals%2Fmp07581.pdf"
