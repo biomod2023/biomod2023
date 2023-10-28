@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-defineProps<{ alwaysDropdown: boolean }>()
+defineProps<{ alwaysDropdown: boolean, dark?: boolean, nested?: boolean }>()
 defineEmits<{ (e: 'toggleActivated', state: boolean): void }>()
 
 const title = ref()
@@ -17,14 +17,15 @@ onMounted(() => {
 
 <template>
   <div
-    class="flex flex-col w-full bg-notebookBg p-4 rounded-[3.2em] transition-[max-height] duration-200 ease-in-out"
+    class="flex flex-col w-full bg-notebookBg p-2 lg:p-4 rounded-[3.2em] transition-[max-height] duration-200 ease-in-out"
     :class="{
       'max-h-24': !activated && ($windowWidth < 1024 || alwaysDropdown),
-      'max-h-full': activated || ($windowWidth >= 1024 && !alwaysDropdown)
+      'max-h-full': activated || ($windowWidth >= 1024 && !alwaysDropdown),
+      'bg-slate': dark
     }"
   >
     <div
-      class="p-4"
+      class="p-6 lg:p-4"
       :class="{
         'flex justify-between items-center align-middle mr-4 active:opacity-60':
           $windowWidth < 1024 || alwaysDropdown
@@ -36,9 +37,16 @@ onMounted(() => {
         }
       "
     >
-      <h2 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
-        <slot name="title"></slot>
-      </h2>
+      <template v-if="nested">
+        <h3 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
+          <slot name="title"></slot>
+        </h3>
+      </template>
+      <template v-else>
+        <h2 :id="id" ref="title" class="font-title font-medium text-xl lg:text-2xl">
+          <slot name="title"></slot>
+        </h2>
+      </template>
       <svg
         v-if="$windowWidth < 1024 || alwaysDropdown"
         class="w-8"

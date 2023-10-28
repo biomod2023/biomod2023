@@ -5,7 +5,7 @@ import NotebookBody from '@/components/lab-notebook/NotebookBody.vue'
 <template>
   <div>
     <div class="m-auto">
-      <h1 class="font-title text-center text-title-sm lg:text-title text-gold mt-4">
+      <h1 class="font-title text-center text-title-sm lg:text-title text-gold mt-4 px-4">
         <slot name="title"></slot>
       </h1>
     </div>
