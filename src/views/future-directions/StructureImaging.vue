@@ -156,13 +156,14 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               Kolbeck, P. J., Dass, M., Martynenko, I. V., van Dijk-Moes, R. J. A., Brouwer, K. J.
               H., van Blaaderen, A., Vanderlinden, W., Liedl, T., & Lipfert, J. (2023). DNA Origami
               Fiducial for Accurate 3D Atomic Force Microscopy Imaging. Nano Letters, 23(4),
-              1236–1243. https://doi.org/10.1021/acs.nanolett.2c04299
+              1236–1243. 
+              <a href="https://doi.org/10.1021/acs.nanolett.2c04299">https://doi.org/10.1021/acs.nanolett.2c04299</a>
             </p>
             <p>
               Lv, Y., Hu, R., Zhu, G., Zhang, X., Mei, L., Liu, Q., Qiu, L., Wu, C., & Tan, W.
               (2015). Preparation and biomedical applications of programmable and multifunctional
               DNA nanoflowers. Nature Protocols, 10(10), 1508–1524.
-              https://doi.org/10.1038/nprot.2015.078
+              <a href="https://doi.org/10.1038/nprot.2015.078">https://doi.org/10.1038/nprot.2015.078</a>
             </p>
           </div>
         </template>
