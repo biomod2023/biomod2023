@@ -27,56 +27,61 @@ onMounted(() => {
     widthPerCarouselPage.value = advisorCarousel.value?.children[0].clientWidth
     let numCols = Math.ceil(advisorCarousel.value?.children.length / 2)
     let numColsPerPage = Math.floor(advisorCarousel.value.clientWidth / widthPerCarouselPage.value)
-    maxCarouselPage.value = Math.ceil(numCols / numColsPerPage) + 
-      (numColsPerPage % 2 == 0 ? 1 : 0)
+    maxCarouselPage.value = Math.ceil(numCols / numColsPerPage) + (numColsPerPage % 2 == 0 ? 1 : 0)
   }
 })
 
-const acknowledgements = ["Dr. Hancock", "Dr. Miffy Cheng", "Dr. Steven D. Perrault",
-  "Dr. William Shih", "Dr. Thorsten-Lars Schmidt", "Eashan Halbe"]
+const acknowledgements = [
+  'Dr. Hancock',
+  'Dr. Miffy Cheng',
+  'Dr. Steven D. Perrault',
+  'Dr. William Shih',
+  'Dr. Thorsten-Lars Schmidt',
+  'Eashan Halbe'
+]
 const advisors = [
   {
-    name : "Dr. Steven Hallam",
-    profile : StevenHallam,
-    position : "Associate Professor",
-    location: "University of British Columbia"
+    name: 'Dr. Steven Hallam',
+    profile: StevenHallam,
+    position: 'Associate Professor',
+    location: 'University of British Columbia'
   },
   {
-    name : "Resmi Radhamony",
-    profile : ResmiRadhamony,
-    position : "Hallam Lab manager",
-    location : "University of British Columbia"
+    name: 'Resmi Radhamony',
+    profile: ResmiRadhamony,
+    position: 'Hallam Lab manager',
+    location: 'University of British Columbia'
   },
   {
-    name : "Brandon Kieft",
-    profile : BrandonKieft,
-    position : "Postdoctoral Research Fellow",
-    location: "University of British Columbia"
+    name: 'Brandon Kieft',
+    profile: BrandonKieft,
+    position: 'Postdoctoral Research Fellow',
+    location: 'University of British Columbia'
   },
   {
-    name : "Abishek Wadhwa",
-    profile : AbishekWadhwa,
-    position : "Graduate Student Research Assistant",
-    location: "University of British Columbia"
+    name: 'Abishek Wadhwa',
+    profile: AbishekWadhwa,
+    position: 'Graduate Student Research Assistant',
+    location: 'University of British Columbia'
   },
   {
-    name : "Marlene Chow",
-    profile : MarleneChow,
-    position : "Director of Academic Programs, Administration and Resources",
-    location : "University of British Columbia"
+    name: 'Marlene Chow',
+    profile: MarleneChow,
+    position: 'Director of Academic Programs, Administration and Resources',
+    location: 'University of British Columbia'
   },
   {
-    name : "Adrian Jan Gredwosk",
-    profile : AdrianJanGredwosk,
-    position : "Graduate Student",
-    location: "University of British Columbia"
+    name: 'Adrian Jan Gredwosk',
+    profile: AdrianJanGredwosk,
+    position: 'Graduate Student',
+    location: 'University of British Columbia'
   },
   {
-    name : "Dan Bizzotto",
-    profile : DanBizzotto,
-    position : "Associate Professor",
-    location: "University of British Columbia"
-  },
+    name: 'Dan Bizzotto',
+    profile: DanBizzotto,
+    position: 'Associate Professor',
+    location: 'University of British Columbia'
+  }
 ]
 </script>
 
@@ -155,31 +160,29 @@ const advisors = [
     </div>
 
     <div class="w-full flex flex-col items-center">
-      <h1 class="text-title-sm lg:text-title text-gold text-center">
-        Advisors
-      </h1>
-      <div class="flex flex-col flex-wrap flex-none w-full h-[36rem] gap-x-2 gap-y-5 overflow-x-scroll
-        snap-x snap-proximity place-content-stretch
-        md:gap-x-7 md:grid md:grid-cols-3 md:w-fit md:h-fit md:place-content-stretch md:overflow-x-clip"
-        ref="advisorCarousel">
-        <div class="w-[15rem] h-[17rem] bg-gold/40 gap-y-4 snap-center
-          flex flex-col justify-center items-center
-          md:w-auto
-          lg:w-[20rem] lg:h-[22rem]"
+      <h1 class="text-title-sm lg:text-title text-gold text-center">Advisors</h1>
+      <div
+        ref="advisorCarousel"
+        class="flex flex-col flex-wrap flex-none w-full h-[36rem] gap-x-2 gap-y-5 overflow-x-scroll snap-x snap-mandatory place-content-stretch md:gap-x-7 md:grid md:grid-cols-3 md:w-fit md:h-fit md:place-content-stretch md:overflow-x-clip"
+      >
+        <div
           v-for="(advisor, i) in advisors"
-          :key="advisor.name + i">
-          <img class="w-[8rem] h-[8rem] rounded-full object-top object-cover
-            lg:w-[12rem] lg:h-[12rem] "
-            :src="advisor.profile"/>
-            <div class="text-center">
-              <div class="">
-                <b> {{ advisor.name }} </b>
-              </div>
-              <div class="text-sm">
-                <p> {{ advisor.position }} </p>
-                <p> {{ advisor.location }} </p>
-              </div>
+          :key="advisor.name + i"
+          class="w-[15rem] h-[17rem] bg-gold/40 gap-y-4 snap-center snap-always flex flex-col justify-center items-center md:w-auto lg:w-[20rem] lg:h-[22rem]"
+        >
+          <img
+            class="w-[8rem] h-[8rem] rounded-full object-top object-cover lg:w-[12rem] lg:h-[12rem]"
+            :src="advisor.profile"
+          />
+          <div class="text-center">
+            <div class="">
+              <b> {{ advisor.name }} </b>
             </div>
+            <div class="text-sm">
+              <p>{{ advisor.position }}</p>
+              <p>{{ advisor.location }}</p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- <div class="flex justify-center gap-4"
@@ -201,8 +204,7 @@ const advisors = [
         Acknowledgements
       </h1>
       <section class="text-center">
-        <h3 class="text-subtitle-sm"
-          v-for="p in acknowledgements" :key="p"> {{ p }} </h3>
+        <h3 class="text-subtitle-sm" v-for="p in acknowledgements" :key="p">{{ p }}</h3>
       </section>
     </div>
   </div>
