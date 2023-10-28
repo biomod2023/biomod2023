@@ -8,13 +8,14 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons'
 import {
   RiArrowDropLeftLine,
   RiArrowDropRightLine,
+  RiTeamFill,
   HiSolidArrowSmRight,
   HiSolidArrowSmLeft
 } from 'oh-vue-icons/icons'
 import { VueWindowSizePlugin } from 'vue-window-size/plugin'
 import vClickOutside from 'v-click-outside'
 
-addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine)
+addIcons(HiSolidArrowSmLeft, HiSolidArrowSmRight, RiArrowDropRightLine, RiArrowDropLeftLine, RiTeamFill)
 
 const { bind, unbind } = vClickOutside.directive;
 

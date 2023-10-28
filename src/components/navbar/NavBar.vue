@@ -143,7 +143,7 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
+      class="fixed z-30 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
         <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />
