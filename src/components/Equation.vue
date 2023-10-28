@@ -1,31 +1,34 @@
 <script setup lang="ts">
 import katex from 'katex'
 import { type Ref, ref, onMounted } from 'vue'
-const props = defineProps<{
-  formula: string
-}>()
-const containerRef = ref(null) as unknown as Ref<HTMLElement>
+const props = withDefaults(
+  defineProps<{
+    formula: string
+    displayMode?: boolean
+  }>(),
+  {
+    formula: '',
+    displayMode: false
+  }
+)
 
+const containerRef = ref(null) as unknown as Ref<HTMLElement>
 onMounted(() => {
-  katex.render(props.formula, containerRef.value, { throwOnError: false })
+  katex.render(props.formula, containerRef.value, {
+    throwOnError: false,
+    displayMode: props.displayMode
+  })
 })
 </script>
 <template>
-  <div
+  <span
     ref="containerRef"
     class="w-full overflow-x-scroll bg-transparent invisible-scroller text-center"
-  ></div>
-</template>
-<!-- 
-<template>
-    hello
-    <vue-mathjax :formula="formula"></vue-mathjax>
+  >
+  </span>
 </template>
 
-<script lang="ts">
-import { VueMathjax } from 'vue-mathjax'
-export default {
-  components: {
-    'vue-mathjax': VueMathjax
-  }}
-</script> -->
+<!-- <template>
+    hello
+    <vue-mathjax :formula="formula"></vue-mathjax>
+</template> -->
