@@ -210,8 +210,10 @@ const tableData = {
               Darling, Nicole J., Hung, Yiu-Sun, Sharma, Shruti, & Segura, Tatiana. (2016)
               “Controlling the Kinetics of Thiol-Maleimide Michael-Type Addition Gelation Kinetics
               for the Generation of Homogenous Poly(Ethylene Glycol) Hydrogels.” Biomaterials,
-              101,199–206. 
-              <a href="https://doi.org/10.1016/j.biomaterials.2016.05.053">https://doi.org/10.1016/j.biomaterials.2016.05.053</a>
+              101,199–206.
+              <a href="https://doi.org/10.1016/j.biomaterials.2016.05.053"
+                >https://doi.org/10.1016/j.biomaterials.2016.05.053</a
+              >
             </p>
             <p>
               Elliott, J. T., & Prestwich, G. D. (2000). Maleimide-functionalized lipids that anchor
@@ -224,17 +226,21 @@ const tableData = {
               ASP-Enzymosomes with Saccharomyces cerevisiae Asparaginase II Expressed in Pichia
               pastoris: Formulation Design and In Vitro Studies of a Potential Antileukemic Drug.
               International Journal of Molecular Sciences, 22(20), 11120.
-              <a href="https://doi.org/10.3390/ijms222011120">https://doi.org/10.3390/ijms222011120</a>
+              <a href="https://doi.org/10.3390/ijms222011120"
+                >https://doi.org/10.3390/ijms222011120</a
+              >
             </p>
             <p>
               Nanjwade, B. K., Hundekar, Y., Mohamied, A. S., Idris, N. F., Srichana, T., &
               Shafioul, A. S. M. (2015). Nanomedicine to Tumor by Enzymosomes. Nanotechnology:
-              Nanomedicine&Nanobiotechnology, 2(1), 1–5. 
-              <a href="https://doi.org/10.24966/NTMB-2044/100004">https://doi.org/10.24966/NTMB-2044/100004</a>
+              Nanomedicine&Nanobiotechnology, 2(1), 1–5.
+              <a href="https://doi.org/10.24966/NTMB-2044/100004"
+                >https://doi.org/10.24966/NTMB-2044/100004</a
+              >
             </p>
             <p>
               Singh, R. (1994). A Sensitive Assay for Maleimide Groups. Bioconjugate Chemistry,
-              5(4), 348–351. 
+              5(4), 348–351.
               <a href="https://doi.org/10.1021/bc00028a011">https://doi.org/10.1021/bc00028a011</a>
             </p>
             <p>
@@ -242,7 +248,9 @@ const tableData = {
               Preparation and Evaluation of Liposomes Co-Loaded with Doxorubicin, Phospholipase D
               Inhibitor 5-Fluoro-2-Indolyl Deschlorohalopemide (FIPI) and D-Alpha Tocopheryl Acid
               Succinate (α-TOS) for Anti-Metastasis. Nanoscale Research Letters, 14, 138.
-              <a href="https://doi.org/10.1186/s11671-019-2964-4">https://doi.org/10.1186/s11671-019-2964-4</a>
+              <a href="https://doi.org/10.1186/s11671-019-2964-4"
+                >https://doi.org/10.1186/s11671-019-2964-4</a
+              >
             </p>
             <p>
               Wang, X., Liu, S., Sun, Y., Yu, X., Lee, S. M., Cheng, Q., Wei, T., Gong, J.,
