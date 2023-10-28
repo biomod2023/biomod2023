@@ -32,8 +32,8 @@ onMounted(() => {
   }
 })
 
-const acknowledgements = ["Dr. Hancock", "Dr. Miffy Cheng", "Dr Steven D. Perrault",
-  "Dr. William Shih", "Dr. Thorsten-Lars Schmidt"]
+const acknowledgements = ["Dr. Hancock", "Dr. Miffy Cheng", "Dr. Steven D. Perrault",
+  "Dr. William Shih", "Dr. Thorsten-Lars Schmidt", "Eashan Halbe"]
 const advisors = [
   {
     name : "Dr. Steven Hallam",
