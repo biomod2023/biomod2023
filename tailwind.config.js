@@ -19,7 +19,7 @@ module.exports = {
       },
       colors: {
         notebookBg: '#333333',
-        notebookText: '#8F8F90',
+        notebookText: '#9E9E9E',
         slate: '#272727',
         dark: '#1E1E1E',
         gold: '#E2B764'
