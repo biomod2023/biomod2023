@@ -1,6 +1,5 @@
 # Notebook & General Documentation
 
-You're welcome. \
 Co-author: Daniel + Minh :D
 
 # General Documentation
@@ -12,7 +11,7 @@ Wrapper component to detect if the user click outside of your component. First, 
 - `yourCallBackFunc` - the method that will be called when the user clicks outside of your component. You have to define this yourself. It varies depending on the need.
 - `setRef` - is a function from `<ClickDetection>` that allows you to to specify the Ref of the target component. With it, we can check if the component has been clicked, whenever there's a click.
 
-```html
+```vue
 <ClickDetection :callback"yourCallBackFunc" v-slot"{setRef}">
   <YourComponent :ref="(el) => setRef(el)">
     ...
