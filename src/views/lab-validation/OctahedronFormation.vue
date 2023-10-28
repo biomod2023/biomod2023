@@ -93,7 +93,7 @@ const tableData = {
               volumes of the reagents as outlined in Table 1 into PCR tubes.
             </p>
             <div class="flex flex-col items-center w-full">
-              <div class="overflow-x-scroll w-full">
+              <div class="overflow-x-scroll w-full md:overflow-x-clip">
                 <table class="table-auto border-collapse lg:w-full">
                   <tr class="bg-slate h-12">
                     <th colspan="7">Volumes for each Ratio (μL)</th>
@@ -225,12 +225,12 @@ const tableData = {
             <p>
               Perrault, S. D., & Shih, W. M. (2014). Virus-inspired membrane encapsulation of DNA
               nanostructures to achieve in vivo stability. ACS nano, 8(5), 5132–5140.
-              https://doi.org/10.1021/nn5011914
+              <a href="https://doi.org/10.1021/nn5011914">https://doi.org/10.1021/nn5011914</a>
             </p>
             <p>
               Perrault, S. D., & Shih, W. M. (2016). Lipid membrane encapsulation of a 3D DNA nano
               octahedron. Methods in Molecular Biology, 165–184.
-              https://doi.org/10.1007/978-1-4939-6454-3_12
+              <a href="https://doi.org/10.1007/978-1-4939-6454-3_12">https://doi.org/10.1007/978-1-4939-6454-3_12</a>
             </p>
           </div>
         </template>
