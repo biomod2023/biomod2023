@@ -141,7 +141,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
         <v-icon
           v-if="$windowWidth >= 450"
           :class="
-            'cursor-pointer relative bottom-[3rem] bg-transparent grow ' +
+            'cursor-pointer relative bottom-[3rem] bg-transparent left-[3rem] md:left-[5rem] ' +
             (currIdx == 0 ? 'invisible' : '')
           "
           name="ri-arrow-drop-left-line"
@@ -162,11 +162,12 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
             <div
               :key="currIdx + 'wrapper'"
               ref="swipeableContainer"
-              class="w-full h-full overflow-hidden"
+              class="w-full h-full overflow-hidden flex justify-center"
               :style="$windowWidth >= 450 ? {} : (swipedStyle as StyleValue)"
             >
               <div
-                class="grid grid-cols-1 place-items-center w-full h-fit gap-y-[2.47rem] md:grid-cols-2"
+                class="grid grid-cols-1 place-items-center w-[75%] h-fit gap-y-[2.47rem] md:grid-cols-2
+                  gap-x-3"
               >
                 <ProfileCard
                   v-for="member in members
@@ -174,7 +175,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
                     ?.slice(currIdx * maxMember, (currIdx + 1) * maxMember)"
                   :key="member.name + currTeam"
                   :member="member"
-                  wrapper-style="w-[19.5rem] lg:w-[24rem] h-[13rem]"
+                  wrapper-style="w-full max-w-[24rem] h-[13rem]"
                 />
               </div>
             </div>
@@ -184,7 +185,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
         <v-icon
           v-if="$windowWidth >= 450"
           :class="
-            'cursor-pointer relative bottom-[3rem] bg-transparent grow ' +
+            'cursor-pointer relative bottom-[3rem] bg-transparent right-[3rem] md:right-[5rem] ' +
             (currIdx == Math.ceil((members?.get(currTeam)?.length ?? 0) / maxMember) - 1
               ? 'invisible'
               : '')
