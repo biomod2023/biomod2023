@@ -104,7 +104,6 @@ const scrollToTop = () => {
       title="YouTube video player" frameborder="0" allow="accelerometer;
       autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
       web-share" allowfullscreen></iframe>
-      <!-- <iframe src="https://youtu.be/krcnwXdkRuU" class="mt-4 w-4/5 lg:w-3/5 h-[40dvw] lg:h-[35dvw]"></iframe> -->
 
       <button class="btn !py-4 mt-2 mb-8 group" @click="scrollToTop">
         <svg class="w-5 lg:w-6 fill-gold group-hover:fill-black transition-all duration-200" viewBox="0 0 24 36"
