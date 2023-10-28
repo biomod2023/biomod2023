@@ -12,8 +12,8 @@ onMounted(() => {
 </script>
 <template>
   <div
+    class="w-full overflow-x-scroll bg-transparent invisible-scroller text-center"
     ref="containerRef"
-    class="w-full overflow-x-scroll whitespace-nowrap bg-transparent invisible-scroller text-center"
   ></div>
 </template>
 <!-- 

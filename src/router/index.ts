@@ -3,9 +3,16 @@ const HomeView = () => import('@/views/HomeView.vue')
 const IdeasView = () => import('@/views/IdeasView.vue')
 const TeamView = () => import('@/views/TeamView.vue')
 const ELSIView = () => import('@/views/ELSIView.vue')
-const GroupAView = () => import('@/views/enzymosome/GroupAView.vue')
-const GroupCView = () => import('@/views/enzymosome/GroupCView.vue')
-const OctadedronFormation = () => import('@/views/Octahedron/OctahedronFormation.vue')
+const SponsorsView = () => import('@/views/SponsorsView.vue')
+const DockingDNASE = () => import('@/views/computational-simulation/DockingDNASE.vue')
+const GroupAView = () => import('@/views/lab-validation/GroupAView.vue')
+const GroupBView = () => import('@/views/lab-validation/GroupBView.vue')
+const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
+const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
+const AADocking = () => import('@/views/future-directions/AADocking.vue')
+const OctahedronLiposomeFormation = () =>
+  import('@/views/future-directions/OctahedronLiposomeFormation.vue')
+const NotFoundView = () => import('@/views/NotFoundView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,38 +22,65 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-
     {
       path: '/ideas',
       name: 'ideas',
       component: IdeasView
     },
-
     {
       path: '/elsi',
       name: 'elsi',
       component: ELSIView
     },
-
     {
       path: '/team',
       name: 'team',
       component: TeamView
     },
     {
-      path: '/enzymosome/enzyme-activity-assays',
-      name: 'enzyme-activity-assays',
+      path: '/sponsors',
+      name: 'sponsors',
+      component: SponsorsView
+    },
+    {
+      path: '/computational-simulation/docking-of-dnase-i',
+      name: 'docking-of-dnase-i',
+      component: DockingDNASE
+    },
+    {
+      path: '/lab-validation/dnase-i',
+      name: 'dnase-i',
       component: GroupAView
     },
     {
-      path: '/enzymosome/enzyme-conjugation',
-      name: 'enzyme-conjugation',
+      path: '/lab-validation/liposome-formation',
+      name: 'liposome-formation',
+      component: GroupBView
+    },
+    {
+      path: '/lab-validation/thiolation-and-conjugation',
+      name: 'thiolation-and-conjugation',
       component: GroupCView
     },
     {
-      path: '/octahedron/octahedron-formation',
+      path: '/lab-validation/octahedron-formation',
       name: 'octahedron-formation',
       component: OctadedronFormation
+    },
+    {
+      path: '/future-directions/aa-docking',
+      name: 'aa-docking',
+      component: AADocking
+    },
+    {
+      path: '/future-directions/octahedron-liposome-formation',
+      name: 'octahedron-liposome-formation',
+      component: OctahedronLiposomeFormation
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: '404-not-found',
+      component: NotFoundView
     }
   ]
 })
