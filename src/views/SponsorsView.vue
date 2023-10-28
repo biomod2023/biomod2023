@@ -182,7 +182,7 @@ const advisors = [
             </div>
         </div>
       </div>
-      <div class="flex justify-center gap-4"
+      <!-- <div class="flex justify-center gap-4"
         v-if="$windowWidth < 768">
         <span
           :class="{
@@ -193,7 +193,7 @@ const advisors = [
           v-for="i in maxCarouselPage"
           :key="i"
         ></span>
-      </div>
+      </div> -->
     </div>
 
     <div>
