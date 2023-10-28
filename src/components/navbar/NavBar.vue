@@ -43,7 +43,7 @@ const tree: Tree[] = [
         name: 'Lab Validation',
         children: [
           {
-            name: 'Dnase I',
+            name: 'DNase I',
             url: '/lab-validation/dnase-i'
           },
           {
