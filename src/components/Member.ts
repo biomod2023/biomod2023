@@ -22,7 +22,8 @@ const Kshemaka: Member = {
   positions: new Map<string, string>([
     ['Leads', 'Team Captain'],
     ['Wetlab', 'Enzymes'],
-    ['Video', 'Modelling']
+    ['Video', 'Modelling'],
+    ['CADnano', 'Designer']
   ]),
   major: 'Microbiology and Immunology',
   year: 4,
@@ -41,7 +42,8 @@ const Miguel: Member = {
   positions: new Map<string, string>([
     ['Leads', 'Team Captain'],
     ['Wetlab', 'Octahedron'],
-    ['Website', 'Graphics']
+    ['Website', 'Graphics'],
+    ['CADnano', 'Designer']
   ]),
   major: 'Biochemistry',
   year: 4,
@@ -113,7 +115,7 @@ const Ethan: Member = {
   name: 'Ethan Rajkumar',
   positions: new Map<string, string>([
     ['Wetlab', 'Octahedron'],
-    ['CADnano', 'Designer'],
+    ['CADnano', 'Modelling'],
     ['Website', 'Developer'],
     ['Finance', 'Sponsorships']
   ]),
@@ -166,7 +168,7 @@ const teams: string[] = ['All', 'Leads', 'CADnano', 'Wetlab', 'Finance', 'Websit
 const members: Map<string, Member[]> = new Map<string, Member[]>([
   ['All', [Kshemaka, Miguel, Ethan, Melanie, Karina, Paniz, Vivian, Maggie]],
   ['Leads', [Kshemaka, Miguel]],
-  ['CADnano', [Ethan]],
+  ['CADnano', [Kshemaka, Miguel, Ethan]],
   ['Wetlab', [Miguel, Kshemaka, Melanie, Karina, Paniz, Ethan, Vivian, Maggie]],
   ['Finance', [Karina, Paniz, Ethan, Vivian, Maggie]],
   ['Website', [Miguel, Melanie, Ethan, Vivian]],
