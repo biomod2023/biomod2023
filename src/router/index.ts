@@ -11,6 +11,7 @@ const GroupBView = () => import('@/views/lab-validation/GroupBView.vue')
 const GroupCView = () => import('@/views/lab-validation/GroupCView.vue')
 const OctadedronFormation = () => import('@/views/lab-validation/OctahedronFormation.vue')
 const AADocking = () => import('@/views/future-directions/AADocking.vue')
+const StructureImaging = () => import('@/views/future-directions/StructureImaging.vue')
 const OctahedronLiposomeFormation = () =>
   import('@/views/future-directions/OctahedronLiposomeFormation.vue')
 const NotFoundView = () => import('@/views/NotFoundView.vue')
@@ -77,6 +78,11 @@ const router = createRouter({
       path: '/future-directions/aa-docking',
       name: 'aa-docking',
       component: AADocking
+    },
+    {
+      path: '/future-directions/structure-imaging',
+      name: 'structure-imaging',
+      component: StructureImaging
     },
     {
       path: '/future-directions/octahedron-liposome-formation',

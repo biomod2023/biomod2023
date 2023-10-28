@@ -21,8 +21,13 @@ onMounted(() => {
 })
 </script>
 <template>
-  <span
-    class="w-full overflow-x-scroll bg-transparent invisible-scroller text-center"
+  <div
     ref="containerRef"
-  ></span>
+    class="w-full overflow-x-scroll bg-transparent invisible-scroller text-center"
+  ></div>
+</template>
+<!-- 
+<template>
+    hello
+    <vue-mathjax :formula="formula"></vue-mathjax>
 </template>

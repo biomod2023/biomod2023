@@ -28,7 +28,7 @@ The notebook text and bubble background colors can be accessed with the `noteboo
 
 ```html
 <div class="bg-notebookBg">
-    <p class="text-notebookText">Body</p>
+  <p class="text-notebookText">Body</p>
 </div>
 ```
 

@@ -68,6 +68,10 @@ const tree: Tree[] = [
             url: '/future-directions/aa-docking'
           },
           {
+            name: 'Structure Imaging',
+            url: '/future-directions/structure-imaging'
+          },
+          {
             name: 'Liposome Formation Using Octahedron',
             url: '/future-directions/octahedron-liposome-formation'
           }
@@ -94,7 +98,7 @@ const tree: Tree[] = [
   <!-- Desktop Navbar -->
   <template v-if="$windowWidth >= 1024">
     <div
-      class="flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
+      class="z-20 flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
       <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
@@ -147,7 +151,7 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
+      class="fixed z-30 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
         <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />
