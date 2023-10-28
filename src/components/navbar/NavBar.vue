@@ -68,6 +68,10 @@ const tree: Tree[] = [
             url: '/future-directions/aa-docking'
           },
           {
+            name: 'Structure Imaging',
+            url: '/future-directions/structure-imaging'
+          },
+          {
             name: 'Liposome Formation Using Octahedron',
             url: '/future-directions/octahedron-liposome-formation'
           }
