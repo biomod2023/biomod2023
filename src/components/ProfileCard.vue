@@ -37,7 +37,7 @@ const handleImgErr = (e: Event) => {
       >
         <img
           :src="member?.image"
-          class="w-[8.2rem] h-[8.2rem] rounded-[5.7rem]"
+          class="w-[8.2rem] h-[8.2rem] rounded-[5.7rem] object-cover"
           @error="handleImgErr"
         />
         <div class="flex flex-col items-center gap-0">
