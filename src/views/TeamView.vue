@@ -141,7 +141,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
         <v-icon
           v-if="$windowWidth >= 450"
           :class="
-            'cursor-pointer relative bottom-[3rem] bg-transparent left-[3rem] md:left-[5rem] ' +
+            'cursor-pointer relative bottom-[3rem] bg-transparent left-[3rem] md:left-[5rem] z-10 ' +
             (currIdx == 0 ? 'invisible' : '')
           "
           name="ri-arrow-drop-left-line"
@@ -151,7 +151,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
         />
 
         <!-- Content -->
-        <div class="relative h-full w-full overflow-hidden grow-0">
+        <div class="relative h-full w-full overflow-hidden grow-0 z-0">
           <TransitionGroup
             :enter-from-class="initialState"
             :leave-to-class="finalState"
@@ -175,6 +175,7 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
                     ?.slice(currIdx * maxMember, (currIdx + 1) * maxMember)"
                   :key="member.name + currTeam"
                   :member="member"
+                  :current-team="currTeam"
                   wrapper-style="w-full max-w-[24rem] h-[13rem]"
                 />
               </div>

@@ -10,7 +10,7 @@ import _Maggie from '@/assets/profile_pictures/Maggie_Wang.jpg'
 type Member = {
   image: string
   name: string
-  position: string
+  positions: Map<string, string>
   description: string
   major: string
   year: number
@@ -18,8 +18,14 @@ type Member = {
 
 const Kshemaka: Member = {
   image: _Kshemaka,
-  name: 'Kshemeka Gunawardena',
-  position: 'Team Captain',
+  name: 'Kshemaka Gunawardena',
+  positions: new Map<string, string>(
+    [ 
+      ["Leads", "Team Captain"],
+      ["Wetlab", "Enzymes"],
+      ["Video", "Modelling"]
+    ]
+  ),
   major: 'Microbiology and Immunology',
   year: 4,
   description:
@@ -34,7 +40,13 @@ const Kshemaka: Member = {
 const Miguel: Member = {
   image: _Miguel,
   name: 'Miguel Tsai',
-  position: 'Team Captain',
+  positions: new Map<string, string>(
+    [ 
+      ["Leads", "Team Captain"],
+      ["Wetlab", "Octahedron"],
+      ["Website", "Graphics"],
+    ]
+  ),
   major: 'Biochemistry',
   year: 4,
   description:
@@ -48,7 +60,12 @@ const Miguel: Member = {
 const Melanie: Member = {
   image: _Melanie,
   name: 'Melanie Chan',
-  position: 'Wetlab Member',
+  positions: new Map<string, string>(
+    [ 
+      ["Wetlab", "Enzymes"],
+      ["Website", "Writer"]
+    ]
+  ),
   major: 'Microbiology and Immunology',
   year: 2,
   description: 'Melanie is a second year science student studying Microbiology\
@@ -60,7 +77,13 @@ const Melanie: Member = {
 const Karina: Member = {
   image: _Karina,
   name: 'Karina Akhmedova',
-  position: 'wetlab member',
+  positions: new Map<string, string>(
+    [ 
+      ["Wetlab", "Enzyme Modelling"],
+      ["Finance", "Administration"],
+      ["Video", "Audio"]
+    ]
+  ),
   major: 'biomedical engineering',
   year: 3,
   description: 'I\'m studying biomedical engineering and am very passionate about\
@@ -76,7 +99,12 @@ const Karina: Member = {
 const Paniz: Member = {
   image: _Paniz,
   name: 'Paniz Ghavimi',
-  position: 'Wetlab member',
+  positions: new Map<string, string>(
+    [ 
+      ["Wetlab", "Liposome"],
+      ["Finance", "Sponsorships"],
+    ]
+  ),
   major: 'Molecular and Cellular Biology',
   year: 4,
   description: 'Hiii everyone! My name is Paniz, and I am an incoming\
@@ -90,7 +118,14 @@ const Paniz: Member = {
 const Ethan: Member = {
   image: _Ethan,
   name: 'Ethan Rajkumar',
-  position: 'Big Man',
+  positions: new Map<string, string>(
+    [ 
+      ["Wetlab", "Octahedron"],
+      ["CADnano", "Designer"],
+      ["Website", "Developer"],
+      ["Finance", "Sponsorships"]
+    ]
+  ),
   major: 'Chemistry and Statistics',
   year: 4,
   description: 'The man, the myth the legend. He is in Chemistry and Statistics\
@@ -102,7 +137,13 @@ const Ethan: Member = {
 const Vivian: Member = {
   image: _Vivian,
   name: 'Vivian Zheng',
-  position: 'Wetlab Member',
+  positions: new Map<string, string>(
+    [ 
+      ["Wetlab", "Liposome"],
+      ["Website", "Writer"],
+      ["Finance", "Administration"]
+    ]
+  ),
   major: 'CAPS',
   year: 3,
   description: 'Hi! I\'m a 3rd year CAPS major, and part of the wet lab team in\
@@ -115,7 +156,13 @@ const Vivian: Member = {
 const Maggie: Member = {
   image: _Maggie,
   name: 'Maggie Wang',
-  position: 'Wetlab Member',
+  positions: new Map<string, string>(
+    [ 
+      ["Wetlab", "Enzymes"],
+      ["Finance", "Sponsorships"],
+      ["Video", "Animation"]
+    ]
+  ),
   major: 'Biomedical Engineering',
   year: 3,
   description: 'Hi, I’m Maggie! I am a third year biomedical engineering student\
@@ -125,7 +172,7 @@ const Maggie: Member = {
   Breasts and Eggs by Mieko Kawakami.'
 }
 
-const teams: string[] = ['Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Social Media']
+const teams: string[] = ['Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video']
 const members: Map<string, Member[]> = new Map<string, Member[]>([
   [
     'Leads',
@@ -133,19 +180,27 @@ const members: Map<string, Member[]> = new Map<string, Member[]>([
       Kshemaka, Miguel
     ]
   ],
-  ['CADnano', []],
+  ['CADnano', [
+    Ethan
+  ]],
   [
     'Wetlab',
     [
+      Miguel, Kshemaka, Melanie, Karina, Paniz, Ethan, Vivian, Maggie
     ]
   ],
   [
     'Finance',
     [
+      Karina, Paniz, Ethan, Vivian, Maggie
     ]
   ],
-  ['Website', []],
-  ['Social Media', []]
+  ['Website', [
+    Miguel, Melanie, Ethan, Vivian
+  ]],
+  ['Video', [
+    Kshemaka, Karina, Maggie
+  ]]
 ])
 
 export type { Member }

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Ref } from 'vue'
-import type { PropType } from 'vue'
 import emptyPic from '@/assets/empty_profile.png'
 
 import type { Member } from '@/components/Member'
 const props = defineProps<{
   member: Member,
   wrapperStyle?: string,
+  currentTeam: string
 }>()  
 const cardConfig: string =
   'absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1 '
@@ -42,7 +42,7 @@ const handleImgErr = (e: Event) => {
         />
         <div class="flex flex-col items-center gap-0">
           <div class="text-base font-bold text-white">{{ member?.name }}</div>
-          <div class="text-base font-normal text-gold">{{ member?.position }}</div>
+          <div class="text-base font-normal text-gold">{{ member?.positions.get(currentTeam) }}</div>
         </div>
       </div>
 
