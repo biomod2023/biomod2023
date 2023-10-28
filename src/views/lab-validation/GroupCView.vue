@@ -64,7 +64,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               </template>
               <template #caption>
                 <p>
-                  Figure 1: Reacting SATA with amine to generate sulfhydryl group (Theule, n.d.).
+                  Figure 1. Reacting SATA with amine to generate sulfhydryl group (Theule, n.d.).
                 </p>
               </template>
             </CaptionedGraphics>
@@ -89,7 +89,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               </template>
               <template #caption>
                 <p>
-                  Figure 2: Michael Addition Reaction – A thiol-maleimide reaction that forms a
+                  Figure 2. Michael Addition Reaction – A thiol-maleimide reaction that forms a
                   thiosuccinimide molecule. (Quanta BioDesign, n.d.).
                 </p>
               </template>
@@ -374,22 +374,24 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
           <div class="pl-6 -indent-6">
             <p>
               Deng, Y., & Tsao, B. P. (2013). Genetics of Human SLE. Dubois’ Lupus Erythematosus and
-              Related Syndromes, 35–45. https://doi.org/10.1016/b978-1-4377-1893-5.00004-2
+              Related Syndromes, 35–45. 
+              <a href="https://doi.org/10.1016/b978-1-4377-1893-5.00004-2">https://doi.org/10.1016/b978-1-4377-1893-5.00004-2</a>
             </p>
             <p>
               Erickson, H. P. (2009, May 15). Size and shape of protein molecules at the nanometer
               level determined by sedimentation, gel filtration, and electron microscopy. Biological
-              procedures online. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3055910/
+              procedures online. 
+              <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3055910/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3055910/</a>
             </p>
             <p>
               Filipe, V., Hawe, A., & Jiskoot, W. (2010, May). Critical evaluation of nanoparticle
               tracking analysis (NTA) by NanoSight for the measurement of nanoparticles and protein
               aggregates. Pharmaceutical research.
-              https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2852530/
+              <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2852530/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2852530/</a>
             </p>
             <p>
               Instructions SATA and SATP. Thermo Scientific. (n.d.).
-              https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0011179_SATA_SATP_UG.pdf
+              <a href="https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0011179_SATA_SATP_UG.pdf">https://assets.fishersci.com/TFS-Assets/LSG/manuals/MAN0011179_SATA_SATP_UG.pdf</a>
             </p>
             <p>
               Heeremans, J. L. M., Kraaijenga, J. J., Los, P., Kluft, C., & Crommelin, D. J. A.
@@ -403,12 +405,13 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
             </p>
             <p>
               Maleimide Reaction Chemistry. Quanta BioDesign. (n.d.).
-              https://www.quantabiodesign.com/maleimide-reaction-chemistry/
+              <a href="https://www.quantabiodesign.com/maleimide-reaction-chemistry/">https://www.quantabiodesign.com/maleimide-reaction-chemistry/</a>
             </p>
             <p>
               Parsiegla, G., Noguere, C., Santell, L., Lazarus, R. A., & Bourne, Y. (2013, January
               9). 4AWN: Structure of recombinant human dnase I (rhdnasei) in complex with magnesium
-              and phosphate. RCSB PDB. https://www.rcsb.org/structure/4awn
+              and phosphate. RCSB PDB. 
+              <a href="https://www.rcsb.org/structure/4awn">https://www.rcsb.org/structure/4awn</a>
             </p>
             <p>
               Raval , N., Maheshwari, R., Kalyane, D., Youngren-Ortiz , S. R., Chougule, M. B.,
@@ -416,15 +419,15 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               pharmaceutical applications. (2019, January 11). Importance of physicochemical
               characterization of nanoparticles in pharmaceutical product development. Basic
               Fundamentals of Drug Delivery.
-              https://www.sciencedirect.com/science/article/pii/B9780128179093000108
+              <a href="https://www.sciencedirect.com/science/article/pii/B9780128179093000108">https://www.sciencedirect.com/science/article/pii/B9780128179093000108</a>
             </p>
             <p>
               Theule, Stephanie. (n.d.). Reaction of SATA [Reaction Image]. ResearchGate.
-              https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224
+              <a href="https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224">https://www.researchgate.net/figure/SATA-and-its-reaction-with-primary-amines-SATA-reacts-with-primary-amines-and_fig18_29529224</a>
             </p>
             <p>
               Understanding Dynamic Light Scattering. Waters | Wyatt Technology. (n.d.).
-              https://www.wyatt.com/library/theory/dynamic-light-scattering-theory.html#:~:text=In%20dynamic%20light%20scattering%20(DLS,to%20the%20particles%27%20hydrodynamic%20radii
+              <a href="https://www.wyatt.com/library/theory/dynamic-light-scattering-theory.html#:~:text=In%20dynamic%20light%20scattering%20(DLS,to%20the%20particles%27%20hydrodynamic%20radii">https://www.wyatt.com/library/theory/dynamic-light-scattering-theory.html#:~:text=In%20dynamic%20light%20scattering%20(DLS,to%20the%20particles%27%20hydrodynamic%20radii</a>
             </p>
           </div>
         </template>
