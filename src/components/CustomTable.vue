@@ -32,7 +32,7 @@ const border = 'border-notebookText'
         >
           {{ tableData.rowHeaders[i / tableData.rowsPerRowHeader] }}
         </th>
-        <td v-for="(item, j) in row" :key="j" class="py-1 lg:text-lg">{{ item }}</td>
+        <td v-for="(item, j) in row" :key="j" class="py-1 lg:text-lg text-center">{{ item }}</td>
       </tr>
     </tbody>
   </table>
