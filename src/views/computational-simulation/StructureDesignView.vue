@@ -146,7 +146,7 @@ const tableData = {
         <template #body>
           <p>
             The development of DNA Origami Structures is iterative consisting of 3 general processes
-          <ol class="list-decimal list-inside px-8">
+          <ol class="list-decimal list-inside pl-4 lg:px-8">
             <li>Finding the 3D locations folding and hybridization for the shorter staple strands relative to the long
               scaffold strand.</li>
             <li>Scrutinizing the design files to pinpoint any potential weak spots or errors.</li>
@@ -160,7 +160,7 @@ const tableData = {
           <h3 :class="sectionStyle"> Specific N-gonal Bipyramid Design Workflow </h3>
           <p>
             The design process for the N-gonal Bipyramidal consists of the following steps:
-          <ol class="list-decimal list-inside px-8">
+          <ol class="list-decimal list-inside lg:px-8">
             <li class="py-2">
               <b>Creating a 2D Blueprint from Our 3D Design (Net-Like Structure):</b> Throughout the development process,
               we envisioned putting our 3D model into a 2D surface. It's similar to visualizing the edges of the 3D
