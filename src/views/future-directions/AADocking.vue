@@ -305,13 +305,13 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               Linden, A., Mayans, O., Meyer-Klaucke, W., Antranikian, G., & Wilmanns, M. (2003).
               Differential regulation of a hyperthermophilic α-amylase with a novel (ca,Zn)
               two-metal center by zinc. Journal of Biological Chemistry, 278(11), 9875–9884.
-              https://doi.org/10.1074/jbc.m211339200
+              <a href="https://doi.org/10.1074/jbc.m211339200">https://doi.org/10.1074/jbc.m211339200</a>
             </p>
             <p>
               Yoon, H.-J., Hashimoto, W., Miyake, O., Murata, K., & Mikami, B. (2001). Crystal
               structure of alginate lyase A1-III complexed with Trisaccharide product at 2.0 Å
               Resolution. Journal of Molecular Biology, 307(1), 9–16.
-              https://doi.org/10.1006/jmbi.2000.4509
+              <a href="https://doi.org/10.1006/jmbi.2000.4509">https://doi.org/10.1006/jmbi.2000.4509</a>
             </p>
           </div>
         </template>
