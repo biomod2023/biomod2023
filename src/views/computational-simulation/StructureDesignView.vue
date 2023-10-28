@@ -635,7 +635,7 @@ const tableData = {
         </template>
       </SingleColumn>
 
-      <SingleColumn>
+      <SingleColumn always-dropdown>
         <template #title> References </template>
         <template #body>
           <div class="pl-6 -indent-6">
