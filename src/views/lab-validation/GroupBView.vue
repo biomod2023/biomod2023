@@ -113,7 +113,7 @@ const tableData = {
         <template #body>
           <div class="flex flex-col gap-y-4">
             <div class="flex flex-col items-center">
-              <div class="w-full overflow-x-scroll md:overflow-x-clip">
+              <div class="flex flex-col items-center w-full overflow-x-scroll md:overflow-x-auto">
                 <CustomTable :table-data="tableData" />
               </div>
               <p class="text-sm text-center">
