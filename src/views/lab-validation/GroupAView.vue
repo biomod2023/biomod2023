@@ -161,7 +161,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               respectively.
             </p>
             <div class="flex flex-col items-center w-full gap-2">
-              <div class="overflow-x-scroll w-full">
+              <div class="overflow-x-scroll w-full md:overflow-clip">
                 <CustomTable :table-data="tableTwoData" />
               </div>
               <p class="text-center text-sm">
