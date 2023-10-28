@@ -304,8 +304,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
               125–131.
               <a href="https://doi.org/10.1080/21655979.2015.1030543"
                 >https://doi.org/10.1080/21655979.2015.1030543</a
-              >
-            </p>
+              >            </p>
           </div>
         </template>
       </SingleColumn>

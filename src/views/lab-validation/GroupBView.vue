@@ -113,11 +113,11 @@ const tableData = {
         <template #body>
           <div class="flex flex-col gap-y-4">
             <div class="flex flex-col items-center">
-              <div class="w-full overflow-scroll">
+              <div class="w-full overflow-x-scroll md:overflow-x-clip">
                 <CustomTable :table-data="tableData" />
               </div>
               <p class="text-sm text-center">
-                Table 1: Liposome Particle Size Distribution under 3 Conditions - Pre-purification,
+                Table 1. Liposome Particle Size Distribution under 3 Conditions - Pre-purification,
                 Post-purification (via Amicon filtration), and Post-incorporation of Maleimide
                 Groups. Samples measured using dynamic light scattering (DLS). Z-Average (mean
                 particle size) and PDI (polydispersity index) characterize particle size and
@@ -210,12 +210,13 @@ const tableData = {
               Darling, Nicole J., Hung, Yiu-Sun, Sharma, Shruti, & Segura, Tatiana. (2016)
               “Controlling the Kinetics of Thiol-Maleimide Michael-Type Addition Gelation Kinetics
               for the Generation of Homogenous Poly(Ethylene Glycol) Hydrogels.” Biomaterials,
-              101,199–206. https://doi.org/10.1016/j.biomaterials.2016.05.053
+              101,199–206. 
+              <a href="https://doi.org/10.1016/j.biomaterials.2016.05.053">https://doi.org/10.1016/j.biomaterials.2016.05.053</a>
             </p>
             <p>
               Elliott, J. T., & Prestwich, G. D. (2000). Maleimide-functionalized lipids that anchor
               polypeptides to lipid bilayers and membranes. Bioconjugate Chemistry, 11(6), 832–841.
-              https://doi.org/10.1021/bc000022a
+              <a href="https://doi.org/10.1021/bc000022a">https://doi.org/10.1021/bc000022a</a>
             </p>
             <p>
               Girão, L. F. C., Carvalheiro, M. C., Ferreira-Silva, M., da Rocha, S. L. G., Perales,
@@ -223,23 +224,25 @@ const tableData = {
               ASP-Enzymosomes with Saccharomyces cerevisiae Asparaginase II Expressed in Pichia
               pastoris: Formulation Design and In Vitro Studies of a Potential Antileukemic Drug.
               International Journal of Molecular Sciences, 22(20), 11120.
-              https://doi.org/10.3390/ijms222011120
+              <a href="https://doi.org/10.3390/ijms222011120">https://doi.org/10.3390/ijms222011120</a>
             </p>
             <p>
               Nanjwade, B. K., Hundekar, Y., Mohamied, A. S., Idris, N. F., Srichana, T., &
               Shafioul, A. S. M. (2015). Nanomedicine to Tumor by Enzymosomes. Nanotechnology:
-              Nanomedicine&Nanobiotechnology, 2(1), 1–5. https://doi.org/10.24966/NTMB-2044/100004
+              Nanomedicine&Nanobiotechnology, 2(1), 1–5. 
+              <a href="https://doi.org/10.24966/NTMB-2044/100004">https://doi.org/10.24966/NTMB-2044/100004</a>
             </p>
             <p>
               Singh, R. (1994). A Sensitive Assay for Maleimide Groups. Bioconjugate Chemistry,
-              5(4), 348–351. https://doi.org/10.1021/bc00028a011
+              5(4), 348–351. 
+              <a href="https://doi.org/10.1021/bc00028a011">https://doi.org/10.1021/bc00028a011</a>
             </p>
             <p>
               Song, M., Wang, J., Lei, J., Peng, G., Zhang, W., Zhang, Y., Yin, M., et al. (2019).
               Preparation and Evaluation of Liposomes Co-Loaded with Doxorubicin, Phospholipase D
               Inhibitor 5-Fluoro-2-Indolyl Deschlorohalopemide (FIPI) and D-Alpha Tocopheryl Acid
               Succinate (α-TOS) for Anti-Metastasis. Nanoscale Research Letters, 14, 138.
-              https://doi.org/10.1186/s11671-019-2964-4
+              <a href="https://doi.org/10.1186/s11671-019-2964-4">https://doi.org/10.1186/s11671-019-2964-4</a>
             </p>
             <p>
               Wang, X., Liu, S., Sun, Y., Yu, X., Lee, S. M., Cheng, Q., Wei, T., Gong, J.,
