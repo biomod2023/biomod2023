@@ -243,7 +243,7 @@ const sectionTitleStyle = 'text-subtitle-sm lg:text-subtitle text-white mb-4'
                 <img
                   src="../../assets/thiolation-and-conjunction/thiolated-dnase-i.png"
                   alt=""
-                  class="xl:w-1/3"
+                  class="xl:w-1/2"
                 />
               </template>
               <template #caption>
