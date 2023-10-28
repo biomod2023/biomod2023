@@ -12,11 +12,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^10.5.0",
     "katex": "^0.16.9",
     "oh-vue-icons": "^1.0.0-rc3",
+    "v-click-outside": "^3.2.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2",
-    "vue-window-size": "^2.0.0"
+    "vue-window-size": "^2.0.0",
+    "vuetify": "^3.3.23"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

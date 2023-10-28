@@ -31,7 +31,7 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Structure Design',
-            url: '#'
+            url: '/computational-simulation/structure-design'
           },
           {
             name: 'Docking of Dnase I',
@@ -48,7 +48,7 @@ const tree: Tree[] = [
           },
           {
             name: 'Liposome Formation',
-            url: '#'
+            url: '/lab-validation/liposome-formation'
           },
           {
             name: 'Octahedron Formation',
@@ -65,11 +65,15 @@ const tree: Tree[] = [
         children: [
           {
             name: 'Docking of Alginate Lyase and Alpha-Amylase',
-            url: '#'
+            url: '/future-directions/aa-docking'
+          },
+          {
+            name: 'Structure Imaging',
+            url: '/future-directions/structure-imaging'
           },
           {
             name: 'Liposome Formation Using Octahedron',
-            url: '#'
+            url: '/future-directions/octahedron-liposome-formation'
           }
         ]
       }
@@ -94,11 +98,15 @@ const tree: Tree[] = [
   <!-- Desktop Navbar -->
   <template v-if="$windowWidth >= 1024">
     <div
-      class="flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
+      class="z-20 flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'">
+          <RouterLink
+            v-show="entry.url"
+            :to="entry.url ? entry.url : '#'"
+            class="h-full py-4 px-12"
+          >
             {{ entry.name }}
           </RouterLink>
           <Dropdown v-show="entry.children" to="#">
@@ -124,14 +132,15 @@ const tree: Tree[] = [
           </Dropdown>
         </template>
       </div>
-      <a href="/">
+      <a href="/" class="shrink-0 w-14">
         <img src="../../assets/logo.svg" alt="Biomod Logo" class="w-14" />
       </a>
-      <div class="flex justify-center gap-16">
+      <div class="flex justify-center">
         <RouterLink
           v-for="(entry, i) in tree.slice(tree.length / 2, tree.length)"
           :key="i"
           :to="entry.url ? entry.url : '#'"
+          class="h-full py-4 px-12"
         >
           {{ entry.name }}
         </RouterLink>
@@ -142,7 +151,7 @@ const tree: Tree[] = [
   <!-- Mobile Navbar -->
   <template v-else>
     <div
-      class="fixed z-20 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
+      class="fixed z-30 top-0 w-full flex justify-between items-center bg-slate py-7 drop-shadow-lg"
     >
       <RouterLink to="/" class="flex items-center">
         <img class="ml-4 mr-4 w-12" src="../../assets/logo.svg" alt="Biomod Logo" />

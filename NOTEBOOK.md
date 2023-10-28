@@ -1,7 +1,21 @@
+# Notebook & General Documentation
+
+You're welcome. \
+Co-author: Daniel + Minh :D
+
+# General Documentation
+## ClickDetection
+Wrapper component to detect if the user click outside of your component. First, `import @/components/utils/ClickDetection.vue`. Then, wrap the component outside of your target component with a few extra twists (work arounds):
+- `yourCallBackFunc` - the method that will be called when the user clicks outside of your component. You have to define this yourself. It varies depending on the need.
+- `setRef` - is a function from `<ClickDetection>` that allows you to to specify the Ref of the target component. With it, we can check if the component has been clicked, whenever there's a click.
+```html
+<ClickDetection :callback"yourCallBackFunc" v-slot"{setRef}">
+  <YourComponent :ref="(el) => setRef(el)">
+    ...
+  </YourComponent>
+</ClickDetection>
+```
 # Notebook
-
-You're welcome.
-
 ## Usage
 
 All you need to get started is import is the `@/components/lab-notebook/Notebook.vue` file.

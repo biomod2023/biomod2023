@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Ref } from 'vue'
-import type { PropType } from 'vue'
 import emptyPic from '@/assets/empty_profile.png'
 
 import type { Member } from '@/components/Member'
-const props = defineProps({
-  member: Object as PropType<Member>
-})
+const props = defineProps<{
+  member: Member
+  wrapperStyle?: string
+  currentTeam: string
+}>()
 const cardConfig: string =
-  'absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1'
+  'absolute w-full h-full rounded-[1.25rem] flex flex-col items-center gap-1 '
 const isHovering: Ref<boolean> = ref(false)
 
 const handleImgErr = (e: Event) => {
@@ -19,7 +20,7 @@ const handleImgErr = (e: Event) => {
 </script>
 
 <template>
-  <div class="relative w-[24rem] h-[13rem]">
+  <div :class="'relative  ' + (props.wrapperStyle !== undefined ? props.wrapperStyle : '')">
     <TransitionGroup
       enter-active-class="transition-opacity duration-200 ease-in-out"
       leave-active-class="transition-opacity duration-200 ease-in"
@@ -32,23 +33,27 @@ const handleImgErr = (e: Event) => {
         key="main"
         :class="cardConfig + ' justify-center bg-gold/40'"
         @mouseenter="isHovering = true"
+        @touchend="isHovering = true"
       >
         <img
           :src="member?.image"
-          class="w-[8.2rem] h-[8.2rem] rounded-[5.7rem]"
+          class="w-[8.2rem] h-[8.2rem] rounded-[5.7rem] object-cover"
           @error="handleImgErr"
         />
         <div class="flex flex-col items-center gap-0">
           <div class="text-base font-bold text-white">{{ member?.name }}</div>
-          <div class="text-base font-normal text-gold">{{ member?.position }}</div>
+          <div class="text-base font-normal text-gold">
+            {{ member?.positions.get(currentTeam) }}
+          </div>
         </div>
       </div>
 
       <div
         v-show="isHovering"
         key="alt"
-        :class="cardConfig + ' bg-gold'"
+        :class="cardConfig + ' bg-gold/80'"
         @mouseleave="isHovering = false"
+        @touchend="isHovering = false"
       >
         <div class="flex flex-col items-center content-start gap-0 p-[0.5rem] max-h-full">
           <div class="text-lg font-bold text-white">{{ member?.name }}</div>
