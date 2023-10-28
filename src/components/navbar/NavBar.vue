@@ -94,11 +94,15 @@ const tree: Tree[] = [
   <!-- Desktop Navbar -->
   <template v-if="$windowWidth >= 1024">
     <div
-      class="flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
+      class="z-20 flex justify-center items-center bg-slate font-semibold text-gold py-4 gap-44 drop-shadow-lg"
     >
       <div class="flex justify-center">
         <template v-for="(entry, i) in tree.slice(0, tree.length / 2)" :key="i">
-          <RouterLink v-show="entry.url" :to="entry.url ? entry.url : '#'" class="h-full py-4 px-12">
+          <RouterLink
+            v-show="entry.url"
+            :to="entry.url ? entry.url : '#'"
+            class="h-full py-4 px-12"
+          >
             {{ entry.name }}
           </RouterLink>
           <Dropdown v-show="entry.children" to="#">

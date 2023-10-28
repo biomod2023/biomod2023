@@ -16,10 +16,22 @@ const handleClickOutside = () => {
   <div
     v-click-outside="handleClickOutside"
     class="flex flex-col items-center h-full"
-    @mouseenter="() => {if (!toggle) dropdown = true}"
-    @mouseleave="() => {if (!toggle) dropdown = false}"
+    @mouseenter="
+      () => {
+        if (!toggle) dropdown = true
+      }
+    "
+    @mouseleave="
+      () => {
+        if (!toggle) dropdown = false
+      }
+    "
   >
-    <div class="relative z-10 flex gap-2 w-full py-4 px-12 cursor-pointer" :class="{ 'opacity-80': dropdown || toggle }" @click="toggle = !toggle">
+    <div
+      class="relative z-10 flex gap-2 w-full py-4 px-12 cursor-pointer"
+      :class="{ 'opacity-80': dropdown || toggle }"
+      @click="toggle = !toggle"
+    >
       <slot name="text"></slot>
       <svg
         class="w-3 stroke-gold transition duration-100"
@@ -31,7 +43,15 @@ const handleClickOutside = () => {
       </svg>
     </div>
 
-    <div v-if="dropdown || toggle" class="fixed pt-2 mt-10" @click="() => {if (!toggle) toggle = true}">
+    <div
+      v-if="dropdown || toggle"
+      class="fixed pt-2 mt-10"
+      @click="
+        () => {
+          if (!toggle) toggle = true
+        }
+      "
+    >
       <div class="bg-slate py-4 shadow-[0_25px_25px_rgba(0,0,0,0.4)] rounded-b-3xl">
         <slot name="content"></slot>
       </div>

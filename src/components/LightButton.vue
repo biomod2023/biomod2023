@@ -2,7 +2,7 @@
 
 <template>
   <button
-    class="flex items-center gap-2 bg-none px-6 py-2 text-gold text-subtitle font-medium hover:opacity-80 active:opacity-60 transition-opacity duration-200"
+    class="flex items-center gap-2 bg-none py-2 text-gold text-subtitle font-medium hover:opacity-80 active:opacity-60 transition-opacity duration-200"
   >
     <slot></slot>
     <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
