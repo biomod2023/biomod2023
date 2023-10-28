@@ -307,13 +307,13 @@ const tableData = {
               </p>
               <CaptionedGraphics>
                 <template #graphics>
-                  <img :src="structure.preview" class="w-[80%] "/>
+                  <img :src="structure.preview" class="w-[80%]" />
                 </template>
                 <template #caption>
                   {{ structure.captions }}
                 </template>
               </CaptionedGraphics>
-              <br>
+              <br />
               <p class="text-center text-xl mt-4"><b>RMSF View</b></p>
               <div class="grid grid-cols-3">
                 <div v-for="j in 3" :key="j">
