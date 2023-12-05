@@ -114,7 +114,8 @@ const { isSwiping, direction, lengthX, lengthY } = useSwipe(swipeableContainer, 
 
       <!-- Desktop -->
       <div
-        class="hidden min-[866px]:gap-x-[1rem] min-[866px]:py-[2rem] min-[866px]:flex min-[866px]:flex-row lg:gap-x-[3rem]"
+        class="hidden w-full gap-x-[1rem]
+        min-[866px]:flex min-[866px]:flex-row min-[866px]:justify-center min-[866px]:py-[2rem]"
       >
         <TransparentButton
           v-for="(team, i) in teams"
