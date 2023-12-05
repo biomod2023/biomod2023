@@ -40,6 +40,7 @@ const Grace: Member = {
   name: 'Grace Wang',
   positions: new Map<string, string>([
     ['Video', 'Team Lead'],
+    ['Leads', 'Video Lead']
   ]),
   major: 'Biology',
   year: 4,
@@ -52,6 +53,7 @@ const Erica: Member = {
   name: 'Erica Chu',
   positions: new Map<string, string>([
     ['Social Media', 'Team Lead'],
+    ['Leads', 'Social Media Lead']
   ]),
   major: 'Biochemistry',
   year: 2,
@@ -64,6 +66,7 @@ const Enda: Member = {
   name: 'Enda Cakmak',
   positions: new Map<string, string>([
     ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'Biomedical Engineering',
   year: 4,
@@ -112,6 +115,7 @@ const Arnaz: Member = {
   name: 'Arnaz Dallah',
   positions: new Map<string, string>([
     ['CADnano', 'Team Lead'],
+    ['Leads', 'CADnano Lead']
   ]),
   major: 'Biomedical Engineering',
   year: 3,
@@ -124,6 +128,7 @@ const Whitney: Member = {
   name: 'Whitney Demetriou',
   positions: new Map<string, string>([
     ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'Pharmaceutical Sciences',
   year: 4,
@@ -219,6 +224,7 @@ const Rosalie: Member = {
   name: 'Rosalie Zhou',
   positions: new Map<string, string>([
     ['Social Media', 'Team Lead'],
+    ['Leads', 'Social Media Lead']
   ]),
   major: 'Pharmacology',
   year: 2,
@@ -243,6 +249,7 @@ const Laura: Member = {
   name: 'Laura Siemens',
   positions: new Map<string, string>([
     ['Wetlab', 'Project Supervisor'],
+    ['Leads', 'Wetlab Project Supervisor']
   ]),
   major: 'Biomedical Engineering',
   year: 3,
@@ -255,6 +262,7 @@ const Kendrick: Member = {
   name: 'Kendrick Cooke',
   positions: new Map<string, string>([
     ['Wetlab', 'Project Supervisor'],
+    ['Leads', 'Wetlab Project Supervisor']
   ]),
   major: 'Pharamaceutical Sciences',
   year: 4,
@@ -412,13 +420,13 @@ const Maggie: Member = {
 
 const teams: string[] = ['All', 'Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video', 'Social Media']
 const members: Map<string, Member[]> = new Map<string, Member[]>([
-  ['All', [Kshemaka, Miguel, Ethan, MelanieCha, Karina, Paniz, Vivian, Arnaz, Maggie, Kendrick, Laura, MelanieChe, Rosalie, Talia, Tianne, TiffanyW, TiffanyY, Vania, Victoria, Vittoria, Whitney, Catherine, Christina, Emma, Enda, Erica, Grace]],
-  ['Leads', [Kshemaka, Miguel]],
-  ['CADnano', [Kshemaka, Miguel, Ethan, Arnaz, TiffanyY]],
-  ['Wetlab', [Miguel, Kshemaka, MelanieCha, Whitney, Karina, Paniz, Ethan, Vivian, Maggie, Kendrick, Laura, MelanieChe, Talia, TiffanyW, Vania, Victoria, Vittoria, Catherine, Christina, Emma, Enda]],
+  ['All', [Kshemaka, Miguel, Ethan, MelanieCha, Karina, Paniz, Vivian, Arnaz, Grace, Enda, Erica, Maggie, Kendrick, MelanieChe, Rosalie, Talia, Tianne, Whitney, Catherine, TiffanyY, Emma, TiffanyW, Vania, Victoria, Vittoria, Christina, Laura]],
+  ['Leads', [Kshemaka, Miguel, Grace, Erica, Enda, Arnaz, Whitney, Rosalie, Kendrick, Laura]],
+  ['CADnano', [Kshemaka, Arnaz, Miguel, Ethan, TiffanyY]],
+  ['Wetlab', [Enda, Whitney, Kendrick, Miguel, Kshemaka, MelanieCha, Karina, Paniz, Ethan, Vivian, Maggie, MelanieChe, Emma, Talia, Catherine, TiffanyW, Vania, Victoria, Vittoria, Laura, Christina]],
   ['Finance', [Karina, Paniz, Ethan, Vivian, Maggie]],
   ['Website', [Miguel, MelanieCha, Ethan, Vivian, Tianne]],
-  ['Video', [Kshemaka, Karina, Grace, Maggie]],
+  ['Video', [Grace, Kshemaka, Karina, Maggie]],
   ['Social Media', [Erica, Rosalie]]
 ])
 
