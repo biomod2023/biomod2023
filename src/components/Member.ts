@@ -25,6 +25,9 @@ import _Emma from '@/assets/profile_pictures/Emma_Lo.png'
 import _Enda from '@/assets/profile_pictures/Enda_Çakmak.jpeg'
 import _Erica from '@/assets/profile_pictures/Erica_Chu.jpeg'
 import _Grace from '@/assets/profile_pictures/Grace_Wang.jpeg'
+import _Rowel from '@/assets/profile_pictures/Rowel_Sabahat.png'
+import _Daniel from '@/assets/profile_pictures/Daniel_Pan.jpg'
+import _Minh from '@/assets/profile_pictures/Minh_Au.jpg'
 
 type Member = {
   image: string
@@ -33,6 +36,44 @@ type Member = {
   description: string
   major: string
   year: number
+}
+
+const Minh: Member = {
+  image: _Minh,
+  name: 'Minh Au',
+  positions: new Map<string, string>([
+    ['Website', 'Tech Lead'],
+    ['Leads', 'Tech Lead']
+  ]),
+  major: 'Computer Science',
+  year: 2,
+  description:
+    "Hello!! I'm Minh, and I'm the other co-lead on the website team. You could find me mainly in the basement, though I don't play piano, sew or climb (or code :P). I'm the main reason why the website is late a few times."
+}
+
+const Daniel: Member = {
+  image: _Daniel,
+  name: 'Daniel Pan',
+  positions: new Map<string, string>([
+    ['Website', 'Tech Lead'],
+    ['Leads', 'Tech Lead']
+  ]),
+  major: 'Computer Science',
+  year: 2,
+  description:
+    "Hi! I'm Daniel, a second-year Computer Science student and a co-lead on the website team. When I'm not coding in the basement, I like playing the piano, sewing, and climbing. If you find any bugs in the website, they're actually features :)"
+}
+
+const Rowel: Member = {
+  image: _Rowel,
+  name: 'Rowel Sabahat',
+  positions: new Map<string, string>([
+    ['Website', 'Developer'],
+  ]),
+  major: 'Biochemistry',
+  year: 5,
+  description:
+    "Hi everyone! I am a 4th year student studying biochemistry and I am also a developer for this year’s UBC BIOMOD Team! When I am not figuring out how to open my repo, you can find me at the gym, on hikes, or at any sushi restaurant in vancouver. My main passions involve exploring the bridge between health science and technology and how I can further enhance this growing field with my own knowledge. I am extremely honoured to be a apart of this years BIOMOD team and I am so excited for you to learn more about our project by exploring this cool website 😉"
 }
 
 const Grace: Member = {
@@ -296,7 +337,6 @@ const Miguel: Member = {
   positions: new Map<string, string>([
     ['Leads', 'Team Captain'],
     ['Wetlab', 'Octahedron'],
-    ['Website', 'Graphics'],
     ['CADnano', 'Designer']
   ]),
   major: 'Biochemistry',
@@ -314,7 +354,6 @@ const MelanieCha: Member = {
   name: 'Melanie Chan',
   positions: new Map<string, string>([
     ['Wetlab', 'Enzymes'],
-    ['Website', 'Writer']
   ]),
   major: 'Microbiology and Immunology',
   year: 2,
@@ -370,7 +409,6 @@ const Ethan: Member = {
   positions: new Map<string, string>([
     ['Wetlab', 'Octahedron'],
     ['CADnano', 'Modelling'],
-    ['Website', 'Developer'],
     ['Finance', 'Sponsorships']
   ]),
   major: 'Chemistry and Statistics',
@@ -387,7 +425,6 @@ const Vivian: Member = {
   name: 'Vivian Zheng',
   positions: new Map<string, string>([
     ['Wetlab', 'Liposome'],
-    ['Website', 'Writer'],
     ['Finance', 'Administration']
   ]),
   major: 'CAPS',
@@ -420,12 +457,12 @@ const Maggie: Member = {
 
 const teams: string[] = ['All', 'Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video', 'Social Media']
 const members: Map<string, Member[]> = new Map<string, Member[]>([
-  ['All', [Kshemaka, Miguel, Ethan, MelanieCha, Karina, Paniz, Vivian, Arnaz, Grace, Enda, Erica, Maggie, Kendrick, MelanieChe, Rosalie, Talia, Tianne, Whitney, Catherine, TiffanyY, Emma, TiffanyW, Vania, Victoria, Vittoria, Christina, Laura]],
+  ['All', [Kshemaka, Miguel, Ethan, MelanieCha, Karina, Paniz, Vivian, Arnaz, Grace, Enda, Erica, Maggie, Kendrick, MelanieChe, Rosalie, Talia, Daniel, Minh, Tianne, Rowel, Whitney, Catherine, TiffanyY, Emma, TiffanyW, Vania, Victoria, Vittoria, Christina, Laura]],
   ['Leads', [Kshemaka, Miguel, Grace, Erica, Enda, Arnaz, Whitney, Rosalie, Kendrick, Laura]],
   ['CADnano', [Kshemaka, Arnaz, Miguel, Ethan, TiffanyY]],
   ['Wetlab', [Enda, Whitney, Kendrick, Miguel, Kshemaka, MelanieCha, Karina, Paniz, Ethan, Vivian, Maggie, MelanieChe, Emma, Talia, Catherine, TiffanyW, Vania, Victoria, Vittoria, Laura, Christina]],
   ['Finance', [Karina, Paniz, Ethan, Vivian, Maggie]],
-  ['Website', [Miguel, MelanieCha, Ethan, Vivian, Tianne]],
+  ['Website', [Daniel, Minh, Rowel, Tianne]],
   ['Video', [Grace, Kshemaka, Karina, Maggie]],
   ['Social Media', [Erica, Rosalie]]
 ])
