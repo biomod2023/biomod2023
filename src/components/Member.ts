@@ -194,6 +194,7 @@ const Victoria: Member = {
   name: 'Victoria Chong',
   positions: new Map<string, string>([
     ['Wetlab', 'Member'],
+    ['Finance', 'Member']
   ]),
   major: 'Biomedical Engineering',
   year: 2,
@@ -290,6 +291,7 @@ const Laura: Member = {
   name: 'Laura Siemens',
   positions: new Map<string, string>([
     ['Wetlab', 'Project Supervisor'],
+    ['Finance', 'Member'],
     ['Leads', 'Wetlab Project Supervisor']
   ]),
   major: 'Biomedical Engineering',
@@ -316,9 +318,6 @@ const Kshemaka: Member = {
   name: 'Kshemaka Gunawardena',
   positions: new Map<string, string>([
     ['Leads', 'Team Captain'],
-    ['Wetlab', 'Enzymes'],
-    ['Video', 'Modelling'],
-    ['CADnano', 'Designer']
   ]),
   major: 'Microbiology and Immunology',
   year: 4,
@@ -336,8 +335,6 @@ const Miguel: Member = {
   name: 'Miguel Tsai',
   positions: new Map<string, string>([
     ['Leads', 'Team Captain'],
-    ['Wetlab', 'Octahedron'],
-    ['CADnano', 'Designer']
   ]),
   major: 'Biochemistry',
   year: 4,
@@ -353,7 +350,8 @@ const MelanieCha: Member = {
   image: _MelanieCha,
   name: 'Melanie Chan',
   positions: new Map<string, string>([
-    ['Wetlab', 'Enzymes'],
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'Microbiology and Immunology',
   year: 2,
@@ -368,9 +366,8 @@ const Karina: Member = {
   image: _Karina,
   name: 'Karina Akhmedova',
   positions: new Map<string, string>([
-    ['Wetlab', 'Enzyme Modelling'],
-    ['Finance', 'Administration'],
-    ['Video', 'Audio']
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'biomedical engineering',
   year: 3,
@@ -389,8 +386,8 @@ const Paniz: Member = {
   image: _Paniz,
   name: 'Paniz Ghavimi',
   positions: new Map<string, string>([
-    ['Wetlab', 'Liposome'],
-    ['Finance', 'Sponsorships']
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'Molecular and Cellular Biology',
   year: 4,
@@ -407,9 +404,7 @@ const Ethan: Member = {
   image: _Ethan,
   name: 'Ethan Rajkumar',
   positions: new Map<string, string>([
-    ['Wetlab', 'Octahedron'],
-    ['CADnano', 'Modelling'],
-    ['Finance', 'Sponsorships']
+    ['Wetlab', 'Member'],
   ]),
   major: 'Chemistry and Statistics',
   year: 4,
@@ -424,8 +419,8 @@ const Vivian: Member = {
   image: _Vivian,
   name: 'Vivian Zheng',
   positions: new Map<string, string>([
-    ['Wetlab', 'Liposome'],
-    ['Finance', 'Administration']
+    ['Wetlab', 'Supervisor'],
+    ['Leads', 'Wetlab Supervisor']
   ]),
   major: 'CAPS',
   year: 3,
@@ -441,9 +436,9 @@ const Maggie: Member = {
   image: _Maggie,
   name: 'Maggie Wang',
   positions: new Map<string, string>([
-    ['Wetlab', 'Enzymes'],
-    ['Finance', 'Sponsorships'],
-    ['Video', 'Animation']
+    ['Wetlab', 'Team Lead'],
+    ['Finance', 'Team Lead'],
+    ['Leads', 'Wetlab Team Lead']
   ]),
   major: 'Biomedical Engineering',
   year: 3,
@@ -458,12 +453,12 @@ const Maggie: Member = {
 const teams: string[] = ['All', 'Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video', 'Social Media']
 const members: Map<string, Member[]> = new Map<string, Member[]>([
   ['All', [Kshemaka, Miguel, Ethan, MelanieCha, Karina, Paniz, Vivian, Arnaz, Grace, Enda, Erica, Maggie, Kendrick, MelanieChe, Rosalie, Talia, Daniel, Minh, Tianne, Rowel, Whitney, Catherine, TiffanyY, Emma, TiffanyW, Vania, Victoria, Vittoria, Christina, Laura]],
-  ['Leads', [Kshemaka, Miguel, Grace, Erica, Enda, Arnaz, Whitney, Rosalie, Kendrick, Laura]],
-  ['CADnano', [Kshemaka, Arnaz, Miguel, Ethan, TiffanyY]],
-  ['Wetlab', [Enda, Whitney, Kendrick, Miguel, Kshemaka, MelanieCha, Karina, Paniz, Ethan, Vivian, Maggie, MelanieChe, Emma, Talia, Catherine, TiffanyW, Vania, Victoria, Vittoria, Laura, Christina]],
-  ['Finance', [Karina, Paniz, Ethan, Vivian, Maggie]],
+  ['Leads', [Kshemaka, Miguel, Grace, Erica, Enda, Arnaz, Whitney, MelanieCha, Karina, Maggie, Paniz, Rosalie, Kendrick, Laura, Vivian, Daniel, Minh]],
+  ['CADnano', [Arnaz, TiffanyY]],
+  ['Wetlab', [Enda, Whitney, MelanieCha, Karina, Maggie, Paniz, Vivian, Kendrick, Ethan, MelanieChe, Emma, Talia, Catherine, TiffanyW, Vania, Victoria, Vittoria, Laura, Christina]],
+  ['Finance', [Maggie, Laura, Victoria]],
   ['Website', [Daniel, Minh, Rowel, Tianne]],
-  ['Video', [Grace, Kshemaka, Karina, Maggie]],
+  ['Video', [Grace]],
   ['Social Media', [Erica, Rosalie]]
 ])
 
