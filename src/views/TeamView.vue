@@ -22,7 +22,6 @@ const handleClick = (inc: number) => {
     finalState.value = inc < 0 ? 'translate-x-full opacity-0' : '-translate-x-full opacity-0'
     changingTeam.value = false
   }
-  console.log(initialState)
 }
 
 let currTeam: Ref<string> = ref('All')
