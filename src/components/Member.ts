@@ -1,11 +1,33 @@
 import _Kshemaka from '@/assets/profile_pictures/Kshemaka.jpg'
 import _Miguel from '@/assets/profile_pictures/Miguel.jpg'
-import _Melanie from '@/assets/profile_pictures/Melanie_Chan.jpg'
+import _MelanieCha from '@/assets/profile_pictures/Melanie_Chan.jpg'
 import _Karina from '@/assets/profile_pictures/Karina_Akhmedove.jpg'
 import _Paniz from '@/assets/profile_pictures/Paniz_Ghavimi.jpg'
 import _Ethan from '@/assets/profile_pictures/Ethan_Rajkumar.jpg'
 import _Vivian from '@/assets/profile_pictures/Vivian_Zheng.jpg'
 import _Maggie from '@/assets/profile_pictures/Maggie_Wang.jpg'
+import _Kendrick from '@/assets/profile_pictures/Kendrick_Cooke.jpeg'
+import _Laura from '@/assets/profile_pictures/female_empty_img.png'
+import _MelanieChe from '@/assets/profile_pictures/Melanie_Cheng.jpg'
+import _Rosalie from '@/assets/profile_pictures/Rosalie_Zhou.jpg'
+import _Talia from '@/assets/profile_pictures/Talia_Feng.jpg'
+import _Tianne from '@/assets/profile_pictures/Tianne_Kussat.png'
+import _TiffanyW from '@/assets/profile_pictures/female_empty_img.png'
+import _TiffanyY from '@/assets/profile_pictures/Tiffany_Yu.jpg'
+import _Vania from '@/assets/profile_pictures/female_empty_img.png'
+import _Victoria from '@/assets/profile_pictures/female_empty_img.png'
+import _Vittoria from '@/assets/profile_pictures/female_empty_img.png'
+import _Whitney from '@/assets/profile_pictures/Whitney_Demetriou.jpg'
+import _Arnaz from '@/assets/profile_pictures/Arnaz_Dhalla.jpg'
+import _Catherine from '@/assets/profile_pictures/Catherine_Zhu.png'
+import _Christina from '@/assets/profile_pictures/female_empty_img.png'
+import _Emma from '@/assets/profile_pictures/Emma_Lo.png'
+import _Enda from '@/assets/profile_pictures/Enda_Çakmak.jpeg'
+import _Erica from '@/assets/profile_pictures/Erica_Chu.jpeg'
+import _Grace from '@/assets/profile_pictures/Grace_Wang.jpeg'
+import _Rowel from '@/assets/profile_pictures/Rowel_Sabahat.png'
+import _Daniel from '@/assets/profile_pictures/Daniel_Pan.jpg'
+import _Minh from '@/assets/profile_pictures/Minh_Au.jpg'
 
 type Member = {
   image: string
@@ -16,15 +38,263 @@ type Member = {
   year: number
 }
 
+const Minh: Member = {
+  image: _Minh,
+  name: 'Minh Au',
+  positions: new Map<string, string>([
+    ['Website', 'Tech Lead'],
+    ['Leads', 'Tech Lead']
+  ]),
+  major: 'Computer Science',
+  year: 2,
+  description:
+    "Hello!! I'm Minh, and I'm the other co-lead on the website team. You could find me mainly in the basement, though I don't play piano, sew or climb (or code :P). I'm the main reason why the website is late a few times."
+}
+
+const Daniel: Member = {
+  image: _Daniel,
+  name: 'Daniel Pan',
+  positions: new Map<string, string>([
+    ['Website', 'Tech Lead'],
+    ['Leads', 'Tech Lead']
+  ]),
+  major: 'Computer Science',
+  year: 2,
+  description:
+    "Hi! I'm Daniel, a second-year Computer Science student and a co-lead on the website team. When I'm not coding in the basement, I like playing the piano, sewing, and climbing. If you find any bugs in the website, they're actually features :)"
+}
+
+const Rowel: Member = {
+  image: _Rowel,
+  name: 'Rowel Sabahat',
+  positions: new Map<string, string>([['Website', 'Developer']]),
+  major: 'Biochemistry',
+  year: 5,
+  description:
+    'Hi everyone! I am a 4th year student studying biochemistry and I am also a developer for this year’s UBC BIOMOD Team! When I am not figuring out how to open my repo, you can find me at the gym, on hikes, or at any sushi restaurant in vancouver. My main passions involve exploring the bridge between health science and technology and how I can further enhance this growing field with my own knowledge. I am extremely honoured to be a apart of this years BIOMOD team and I am so excited for you to learn more about our project by exploring this cool website 😉'
+}
+
+const Grace: Member = {
+  image: _Grace,
+  name: 'Grace Wang',
+  positions: new Map<string, string>([
+    ['Video', 'Team Lead'],
+    ['Leads', 'Video Lead']
+  ]),
+  major: 'Biology',
+  year: 4,
+  description:
+    'Hi! My name is Grace! I am the team lead for the dynamic video crew team. I’m currently a fourth year student studying Biology in the Faculty of Science. I love hiking and enjoying nature. I find beauty not just in the complexities in science but also in the great outdoors. Going on hikes and stargazing is a passion of mine since I cherish moments that nature offers. During my spare time, I tend to paint portraits or sceneries and make music. It’s a blend of my love for the arts and science. '
+}
+
+const Erica: Member = {
+  image: _Erica,
+  name: 'Erica Chu',
+  positions: new Map<string, string>([
+    ['Social Media', 'Team Lead'],
+    ['Leads', 'Social Media Lead']
+  ]),
+  major: 'Biochemistry',
+  year: 2,
+  description:
+    'Hi I’m Erica :) I do the social media and events stuff! I also really like Taylor Swift. Hope to see you around!'
+}
+
+const Enda: Member = {
+  image: _Enda,
+  name: 'Enda Cakmak',
+  positions: new Map<string, string>([
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
+  ]),
+  major: 'Biomedical Engineering',
+  year: 4,
+  description:
+    "Hi! I'm Enda and I am a 4th year Biomedical Engineering student at UBC! I have been a part of the wet lab team at BIOMOD since my 2nd year because I was interested in learning more about nanotechnology, molecular biology and wet lab experiments. Being part of a research project fully ran by students is a very exciting and unique experience! In my free time, I like boxing, feeding my caffeine addiction, and watching F1! "
+}
+
+const Emma: Member = {
+  image: _Emma,
+  name: 'Emma Lo',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Biochemistry',
+  year: 2,
+  description:
+    'Emma is a Biochemistry student whose true passion in life is to discover the scientific formula for the perfect nap. She shows up to BIOMOD meetings running on nothing but sushi, matcha, and a pinch of stardust, but is always ready to help out. In her free time she enjoys reading, drawing, or teaching herself a new musical instrument.'
+}
+
+const Christina: Member = {
+  image: _Christina,
+  name: 'Christina Zhang',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Biochemistry',
+  year: 3,
+  description:
+    'Meet the Dilophosaurus, a carnivorous dinosaur from the Early Jurassic distinguished by its double-crested appearance. Despite its Hollywood portrayal in "Jurassic Park," there\'s no evidence that Dilophosaurus spat venom. Instead, its crests likely served a display or recognition function. With a lightweight build and long legs, it was likely a fast and agile predator. Dilophosaurus offers a glimpse into the varied forms and functions of crests in dinosaurs, showcasing the complexity of adaptations that evolved throughout the vast timeline of dinosaur existence on our planet.'
+}
+
+const Catherine: Member = {
+  image: _Catherine,
+  name: 'Catherine Zhu',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Biomedical Engineering',
+  year: 3,
+  description:
+    'Hi! I’m a 4th year biomedical engineering student in the systems and signals stream! I’m interested in learning about MEMS and nanotechnology. In my spare time, I enjoy playing computer games and reading Webtoons. I also like to figure skate and ski.'
+}
+
+const Arnaz: Member = {
+  image: _Arnaz,
+  name: 'Arnaz Dallah',
+  positions: new Map<string, string>([
+    ['CADnano', 'Team Lead'],
+    ['Leads', 'CADnano Lead']
+  ]),
+  major: 'Biomedical Engineering',
+  year: 3,
+  description:
+    'The Triceratops, a well-known herbivorous dinosaur of the Late Cretaceous, had a unique dental arrangement that set it apart. While it possessed a beak at the front of its mouth for cropping vegetation, the rest of its jaw was filled with numerous teeth arranged in groups called dental batteries. These batteries consisted of up to 800 tightly packed teeth, forming efficient grinding surfaces. This dental adaptation allowed Triceratops to process tough plant material, showcasing the specialized features that evolved in dinosaurs to exploit specific dietary resources during their existence on Earth.'
+}
+
+const Whitney: Member = {
+  image: _Whitney,
+  name: 'Whitney Demetriou',
+  positions: new Map<string, string>([
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
+  ]),
+  major: 'Pharmaceutical Sciences',
+  year: 4,
+  description:
+    'My name is Whitney Demetriou and I am a 4th year student in the faculty of Pharmaceutical Sciences. I am part of the BIOMOD wetlab team, and am interested in drug formulation/development.'
+}
+
+const Vittoria: Member = {
+  image: _Vittoria,
+  name: 'Vittoria Baht',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Biochemistry',
+  year: 4,
+  description:
+    'In the Early Cretaceous, the Microraptor, a small, feathered dinosaur, possessed a remarkable ability—it could glide or possibly even fly. This feathered dinosaur had long feathers on its arms and legs, forming wing-like structures. Although not a direct ancestor of birds, Microraptor exemplifies the evolutionary experimentation with flight-related features in non-avian dinosaurs. Its feathered limbs and potential gliding capabilities highlight the diverse paths taken by dinosaurs as they adapted to various ecological niches, contributing to the evolutionary tapestry that eventually led to the emergence of modern birds.'
+}
+
+const Victoria: Member = {
+  image: _Victoria,
+  name: 'Victoria Chong',
+  positions: new Map<string, string>([
+    ['Wetlab', 'Member'],
+    ['Finance', 'Member']
+  ]),
+  major: 'Biomedical Engineering',
+  year: 2,
+  description:
+    'The Parasaurolophus, a herbivorous dinosaur of the Late Cretaceous, featured a distinctive cranial crest—a long, tubular structure extending backward from its skull. Recent studies suggest that this hollow crest acted as a resonating chamber, enabling Parasaurolophus to produce low-frequency sounds. This adaptation likely played a role in communication, helping these dinosaurs convey information or warn of potential threats. The intricate structures found in dinosaur anatomy continue to unravel, providing valuable insights into the behaviors and adaptations that allowed them to thrive in prehistoric environments.'
+}
+
+const Vania: Member = {
+  image: _Vania,
+  name: 'Vania Rezaei',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Physiology, Neurobiology and Public Health',
+  year: 4,
+  description:
+    'The Ankylosaurus, a heavily armored dinosaur from the Late Cretaceous, sported a remarkable defense mechanism—a tail club composed of fused vertebrae and thick bony knobs. This tail club, resembling a medieval mace, served as a formidable weapon against predators. Ankylosaurus likely swung its tail to deter attackers or assert dominance. This unique adaptation showcases the ingenious ways dinosaurs evolved to thrive in their ecosystems, emphasizing the fascinating diversity of defensive strategies employed by these ancient creatures.'
+}
+
+const TiffanyY: Member = {
+  image: _TiffanyY,
+  name: 'Tiffany Yu',
+  positions: new Map<string, string>([['CADnano', 'CADnano Supervisor']]),
+  major: 'Chemical and Biological Engineering',
+  year: 4,
+  description:
+    'My name is Tiffany Yu and I am a fourth year Chemical and Biological Engineering student. I am the team lead of Cadnano sub-team. I joined BIOMOD because I have great interest in nanotechnology. In my free time, I play the piano and I am currently learning opera singing.'
+}
+const TiffanyW: Member = {
+  image: _TiffanyW,
+  name: 'Tiffany Wai',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Microbiology and Immunology',
+  year: 4,
+  description:
+    'In the Late Cretaceous period, the Spinosaurus, one of the largest carnivorous dinosaurs, inhabited river systems and displayed a unique adaptation: a crocodile-like snout. This adaptation suggests a semi-aquatic lifestyle, with Spinosaurus possibly hunting fish. With an estimated length of up to 50-59 feet (15-18 meters), it surpasses even the Tyrannosaurus rex in size. The discovery of Spinosaurus fossils in North Africa provides insights into the incredible diversity and adaptations of dinosaurs in different environments during prehistoric times.'
+}
+
+const Tianne: Member = {
+  image: _Tianne,
+  name: 'Tianne Kussat',
+  positions: new Map<string, string>([['Website', 'Graphic Designer']]),
+  major: 'Microbiology and Immunology',
+  year: 2,
+  description:
+    "Hi I'm Tianne, I'm a second year Microbiology and Immunology student. I'm on the website team where I make graphics. Outside of studying, I spend my time reading - my favourite book is The Tenth Muse by Catherine Chung."
+}
+
+const Talia: Member = {
+  image: _Talia,
+  name: 'Talia Feng',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Applied Biology',
+  year: 2,
+  description:
+    "Hello, I'm Talia. I am a second year student studying computer science and microbiology and immunology. I am passionate about  drug delivery and immunology as well as software development. I joined BIOMOD because I enjoy the teamworking aspect and enjoy experimenting in labs. "
+}
+
+const Rosalie: Member = {
+  image: _Rosalie,
+  name: 'Rosalie Zhou',
+  positions: new Map<string, string>([
+    ['Social Media', 'Team Lead'],
+    ['Leads', 'Social Media Lead']
+  ]),
+  major: 'Pharmacology',
+  year: 2,
+  description:
+    'Hello! My name is Rosalie Zhou and I am a 2nd year Science student studying Pharmacology. I am a part of the Social Media and Events sub-team and I post updates of our progress as well as share interesting findings by our team with UBC students. '
+}
+
+const MelanieChe: Member = {
+  image: _MelanieChe,
+  name: 'Melanie Cheng',
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  major: 'Biomedical Engineering',
+  year: 3,
+  description:
+    "I’m Melanie and I am currently in my third year studying Biomedical Engineering. This will be my second year as a part of UBC Biomod’s wetlab team and I'm excited to continue with this journey!"
+}
+
+const Laura: Member = {
+  image: _Laura,
+  name: 'Laura Siemens',
+  positions: new Map<string, string>([
+    ['Wetlab', 'Project Supervisor'],
+    ['Finance', 'Member'],
+    ['Leads', 'Wetlab Project Supervisor']
+  ]),
+  major: 'Biomedical Engineering',
+  year: 3,
+  description:
+    'Did you know that the Stegosaurus, a herbivorous dinosaur from the Late Jurassic period, had a brain the size of a walnut, despite its massive size? Despite its relatively small brain, the Stegosaurus had large plates along its back and four sharp spikes on its tail, likely used for defense against predators. These distinct features make the Stegosaurus a fascinating example of the diverse adaptations that existed among dinosaurs during their reign on Earth.'
+}
+
+const Kendrick: Member = {
+  image: _Kendrick,
+  name: 'Kendrick Cooke',
+  positions: new Map<string, string>([
+    ['Wetlab', 'Project Supervisor'],
+    ['Leads', 'Wetlab Project Supervisor']
+  ]),
+  major: 'Pharamaceutical Sciences',
+  year: 4,
+  description:
+    'Hi! My name is Kendrick Cooke and I’m a 4th year Bachelor of Pharmaceutical Sciences student. I have been a part of Biomod since my third year and am acting Project Lead this year! I find new drug delivery technologies very interesting and am passionate about women’s health! Outside of school I really enjoy sports, I play football golf and ultimate frisbee and love being outside. '
+}
+
 const Kshemaka: Member = {
   image: _Kshemaka,
   name: 'Kshemaka Gunawardena',
-  positions: new Map<string, string>([
-    ['Leads', 'Team Captain'],
-    ['Wetlab', 'Enzymes'],
-    ['Video', 'Modelling'],
-    ['CADnano', 'Designer']
-  ]),
+  positions: new Map<string, string>([['Leads', 'Team Captain']]),
   major: 'Microbiology and Immunology',
   year: 4,
   description:
@@ -39,12 +309,7 @@ const Kshemaka: Member = {
 const Miguel: Member = {
   image: _Miguel,
   name: 'Miguel Tsai',
-  positions: new Map<string, string>([
-    ['Leads', 'Team Captain'],
-    ['Wetlab', 'Octahedron'],
-    ['Website', 'Graphics'],
-    ['CADnano', 'Designer']
-  ]),
+  positions: new Map<string, string>([['Leads', 'Team Captain']]),
   major: 'Biochemistry',
   year: 4,
   description:
@@ -55,12 +320,12 @@ const Miguel: Member = {
     project..... Well, I also love playing nintendo games.'
 }
 
-const Melanie: Member = {
-  image: _Melanie,
+const MelanieCha: Member = {
+  image: _MelanieCha,
   name: 'Melanie Chan',
   positions: new Map<string, string>([
-    ['Wetlab', 'Enzymes'],
-    ['Website', 'Writer']
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'Microbiology and Immunology',
   year: 2,
@@ -75,9 +340,8 @@ const Karina: Member = {
   image: _Karina,
   name: 'Karina Akhmedova',
   positions: new Map<string, string>([
-    ['Wetlab', 'Enzyme Modelling'],
-    ['Finance', 'Administration'],
-    ['Video', 'Audio']
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'biomedical engineering',
   year: 3,
@@ -96,8 +360,8 @@ const Paniz: Member = {
   image: _Paniz,
   name: 'Paniz Ghavimi',
   positions: new Map<string, string>([
-    ['Wetlab', 'Liposome'],
-    ['Finance', 'Sponsorships']
+    ['Wetlab', 'Team Lead'],
+    ['Leads', 'Wetlab Lead']
   ]),
   major: 'Molecular and Cellular Biology',
   year: 4,
@@ -113,12 +377,7 @@ const Paniz: Member = {
 const Ethan: Member = {
   image: _Ethan,
   name: 'Ethan Rajkumar',
-  positions: new Map<string, string>([
-    ['Wetlab', 'Octahedron'],
-    ['CADnano', 'Modelling'],
-    ['Website', 'Developer'],
-    ['Finance', 'Sponsorships']
-  ]),
+  positions: new Map<string, string>([['Wetlab', 'Member']]),
   major: 'Chemistry and Statistics',
   year: 4,
   description:
@@ -132,9 +391,8 @@ const Vivian: Member = {
   image: _Vivian,
   name: 'Vivian Zheng',
   positions: new Map<string, string>([
-    ['Wetlab', 'Liposome'],
-    ['Website', 'Writer'],
-    ['Finance', 'Administration']
+    ['Wetlab', 'Supervisor'],
+    ['Leads', 'Wetlab Supervisor']
   ]),
   major: 'CAPS',
   year: 3,
@@ -150,9 +408,9 @@ const Maggie: Member = {
   image: _Maggie,
   name: 'Maggie Wang',
   positions: new Map<string, string>([
-    ['Wetlab', 'Enzymes'],
-    ['Finance', 'Sponsorships'],
-    ['Video', 'Animation']
+    ['Wetlab', 'Team Lead'],
+    ['Finance', 'Team Lead'],
+    ['Leads', 'Wetlab Team Lead']
   ]),
   major: 'Biomedical Engineering',
   year: 3,
@@ -164,15 +422,103 @@ const Maggie: Member = {
   Breasts and Eggs by Mieko Kawakami.'
 }
 
-const teams: string[] = ['All', 'Leads', 'CADnano', 'Wetlab', 'Finance', 'Website', 'Video']
+const teams: string[] = [
+  'All',
+  'Leads',
+  'CADnano',
+  'Wetlab',
+  'Finance',
+  'Website',
+  'Video',
+  'Social Media'
+]
 const members: Map<string, Member[]> = new Map<string, Member[]>([
-  ['All', [Kshemaka, Miguel, Ethan, Melanie, Karina, Paniz, Vivian, Maggie]],
-  ['Leads', [Kshemaka, Miguel]],
-  ['CADnano', [Kshemaka, Miguel, Ethan]],
-  ['Wetlab', [Miguel, Kshemaka, Melanie, Karina, Paniz, Ethan, Vivian, Maggie]],
-  ['Finance', [Karina, Paniz, Ethan, Vivian, Maggie]],
-  ['Website', [Miguel, Melanie, Ethan, Vivian]],
-  ['Video', [Kshemaka, Karina, Maggie]]
+  [
+    'All',
+    [
+      Kshemaka,
+      Miguel,
+      Ethan,
+      MelanieCha,
+      Karina,
+      Paniz,
+      Vivian,
+      Arnaz,
+      Grace,
+      Enda,
+      Erica,
+      Maggie,
+      Kendrick,
+      MelanieChe,
+      Rosalie,
+      Talia,
+      Daniel,
+      Minh,
+      Tianne,
+      Rowel,
+      Whitney,
+      Catherine,
+      TiffanyY,
+      Emma,
+      TiffanyW,
+      Vania,
+      Victoria,
+      Vittoria,
+      Christina,
+      Laura
+    ]
+  ],
+  [
+    'Leads',
+    [
+      Kshemaka,
+      Miguel,
+      Grace,
+      Erica,
+      Enda,
+      Arnaz,
+      Whitney,
+      MelanieCha,
+      Karina,
+      Maggie,
+      Paniz,
+      Rosalie,
+      Kendrick,
+      Laura,
+      Vivian,
+      Daniel,
+      Minh
+    ]
+  ],
+  ['CADnano', [Arnaz, TiffanyY]],
+  [
+    'Wetlab',
+    [
+      Enda,
+      Whitney,
+      MelanieCha,
+      Karina,
+      Maggie,
+      Paniz,
+      Vivian,
+      Kendrick,
+      Ethan,
+      MelanieChe,
+      Emma,
+      Talia,
+      Catherine,
+      TiffanyW,
+      Vania,
+      Victoria,
+      Vittoria,
+      Laura,
+      Christina
+    ]
+  ],
+  ['Finance', [Maggie, Laura, Victoria]],
+  ['Website', [Daniel, Minh, Rowel, Tianne]],
+  ['Video', [Grace]],
+  ['Social Media', [Erica, Rosalie]]
 ])
 
 export type { Member }

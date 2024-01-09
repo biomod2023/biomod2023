@@ -13,7 +13,6 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         activeElementId.value = entry.target.innerHTML.trim()
-        console.log(activeElementId.value)
       }
     })
   }
