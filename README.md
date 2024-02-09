@@ -5,6 +5,8 @@
 
 This is the website for Biomod's 2023 project submission.
 
+[See the website here!](https://ubcbiomod2023.netlify.app)
+
 See [THEME.md](./THEME.md) for Tailwind CSS theme documentation and [COMPONENTS.md](./COMPONENTS.md) for our custom component documentation, including Lab Notebook template components.
 
 ## Project Setup
