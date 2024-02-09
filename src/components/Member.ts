@@ -20,7 +20,7 @@ import _Vittoria from '@/assets/profile_pictures/female_empty_img.png'
 import _Whitney from '@/assets/profile_pictures/Whitney_Demetriou.jpg'
 import _Arnaz from '@/assets/profile_pictures/Arnaz_Dhalla.jpg'
 import _Catherine from '@/assets/profile_pictures/Catherine_Zhu.png'
-import _Christina from '@/assets/profile_pictures/female_empty_img.png'
+import _Christina from '@/assets/profile_pictures/Christina_Zhang.jpg'
 import _Emma from '@/assets/profile_pictures/Emma_Lo.png'
 import _Enda from '@/assets/profile_pictures/Enda_Çakmak.jpeg'
 import _Erica from '@/assets/profile_pictures/Erica_Chu.jpeg'
@@ -126,17 +126,17 @@ const Emma: Member = {
 const Christina: Member = {
   image: _Christina,
   name: 'Christina Zhang',
-  positions: new Map<string, string>([['Wetlab', 'Member']]),
-  major: 'Biochemistry',
+  positions: new Map<string, string>([['Wetlab', 'Member',], ['Video', 'Member']]),
+  major: 'Integrated Science',
   year: 3,
   description:
-    'Meet the Dilophosaurus, a carnivorous dinosaur from the Early Jurassic distinguished by its double-crested appearance. Despite its Hollywood portrayal in "Jurassic Park," there\'s no evidence that Dilophosaurus spat venom. Instead, its crests likely served a display or recognition function. With a lightweight build and long legs, it was likely a fast and agile predator. Dilophosaurus offers a glimpse into the varied forms and functions of crests in dinosaurs, showcasing the complexity of adaptations that evolved throughout the vast timeline of dinosaur existence on our planet.'
+    'Hello, I\'m Christina.  I\'m a third-year student majoring in integrated science, with a focus on genetic, immunology, and data science. I like to daze by the sea or somewhere with lush trees.'
 }
 
 const Catherine: Member = {
   image: _Catherine,
   name: 'Catherine Zhu',
-  positions: new Map<string, string>([['Wetlab', 'Member']]),
+  positions: new Map<string, string>([['Video', 'Member']]),
   major: 'Biomedical Engineering',
   year: 3,
   description:
@@ -460,11 +460,11 @@ const members: Map<string, Member[]> = new Map<string, Member[]>([
       Catherine,
       TiffanyY,
       Emma,
+      Christina,
       TiffanyW,
       Vania,
       Victoria,
       Vittoria,
-      Christina,
       Laura
     ]
   ],
@@ -506,18 +506,17 @@ const members: Map<string, Member[]> = new Map<string, Member[]>([
       MelanieChe,
       Emma,
       Talia,
-      Catherine,
+      Christina,
       TiffanyW,
       Vania,
       Victoria,
       Vittoria,
       Laura,
-      Christina
     ]
   ],
   ['Finance', [Maggie, Laura, Victoria]],
   ['Website', [Daniel, Minh, Rowel, Tianne]],
-  ['Video', [Grace]],
+  ['Video', [Grace, Catherine, Christina]],
   ['Social Media', [Erica, Rosalie]]
 ])
 
