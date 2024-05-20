@@ -145,7 +145,7 @@ const Catherine: Member = {
 
 const Arnaz: Member = {
   image: _Arnaz,
-  name: 'Arnaz Dallah',
+  name: 'Arnaz Dhalla',
   positions: new Map<string, string>([
     ['CADnano', 'Team Lead'],
     ['Leads', 'CADnano Lead']
